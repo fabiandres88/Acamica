@@ -1,92 +1,57 @@
 body
 {
+    border: 1px solid #000;
     margin: 0%;
     padding: 0%;
-    border: 0%;
-    width: 320px;
+    border: 0%;    
     background-color: #ffffff;
 }
-#container
-{
+header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "logohead head";
-    width: 320px;
-    height: 44px;
+    grid-template-columns: 1fr 2fr;
+    height: 80px;
 }
-#container #logohead
-{
-    grid-column-start: logohead;
-    grid-column-end: logohead;    
-    width: 160px;
-    height: 44px;
+#logohead {
+    margin-left: 100px;
+    margin-top: 22px;    
 }
-#container #head
-{
-    grid-column-start: head;
-    grid-column-end: head;
-    width: 160px;
-    height: 44px;
+#logohead img {
+    width: 38px;
+    height: 38px;
 }
-#bd
-{
-    width: 24px;
-    height: 24px;
-    padding: 10px 0px 10px 19px;
-}
-#button
-{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 18px;
-	height: 12px;
-    padding: 16px 19px 16px 123px;
-} 
-#button div
-{
-    width: 18px;
-    height: 2px;
-    background: black;
+#menu {
+    justify-self: end;
 }
 #burger
 {
     display: none;
 }
-
-
-.submenu
-{
-    list-style: none;
-    width: 320px;
-    height: 224px;
-    position: relative;
-    background-color: #0000EC;
-    left: -480px;
-    
-       
+#menu label[for="burger"]{
+    display: none;
 }
-.submenu ul li
-{
-    padding: 16px 0px 18px 16px;
-    font-size: 16px;    
-    list-style: none;
-    position: relative;
-    left: -40px;
+.submenu {
+    margin-right: 60px;
 }
-.submenu ul li a 
-{
-    text-decoration: none;
-    color: #ffffff;
+.submenu ul {
+    list-style: none;    
+    display: flex;
     font-family: 'IBM Plex Mono', monospace;
+    margin-top: 28px;    
 }
-#burger:checked ~ .submenu
-{
-    left: -160px;
-    transition: all 1s;
+.submenu ul li {     
+    padding-right: 28px;
 }
+.submenu ul li a {
+    text-decoration: none;
+    color: #060A24;
+}
+
+
+
+
+
+
+
 h1
 {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -161,4 +126,60 @@ h1
     width: 320px;
     height: 341px;
     background-image: linear-gradient(170deg, #ffffff 5%, #0000FF 0%, #0000A3 95%);
+}
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 44px;
+        grid-template-columns: 1fr 1fr;
+    }
+    #logohead {
+        margin-left: 16px;
+        margin-top: 10px;        
+    }
+    #logohead img {
+        width: 24px;
+        height: 24px;
+    }
+    #menu {
+        height: 44px;
+    }
+    #menu label[for="burger"]{
+        display: block;
+        margin-top: 13px;
+        margin-right: 15px;
+    }    
+    .submenu
+    {
+        list-style: none;        
+        position: absolute;
+        background-color: #0000EC;
+        top: 44px;
+        left: -480px;    
+    }
+    .submenu ul {
+        display: block;
+        margin: 0px;
+    }
+    .submenu ul li
+    {
+        padding: 16px 0px 18px 16px;
+        font-size: 16px;    
+        list-style: none;
+        position: relative;
+        left: -40px;
+    }
+    .submenu ul li a 
+    {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    #burger:checked ~ .submenu
+    {
+        left: 0px;
+        transition: all 1s;
+        width: 100%;
+    }
 }
