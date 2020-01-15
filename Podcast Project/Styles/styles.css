@@ -1,6 +1,4 @@
-body
-{
-    border: 1px solid #000;
+body{
     margin: 0%;
     padding: 0%;
     border: 0%;    
@@ -12,15 +10,17 @@ header {
     height: 80px;
 }
 #logohead {
-    margin-left: 100px;
+    margin-left: 0px;
     margin-top: 22px;    
 }
 #logohead img {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
+    padding-left: 20.83%;
 }
 #menu {
     justify-self: end;
+    padding-right: 5.41%;
 }
 #burger
 {
@@ -30,7 +30,7 @@ header {
     display: none;
 }
 .submenu {
-    margin-right: 60px;
+   
 }
 .submenu ul {
     list-style: none;    
@@ -39,88 +39,141 @@ header {
     margin-top: 28px;    
 }
 .submenu ul li {     
-    padding-right: 28px;
+    padding-right: 48px;
 }
 .submenu ul li a {
     text-decoration: none;
     color: #060A24;
 }
-
-
-
-
-
-
-
-h1
-{
+h1{
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 36px;
+    font-size: 64px;
     color: #060A24;
     letter-spacing: 0px;
-    padding-left: 16px;
     line-height: 42px;
     font-weight: lighter;
+    width: 100%;
+    padding-left: 13.9%;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+h2{
+    display: none;
 }
 #world
 {
     text-decoration: line-through;
 }
-#parrafo
+#point {
+    color: #0000EC;
+}
+#p-desktop
 {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
     line-height: 22px;
-    padding-left: 16px;
+    padding-left: 13.9%;
+    text-align: justify;
     color: #060A24;
 }
-.conoce
-{
+#p-mobile   {
+    display: none;
+}
+.conoce{
     background-color: #00F3BB;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 288px;
-    height: 48px;
-    margin-left: 16px;    
+    width: 226px;
+    height: 56px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     line-height: 22px;
+    margin-left: 13.9%;
+    margin-top: 42px;
+    margin-bottom: 5px;    
 }
-.conoce a
-{
+.conoce a{
     color: #060A24;
     text-decoration: none;
+    font-weight: bold;
 }
-#episodios
-{
-    width: 320px;
-    height: 1203.5px;
-    background-image: linear-gradient(170deg, #ffffff 5%, #0000FF 0%, #0000A3 95%, #ffffff 5%);
+#episodios{
+    width: 100%;
+    height: 1042.6px;
+    position: relative;
+    background-image: linear-gradient(to bottom left, #0000FF, #0000A3);
+    
 }
-#titulo
-{
+svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vw;
+}
+  #triangle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10vw;
+    transform: rotate(180deg);
+}
+#titulo {
     color: #ffffff;
     font-size: 36px;
     line-height: 42px;
     font-family: 'IBM Plex Sans', sans-serif;
-    padding: 64px 147px 21px 16px;
+    font-weight: lighter;
+    padding-top: 12.94%;
+    padding-bottom: 1.81%;
+    padding-left: 13.9%;    
 }
-.spotify
-{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 11px;
-    width: 320px;
+.spotify    {
+   display:grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   width: 100%; 
+}
+.episoderight{
+    margin-right: 5%;
+    margin-left: 13.88%;
+    padding-bottom: 10.01%;      
+}
+.episodeleft{
+    margin-right: 13.88%;
+    margin-left: 5%;
 }
 #phone
 {
     padding-top: 37px;
     padding-bottom: 27px;
     position: absolute;
-    width: 320px;
-    height: 519px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "phone" "nosotros"
+                            "phone" "paragraph";    
 }
+#phone #computer{
+   grid-column-start: 1;
+   grid-column-end: 1;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+#phone #nosotros{
+    grid-column-start: nosotros;
+   grid-column-end: nosotros;
+}
+
+#phone p{
+    grid-column-start: paragraph;
+   grid-column-end: paragraph;
+}
+/*
+
+
 #novedades
 {
     width: 320px;
@@ -128,19 +181,21 @@ h1
     background-image: linear-gradient(170deg, #ffffff 5%, #0000FF 0%, #0000A3 95%);
 }
 
-
+*/
 @media only screen and (max-width: 600px) {
     header {
         height: 44px;
         grid-template-columns: 1fr 1fr;
     }
     #logohead {
-        margin-left: 16px;
+
+        margin-left: 0px;
         margin-top: 10px;        
     }
     #logohead img {
         width: 24px;
         height: 24px;
+        padding-left: 10%;
     }
     #menu {
         height: 44px;
@@ -150,8 +205,7 @@ h1
         margin-top: 13px;
         margin-right: 15px;
     }    
-    .submenu
-    {
+    .submenu    {
         list-style: none;        
         position: absolute;
         background-color: #0000EC;
@@ -162,24 +216,90 @@ h1
         display: block;
         margin: 0px;
     }
-    .submenu ul li
-    {
+    .submenu ul li    {
         padding: 16px 0px 18px 16px;
         font-size: 16px;    
         list-style: none;
         position: relative;
         left: -40px;
     }
-    .submenu ul li a 
-    {
+    .submenu ul li a    {
         text-decoration: none;
         color: #ffffff;
         font-family: 'IBM Plex Mono', monospace;
     }
-    #burger:checked ~ .submenu
-    {
+    #burger:checked ~ .submenu    {
         left: 0px;
         transition: all 1s;
         width: 100%;
     }
+    h1{
+        display: none;
+    }
+    h2  {
+        display: block;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 36px;
+        color: #060A24;
+        letter-spacing: 0px;
+        line-height: 42px;
+        font-weight: lighter;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-left: 5%;
+    }
+    #p-mobile   {
+        display: block;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        line-height: 22px;
+        padding-left: 5%;
+        text-align: justify;
+        color: #060A24;
+    }
+    #p-desktop  {
+        display: none;
+    }
+    .conoce {
+        background-color: #00F3BB;    
+        width: 90%;
+        height: 48px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        line-height: 22px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 24px;
+        margin-top: 36px;    
+    }
+    .conoce a   {
+        color: #060A24;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    #episodios{
+    width: 100%;
+    height: 1231.5px;
+    }
+    #titulo {
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 42px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: lighter;
+    padding: 64px 147px 21px;
+    padding-left: 5%;    
+    }
+    .spotify    {
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%; 
+     }
+    .spotify div{
+        margin-right: 3.43%;
+        padding-bottom: 3.43%;
+        margin-left: 3.43%;
+    }
+
 }
