@@ -9,8 +9,7 @@
     <title>Podcast channel</title>
     <link rel="stylesheet" href="./Styles/styles.css">
     <script src="https://kit.fontawesome.com/8a89a54854.js" crossorigin="anonymous"></script>
-    <link
-        href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
         rel="stylesheet">
 </head>
 
@@ -23,13 +22,14 @@
             <input type="checkbox" id="burger" />
             <label for="burger">
                 <img src="./Images/burger.svg" width="18px" height="18px" alt="burger-menu-image">
+                <img id="close" src="./Images/close.svg" width="18px" height="18px" alt="close-menu-image">
             </label>
             <nav class="submenu">
                 <ul>
-                    <li><a href="#episodios">EPISODIOS</a></li>
-                    <li><a href="#nosotros">NOSOTROS</a></li>
-                    <li><a href="#entrevistas">ENTREVISTAS</a></li>
-                    <li><a href="#topicos">TÓPICOS</a></li>
+                    <li><a href="#episodes">EPISODIOS</a></li>
+                    <li><a href="#where_we_from">NOSOTROS</a></li>
+                    <li><a href="#interviews">ENTREVISTAS</a></li>
+                    <li><a href="#topics">TÓPICOS</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,9 +45,9 @@
         <p id="p-mobile">Un podcast que explora el mundo de<br> la programación. Nuevos episodios,<br> todos los jueves
             cada
             15 días.</p>
-        <a class="conoce" href="#topicos">CONOCÉ MÁS</a>
+        <a class="conoce" href="#topics">CONOCÉ MÁS</a>
 
-        <div id="episodios">
+        <div id="episodes">
             <svg id="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,100 100,0 100,100" />
             </svg>
@@ -124,27 +124,28 @@
             <h5>Algunos de nuestros temas</h5>
         </div>
         <div id="images_topics">
-            <div><img src="./Images/icon1.svg" alt=""><br> Trabajo remoto</div>
-            <div><img src="./Images/icon2.svg" alt=""><br> Repensando la<br> programación</div>
-            <div><img src="./Images/icon3.svg" alt=""><br> Bases del código</div>
-            <div><img src="./Images/icon4.svg" alt=""><br> Seguridad<br> informática</div>
+            <div><img src="./Images/icon1.svg" alt="remote work"><br> Trabajo remoto</div>
+            <div><img src="./Images/icon2.svg" alt="rethinking programming"><br> Repensando la<br> programación</div>
+            <div><img src="./Images/icon3.svg" alt="code bases"><br> Bases del código</div>
+            <div><img src="./Images/icon4.svg" alt="Informatic security"><br> <span id="inf_sec_desktop"> Seguridad<br> informática</span> <span id="informatics_security">Seguridad informática</span></div>
         </div>
-        <div id="news">
+        <diav id="news">
             <svg id="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,100 100,0 100,100" />
             </svg>
             <div id="want">¿Querés las últimas novedades?</div>
-            <div id="listen">ESCUCHÁ LOS ESPISODIOS</div>
+            <a id="listen" href="#episodes">ESCUCHÁ LOS ESPISODIOS</a>
         </div>
     </div>
     </div>
     <footer> <div> © 2019— Hello blue pale dot
     </div>
-        <div id="icons"><i class="fab fa-spotify"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-telegram"></i>
+        <div id="icons">
+        <a href="https://www.spotify.com/co/"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> 
+        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a> 
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://web.telegram.org/"><i class="fab fa-telegram"></i></a> 
     </div>
     </footer>
 </body>
