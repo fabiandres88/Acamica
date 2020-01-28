@@ -1,7 +1,6 @@
 body{
     margin: 0%;
     padding: 0%;
-    border: 0%;    
     background-color: #ffffff;
 }
 header {
@@ -38,8 +37,7 @@ header {
     display: flex;
     font-family: 'IBM Plex Mono', monospace;
     margin-top: 28px;
-    height: 224px;
-       
+    height: 224px;       
 }
 .submenu ul li {     
     padding-right: 48px;
@@ -48,13 +46,18 @@ header {
 .submenu ul li a {
     text-decoration: none;
     color: #060A24;
-}/*
-.submenu ul li a:active {    
+}
+.submenu ul li a:visited {    
     text-decoration: line-through;
-    color: #060A24 56%;
-}*/
+    color: #060A24;
+}
 .submenu ul li a:hover {
     color: #00F3BB;
+    text-decoration: line-through;
+}
+.submenu ul li a:active {    
+    text-decoration: line-through;
+    color: #060A24 ;
 }
 h1{
     font-family: 'IBM Plex Sans', sans-serif;
@@ -71,7 +74,7 @@ h1{
 h2{
     display: none;
 }
-#world
+.world
 {
     text-decoration: line-through;
 }
@@ -90,7 +93,7 @@ h2{
 #p-mobile   {
     display: none;
 }
-.conoce{
+.know{
     background-color: #00F3BB;
     display: flex;
     justify-content: center;
@@ -107,7 +110,7 @@ h2{
     text-decoration: none;
     font-weight: bold;    
 }
-.conoce:hover{
+.know:hover{
     background:linear-gradient(to left, #0000FE,#00F0B8) ;
     color: #FFFFFF;
 }
@@ -115,8 +118,7 @@ h2{
     width: 100%;
     height: 1042.6px;
     position: relative;
-    background-image: linear-gradient(to bottom left, #0000FF, #0000A3);
-    
+    background-image: linear-gradient(to left, #0000FF, #0000A3);    
 }
 svg {
     position: absolute;
@@ -124,14 +126,14 @@ svg {
     width: 100%;
     height: 10vw;
 }
-#triangle {
+.triangle {
     position: absolute;
     top: 0;
     width: 100%;
     height: 10vw;
     transform: rotate(180deg);
 }
-#titulo {
+#title {
     color: #ffffff;
     font-size: 36px;
     line-height: 42px;
@@ -146,15 +148,38 @@ svg {
    grid-template-columns: repeat(2, 1fr);
    grid-template-rows: repeat(2, 1fr);
    width: 100%; 
+   position: absolute;
 }
-.episoderight{
-    margin-right: 5%;
-    margin-left: 13.88%;
-    padding-bottom: 10.01%;      
+#iframeone{
+    position: relative;
+    border: 0px;
+    width: 81.115%;
+    height: 232px;
+    padding-left: 13.888%;
+    padding-bottom: 72px;     
 }
-.episodeleft{
-    margin-right: 13.88%;
-    margin-left: 5%;
+#iframetwo{
+    position: relative;
+    border: 0px;
+    width: 81.115%;
+    height:232px;
+    padding-right: 13.888%;
+    padding-left: 5%;
+}
+#iframethree{
+    position: relative;
+    border: 0px;
+    width: 81.115%;
+    height: 232px;
+    padding-left: 13.888%; 
+}
+#iframefour{
+    position: relative;
+    border: 0px;
+    width: 81.115%;
+    height: 232px;
+    padding-right: 13.888%;
+    padding-left: 5%;
 }
 #where_we_from
 {
@@ -163,7 +188,7 @@ svg {
     height: 92%;
     display: grid;
     grid-template-columns:50% 50%;
-    grid-template-rows: 1;
+    grid-template-rows: 1fr;
 }
 #where_we_from #img_woman{
    grid-column-start: 1;
@@ -190,7 +215,7 @@ svg {
     font-size: 48px;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
-    width: 55.41%;
+    width: 100%;
 }
 #we_mobile{
     display: none;
@@ -202,7 +227,7 @@ svg {
    font-size: 16px;
    font-weight: 400;
    line-height: 24px;
-   width: 64.44%;
+   width: 100%;
 }
 #text_mobile{
     display: none;
@@ -257,7 +282,7 @@ svg {
     width: 100%;
     height: 518px;
     position: relative;
-    background-image: linear-gradient(to bottom left, #0000FF, #0000A3);
+    background-image: linear-gradient(to left, #0000FF, #0000A3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -316,15 +341,7 @@ footer div{
     padding-right: 3.88%;
 }  
 /*
-
-
-#novedades
-{
-    width: 320px;
-    height: 341px;
-    background-image: linear-gradient(170deg, #ffffff 5%, #0000FF 0%, #0000A3 95%);
-}
-
+Media Queries
 */
 @media only screen and (max-width: 600px) {
     
@@ -353,8 +370,7 @@ footer div{
         align-items: center;
         justify-items: end;
         margin: 0px;
-        padding: 0px;
-               
+        padding: 0px;               
     }
    .submenu    {
         list-style: none;        
@@ -379,6 +395,15 @@ footer div{
         font-weight: 200;
         color: #ffffff;
         font-family: 'IBM Plex Mono', monospace;
+    }
+    .submenu ul li a:visited{
+        color: #FFFFFF;
+    }
+    .submenu ul li a:hover{
+        color: #FFFFFF;
+    }
+    .submenu ul li a:active{
+        color: #FFFFFF;
     }
     #burger:checked ~ .submenu    {
         left: 0px;
@@ -419,7 +444,7 @@ footer div{
     #p-desktop  {
         display: none;
     }
-    .conoce {
+    .know {
         background-color: #00F3BB;    
         width: 90%;
         height: 48px;
@@ -434,8 +459,11 @@ footer div{
     #episodes{
         width: 100%;
         height: 1231.5px;
+        position: relative;
+        background-image: linear-gradient(to bottom, #0000FF, #0000A3);    
+        
     }
-    #titulo {
+    #title {
         color: #ffffff;
         font-size: 36px;
         line-height: 42px;
@@ -449,10 +477,38 @@ footer div{
         grid-template-rows: repeat(4, 1fr);
         width: 100%; 
      }
-    .spotify div{
-        margin-right: 3.43%;
-        padding-bottom: 3.43%;
-        margin-left: 3.43%;
+     #iframeone{
+        position: relative;
+        border: 0px;
+        width: 93.125%;
+        height: 232px;
+        padding-right: 3.4375%;
+        padding-left: 3.4375%;
+        padding-bottom: 0px;
+    }
+    #iframetwo{
+        position: relative;
+        border: 0px;
+        width: 93.125%;
+        height:232px;
+        padding-right: 3.4375%;
+        padding-left: 3.4375%;
+    }
+    #iframethree{
+        position: relative;
+        border: 0px;
+        width: 93.125%;
+        height: 232px;
+        padding-right: 3.4375%;
+        padding-left: 3.4375%; 
+    }
+    #iframefour{
+        position: relative;
+        border: 0px;
+        width: 93.125%;
+        height: 232px;
+        padding-right: 3.4375%;
+        padding-left: 3.4375%;
     }
     #where_we_from
     {
@@ -469,6 +525,7 @@ footer div{
     #phone{
    
         width: 100%;
+        height: 126.585%;
         transform: translateY(-100px);
         padding: 0%;
     }
@@ -562,7 +619,7 @@ footer div{
         width: 100%;
         height: 341px;
         position: relative;
-        background-image: linear-gradient(  #0000FF,#0000A3); /*to bottom left,*/
+        background-image: linear-gradient(to left, #0000FF, #0000A3); 
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -621,10 +678,9 @@ footer div{
         color: #060A24;
     }   
     #icons i{
-        padding-right: 0%;   
-        
-        
+        padding-right: 0%;        
     }
+     
    
     
       

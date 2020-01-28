@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width , user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Podcast channel</title>
     <link rel="stylesheet" href="./Styles/styles.css">
     <script src="https://kit.fontawesome.com/8a89a54854.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,8 +21,8 @@
         <div id="menu">
             <input type="checkbox" id="burger" />
             <label for="burger">
-                <img src="./Images/burger.svg" width="18px" height="18px" alt="burger-menu-image">
-                <img id="close" src="./Images/close.svg" width="18px" height="18px" alt="close-menu-image">
+                <img src="./Images/burger.svg" width="18" height="18" alt="burger menu image">
+                <img id="close" src="./Images/close.svg" width="18" height="18" alt="close menu image">
             </label>
             <nav class="submenu">
                 <ul>
@@ -35,8 +35,8 @@
         </div>
     </header>
     <div id="container">
-        <h1>Hello <span id="world">world</span> pale blue dot<span id="point">.</span></h1>
-        <h2>Hello <span id="world">world</span> <br>pale blue dot.</h2>
+        <h1>Hello <span class="world">world</span> pale blue dot<span id="point">.</span></h1>
+        <h2>Hello <span class="world">world</span> <br>pale blue dot.</h2>
         <p id="p-desktop">El portal de podcast que explora el mundo de la programación y<br> la tecnología. Nuevos
             episodios, todos los jueves
             cada
@@ -45,38 +45,29 @@
         <p id="p-mobile">Un podcast que explora el mundo de<br> la programación. Nuevos episodios,<br> todos los jueves
             cada
             15 días.</p>
-        <a class="conoce" href="#topics">CONOCÉ MÁS</a>
+        <a class="know" href="#topics">CONOCÉ MÁS</a>
 
         <div id="episodes">
-            <svg id="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,100 100,0 100,100" />
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,100 100,0 100,100" />
             </svg>
-            <div id="titulo">Episodios</div>
+            <div id="title">Episodios</div>
             <div class="spotify">
-                <div class="episoderight"><iframe
-                        src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" width="100%"
-                        height="232px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-
-                <div class="episodeleft"><iframe
-                        src="https://open.spotify.com/embed-podcast/episode/2Hn8oHQ3EgVTtg8ysqfZco" width="100%"
-                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-                <div class="episoderight"><iframe
-                        src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="100%"
-                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-                <div class="episodeleft"><iframe
-                        src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" width="100%"
-                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
+                <iframe id="iframeone" src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" allow="encrypted-media"></iframe>
+                
+                <iframe id="iframetwo" src="https://open.spotify.com/embed-podcast/episode/2Hn8oHQ3EgVTtg8ysqfZco" allow="encrypted-media"></iframe>
+                
+                <iframe id="iframethree" src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" allow="encrypted-media"></iframe>
+                
+                <iframe id="iframefour" src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" allow="encrypted-media"></iframe>
+                
             </div>
         </div>
         <div id="where_we_from">
-            <div id="img_woman"><img id="phone" src="./Images/phone.png" alt=""></div>
+            <div id="img_woman"><img id="phone" src="./Images/phone.png" alt="Cell phone image"></div>
 
             <div id="paragraph_our">
                 <h3 id="we_desktop">De dónde venimos</h3>
@@ -112,13 +103,14 @@
             <h3>Invitadas/os estelares</h3>
         </div>
         <div id="special_guest">
-            <img src="./Images/grace-hopper.png" width="320px" height="243px" alt="">
-            <img src="./Images/Katie-Bouman.png" width="320px" height="243px" alt="">
-            <img src="./Images/Margaret_Hamilton.png" width="320px" height="243px" alt="">
-            <img src="./Images/An E.R.A.Univac 1103 computer in the 1950s.png" width="320px" height="243px" alt="">
-            <img src="./Images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
-                width="320px" height="243px" alt="">
-            <img src="./Images/susan-kare.png" width="320px" height="243px" alt="">
+            <img src="./Images/grace-hopper.png" width="320" height="243" alt="Grace Hopper image">
+            <img src="./Images/Katie-Bouman.png" width="320" height="243" alt="Katie Bouman image">
+            <img src="./Images/Margaret_Hamilton.png" width="320" height="243" alt="Margaret Hamilton image">
+            <img src="./Images/An-E.R.A.Univac-1103-computer-in-the-1950s.png" width="320" height="243"
+                alt="Univas Computer System">
+            <img src="./Images/Computer-operators-with-an-Eniac-the-world’s-first-programmable-general-purpose-computer.png"
+                width="320" height="243" alt="Eniac Computer">
+            <img src="./Images/susan-kare.png" width="320" height="243" alt="">
         </div>
         <div id="topics">
             <h5>Algunos de nuestros temas</h5>
@@ -127,26 +119,27 @@
             <div><img src="./Images/icon1.svg" alt="remote work"><br> Trabajo remoto</div>
             <div><img src="./Images/icon2.svg" alt="rethinking programming"><br> Repensando la<br> programación</div>
             <div><img src="./Images/icon3.svg" alt="code bases"><br> Bases del código</div>
-            <div><img src="./Images/icon4.svg" alt="Informatic security"><br> <span id="inf_sec_desktop"> Seguridad<br> informática</span> <span id="informatics_security">Seguridad informática</span></div>
+            <div><img src="./Images/icon4.svg" alt="Informatic security"><br> <span id="inf_sec_desktop"> Seguridad<br>
+                    informática</span> <span id="informatics_security">Seguridad informática</span></div>
         </div>
-        <diav id="news">
-            <svg id="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <div id="news">
+            <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon fill="white" points="0,100 100,0 100,100" />
             </svg>
             <div id="want">¿Querés las últimas novedades?</div>
             <a id="listen" href="#episodes">ESCUCHÁ LOS ESPISODIOS</a>
         </div>
     </div>
-    </div>
-    <footer> <div> © 2019— Hello blue pale dot
-    </div>
+    <footer>
+        <div> © 2019— Hello blue pale dot
+        </div>
         <div id="icons">
-        <a href="https://www.spotify.com/co/"><i class="fab fa-spotify"></i></a>
-        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> 
-        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a> 
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://web.telegram.org/"><i class="fab fa-telegram"></i></a> 
-    </div>
+            <a href="https://www.spotify.com/co/"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://web.telegram.org/"><i class="fab fa-telegram"></i></a>
+        </div>
     </footer>
 </body>
 
