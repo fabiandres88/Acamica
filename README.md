@@ -1,4 +1,4 @@
 # Acamica
 
 It contains all developed projects as part of Acamica Scholarship.
-(DWFS) 
+(Web Full Stack Development) 
