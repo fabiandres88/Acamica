@@ -9,7 +9,7 @@ $primaryfont: "Chakra Petch";
 body{
     margin: 0%;
     padding: 0%;
-    
+    background-color: rgb(250, 241, 249);
 }
 #title{
     display: flex;
@@ -94,7 +94,11 @@ p {
         height: 24px;        
     }
     form{
-        
+        #formSearch{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
         #mySearch{
             width: 88.08%;
             height: 48px;
@@ -108,6 +112,7 @@ p {
         }
     #ButtonSearch{
         text-align: center;
+        margin-left: 8px;
         width: 8.5%;
         height: 36px;
         color: $searchBarColor;
