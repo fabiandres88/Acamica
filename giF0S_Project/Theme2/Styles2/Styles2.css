@@ -1,7 +1,7 @@
 body {
   margin: 0%;
   padding: 0%;
-  background-color: #faf1f9;
+  background-color: #110038;
 }
 
 #title {
@@ -11,8 +11,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   border-bottom: #110038 1px solid;
   width: 100%;
   height: 23px;
@@ -47,11 +47,8 @@ body {
   display: block;
   width: 144px;
   height: 36px;
-  background-color: #F7C9F3;
-  color: #110038;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Chakra Petch";
+  color: #FFFFFF;
+  background-color: #EE3EFE;
   margin-left: 47.6%;
   margin-top: 44px;
   margin-bottom: 38px;
@@ -61,11 +58,8 @@ body {
   display: block;
   width: 131px;
   height: 36px;
-  background-color: #F7C9F3;
-  color: #110038;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Chakra Petch";
+  color: #FFFFFF;
+  background-color: #EE3EFE;
   margin-left: 16px;
   margin-top: 44px;
   margin-bottom: 38px;
@@ -77,14 +71,16 @@ body {
   display: flex;
   width: 36px;
   height: 36px;
-  background-color: #F7C9F3;
+  background-color: #EE3EFE;
   margin-left: 0px;
   margin-top: 44px;
   margin-bottom: 38px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url(../Images/dropdown.svg);
+  background-image: url(../../Images/forward.svg);
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -92,22 +88,19 @@ body {
 #buttonzone p {
   margin-right: 83, 4492%;
   margin-left: 1.147%;
-  color: #110038;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Chakra Petch";
+  color: #FFFFFF;
 }
 
 #searchbox {
-  background-color: #E6E6E6;
+  background-color: #B4B4B4;
   width: 83.4492%;
   height: 99px;
   margin-left: 6.9%;
 }
 
 #searchbox #SearchboxTitle {
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
 #searchbox h2 {
@@ -177,8 +170,8 @@ body {
   margin-left: 8px;
   width: 8.5%;
   height: 36px;
-  background-color: #E6E6E6;
-  color: #B4B4B4;
+  background-color: #B4B4B4;
+  color: #8F8F8F;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
@@ -205,29 +198,29 @@ body {
 
 #suggestions #suggest::-webkit-input-placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
 #suggestions #suggest:-ms-input-placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
 #suggestions #suggest::-ms-input-placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
 #suggestions #suggest::placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
@@ -300,29 +293,29 @@ body {
 
 #trendsSection #trends::-webkit-input-placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
 #trendsSection #trends:-ms-input-placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
 #trendsSection #trends::-ms-input-placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
 #trendsSection #trends::placeholder {
   color: #110038;
-  font-family: "Chakra Petch";
   font-size: 14px;
+  font-family: "Chakra Petch";
   font-weight: 400;
 }
 
@@ -354,4 +347,4 @@ body {
   height: 280px;
   width: 20.927%;
 }
-/*# sourceMappingURL=Styles.css.map */
+/*# sourceMappingURL=Styles2.css.map */
