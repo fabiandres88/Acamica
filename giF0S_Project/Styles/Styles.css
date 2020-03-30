@@ -1,0 +1,273 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+#title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  border-bottom: #110038 1px solid;
+  width: 100%;
+  height: 23px;
+}
+
+#title h1 {
+  font-size: 12px;
+  margin-left: 0.4867%;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+#buttonzone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 118px;
+}
+
+#buttonzone #logotipe {
+  text-align: center;
+  margin-left: 6.9%;
+  margin-top: 35px;
+  margin-bottom: 19px;
+}
+
+#buttonzone #buttonOne {
+  display: block;
+  width: 144px;
+  height: 36px;
+  background-color: #F7C9F3;
+  margin-left: 47.6%;
+  margin-top: 44px;
+  margin-bottom: 38px;
+}
+
+#buttonzone #buttonTwo {
+  display: block;
+  width: 131px;
+  height: 36px;
+  background-color: #F7C9F3;
+  margin-left: 16px;
+  margin-top: 44px;
+  margin-bottom: 38px;
+}
+
+#buttonzone #themes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  background-color: #F7C9F3;
+  margin-left: 0px;
+  margin-top: 44px;
+  margin-bottom: 38px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../Images/dropdown.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#buttonzone p {
+  margin-right: 83,4492%;
+  margin-left: 1.147%;
+}
+
+#searchbox {
+  background-color: #E6E6E6;
+  width: 83.4492%;
+  height: 99px;
+  margin-left: 6.9%;
+}
+
+#searchbox #SearchboxTitle {
+  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+#searchbox h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+  margin-left: 6px;
+  font-family: "Chakra Petch";
+  font-weight: bold;
+  font-size: 14px;
+  height: 24px;
+}
+
+#searchbox form #mySearch {
+  width: 88.08%;
+  height: 48px;
+  margin-left: 15px;
+}
+
+#searchbox form #mySearch::-webkit-input-placeholder {
+  color: #B4B4B4;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+}
+
+#searchbox form #mySearch:-ms-input-placeholder {
+  color: #B4B4B4;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+}
+
+#searchbox form #mySearch::-ms-input-placeholder {
+  color: #B4B4B4;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+}
+
+#searchbox form #mySearch::placeholder {
+  color: #B4B4B4;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+}
+
+#searchbox form #ButtonSearch {
+  text-align: center;
+  width: 8.5%;
+  height: 36px;
+  color: #B4B4B4;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
+}
+
+#searchbox form #ButtonSearch #ButtonContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#suggestions #suggest {
+  height: 32px;
+  width: 83.17%;
+  margin-left: 6.9%;
+  margin-top: 76px;
+}
+
+#GifSugget {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 19px;
+}
+
+#GifSugget #first {
+  margin-left: 6.955%;
+  margin-right: 12px;
+  height: 280px;
+  width: 19.4720%;
+}
+
+#GifSugget #first img {
+  height: 280px;
+  width: 100%;
+}
+
+#GifSugget #second {
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 280px;
+  width: 19.4720%;
+}
+
+#GifSugget #second img {
+  height: 280px;
+  width: 100%;
+}
+
+#GifSugget #third {
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 280px;
+  width: 19.4720%;
+}
+
+#GifSugget #third img {
+  height: 280px;
+  width: 100%;
+}
+
+#GifSugget #fourth {
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 280px;
+  width: 19.4720%;
+}
+
+#GifSugget #fourth img {
+  height: 280px;
+  width: 100%;
+}
+
+#trendsSection #trends {
+  width: 83.44%;
+  height: 32px;
+  margin-top: 68px;
+  margin-left: 6.9541%;
+}
+
+.trendsCharge {
+  margin-left: 6.955%;
+  margin-top: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trendsCharge .trendsFirstCharge {
+  margin-right: 12px;
+  margin-left: 0%;
+  height: 280px;
+  width: 20.927%;
+}
+
+.trendsCharge img {
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 280px;
+  width: 20.927%;
+}
+
+.trendsCharge div img {
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 280px;
+  width: 20.927%;
+}
+/*# sourceMappingURL=Styles.css.map */

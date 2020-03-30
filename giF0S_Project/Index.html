@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>giF0S Project</title>
     <link rel="stylesheet" href="./Styles/Styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div>
+        <header id="title">
+            <h1>Bienvenidos/as a Guifos.com!------Donde los gifs están//////Número de visitas:</h1>
+        </header>
+        <div id="buttonzone"><img id="logotipe" src="./Images/gifOF_logo.png" width="102.6px" height="64px"
+                alt="Logo blu Gifos">
+            <button id="buttonOne">Crear Guifos</button> <button id="buttonTwo">Elegir Tema</button>
+            <select id="themes" name="themes">
+                <option value="Empty"></option>
+                <option value="Theme1">Theme1</option>
+                <option value="Theme2">Theme2</option>
+            </select>
+            <p> <ins>M</ins>is Guifos</p>
+        </div>
+        <div id="searchbox">
+            <div id="SearchboxTitle">
+                <h2>Buscar</h2>
+            </div>
+            <form>
+                <div>
+                    <input type="search" id="mySearch" name="mySearch"
+                        placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
+                    <button id="ButtonSearch">
+                        <div id="ButtonContent"><img id="mGlassImage" src="./Images/lupa_inactive.svg"
+                                alt="magnifying_glass_image"> Buscar</div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="suggestions">
+        <input id="suggest" type="text" name="we_suggest_you" placeholder="Hoy te sugerimos:" size="32">
+    </div>
+    <div id="GifSugget">
+        <div id="first"><img src="./Images/Test.jpg" alt="Test"></div>
+        <div id="second"><img src="./Images/Test.jpg" alt="Test"></div>
+        <div id="third"><img src="./Images/Test.jpg" alt="Test"></div>
+        <div id="fourth"><img src="./Images/Test.jpg" alt="Test"></div>
+    </div>
+    <div id="trendsSection">
+        <input type="text" id="trends" name="trends" placeholder="Tendencias:" size="32">
+        <div class="trendsCharge">
+            <img class="trendsFirstCharge" src="./Images/Test.jpg" alt="Test">
+            <img src="./Images/Test.jpg" alt="Test">
+            <img src="./Images/Test.jpg" alt="Test">
+            <img src="./Images/Test.jpg" alt="Test">
+        </div>
+        <div class="trendsCharge">
+            <img class="trendsFirstCharge" src="./Images/Test.jpg" alt="Test">
+            <img src="./Images/Test.jpg" alt="Test">
+            <img src="./Images/Test.jpg" alt="Test">
+            <img src="./Images/Test.jpg" alt="Test">
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
