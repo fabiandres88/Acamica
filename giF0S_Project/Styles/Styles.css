@@ -13,9 +13,10 @@ body {
           align-items: center;
   background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-  border-bottom: #110038 1px solid;
   width: 100%;
   height: 23px;
+  -webkit-box-shadow: inset 0 -1px 0 0 #110038;
+          box-shadow: inset 0 -1px 0 0 #110038;
 }
 
 #title h1 {
@@ -55,6 +56,9 @@ body {
   margin-left: 47.6%;
   margin-top: 44px;
   margin-bottom: 38px;
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #buttonzone #buttonTwo {
@@ -69,6 +73,9 @@ body {
   margin-left: 16px;
   margin-top: 44px;
   margin-bottom: 38px;
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #buttonzone #themes {
@@ -87,6 +94,9 @@ body {
   background-image: url(../Images/dropdown.svg);
   background-position: center;
   background-repeat: no-repeat;
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #buttonzone p {
@@ -103,11 +113,18 @@ body {
   width: 83.4492%;
   height: 99px;
   margin-left: 6.9%;
+  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
+          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
 }
 
 #searchbox #SearchboxTitle {
   background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  -webkit-box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
+          box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
+  border-right: #B4B4B4 2px;
+  width: 99.5%;
+  margin-left: 0.25%;
 }
 
 #searchbox h2 {
@@ -118,11 +135,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #FFFFFF;
-  margin-left: 6px;
   font-family: "Chakra Petch";
   font-weight: bold;
   font-size: 14px;
   height: 24px;
+  width: 100%;
+  border-top: #FFFFFF solid 2px;
 }
 
 #searchbox form #formSearch {
@@ -142,6 +160,9 @@ body {
   width: 88.08%;
   height: 48px;
   margin-left: 15px;
+  border: solid 1px #979797;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6E6E6, inset 1px 1px 0 0 #000000;
+          box-shadow: inset -1px -1px 0 0 #E6E6E6, inset 1px 1px 0 0 #000000;
 }
 
 #searchbox form #mySearch::-webkit-input-placeholder {
@@ -182,6 +203,9 @@ body {
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
+  border: solid 1px #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #searchbox form #ButtonSearch #ButtonContent {
@@ -196,11 +220,57 @@ body {
       justify-content: space-around;
 }
 
+#SubMenuSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 160px;
+  background-color: #E6E6E6;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  display: none;
+}
+
+#SubMenuSearch button {
+  background-color: #E6E6E6;
+  width: 87.9166%;
+  height: 34px;
+  margin-left: 1.3333%;
+}
+
+#SubMenuSearch #ResultSearch {
+  margin-top: 17px;
+}
+
+#SubMenuSearch #SimilarResult {
+  margin-top: 11px;
+  background-color: #f0f0f0;
+  border: solid 1px #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#SubMenuSearch #OtherOne {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  border: solid 1px #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
 #suggestions #suggest {
   height: 32px;
   width: 83.17%;
   margin-left: 6.9%;
   margin-top: 76px;
+  border: solid 1px #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
 }
 
 #suggestions #suggest::-webkit-input-placeholder {
@@ -296,6 +366,9 @@ body {
   height: 32px;
   margin-top: 68px;
   margin-left: 6.9541%;
+  border: solid 1px #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
 }
 
 #trendsSection #trends::-webkit-input-placeholder {

@@ -17,9 +17,9 @@ body {
     display: flex;
     align-items: center;
     background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-    border-bottom: $outsidebordercolor 1px solid;
     width: 100%;
     height: 23px;
+    box-shadow: inset 0 -1px 0 0 $outsidebordercolor;
 
     h1 {
         font-size: 12px;
@@ -54,6 +54,8 @@ body {
         margin-left: 47.6%;
         margin-top: 44px;
         margin-bottom: 38px;
+        border: $outsidebordercolor outset 1px;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
     }
 
     #buttonTwo {
@@ -68,6 +70,8 @@ body {
         margin-left: 16px;
         margin-top: 44px;
         margin-bottom: 38px;
+        border: $outsidebordercolor outset 1px;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
     }
 
     #themes {
@@ -82,6 +86,8 @@ body {
         background-image: url(../Images/dropdown.svg);
         background-position: center;
         background-repeat: no-repeat;
+        border: $outsidebordercolor outset 1px;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
     }
 
     p {
@@ -99,20 +105,26 @@ body {
     width: 83.4492%;
     height: 99px;
     margin-left: 6.9%;
+    box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
     #SearchboxTitle {
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+        box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox ,inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
+        border-right: $searchBarColor 2px;
+        width: 99.5%;
+        margin-left: 0.25%;
     }
 
     h2 {
         display: flex;
         align-items: center;
         color: $fontcolorheader;
-        margin-left: 6px;
         font-family: $primaryfont;
         font-weight: bold;
         font-size: 14px;
         height: 24px;
+        width: 100%;
+        border-top: $fontcolorheader solid 2px;
     }
 
     form {
@@ -126,6 +138,8 @@ body {
             width: 88.08%;
             height: 48px;
             margin-left: 15px;
+            border: solid 1px #979797;
+            box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
 
             &::placeholder {
                 color: $searchBarColor;
@@ -140,11 +154,13 @@ body {
             margin-left: 8px;
             width: 8.5%;
             height: 36px;
-            background-color: $backgroundcolorsearchbox ;
+            background-color: $backgroundcolorsearchbox;
             color: $searchBarColor;
             font-size: 16px;
             font-family: $primaryfont;
             font-weight: 400;
+            border: solid 1px #808080;
+            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
 
             #ButtonContent {
                 display: flex;
@@ -155,13 +171,49 @@ body {
     }
 }
 
+#SubMenuSearch{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 160px;
+    background-color: $backgroundcolorsearchbox;
+    transform: translateY(15px);
+    display: none;
+
+    button{
+        background-color: $backgroundcolorsearchbox;
+        width: 87.9166%;
+        height: 34px;
+        margin-left: 1.3333%;
+    }
+    #ResultSearch{
+        margin-top: 17px;
+    }
+    #SimilarResult{
+        margin-top: 11px;
+        background-color: #f0f0f0;
+        border: solid 1px #808080;
+        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+    }
+    #OtherOne{
+        margin-top: 10px;
+        background-color: #f0f0f0;
+        border: solid 1px #808080;
+        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+    }
+}
+
 #suggestions {
+
     #suggest {
         height: 32px;
         width: 83.17%;
         margin-left: 6.9%;
         margin-top: 76px;
-        &::placeholder{
+        border: solid 1px #E6BBE2;
+        box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+
+        &::placeholder {
             color: $outsidebordercolor;
             font-family: $primaryfont;
             font-size: 14px;
@@ -231,7 +283,10 @@ body {
         height: 32px;
         margin-top: 68px;
         margin-left: 6.9541%;
-        &::placeholder{
+        border: solid 1px #E6BBE2;
+        box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+
+        &::placeholder {
             color: $outsidebordercolor;
             font-family: $primaryfont;
             font-size: 14px;

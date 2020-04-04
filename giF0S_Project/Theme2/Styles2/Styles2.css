@@ -13,9 +13,10 @@ body {
           align-items: center;
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-  border-bottom: #110038 1px solid;
   width: 100%;
   height: 23px;
+  -webkit-box-shadow: inset 0 -1px 0 0 #110038;
+          box-shadow: inset 0 -1px 0 0 #110038;
 }
 
 #title h1 {
@@ -47,22 +48,34 @@ body {
   display: block;
   width: 144px;
   height: 36px;
-  color: #FFFFFF;
   background-color: #EE3EFE;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
   margin-left: 47.6%;
   margin-top: 44px;
   margin-bottom: 38px;
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #buttonzone #buttonTwo {
   display: block;
   width: 131px;
   height: 36px;
-  color: #FFFFFF;
   background-color: #EE3EFE;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
   margin-left: 16px;
   margin-top: 44px;
   margin-bottom: 38px;
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #buttonzone #themes {
@@ -83,12 +96,18 @@ body {
           transform: rotate(-270deg);
   background-position: center;
   background-repeat: no-repeat;
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset 0 -1px 0 0 #FFFFFF, inset 1px 0 0 0 #FFFFFF;
+          box-shadow: inset 0 -1px 0 0 #FFFFFF, inset 1px 0 0 0 #FFFFFF;
 }
 
 #buttonzone p {
   margin-right: 83, 4492%;
   margin-left: 1.147%;
   color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
 }
 
 #searchbox {
@@ -96,11 +115,18 @@ body {
   width: 83.4492%;
   height: 99px;
   margin-left: 6.9%;
+  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
+          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
 }
 
 #searchbox #SearchboxTitle {
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  -webkit-box-shadow: inset 2px 0 0 0 #B4B4B4, inset 0 4px 0 0 #B4B4B4, inset -2px 0 0 0 #B4B4B4;
+          box-shadow: inset 2px 0 0 0 #B4B4B4, inset 0 4px 0 0 #B4B4B4, inset -2px 0 0 0 #B4B4B4;
+  border-right: solid 1px #8F8F8F;
+  width: 99.5%;
+  margin-left: 0.25%;
 }
 
 #searchbox h2 {
@@ -111,11 +137,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #FFFFFF;
-  margin-left: 6px;
   font-family: "Chakra Petch";
   font-weight: bold;
   font-size: 14px;
   height: 24px;
+  width: 100%;
+  border-top: solid 2px #FFFFFF;
 }
 
 #searchbox form #formSearch {
@@ -135,6 +162,9 @@ body {
   width: 88.08%;
   height: 48px;
   margin-left: 15px;
+  border: solid 1px #979797;
+  -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
+          box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
 }
 
 #searchbox form #mySearch::-webkit-input-placeholder {
@@ -175,6 +205,9 @@ body {
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
+  border: solid 1px #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #searchbox form #ButtonSearch #ButtonContent {
@@ -194,6 +227,9 @@ body {
   width: 83.17%;
   margin-left: 6.9%;
   margin-top: 76px;
+  border: solid 1px #2E32FB;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
 }
 
 #suggestions #suggest::-webkit-input-placeholder {
@@ -289,6 +325,9 @@ body {
   height: 32px;
   margin-top: 68px;
   margin-left: 6.9541%;
+  border: solid 1px #2E32FB;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
 }
 
 #trendsSection #trends::-webkit-input-placeholder {

@@ -27,22 +27,28 @@
         </div>
         <div id="searchbox">
             <div id="SearchboxTitle">
-                <h2>Buscar</h2>
+                <h2>&nbsp;Buscar</h2>
             </div>
             <form>
                 <div id="formSearch">
-                    <input type="search" id="mySearch" name="mySearch"
+                    <input type="search" id="mySearch" name="mySearch" onsearch="GetSearchValue()"
                         placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
                     <button id="ButtonSearch">
                         <div id="ButtonContent"><img id="mGlassImage" src="./Images/lupa_inactive.svg"
                                 alt="magnifying_glass_image"> Buscar</div>
                     </button>
+                   
+                </div>
+                <div id="SubMenuSearch">
+                    <button id="ResultSearch" >Resultado de búsqueda sugerido</button>
+                    <button id="SimilarResult" >Un resultado similar de búsqueda</button>
+                    <button id="OtherOne" >Y otro más</button>
                 </div>
             </form>
         </div>
     </div>
     <div id="suggestions">
-        <input id="suggest" type="text" name="we_suggest_you" placeholder="Hoy te sugerimos:" size="32">
+        <input id="suggest" type="text" name="we_suggest_you" placeholder="&nbsp;&nbsp;Hoy te sugerimos:" size="32">
     </div>
     <div id="GifSugget">
         <div id="first"><img src="./Images/Test.jpg" alt="Test"></div>
@@ -51,7 +57,7 @@
         <div id="fourth"><img src="./Images/Test.jpg" alt="Test"></div>
     </div>
     <div id="trendsSection">
-        <input type="text" id="trends" name="trends" placeholder="Tendencias:" size="32">
+        <input type="text" id="trends" name="trends" placeholder="&nbsp;&nbsp;Tendencias:" size="32">
         <div class="trendsCharge">
             <img class="trendsFirstCharge" src="./Images/Test.jpg" alt="Test">
             <img src="./Images/Test.jpg" alt="Test">

@@ -17,9 +17,9 @@ body {
     display: flex;
     align-items: center;
     background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-    border-bottom: $outsidebordercolor 1px solid;
     width: 100%;
     height: 23px;
+    box-shadow: inset 0 -1px 0 0 $outsidebordercolor;
 
     h1 {
         font-size: 12px;
@@ -46,22 +46,32 @@ body {
         display: block;
         width: 144px;
         height: 36px;
-        color: $fontcolorheader;
         background-color: $backgroundcolorbtn;
+        color: $fontcolorheader;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $primaryfont;
         margin-left: 47.6%;
         margin-top: 44px;
         margin-bottom: 38px;
+        border: $outsidebordercolor outset 1px;
+        box-shadow: inset -1px -1px 0 0 $themeonegradientcolor1, inset 1px 1px 0 0 $fontcolorheader;
     }
 
     #buttonTwo {
         display: block;
         width: 131px;
         height: 36px;
-        color: $fontcolorheader;
         background-color: $backgroundcolorbtn;
+        color: $fontcolorheader;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $primaryfont;
         margin-left: 16px;
         margin-top: 44px;
         margin-bottom: 38px;
+        border: $outsidebordercolor outset 1px;
+        box-shadow: inset -1px -1px 0 0 $themeonegradientcolor1, inset 1px 1px 0 0 $fontcolorheader;
     }
 
     #themes {
@@ -77,12 +87,17 @@ body {
         transform: rotate(-270deg);
         background-position: center;
         background-repeat: no-repeat;
+        border: $outsidebordercolor outset 1px;
+        box-shadow: inset 0 -1px 0 0 $fontcolorheader, inset 1px 0 0 0 $fontcolorheader;
     }
 
     p {
         margin-right: 83, 4492%;
         margin-left: 1.147%;
         color: $fontcolorheader;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $primaryfont;
     }
 }
 
@@ -91,20 +106,26 @@ body {
     width: 83.4492%;
     height: 99px;
     margin-left: 6.9%;
+    box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
     #SearchboxTitle {
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+        box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox, inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
+        border-right: solid 1px $searchBarColor ;
+        width: 99.5%;
+        margin-left: 0.25%;        
     }
 
     h2 {
         display: flex;
         align-items: center;
         color: $fontcolorheader;
-        margin-left: 6px;
         font-family: $primaryfont;
         font-weight: bold;
         font-size: 14px;
         height: 24px;
+        width: 100%;
+        border-top: solid 2px $fontcolorheader;
     }
 
     form {
@@ -118,6 +139,8 @@ body {
             width: 88.08%;
             height: 48px;
             margin-left: 15px;
+            border: solid 1px #979797;
+            box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
 
             &::placeholder {
                 color: $backgroundcolorsearchbox;
@@ -137,6 +160,8 @@ body {
             font-size: 16px;
             font-family: $primaryfont;
             font-weight: 400;
+            border: solid 1px #808080;
+            box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 $fontcolorheader;
 
             #ButtonContent {
                 display: flex;
@@ -153,6 +178,8 @@ body {
         width: 83.17%;
         margin-left: 6.9%;
         margin-top: 76px;
+        border: solid 1px #2E32FB;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor ;
 
         &::placeholder {
             color: $outsidebordercolor;
@@ -225,7 +252,10 @@ body {
         height: 32px;
         margin-top: 68px;
         margin-left: 6.9541%;
-        &::placeholder{
+        border: solid 1px #2E32FB;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor ;
+
+        &::placeholder {
             color: $outsidebordercolor;
             font-size: 14px;
             font-family: $primaryfont;
