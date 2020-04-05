@@ -15,6 +15,7 @@
         <header id="title">
             <h1>Bienvenidos/as a Guifos.com!------Donde los gifs están//////Número de visitas:</h1>
         </header>
+        <!-- SECTION IMAGE LOGO AND BUTTONS TO SELECT THEME -->
         <div id="buttonzone"><img id="logotipe" src="./Images/gifOF_logo.png" width="102.6px" height="64px"
                 alt="Logo blu Gifos">
             <button id="buttonOne">Crear Guifos</button> <button id="buttonTwo">Elegir Tema</button>
@@ -25,6 +26,7 @@
             </select>
             <p> <ins>M</ins>is Guifos</p>
         </div>
+        <!--SECTION BAR SEARCH -->
         <div id="searchbox">
             <div id="SearchboxTitle">
                 <h2>&nbsp;Buscar</h2>
@@ -33,12 +35,13 @@
                 <div id="formSearch">
                     <input type="search" id="mySearch" name="mySearch" onsearch="GetSearchValue()"
                         placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
-                    <button id="ButtonSearch">
+                    <button id="ButtonSearch" type="button">
                         <div id="ButtonContent"><img id="mGlassImage" src="./Images/lupa_inactive.svg"
                                 alt="magnifying_glass_image"> Buscar</div>
                     </button>
                    
                 </div>
+                <!--SECTION SUB MENU SEARCH -->
                 <div id="SubMenuSearch">
                     <button id="ResultSearch" >Resultado de búsqueda sugerido</button>
                     <button id="SimilarResult" >Un resultado similar de búsqueda</button>
@@ -47,15 +50,17 @@
             </form>
         </div>
     </div>
+    <!--SECTION SUGGESTIONS -->
     <div id="suggestions">
         <input id="suggest" type="text" name="we_suggest_you" placeholder="&nbsp;&nbsp;Hoy te sugerimos:" size="32">
     </div>
     <div id="GifSugget">
-        <div id="first"><img src="./Images/Test.jpg" alt="Test"></div>
+        <div id="first"><embed id="FirstSuggest" src="" alt="Test"></div>
         <div id="second"><img src="./Images/Test.jpg" alt="Test"></div>
         <div id="third"><img src="./Images/Test.jpg" alt="Test"></div>
         <div id="fourth"><img src="./Images/Test.jpg" alt="Test"></div>
     </div>
+    <!--SECTION TRENDS  -->
     <div id="trendsSection">
         <input type="text" id="trends" name="trends" placeholder="&nbsp;&nbsp;Tendencias:" size="32">
         <div class="trendsCharge">
