@@ -16,7 +16,7 @@
             <h1>Bienvenidos/as a Guifos.com!------Donde los gifs están//////Número de visitas:</h1>
         </header>
         <!-- SECTION IMAGE LOGO AND BUTTONS TO SELECT THEME -->
-        <div id="buttonzone"><img id="logotipe" src="./Images/gifOF_logo.png" width="102.6px" height="64px"
+        <div id="buttonZone"><img id="logotipe" src="./Images/gifOF_logo.png" width="102.6px" height="64px"
                 alt="Logo blu Gifos">
             <button id="buttonOne">Crear Guifos</button> <button id="buttonTwo">Elegir Tema</button>
             <select id="themes" name="themes">
@@ -27,38 +27,53 @@
             <p> <ins>M</ins>is Guifos</p>
         </div>
         <!--SECTION BAR SEARCH -->
-        <div id="searchbox">
-            <div id="SearchboxTitle">
+        <div id="searchBox">
+            <div id="searchBoxTitle">
                 <h2>&nbsp;Buscar</h2>
             </div>
-            <form>
-                <div id="formSearch">
-                    <input type="search" id="mySearch" name="mySearch" onsearch="GetSearchValue()"
-                        placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
-                    <button id="ButtonSearch" type="button">
-                        <div id="ButtonContent"><img id="mGlassImage" src="./Images/lupa_inactive.svg"
-                                alt="magnifying_glass_image"> Buscar</div>
-                    </button>
-                   
-                </div>
-                <!--SECTION SUB MENU SEARCH -->
-                <div id="SubMenuSearch">
-                    <button id="ResultSearch" >Resultado de búsqueda sugerido</button>
-                    <button id="SimilarResult" >Un resultado similar de búsqueda</button>
-                    <button id="OtherOne" >Y otro más</button>
-                </div>
-            </form>
+
+            <div id="formSearch">
+                <input type="search" id="mySearch" name="mySearch" onsearch="myFunction()"
+                    placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
+                <button id="buttonSearch" type="button">
+                    <div id="buttonContent"><img id="mGlassImage" src="./Images/lupa_inactive.svg"
+                            alt="magnifying_glass_image"> Buscar</div>
+                </button>
+
+            </div>
+            <!--SECTION SUB MENU SEARCH -->
+            <div id="subMenuSearch">
+                <button id="resultSearch">Resultado de búsqueda sugerido</button>
+                <button id="similarResult">Un resultado similar de búsqueda</button>
+                <button id="otherOneResult">Y otro más</button>
+            </div>
         </div>
+
     </div>
+
     <!--SECTION SUGGESTIONS -->
     <div id="suggestions">
         <input id="suggest" type="text" name="we_suggest_you" placeholder="&nbsp;&nbsp;Hoy te sugerimos:" size="32">
     </div>
-    <div id="GifSugget">
-        <div id="first"><embed id="FirstSuggest" src="" alt="Test"></div>
-        <div id="second"><img src="./Images/Test.jpg" alt="Test"></div>
-        <div id="third"><img src="./Images/Test.jpg" alt="Test"></div>
-        <div id="fourth"><img src="./Images/Test.jpg" alt="Test"></div>
+    <div id="gifSuggest">
+
+        <div id="gifSuggest1">
+            <p><button class="buttonCloseGif" type="button"><img src="./Images/button3.svg" alt="Button-Close"></button></p>
+            <!-- <button class="seeMoreButton" type="button">Ver más…</button> -->
+        </div>
+        <div id="gifSuggest2">
+            <p><button class="buttonCloseGif" type="button"><img src="./Images/button3.svg" alt="Button-Close"></button></p>
+            <!-- <button class="seeMoreButton" type="button">Ver más…</button> -->
+        </div>
+        <div id="gifSuggest3">
+            <p><button class="buttonCloseGif" type="button"><img src="./Images/button3.svg" alt="Button-Close"></button></p>
+            <!-- <button class="seeMoreButton" type="button">Ver más…</button> -->
+        </div>
+        <div id="gifSuggest4">
+            <p><button class="buttonCloseGif" type="button"><img src="./Images/button3.svg" alt="Button-Close"></button></p>
+            <!-- <button class="seeMoreButton" type="button">Ver más…</button> -->
+        </div>
+
     </div>
     <!--SECTION TRENDS  -->
     <div id="trendsSection">

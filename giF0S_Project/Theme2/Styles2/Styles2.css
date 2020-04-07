@@ -119,7 +119,7 @@ body {
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
 }
 
-#searchbox #SearchboxTitle {
+#searchbox #searchBoxTitle {
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   -webkit-box-shadow: inset 2px 0 0 0 #B4B4B4, inset 0 4px 0 0 #B4B4B4, inset -2px 0 0 0 #B4B4B4;
@@ -145,7 +145,7 @@ body {
   border-top: solid 2px #FFFFFF;
 }
 
-#searchbox form #formSearch {
+#searchbox #formSearch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +158,7 @@ body {
           align-items: center;
 }
 
-#searchbox form #mySearch {
+#searchbox #formSearch #mySearch {
   width: 88.08%;
   height: 48px;
   margin-left: 15px;
@@ -167,35 +167,35 @@ body {
           box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
 }
 
-#searchbox form #mySearch::-webkit-input-placeholder {
+#searchbox #formSearch #mySearch::-webkit-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #mySearch:-ms-input-placeholder {
+#searchbox #formSearch #mySearch:-ms-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #mySearch::-ms-input-placeholder {
+#searchbox #formSearch #mySearch::-ms-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #mySearch::placeholder {
+#searchbox #formSearch #mySearch::placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #ButtonSearch {
+#searchbox #formSearch #buttonSearch {
   text-align: center;
   margin-left: 8px;
   width: 8.5%;
@@ -210,7 +210,7 @@ body {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#searchbox form #ButtonSearch #ButtonContent {
+#searchbox #formSearch #buttonSearch #buttonContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,6 +220,49 @@ body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+#subMenuSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 160px;
+  background-color: #B4B4B4;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  display: none;
+}
+
+#subMenuSearch button {
+  background-color: #B4B4B4;
+  width: 87.9166%;
+  height: 34px;
+  margin-left: 1.3333%;
+}
+
+#subMenuSearch #resultSearch {
+  margin-top: 17px;
+}
+
+#subMenuSearch #similarResult {
+  margin-top: 11px;
+  background-color: #f0f0f0;
+  border: solid 1px #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#subMenuSearch #otherOneResult {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  border: solid 1px #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
 }
 
 #suggestions #suggest {
@@ -260,7 +303,7 @@ body {
   font-weight: 400;
 }
 
-#GifSugget {
+#gifSuggest {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,50 +315,50 @@ body {
   margin-top: 19px;
 }
 
-#GifSugget #first {
+#gifSuggest #first {
   margin-left: 6.955%;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #first img {
+#gifSuggest #first img {
   height: 280px;
   width: 100%;
 }
 
-#GifSugget #second {
+#gifSuggest #second {
   margin-left: 12px;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #second img {
+#gifSuggest #second img {
   height: 280px;
   width: 100%;
 }
 
-#GifSugget #third {
+#gifSuggest #third {
   margin-left: 12px;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #third img {
+#gifSuggest #third img {
   height: 280px;
   width: 100%;
 }
 
-#GifSugget #fourth {
+#gifSuggest #fourth {
   margin-left: 12px;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #fourth img {
+#gifSuggest #fourth img {
   height: 280px;
   width: 100%;
 }

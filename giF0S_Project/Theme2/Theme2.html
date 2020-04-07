@@ -15,6 +15,7 @@
         <header id="title">
             <h1>Bienvenidos/as a Guifos.com!------Donde los gifs están//////Número de visitas:</h1>
         </header>
+        <!-- SECTION IMAGE LOGO AND BUTTONS TO SELECT THEME -->
         <div id="buttonzone"><img id="logotipe" src="../Images/gifOF_logo_dark.png" width="102.6px" height="64px"
                 alt="Logo blu Gifos">
             <button id="buttonOne">Crear Guifos</button> <button id="buttonTwo">Elegir Tema </button>
@@ -25,30 +26,36 @@
             </select>
             <p> <ins>M</ins>is Guifos</p>
         </div>
+        <!--SECTION BAR SEARCH -->
         <div id="searchbox">
-            <div id="SearchboxTitle">
+            <div id="searchBoxTitle">
                 <h2>&nbsp;Buscar</h2>
             </div>
-            <form>
+            
                 <div id="formSearch">
-                    <input type="search" id="mySearch" name="mySearch"
+                    <input type="search" id="mySearch" name="mySearch" onsearch="myFunction()"
                         placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
-                    <button id="ButtonSearch">
+                    <button id="buttonSearch" type="button" >
                         <div id="ButtonContent"><img id="mGlassImage" src="../Images/Combined Shape.svg"
                                 alt="magnifying_glass_image"> Buscar</div>
                     </button>
                 </div>
-            </form>
+             <!--SECTION SUB MENU SEARCH -->
+             <div id="subMenuSearch">
+                <button id="resultSearch">Resultado de búsqueda sugerido</button>
+                <button id="similarResult">Un resultado similar de búsqueda</button>
+                <button id="otherOneResult">Y otro más</button>
+            </div>
         </div>
     </div>
     <div id="suggestions">
         <input id="suggest" type="text" name="we_suggest_you" placeholder="&nbsp;&nbsp;Hoy te sugerimos:" size="32">
     </div>
-    <div id="GifSugget">
-        <div id="first"><img src="../Images/Test.jpg" alt="Test"></div>
+    <div id="gifSuggest">
+        <!-- <div id="first"><img src="../Images/Test.jpg" alt="Test"></div>
         <div id="second"><img src="../Images/Test.jpg" alt="Test"></div>
         <div id="third"><img src="../Images/Test.jpg" alt="Test"></div>
-        <div id="fourth"><img src="../Images/Test.jpg" alt="Test"></div>
+        <div id="fourth"><img src="../Images/Test.jpg" alt="Test"></div> -->
     </div>
     <div id="trendsSection">
         <input type="text" id="trends" name="trends" placeholder="&nbsp;&nbsp;Tendencias:" size="32">
@@ -65,7 +72,7 @@
             <img src="../Images/Test.jpg" alt="Test">
         </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="../index.js"></script>
 </body>
 
 </html>

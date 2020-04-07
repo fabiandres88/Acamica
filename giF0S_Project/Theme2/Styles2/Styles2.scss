@@ -108,7 +108,7 @@ body {
     margin-left: 6.9%;
     box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
-    #SearchboxTitle {
+    #searchBoxTitle {
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox, inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
         border-right: solid 1px $searchBarColor ;
@@ -128,12 +128,12 @@ body {
         border-top: solid 2px $fontcolorheader;
     }
 
-    form {
+    
         #formSearch {
             display: flex;
             flex-direction: row;
             align-items: center;
-        }
+        
 
         #mySearch {
             width: 88.08%;
@@ -150,7 +150,7 @@ body {
             }
         }
 
-        #ButtonSearch {
+        #buttonSearch {
             text-align: center;
             margin-left: 8px;
             width: 8.5%;
@@ -163,7 +163,7 @@ body {
             border: solid 1px #808080;
             box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 $fontcolorheader;
 
-            #ButtonContent {
+            #buttonContent {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
@@ -172,6 +172,41 @@ body {
     }
 }
 
+    #subMenuSearch {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 160px;
+        background-color: $backgroundcolorsearchbox;
+        transform: translateY(15px);
+        display: none;
+    
+        button {
+            background-color: $backgroundcolorsearchbox;
+            width: 87.9166%;
+            height: 34px;
+            margin-left: 1.3333%;
+        }
+    
+        #resultSearch {
+            margin-top: 17px;
+        }
+    
+        #similarResult {
+            margin-top: 11px;
+            background-color: #f0f0f0;
+            border: solid 1px #808080;
+            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+        }
+    
+        #otherOneResult {
+            margin-top: 10px;
+            background-color: #f0f0f0;
+            border: solid 1px #808080;
+            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+        }
+    }
+    
 #suggestions {
     #suggest {
         height: 32px;
@@ -191,7 +226,7 @@ body {
 
 }
 
-#GifSugget {
+#gifSuggest {
     width: 100%;
     display: flex;
     flex-direction: row;
