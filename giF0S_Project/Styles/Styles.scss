@@ -30,7 +30,7 @@ body {
     }
 }
 
-#buttonzone {
+#buttonZone {
     display: flex;
     align-items: center;
     height: 118px;
@@ -100,14 +100,14 @@ body {
     }
 }
 
-#searchbox {
+#searchBox {
     background-color: $backgroundcolorsearchbox;
     width: 83.4492%;
     height: 99px;
     margin-left: 6.9%;
     box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
-    #SearchboxTitle {
+    #searchBoxTitle {
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox ,inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
         border-right: $searchBarColor 2px;
@@ -149,7 +149,7 @@ body {
             }
         }
 
-        #ButtonSearch {
+        #buttonSearch {
             text-align: center;
             margin-left: 8px;
             width: 8.5%;
@@ -162,7 +162,7 @@ body {
             border: solid 1px #808080;
             box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
 
-            #ButtonContent {
+            #buttonContent {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
@@ -171,7 +171,7 @@ body {
     }
 }
 
-#SubMenuSearch{
+#subMenuSearch{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -186,16 +186,16 @@ body {
         height: 34px;
         margin-left: 1.3333%;
     }
-    #ResultSearch{
+    #resultSearch{
         margin-top: 17px;
     }
-    #SimilarResult{
+    #similarResult{
         margin-top: 11px;
         background-color: #f0f0f0;
         border: solid 1px #808080;
         box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
     }
-    #OtherOne{
+    #otherOne{
         margin-top: 10px;
         background-color: #f0f0f0;
         border: solid 1px #808080;
@@ -222,13 +222,13 @@ body {
     }
 }
 
-#GifSugget {
+#gifSugget {
     width: 100%;
     display: flex;
     flex-direction: row;
     margin-top: 19px;
 
-    #first {
+    #gifSugget1 {
         margin-left: 6.955%;
         margin-right: 12px;
         height: 280px;
@@ -240,7 +240,7 @@ body {
         }
     }
 
-    #second {
+    #gifSugget2 {
         margin-left: 12px;
         margin-right: 12px;
         height: 280px;
@@ -252,7 +252,7 @@ body {
         }
     }
 
-    #third {
+    #gifSugget3 {
         margin-left: 12px;
         margin-right: 12px;
         height: 280px;
@@ -264,7 +264,7 @@ body {
         }
     }
 
-    #fourth {
+    #gifSugget4 {
         margin-left: 12px;
         margin-right: 12px;
         height: 280px;

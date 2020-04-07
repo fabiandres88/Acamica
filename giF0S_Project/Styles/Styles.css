@@ -27,7 +27,7 @@ body {
   color: #FFFFFF;
 }
 
-#buttonzone {
+#buttonZone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,14 +37,14 @@ body {
   height: 118px;
 }
 
-#buttonzone #logotipe {
+#buttonZone #logotipe {
   text-align: center;
   margin-left: 6.9%;
   margin-top: 35px;
   margin-bottom: 19px;
 }
 
-#buttonzone #buttonOne {
+#buttonZone #buttonOne {
   display: block;
   width: 144px;
   height: 36px;
@@ -61,7 +61,7 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonzone #buttonTwo {
+#buttonZone #buttonTwo {
   display: block;
   width: 131px;
   height: 36px;
@@ -78,7 +78,7 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonzone #themes {
+#buttonZone #themes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,7 +99,7 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonzone p {
+#buttonZone p {
   margin-right: 83, 4492%;
   margin-left: 1.147%;
   color: #110038;
@@ -108,7 +108,7 @@ body {
   font-family: "Chakra Petch";
 }
 
-#searchbox {
+#searchBox {
   background-color: #E6E6E6;
   width: 83.4492%;
   height: 99px;
@@ -117,7 +117,7 @@ body {
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
 }
 
-#searchbox #SearchboxTitle {
+#searchBox #searchBoxTitle {
   background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   -webkit-box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
@@ -127,7 +127,7 @@ body {
   margin-left: 0.25%;
 }
 
-#searchbox h2 {
+#searchBox h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +143,7 @@ body {
   border-top: #FFFFFF solid 2px;
 }
 
-#searchbox form #formSearch {
+#searchBox form #formSearch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,7 +156,7 @@ body {
           align-items: center;
 }
 
-#searchbox form #mySearch {
+#searchBox form #mySearch {
   width: 88.08%;
   height: 48px;
   margin-left: 15px;
@@ -165,35 +165,35 @@ body {
           box-shadow: inset -1px -1px 0 0 #E6E6E6, inset 1px 1px 0 0 #000000;
 }
 
-#searchbox form #mySearch::-webkit-input-placeholder {
+#searchBox form #mySearch::-webkit-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #mySearch:-ms-input-placeholder {
+#searchBox form #mySearch:-ms-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #mySearch::-ms-input-placeholder {
+#searchBox form #mySearch::-ms-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #mySearch::placeholder {
+#searchBox form #mySearch::placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchbox form #ButtonSearch {
+#searchBox form #buttonSearch {
   text-align: center;
   margin-left: 8px;
   width: 8.5%;
@@ -208,7 +208,7 @@ body {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#searchbox form #ButtonSearch #ButtonContent {
+#searchBox form #buttonSearch #buttonContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,7 +220,7 @@ body {
       justify-content: space-around;
 }
 
-#SubMenuSearch {
+#subMenuSearch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,18 +236,18 @@ body {
   display: none;
 }
 
-#SubMenuSearch button {
+#subMenuSearch button {
   background-color: #E6E6E6;
   width: 87.9166%;
   height: 34px;
   margin-left: 1.3333%;
 }
 
-#SubMenuSearch #ResultSearch {
+#subMenuSearch #resultSearch {
   margin-top: 17px;
 }
 
-#SubMenuSearch #SimilarResult {
+#subMenuSearch #similarResult {
   margin-top: 11px;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -255,7 +255,7 @@ body {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#SubMenuSearch #OtherOne {
+#subMenuSearch #otherOne {
   margin-top: 10px;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -301,7 +301,7 @@ body {
   font-weight: 400;
 }
 
-#GifSugget {
+#gifSugget {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,50 +313,50 @@ body {
   margin-top: 19px;
 }
 
-#GifSugget #first {
+#gifSugget #gifSugget1 {
   margin-left: 6.955%;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #first img {
+#gifSugget #gifSugget1 img {
   height: 280px;
   width: 100%;
 }
 
-#GifSugget #second {
+#gifSugget #gifSugget2 {
   margin-left: 12px;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #second img {
+#gifSugget #gifSugget2 img {
   height: 280px;
   width: 100%;
 }
 
-#GifSugget #third {
+#gifSugget #gifSugget3 {
   margin-left: 12px;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #third img {
+#gifSugget #gifSugget3 img {
   height: 280px;
   width: 100%;
 }
 
-#GifSugget #fourth {
+#gifSugget #gifSugget4 {
   margin-left: 12px;
   margin-right: 12px;
   height: 280px;
   width: 19.4720%;
 }
 
-#GifSugget #fourth img {
+#gifSugget #gifSugget4 img {
   height: 280px;
   width: 100%;
 }
