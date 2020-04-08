@@ -360,10 +360,6 @@ body {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-#gifSuggest #hashtagGif1, #gifSuggest #hashtagGif2, #gifSuggest #hashtagGif3, #gifSuggest #hashtagGif4 {
-  color: #FFFFFF;
-}
-
 #gifSuggest .buttonCloseGif {
   position: relative;
   z-index: 4;
@@ -399,7 +395,7 @@ body {
 }
 
 #trendsSection #trends {
-  width: 83.44%;
+  width: 83.45%;
   height: 32px;
   margin-top: 68px;
   margin-left: 6.9541%;
@@ -442,26 +438,80 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
-.trendsCharge .trendsFirstCharge {
-  margin-right: 12px;
+.trendsCharge #trendsCharge1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 0.3478%;
   margin-left: 0%;
-  height: 280px;
-  width: 20.927%;
+  height: 304px;
+  width: 20.4461%;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
-.trendsCharge img {
-  margin-left: 12px;
-  margin-right: 12px;
-  height: 280px;
+.trendsCharge #trendsCharge1 img {
+  height: 296px;
   width: 20.927%;
+  border: dotted #110038 1px;
 }
 
-.trendsCharge div img {
-  margin-left: 12px;
-  margin-right: 12px;
-  height: 280px;
-  width: 20.927%;
+.trendsCharge #trendsCharge1 p {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: "Chakra Petch";
+  font-weight: 700;
+  width: 97.22277%;
+  height: 24px;
+  margin-left: 1.3943%;
+  margin-bottom: 4px;
+  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+.trendsCharge #trendsCharge2 {
+  margin-left: 0.3478%;
+}
+
+.trendsCharge .secondaryTrendsCharge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #E6E6E6;
+  height: 298px;
+  width: 20.0289%;
+  margin-right: 0.5565%;
+  margin-left: 0.5565%;
+}
+
+.trendsCharge .bigLeftTrendsCharge {
+  width: 41.1693%;
+  height: 298px;
+  margin-right: 0.5565%;
+  margin-left: 0%;
+  background: #E6E6E6;
+}
+
+.trendsCharge .bigRightTrendsCharge {
+  width: 41.1693%;
+  height: 298px;
+  margin-right: 0.5565%;
+  margin-left: 0.5565%;
+  background: #E6E6E6;
+}
+
+.trendsCharge #trendsCharge8, .trendsCharge #trendsCharge11, .trendsCharge #trendsCharge18, .trendsCharge #trendsCharge21 {
+  margin-left: 0px;
 }
 /*# sourceMappingURL=Styles.css.map */

@@ -234,7 +234,7 @@ body {
     }
 
     #gifSuggest2 {
-        margin-left: 0.5565%;        
+        margin-left: 0.5565%;
     }
 
     #gifSuggest3 {
@@ -246,7 +246,7 @@ body {
     }
 
     .borderShadowGif {
-        margin-right:0.5565%;
+        margin-right: 0.5565%;
         width: 20.0289%;
         height: 313px;
         background-color: $backgroundcolorsearchbox;
@@ -254,7 +254,7 @@ body {
 
         img {
             position: relative;
-            right:30px;
+            right: 30px;
             bottom: 47px;
             left: 4px;
             height: 280px;
@@ -272,10 +272,6 @@ body {
         margin-top: 4px;
         margin-left: 1.3943%;
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-    }
-    // THIS IDS ARE USED TO CHARGE THE GIFS NAMES
-    #hashtagGif1, #hashtagGif2, #hashtagGif3, #hashtagGif4{
-        color: $fontcolorheader;   
     }
 
     .buttonCloseGif {
@@ -314,7 +310,7 @@ body {
 
 #trendsSection {
     #trends {
-        width: 83.44%;
+        width: 83.45%;
         height: 32px;
         margin-top: 68px;
         margin-left: 6.9541%;
@@ -334,27 +330,65 @@ body {
     margin-left: 6.955%;
     margin-top: 17px;
     display: flex;
+    width: 100%;
 
-    .trendsFirstCharge {
-        margin-right: 12px;
+    //THESE ARE THE STYLES TO THE ONLY GIF WITH BORDER  STYLE IN THE TRENDS SECTION
+    #trendsCharge1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right:0.3478%;
         margin-left: 0%;
-        height: 280px;
-        width: 20.927%;
-    }
+        height: 304px;
+        width: 20.4461%;
+        background-color: $backgroundcolorsearchbox;
+        box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
 
-    img {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 20.927%;
-    }
-
-    div {
         img {
-            margin-left: 12px;
-            margin-right: 12px;
-            height: 280px;
+            height: 296px;
             width: 20.927%;
+            border: dotted $outsidebordercolor 1px;
         }
+
+        p {
+            color: $fontcolorheader;
+            font-size: 14px;
+            font-family: $primaryfont;
+            font-weight: 700;
+            width: 97.22277%;
+            height: 24px;
+            margin-left: 1.3943%;
+            margin-bottom: 4px;
+            background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+        }
+       
+    }
+    #trendsCharge2{
+        margin-left:0.3478%;
+    }
+    .secondaryTrendsCharge{
+        display: flex;
+        background:$backgroundcolorsearchbox;
+        height: 298px;
+        width: 20.0289%;
+        margin-right: 0.5565%;
+        margin-left: 0.5565%;
+    }
+    .bigLeftTrendsCharge{
+        width: 41.1693%;
+        height: 298px;
+        margin-right: 0.5565%;
+        margin-left: 0%;
+        background:$backgroundcolorsearchbox;
+    }
+    .bigRightTrendsCharge{
+        width: 41.1693%;
+        height: 298px;
+        margin-right: 0.5565%;
+        margin-left: 0.5565%;
+        background:$backgroundcolorsearchbox;
+    }
+    #trendsCharge8, #trendsCharge11, #trendsCharge18, #trendsCharge21{
+        margin-left: 0px;
     }
 }
