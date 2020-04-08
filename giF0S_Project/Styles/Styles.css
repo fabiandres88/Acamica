@@ -341,19 +341,13 @@ body {
 #gifSuggest .borderShadowGif img {
   position: relative;
   right: 30px;
-  bottom: 49px;
+  bottom: 47px;
   left: 4px;
   height: 280px;
   width: 97.22277%;
 }
 
 #gifSuggest .hashtagGif {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   color: #FFFFFF;
   font-size: 14px;
   font-family: "Chakra Petch";
@@ -366,10 +360,15 @@ body {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
+#gifSuggest #hashtagGif1, #gifSuggest #hashtagGif2, #gifSuggest #hashtagGif3, #gifSuggest #hashtagGif4 {
+  color: #FFFFFF;
+}
+
 #gifSuggest .buttonCloseGif {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  position: relative;
+  z-index: 4;
+  bottom: 43px;
+  left: 90.9775%;
   width: 16px;
   height: 14px;
   margin-right: 1.786%;
@@ -384,13 +383,13 @@ body {
 
 #gifSuggest .seeMoreButton {
   position: relative;
-  z-index: 4;
+  z-index: 5;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
   color: #FFFFFF;
-  top: 215px;
-  left: 11px;
+  top: 223px;
+  right: 8px;
   width: 81px;
   height: 34px;
   background-color: #4180F6;

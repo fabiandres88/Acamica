@@ -255,7 +255,7 @@ body {
         img {
             position: relative;
             right:30px;
-            bottom: 49px;
+            bottom: 47px;
             left: 4px;
             height: 280px;
             width: 97.22277%;
@@ -263,8 +263,6 @@ body {
     }
 
     .hashtagGif {
-        display: flex;
-        justify-content: flex-end;
         color: $fontcolorheader;
         font-size: 14px;
         font-family: $primaryfont;
@@ -275,12 +273,16 @@ body {
         margin-left: 1.3943%;
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
     }
+    // THIS IDS ARE USED TO CHARGE THE GIFS NAMES
     #hashtagGif1, #hashtagGif2, #hashtagGif3, #hashtagGif4{
-        
+        color: $fontcolorheader;   
     }
 
     .buttonCloseGif {
-        align-self: center;
+        position: relative;
+        z-index: 4;
+        bottom: 43px;
+        left: 90.9775%;
         width: 16px;
         height: 14px;
         margin-right: 1.786%;
@@ -295,13 +297,13 @@ body {
 
     .seeMoreButton {
         position: relative;
-        z-index: 4;
+        z-index: 5;
         font-size: 14px;
         font-family: $primaryfont;
         font-weight: 400;
         color: $fontcolorheader;
-        top: 215px;
-        left: 11px;
+        top: 223px;
+        right: 8px;
         width: 81px;
         height: 34px;
         background-color: #4180F6;
