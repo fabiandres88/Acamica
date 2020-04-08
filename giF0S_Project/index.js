@@ -37,21 +37,17 @@ function GetGifsBySearch(url) {
 			console.log(data.data);
 			console.log(data.data[0]);
 			console.log(data.data[0].source);
-			let gifSuggest=document.getElementById("gifSuggest");
+						
 			for (let i=0; i<=3; i ++ ){
 				let gifGiphy=data.data[i];
 				let gifInsertIn=document.getElementById(`gifSuggest${i+1}`);
 				let gifImg=document.createElement("img");
 				gifImg.setAttribute("src", gifGiphy.images.original.url);
-				// gifImg.style.width= '280px';
-				// gifImg.setAttribute("height", 280);
 				gifInsertIn.append(gifImg);
-				// gifImg.className="searchedGif";
-				// gifSuggest.appendChild(gifImg);
+				let gifTitle= data.data[i].title;
+				let gifTitleInsert=document.getElementById(`hashtagGif${i+1}`);
+				gifTitleInsert.innerHTML=gifTitle;
 			}
-			// Gif1.setAttribute("src", data.data[0].source);
-			// Gif1.setAttribute("style", "width: 280px");
-			// Gif1.setAttribute("style", "height: 280px");
 			return data
 		}).catch(error => {
 			console.error("fetch failed", error);

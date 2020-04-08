@@ -102,14 +102,14 @@ body {
 
 #searchBox {
     background-color: $backgroundcolorsearchbox;
-    width: 83.4492%;
+    width: 83.45%;
     height: 99px;
     margin-left: 6.9%;
     box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
     #searchBoxTitle {
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-        box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox ,inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
+        box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox, inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
         border-right: $searchBarColor 2px;
         width: 99.5%;
         margin-left: 0.25%;
@@ -127,51 +127,49 @@ body {
         border-top: $fontcolorheader solid 2px;
     }
 
-    form {
-        #formSearch {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+    #formSearch {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
-        #mySearch {
-            width: 88.08%;
-            height: 48px;
-            margin-left: 15px;
-            border: solid 1px #979797;
-            box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
+    #mySearch {
+        width: 88.08%;
+        height: 48px;
+        margin-left: 15px;
+        border: solid 1px #979797;
+        box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
 
-            &::placeholder {
-                color: $searchBarColor;
-                font-size: 16px;
-                font-family: $primaryfont;
-                font-weight: 400;
-            }
-        }
-
-        #buttonSearch {
-            text-align: center;
-            margin-left: 8px;
-            width: 8.5%;
-            height: 36px;
-            background-color: $backgroundcolorsearchbox;
+        &::placeholder {
             color: $searchBarColor;
             font-size: 16px;
             font-family: $primaryfont;
             font-weight: 400;
-            border: solid 1px #808080;
-            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+        }
+    }
 
-            #buttonContent {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-            }
+    #buttonSearch {
+        text-align: center;
+        margin-left: 8px;
+        width: 8.5%;
+        height: 36px;
+        background-color: $backgroundcolorsearchbox;
+        color: $searchBarColor;
+        font-size: 16px;
+        font-family: $primaryfont;
+        font-weight: 400;
+        border: solid 1px #808080;
+        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+
+        #buttonContent {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
         }
     }
 }
 
-#subMenuSearch{
+#subMenuSearch {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -180,22 +178,25 @@ body {
     transform: translateY(15px);
     display: none;
 
-    button{
+    button {
         background-color: $backgroundcolorsearchbox;
         width: 87.9166%;
         height: 34px;
         margin-left: 1.3333%;
     }
-    #resultSearch{
+
+    #resultSearch {
         margin-top: 17px;
     }
-    #similarResult{
+
+    #similarResult {
         margin-top: 11px;
         background-color: #f0f0f0;
         border: solid 1px #808080;
         box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
     }
-    #otherOne{
+
+    #otherOne {
         margin-top: 10px;
         background-color: #f0f0f0;
         border: solid 1px #808080;
@@ -207,7 +208,7 @@ body {
 
     #suggest {
         height: 32px;
-        width: 83.17%;
+        width: 83.45%;
         margin-left: 6.9%;
         margin-top: 76px;
         border: solid 1px #E6BBE2;
@@ -222,58 +223,90 @@ body {
     }
 }
 
-#gifSugget {
-    width: 100%;
+#gifSuggest {
     display: flex;
     flex-direction: row;
+    width: 100%;
     margin-top: 19px;
 
-    #gifSugget1 {
+    #gifSuggest1 {
         margin-left: 6.955%;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
+    }
+
+    #gifSuggest2 {
+        margin-left: 0.5565%;        
+    }
+
+    #gifSuggest3 {
+        margin-left: 0.5565%;
+    }
+
+    #gifSuggest4 {
+        margin-left: 0.5565%
+    }
+
+    .borderShadowGif {
+        margin-right:0.5565%;
+        width: 20.0289%;
+        height: 313px;
+        background-color: $backgroundcolorsearchbox;
+        box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
         img {
+            position: relative;
+            right:30px;
+            bottom: 49px;
+            left: 4px;
             height: 280px;
-            width: 100%;
+            width: 97.22277%;
         }
     }
 
-    #gifSugget2 {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
-
-        img {
-            height: 280px;
-            width: 100%;
-        }
+    .hashtagGif {
+        display: flex;
+        justify-content: flex-end;
+        color: $fontcolorheader;
+        font-size: 14px;
+        font-family: $primaryfont;
+        font-weight: 700;
+        width: 97.22277%;
+        height: 24px;
+        margin-top: 4px;
+        margin-left: 1.3943%;
+        background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+    }
+    #hashtagGif1, #hashtagGif2, #hashtagGif3, #hashtagGif4{
+        
     }
 
-    #gifSugget3 {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
-
-        img {
-            height: 280px;
-            width: 100%;
-        }
+    .buttonCloseGif {
+        align-self: center;
+        width: 16px;
+        height: 14px;
+        margin-right: 1.786%;
+        background-image: url(../Images/button3.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top: solid 1px $fontcolorheader;
+        border-right: solid 1px #000000;
+        border-bottom: solid 1px #000000;
+        border-left: solid 1px $fontcolorheader;
     }
 
-    #gifSugget4 {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
-
-        img {
-            height: 280px;
-            width: 100%;
-        }
+    .seeMoreButton {
+        position: relative;
+        z-index: 4;
+        font-size: 14px;
+        font-family: $primaryfont;
+        font-weight: 400;
+        color: $fontcolorheader;
+        top: 215px;
+        left: 11px;
+        width: 81px;
+        height: 34px;
+        background-color: #4180F6;
+        border: solid 1px #4C2F99;
+        box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 #284F99;
     }
 }
 
