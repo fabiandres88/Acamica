@@ -46,7 +46,7 @@ body {
 
 #buttonZone #buttonOne {
   display: block;
-  width: 144px;
+  width: 10.0140%;
   height: 36px;
   background-color: #F7C9F3;
   color: #110038;
@@ -63,14 +63,14 @@ body {
 
 #buttonZone #buttonTwo {
   display: block;
-  width: 131px;
+  width: 9.11%;
   height: 36px;
   background-color: #F7C9F3;
   color: #110038;
   font-size: 16px;
   font-weight: 400;
   font-family: "Chakra Petch";
-  margin-left: 16px;
+  margin-left: 1.1137%;
   margin-top: 44px;
   margin-bottom: 38px;
   border: #110038 outset 1px;
@@ -82,10 +82,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 36px;
+  width: 2.504%;
   height: 36px;
   background-color: #F7C9F3;
-  margin-left: 0px;
+  margin-left: 0%;
   margin-top: 44px;
   margin-bottom: 38px;
   -webkit-appearance: none;
@@ -103,7 +103,7 @@ body {
   margin-right: 83, 4492%;
   margin-left: 1.147%;
   color: #110038;
-  font-size: 16px;
+  font-size: 100%;
   font-weight: 400;
   font-family: "Chakra Petch";
 }
@@ -441,7 +441,16 @@ body {
   width: 100%;
 }
 
-.trendsCharge #trendsCharge1 {
+.trendsCharge img {
+  position: relative;
+  right: 30px;
+  bottom: 0px;
+  left: 0px;
+  height: 298px;
+  width: 100%;
+}
+
+.trendsCharge #gifSuggest5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,9 +458,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   margin-right: 0.3478%;
   margin-left: 0%;
   height: 304px;
@@ -461,18 +467,25 @@ body {
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
-.trendsCharge #trendsCharge1 img {
-  height: 296px;
-  width: 20.927%;
+.trendsCharge #gifSuggest5 img {
+  position: relative;
+  z-index: 1;
+  left: 3px;
+  bottom: 18px;
+  height: 100%;
+  width: 97.2778%;
   border: dotted #110038 1px;
 }
 
-.trendsCharge #trendsCharge1 p {
+.trendsCharge #gifSuggest5 div {
+  position: relative;
+  z-index: 4;
+  top: 284px;
   color: #FFFFFF;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 700;
-  width: 97.22277%;
+  width: 97.2778%;
   height: 24px;
   margin-left: 1.3943%;
   margin-bottom: 4px;
@@ -480,7 +493,7 @@ body {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-.trendsCharge #trendsCharge2 {
+.trendsCharge #gifSuggest6 {
   margin-left: 0.3478%;
 }
 
@@ -503,6 +516,11 @@ body {
   background: #E6E6E6;
 }
 
+.trendsCharge .bigLeftTrendsCharge img {
+  width: 100%;
+  height: 100%;
+}
+
 .trendsCharge .bigRightTrendsCharge {
   width: 41.1693%;
   height: 298px;
@@ -511,7 +529,15 @@ body {
   background: #E6E6E6;
 }
 
-.trendsCharge #trendsCharge8, .trendsCharge #trendsCharge11, .trendsCharge #trendsCharge18, .trendsCharge #trendsCharge21 {
+.trendsCharge .bigRightTrendsCharge img {
+  width: 100%;
+  height: 100%;
+}
+
+.trendsCharge #gifSuggest12,
+.trendsCharge #gifSuggest15,
+.trendsCharge #gifSuggest22,
+.trendsCharge #gifSuggest25 {
   margin-left: 0px;
 }
 /*# sourceMappingURL=Styles.css.map */

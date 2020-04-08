@@ -16,17 +16,34 @@ var UrlToFetch = "";
 //TODO: FR- CREATE CONST TO ORGANIZE THE URLS DEFINITION   
 
 //GETTING SEARCH VALUE AN CALLING THE FETCH
-ListenSearch.addEventListener("click", myFunction);
+ListenSearch.addEventListener("click", gettingSearchValue);
 
-function myFunction (){
+function gettingSearchValue (){
 	let StringSearch = document.querySelector("#mySearch");
 	let Valuesearch = (StringSearch.value);
 	UrlToFetch = `https://api.giphy.com/v1/gifs/search?api_key=qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA&q=${Valuesearch}&limit=25&offset=0&rating=G&lang=en`
-	GetGifsBySearch(UrlToFetch);
+	getGifsBySearch(UrlToFetch);
 }
 
+window.onload=getGifsBySearch("https://api.giphy.com/v1/gifs/search?api_key=qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA&q=coding&limit=28&offset=0&rating=G&lang=en");
+
 //FUNCTION TO GET REQUEST BY FETCH
-function GetGifsBySearch(url) {
+// function getGifByRandomToPreview(url){
+// 	return fetch(url)
+// 	.then (response => {
+// 		return response.json();
+// 	})
+// 	.then(data => {
+// 		data;
+// 		console.log(data);
+// 	return data
+// }).catch (error => {
+// 	console.error("fetch failed", error);
+// })	
+// }
+
+//FUNCTION TO GET REQUEST BY FETCH
+function getGifsBySearch(url) {
 	return fetch(url)
 		.then(response => {
 			return response.json();
@@ -38,15 +55,15 @@ function GetGifsBySearch(url) {
 			console.log(data.data[0]);
 			console.log(data.data[0].source);
 						
-			for (let i=0; i<=3; i ++ ){
+			for (let i=0; i<=27; i ++ ){
 				let gifGiphy=data.data[i];
 				let gifInsertIn=document.getElementById(`gifSuggest${i+1}`);
 				let gifImg=document.createElement("img");
 				gifImg.setAttribute("src", gifGiphy.images.original.url);
 				gifInsertIn.append(gifImg);
 				let gifTitle= data.data[i].title;
-				let gifTitleInsert=document.getElementById(`hashtagGif${i+1}`);
-				gifTitleInsert.innerHTML=gifTitle;
+				// let gifTitleInsert=document.getElementById(`hashtagGif${i+1}`);
+				// gifTitleInsert.innerHTML=gifTitle;
 			}
 			return data
 		}).catch(error => {
