@@ -9,11 +9,25 @@ console.log(Theme2);*/
 // var FirstGif = document.querySelector("#first");
 // var Gif1 = FirstGif.firstElementChild;
 // console.log(Gif1)
+//GETING THEMES TO CHANGE IT
+let changeTheme= document.getElementById("themes");
+
 //GETTING BUTTON
 let ListenSearch = document.querySelector("#buttonSearch")
 //VARIABLR TO USE IN THE FETCH
 var UrlToFetch = "";
 //TODO: FR- CREATE CONST TO ORGANIZE THE URLS DEFINITION   
+
+changeTheme.addEventListener("change", changeThemes);
+// FUNCTION TO CHANGES THE THEME BY USERS
+function changeThemes (){
+	if (changeTheme.value == "Theme2"){
+		document.getElementById('themeDarkSelect').href = './Theme2/Styles2/Styles2.css';		
+	}
+	if (changeTheme.value == "Theme1"){
+		document.getElementById('themeDarkSelect').href = "./Styles/Styles.css";		
+	}		
+}
 
 //GETTING SEARCH VALUE AN CALLING THE FETCH
 ListenSearch.addEventListener("click", gettingSearchValue);

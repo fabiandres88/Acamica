@@ -44,7 +44,7 @@ body {
 
     #buttonOne {
         display: block;
-        width: 144px;
+        width: 10.0140%;
         height: 36px;
         background-color: $backgroundcolorbtn;
         color: $fontcolorheader;
@@ -60,14 +60,14 @@ body {
 
     #buttonTwo {
         display: block;
-        width: 131px;
+        width: 9.11%;
         height: 36px;
         background-color: $backgroundcolorbtn;
         color: $fontcolorheader;
         font-size: 16px;
         font-weight: 400;
         font-family: $primaryfont;
-        margin-left: 16px;
+        margin-left: 1.1137%;
         margin-top: 44px;
         margin-bottom: 38px;
         border: $outsidebordercolor outset 1px;
@@ -76,7 +76,7 @@ body {
 
     #themes {
         display: flex;
-        width: 36px;
+        width: 2.504%;
         height: 36px;
         background-color: $backgroundcolorbtn;
         margin-left: 0px;
@@ -95,7 +95,7 @@ body {
         margin-right: 83, 4492%;
         margin-left: 1.147%;
         color: $fontcolorheader;
-        font-size: 16px;
+        font-size: 100%;
         font-weight: 400;
         font-family: $primaryfont;
     }
@@ -103,7 +103,7 @@ body {
 
 #searchbox {
     background-color: $backgroundcolorsearchbox;
-    width: 83.4492%;
+    width: 83.45%;
     height: 99px;
     margin-left: 6.9%;
     box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
@@ -210,7 +210,7 @@ body {
 #suggestions {
     #suggest {
         height: 32px;
-        width: 83.17%;
+        width: 83.45%;
         margin-left: 6.9%;
         margin-top: 76px;
         border: solid 1px #2E32FB;
@@ -232,58 +232,79 @@ body {
     flex-direction: row;
     margin-top: 19px;
 
-    #first {
+    #gifSuggest1 {
         margin-left: 6.955%;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
+    }
+
+    #gifSuggest2, #gifSuggest3, #gifSuggest4 {
+        margin-left: 0.5565%;
+    }
+    .borderShadowGif {
+        margin-right: 0.5565%;
+        width: 20.0289%;
+        height: 313px;
+        background-color: $backgroundcolorsearchbox;
+        box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
         img {
+            position: relative;
+            right: 30px;
+            bottom: 47px;
+            left: 4px;
             height: 280px;
-            width: 100%;
+            width: 97.22277%;
         }
     }
 
-    #second {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
-
-        img {
-            height: 280px;
-            width: 100%;
-        }
+    .hashtagGif {
+        color: $fontcolorheader;
+        font-size: 14px;
+        font-family: $primaryfont;
+        font-weight: 700;
+        width: 97.22277%;
+        height: 24px;
+        margin-top: 4px;
+        margin-left: 1.3943%;
+        background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
     }
 
-    #third {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
-
-        img {
-            height: 280px;
-            width: 100%;
-        }
+    .buttonCloseGif {
+        position: relative;
+        z-index: 4;
+        bottom: 43px;
+        left: 90.9775%;
+        width: 16px;
+        height: 14px;
+        margin-right: 1.786%;
+        background-image: url(../Images/button3.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top: solid 1px $fontcolorheader;
+        border-right: solid 1px #000000;
+        border-bottom: solid 1px #000000;
+        border-left: solid 1px $fontcolorheader;
     }
 
-    #fourth {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 19.4720%;
-
-        img {
-            height: 280px;
-            width: 100%;
-        }
+    .seeMoreButton {
+        position: relative;
+        z-index: 5;
+        font-size: 14px;
+        font-family: $primaryfont;
+        font-weight: 400;
+        color: $fontcolorheader;
+        top: 223px;
+        right: 8px;
+        width: 81px;
+        height: 34px;
+        background-color: #4180F6;
+        border: solid 1px #4C2F99;
+        box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 #284F99;
     }
 }
-
+ 
 #trendsSection {
     #trends {
-        width: 83.44%;
+        width: 83.45%;
         height: 32px;
         margin-top: 68px;
         margin-left: 6.9541%;
@@ -303,27 +324,99 @@ body {
     margin-left: 6.955%;
     margin-top: 17px;
     display: flex;
-
-    .trendsFirstCharge {
-        margin-right: 12px;
-        margin-left: 0%;
-        height: 280px;
-        width: 20.927%;
-    }
+    width: 100%;
 
     img {
-        margin-left: 12px;
-        margin-right: 12px;
-        height: 280px;
-        width: 20.927%;
+        position: relative;
+        right: 30px;
+        bottom: 0px;
+        left: 0px;
+        height: 298px;
+        width: 100%;
     }
 
-    div {
+    //THESE ARE THE STYLES TO THE ONLY GIF WITH BORDER  STYLE IN THE TRENDS SECTION
+    #gifSuggest5 {
+        display: flex;
+        flex-direction: column;
+        // justify-content: flex-end;
+        margin-right: 0.3478%;
+        margin-left: 0%;
+        height: 304px;
+        width: 20.4461%;
+        background-color: $backgroundcolorsearchbox;
+        box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+
         img {
-            margin-left: 12px;
-            margin-right: 12px;
-            height: 280px;
-            width: 20.927%;
+            position: relative;
+            z-index: 1;
+            left: 3px;
+            bottom: 18px;
+            height: 100%;
+            width: 97.2778%;
+            border: dotted $outsidebordercolor 1px;
+        }
+
+        div {
+            position: relative;
+            z-index: 4;
+            top: 284px;
+            color: $fontcolorheader;
+            font-size: 14px;
+            font-family: $primaryfont;
+            font-weight: 700;
+            width: 97.2778%;
+            height: 24px;
+            margin-left: 1.3943%;
+            margin-bottom: 4px;
+            background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         }
     }
+
+    #gifSuggest6 {
+        margin-left: 0.3478%;
+    }
+
+    .secondaryTrendsCharge {
+        display: flex;
+        background: $backgroundcolorsearchbox;
+        height: 298px;
+        width: 20.0289%;
+        margin-right: 0.5565%;
+        margin-left: 0.5565%;
+    }
+
+    .bigLeftTrendsCharge {
+        width: 41.1693%;
+        height: 298px;
+        margin-right: 0.5565%;
+        margin-left: 0%;
+        background: $backgroundcolorsearchbox;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .bigRightTrendsCharge {
+        width: 41.1693%;
+        height: 298px;
+        margin-right: 0.5565%;
+        margin-left: 0.5565%;
+        background: $backgroundcolorsearchbox;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    #gifSuggest12,
+    #gifSuggest15,
+    #gifSuggest22,
+    #gifSuggest25 {
+        margin-left: 0px;
+    }
+
 }

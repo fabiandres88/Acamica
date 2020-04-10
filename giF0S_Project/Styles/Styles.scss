@@ -110,7 +110,7 @@ body {
     #searchBoxTitle {
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox, inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
-        border-right: $searchBarColor 2px;
+        border-right: solid $searchBarColor 2px;
         width: 99.5%;
         margin-left: 0.25%;
     }
@@ -196,7 +196,7 @@ body {
         box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
     }
 
-    #otherOne {
+    #otherOneResult {
         margin-top: 10px;
         background-color: #f0f0f0;
         border: solid 1px #808080;
@@ -233,16 +233,8 @@ body {
         margin-left: 6.955%;
     }
 
-    #gifSuggest2 {
+    #gifSuggest2, #gifSuggest3, #gifSuggest4 {
         margin-left: 0.5565%;
-    }
-
-    #gifSuggest3 {
-        margin-left: 0.5565%;
-    }
-
-    #gifSuggest4 {
-        margin-left: 0.5565%
     }
 
     .borderShadowGif {
@@ -331,6 +323,7 @@ body {
     margin-top: 17px;
     display: flex;
     width: 100%;
+    
     img {
         position: relative;
         right: 30px;

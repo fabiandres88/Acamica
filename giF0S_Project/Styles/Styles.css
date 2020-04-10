@@ -122,7 +122,7 @@ body {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   -webkit-box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
           box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
-  border-right: #B4B4B4 2px;
+  border-right: solid #B4B4B4 2px;
   width: 99.5%;
   margin-left: 0.25%;
 }
@@ -255,7 +255,7 @@ body {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #otherOne {
+#subMenuSearch #otherOneResult {
   margin-top: 10px;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -317,15 +317,7 @@ body {
   margin-left: 6.955%;
 }
 
-#gifSuggest #gifSuggest2 {
-  margin-left: 0.5565%;
-}
-
-#gifSuggest #gifSuggest3 {
-  margin-left: 0.5565%;
-}
-
-#gifSuggest #gifSuggest4 {
+#gifSuggest #gifSuggest2, #gifSuggest #gifSuggest3, #gifSuggest #gifSuggest4 {
   margin-left: 0.5565%;
 }
 
