@@ -1,28 +1,36 @@
-//GETTING THEME 2
-/*let ThemesSelector = document.querySelector("#themes");
-console.log(ThemesSelector);
-let Theme2= ThemesSelector[2];
-console.log(Theme2);*/
-
 //CREATING VARIABLES
-//GETTING FIRST ITEM IN SECTION GIFS
-// var FirstGif = document.querySelector("#first");
-// var Gif1 = FirstGif.firstElementChild;
-// console.log(Gif1)
+
 //GETING THEMES TO CHANGE IT
-let changeTheme= document.getElementById("themes");
+let changeTheme= document.getElementById("buttonTwo");
+let changeT= document.getElementById("lightTheme");
+console.log(changeT)
+let selectThemeD= document.getElementsByClassName("day");
+let selectThemeN= document.getElementsByClassName("night");
+console.log(selectThemeN);
 
 //GETTING BUTTON
 let ListenSearch = document.querySelector("#buttonSearch")
+
 //VARIABLR TO USE IN THE FETCH
 var UrlToFetch = "";
+
 //TODO: FR- CREATE CONST TO ORGANIZE THE URLS DEFINITION   
 
-changeTheme.addEventListener("change", changeThemes);
+changeTheme.addEventListener("click", function(event){
+	let themes = document.getElementById("menuThemes");
+	console.log(themes);
+	themes.style.display = "flex";
+});
+
+function myFunction () {
+	document.getElementById('themeSelector').href = './Theme2/Styles2/Styles2.css';
+	console.log("Esta bien get");		
+}
+
 // FUNCTION TO CHANGES THE THEME BY USERS
 function changeThemes (){
 	if (changeTheme.value == "Theme2"){
-		document.getElementById('themeDarkSelect').href = './Theme2/Styles2/Styles2.css';		
+		document.getElementById('themeSelector').href = './Theme2/Styles2/Styles2.css';		
 	}
 	if (changeTheme.value == "Theme1"){
 		document.getElementById('themeDarkSelect').href = "./Styles/Styles.css";		

@@ -30,7 +30,7 @@ body {
     }
 }
 
-#buttonzone {
+#buttonZone {
     display: flex;
     align-items: center;
     height: 118px;
@@ -51,8 +51,8 @@ body {
         font-size: 16px;
         font-weight: 400;
         font-family: $primaryfont;
-        margin-left: 47.6%;
         margin-top: 44px;
+        margin-left: 47.6%;
         margin-bottom: 38px;
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 $themeonegradientcolor1, inset 1px 1px 0 0 $fontcolorheader;
@@ -101,7 +101,7 @@ body {
     }
 }
 
-#searchbox {
+#searchBox {
     background-color: $backgroundcolorsearchbox;
     width: 83.45%;
     height: 99px;
@@ -111,9 +111,9 @@ body {
     #searchBoxTitle {
         background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox, inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
-        border-right: solid 1px $searchBarColor ;
+        border-right: solid 1px $searchBarColor;
         width: 99.5%;
-        margin-left: 0.25%;        
+        margin-left: 0.25%;
     }
 
     h2 {
@@ -128,12 +128,12 @@ body {
         border-top: solid 2px $fontcolorheader;
     }
 
-    
-        #formSearch {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        
+
+    #formSearch {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
 
         #mySearch {
             width: 88.08%;
@@ -172,41 +172,41 @@ body {
     }
 }
 
-    #subMenuSearch {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 160px;
+#subMenuSearch {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 160px;
+    background-color: $backgroundcolorsearchbox;
+    transform: translateY(15px);
+    display: none;
+
+    button {
         background-color: $backgroundcolorsearchbox;
-        transform: translateY(15px);
-        display: none;
-    
-        button {
-            background-color: $backgroundcolorsearchbox;
-            width: 87.9166%;
-            height: 34px;
-            margin-left: 1.3333%;
-        }
-    
-        #resultSearch {
-            margin-top: 17px;
-        }
-    
-        #similarResult {
-            margin-top: 11px;
-            background-color: #f0f0f0;
-            border: solid 1px #808080;
-            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-        }
-    
-        #otherOneResult {
-            margin-top: 10px;
-            background-color: #f0f0f0;
-            border: solid 1px #808080;
-            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-        }
+        width: 87.9166%;
+        height: 34px;
+        margin-left: 1.3333%;
     }
-    
+
+    #resultSearch {
+        margin-top: 17px;
+    }
+
+    #similarResult {
+        margin-top: 11px;
+        background-color: #f0f0f0;
+        border: solid 1px #808080;
+        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+    }
+
+    #otherOneResult {
+        margin-top: 10px;
+        background-color: #f0f0f0;
+        border: solid 1px #808080;
+        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+    }
+}
+
 #suggestions {
     #suggest {
         height: 32px;
@@ -214,7 +214,7 @@ body {
         margin-left: 6.9%;
         margin-top: 76px;
         border: solid 1px #2E32FB;
-        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor ;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor;
 
         &::placeholder {
             color: $outsidebordercolor;
@@ -236,9 +236,12 @@ body {
         margin-left: 6.955%;
     }
 
-    #gifSuggest2, #gifSuggest3, #gifSuggest4 {
+    #gifSuggest2,
+    #gifSuggest3,
+    #gifSuggest4 {
         margin-left: 0.5565%;
     }
+
     .borderShadowGif {
         margin-right: 0.5565%;
         width: 20.0289%;
@@ -276,7 +279,7 @@ body {
         width: 16px;
         height: 14px;
         margin-right: 1.786%;
-        background-image: url(../Images/button3.svg);
+        background-image: url(../../Images/button3.svg);
         background-repeat: no-repeat;
         background-position: center;
         border-top: solid 1px $fontcolorheader;
@@ -301,7 +304,7 @@ body {
         box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 #284F99;
     }
 }
- 
+
 #trendsSection {
     #trends {
         width: 83.45%;
@@ -309,7 +312,7 @@ body {
         margin-top: 68px;
         margin-left: 6.9541%;
         border: solid 1px #2E32FB;
-        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor ;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor;
 
         &::placeholder {
             color: $outsidebordercolor;

@@ -13,6 +13,7 @@ body {
     background-color: rgb(250, 241, 249);
 }
 
+//THIS SECTION CONTENT THE TOP BAR WITH ITS GRADIENT STYLE
 #title {
     display: flex;
     align-items: center;
@@ -30,58 +31,113 @@ body {
     }
 }
 
+//THIS SECTION CONTENT LOGO GIFOS- BUTTONS CREATE GIFOS AND SELECT THEME AND MIS GUIFOS LINK 
+
 #buttonZone {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     height: 118px;
 
     #logotipe {
-        text-align: center;
-        margin-left: 6.9%;
-        margin-top: 35px;
-        margin-bottom: 19px;
+        align-self: center;
+        width: 91px;
+        margin-left: 6.3288%;
+        padding-left: 0.5565%;
+        padding-right: 0.2504%;
     }
 
     #buttonOne {
-        display: block;
-        width: 10.0140%;
+        align-self: center;
+        margin-right: 1.1137%;
+        margin-left: 47.6637%;
         height: 36px;
+        width: 10.0139%;
         background-color: $backgroundcolorbtn;
         color: $outsidebordercolor;
         font-size: 16px;
         font-weight: 400;
         font-family: $primaryfont;
-        margin-left: 47.6%;
-        margin-top: 44px;
-        margin-bottom: 38px;
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
     }
 
+
     #buttonTwo {
-        display: block;
-        width: 9.11%;
+        align-self: center;
+        // display: block;
         height: 36px;
+        width: 9.1098%;
         background-color: $backgroundcolorbtn;
         color: $outsidebordercolor;
         font-size: 16px;
         font-weight: 400;
         font-family: $primaryfont;
-        margin-left: 1.1137%;
-        margin-top: 44px;
-        margin-bottom: 38px;
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+
+        
+
+    }
+    #menuThemes {
+        display: none;
+        position: absolute;
+        top: 84px;
+        right: 15.7%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $backgroundcolorsearchbox;
+        width: 11.82%;
+        height: 102px;
+        padding-left: 0px;
+        box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+        list-style: none;
+
+        a{
+            text-decoration: none;
+        }
+
+        .day {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 150px;
+            height: 36px;
+            background-color: #FFF4FD;
+            border: #CCA6C9 1px solid;
+            box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $primaryfont;
+            color: $outsidebordercolor;
+        }
+
+        .night {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 150px;
+            height: 36px;
+            background-color: #F0F0F0;
+            border: #808080 1px solid;
+            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $primaryfont;
+            color: $outsidebordercolor;
+        }
     }
 
     #themes {
         display: flex;
-        width: 2.504%;
+        align-self: center;
+        width: 2.5%;
         height: 36px;
         background-color: $backgroundcolorbtn;
-        margin-left: 0%;
-        margin-top: 44px;
-        margin-bottom: 38px;
         appearance: none;
         background-image: url(../Images/dropdown.svg);
         background-position: center;
@@ -90,15 +146,19 @@ body {
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
     }
 
-    p {
-        margin-right: 83, 4492%;
-        margin-left: 1.147%;
+    #linkMyGifos {
+        display: block;
+        align-self: center;
+        width: 85px;
+        margin-left: 1.1474%;
         color: $outsidebordercolor;
-        font-size: 100%;
+        font-size: 16px;
         font-weight: 400;
         font-family: $primaryfont;
     }
+
 }
+
 
 #searchBox {
     background-color: $backgroundcolorsearchbox;
@@ -233,7 +293,9 @@ body {
         margin-left: 6.955%;
     }
 
-    #gifSuggest2, #gifSuggest3, #gifSuggest4 {
+    #gifSuggest2,
+    #gifSuggest3,
+    #gifSuggest4 {
         margin-left: 0.5565%;
     }
 
@@ -323,7 +385,7 @@ body {
     margin-top: 17px;
     display: flex;
     width: 100%;
-    
+
     img {
         position: relative;
         right: 30px;

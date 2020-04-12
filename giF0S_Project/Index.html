@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>giF0S Project</title>
-    <link id="themeDarkSelect" rel="stylesheet" href="./Styles/Styles.css">
+    <link id="themeSelector" rel="stylesheet" href="./Styles/Styles.css">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
 </head>
 
@@ -16,22 +16,32 @@
             <h1>Bienvenidos/as a Guifos.com!------Donde los gifs están//////Número de visitas:</h1>
         </header>
         <!-- SECTION IMAGE LOGO AND BUTTONS TO SELECT THEME -->
-        <div id="buttonZone"><img id="logotipe" src="./Images/gifOF_logo.png" width="102.6px" height="64px"
-                alt="Logo blu Gifos">
-            <button id="buttonOne">Crear Guifos</button> <button id="buttonTwo">Elegir Tema</button>
-            <select id="themes" name="themes">
-                <option value="Empty"></option>
-                <option value="Theme1">Theme1</option>
-                <option value="Theme2">Theme2</option>
-            </select>
-            <p> <ins>M</ins>is Guifos</p>
+        <div id="buttonZone">
+            <img id="logotipe" src="./Images/gifOF_logo.png" alt="Logo blu Gifos">
+            <button id="buttonOne">Crear Guifos</button>
+            <button id="buttonTwo">Elegir Tema
+                
+            </button>
+            <ul id="menuThemes">
+                <!-- <a href="" id="lightTheme"> -->
+                    <li class="day">
+                        Sailor Day
+                    </li>
+                <!-- </a> -->
+                <!-- <a href="" id="darkTheme"> -->
+                    <li class="night" onclick="myFunction()">
+                        Sailor Night
+                    </li>
+                <!-- </a> -->
+            </ul>
+            <button id="themes" name="themes"></button>
+            <p id="linkMyGifos"> <ins>M</ins>is Guifos</p>
         </div>
         <!--SECTION BAR SEARCH -->
         <div id="searchBox">
             <div id="searchBoxTitle">
                 <h2>&nbsp;Buscar</h2>
             </div>
-
             <div id="formSearch">
                 <input type="search" id="mySearch" name="mySearch" onsearch="gettingSearchValue()"
                     placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
@@ -39,7 +49,6 @@
                     <div id="buttonContent"><img id="mGlassImage" src="./Images/lupa_inactive.svg"
                             alt="magnifying_glass_image"> Buscar</div>
                 </button>
-
             </div>
             <!--SECTION SUB MENU SEARCH -->
             <div id="subMenuSearch">
