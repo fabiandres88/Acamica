@@ -24,18 +24,18 @@
             </button>
             <ul id="menuThemes">
                 <!-- <a href="" id="lightTheme"> -->
-                    <li class="day">
+                    <li class="day" onclick="lightThemeCall()">
                         Sailor Day
                     </li>
                 <!-- </a> -->
                 <!-- <a href="" id="darkTheme"> -->
-                    <li class="night" onclick="myFunction()">
+                    <li class="night" onclick="darkThemeCall()">
                         Sailor Night
                     </li>
                 <!-- </a> -->
             </ul>
             <button id="themes" name="themes"></button>
-            <p id="linkMyGifos"> <ins>M</ins>is Guifos</p>
+            <a href=""><p id="linkMyGifos"><ins>M</ins>is Guifos</p></a>
         </div>
         <!--SECTION BAR SEARCH -->
         <div id="searchBox">
@@ -43,7 +43,7 @@
                 <h2>&nbsp;Buscar</h2>
             </div>
             <div id="formSearch">
-                <input type="search" id="mySearch" name="mySearch" onsearch="gettingSearchValue()"
+                <input type="search" id="mySearch" name="mySearch" autocomplete="off" onsearch="gettingSearchValue()"
                     placeholder="   Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
                 <button id="buttonSearch" type="button">
                     <div id="buttonContent"><img id="mGlassImage" src="./Images/lupa_inactive.svg"
@@ -52,9 +52,9 @@
             </div>
             <!--SECTION SUB MENU SEARCH -->
             <div id="subMenuSearch">
-                <button id="resultSearch">Resultado de búsqueda sugerido</button>
-                <button id="similarResult">Un resultado similar de búsqueda</button>
-                <button id="otherOneResult">Y otro más</button>
+                <button id="resultSearch">&nbsp;&nbsp;Resultado de búsqueda sugerido</button>
+                <button id="similarResult">&nbsp;&nbsp;Un resultado similar de búsqueda</button>
+                <button id="otherOneResult">&nbsp;&nbsp;Y otro más</button>
             </div>
         </div>
 
@@ -89,44 +89,90 @@
         <input type="text" id="trends" name="trends" placeholder="&nbsp;&nbsp;Tendencias:" size="32">
         <div class="trendsCharge">
             <div id="gifSuggest5">
-                <div></div>
+                <p id="hashtagGif5"></p>
             </div>
-            <div id="gifSuggest6" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest7" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest8" class="secondaryTrendsCharge"></div>
+            <div id="gifSuggest6" class="secondaryTrendsCharge">
+                <p id="hashtagGif6"></p>
+            </div>
+            <div id="gifSuggest7" class="secondaryTrendsCharge">
+                <p id="hashtagGif7"></p>
+            </div>
+            <div id="gifSuggest8" class="secondaryTrendsCharge">
+                <p id="hashtagGif8"></p>
+            </div>            
         </div>
         <div class="trendsCharge">
-            <div id="gifSuggest9" class="bigLeftTrendsCharge"></div>
-            <div id="gifSuggest10" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest11" class="secondaryTrendsCharge"></div>
+            <div id="gifSuggest9" class="bigLeftTrendsCharge">
+                <p id="hashtagGif9"></p> 
+            </div>
+            <div id="gifSuggest10" class="secondaryTrendsCharge">
+                <p id="hashtagGif10"></p>
+            </div>
+            <div id="gifSuggest11" class="secondaryTrendsCharge">
+                <p id="hashtagGif11"></p>
+            </div>
         </div>
         <div class="trendsCharge">
-            <div id="gifSuggest12" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest13" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest14" class="bigRightTrendsCharge"></div>
+            <div id="gifSuggest12" class="secondaryTrendsCharge">
+                <p id="hashtagGif12"></p>
+            </div>
+            <div id="gifSuggest13" class="secondaryTrendsCharge">
+                <p id="hashtagGif13"></p>
+            </div>
+            <div id="gifSuggest14" class="bigRightTrendsCharge">
+                <p id="hashtagGif14"></p>
+            </div>
         </div>
         <div class="trendsCharge">
-            <div id="gifSuggest15" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest16" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest17" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest18" class="secondaryTrendsCharge"></div>
+            <div id="gifSuggest15" class="secondaryTrendsCharge">
+                <p id="hashtagGif15"></p>
+            </div>
+            <div id="gifSuggest16" class="secondaryTrendsCharge">
+                <p id="hashtagGif16"></p>
+            </div>
+            <div id="gifSuggest17" class="secondaryTrendsCharge">
+                <p id="hashtagGif17"></p>
+            </div>
+            <div id="gifSuggest18" class="secondaryTrendsCharge">
+                <p id="hashtagGif18"></p>
+            </div>
         </div>
 
         <div class="trendsCharge">
-            <div id="gifSuggest19" class="bigLeftTrendsCharge"></div>
-            <div id="gifSuggest20" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest21" class="secondaryTrendsCharge"></div>
+            <div id="gifSuggest19" class="bigLeftTrendsCharge">
+                <p id="hashtagGif19"></p>
+            </div>
+            <div id="gifSuggest20" class="secondaryTrendsCharge">
+                <p id="hashtagGif20"></p>
+            </div>
+            <div id="gifSuggest21" class="secondaryTrendsCharge">
+                <p id="hashtagGif21"></p>
+            </div>
         </div>
         <div class="trendsCharge">
-            <div id="gifSuggest22" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest23" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest24" class="bigRightTrendsCharge"></div>
+            <div id="gifSuggest22" class="secondaryTrendsCharge">
+                <p id="hashtagGif22"></p>
+            </div>
+            <div id="gifSuggest23" class="secondaryTrendsCharge">
+                <p id="hashtagGif23"></p>
+            </div>
+            <div id="gifSuggest24" class="bigRightTrendsCharge">
+                <p id="hashtagGif24"></p>
+            </div>
         </div>
         <div class="trendsCharge">
-            <div id="gifSuggest25" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest26" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest27" class="secondaryTrendsCharge"></div>
-            <div id="gifSuggest28" class="secondaryTrendsCharge"></div>
+            <div id="gifSuggest25" class="secondaryTrendsCharge">
+                <p id="hashtagGif25"></p>
+            </div>
+            <div id="gifSuggest26" class="secondaryTrendsCharge">
+                <p id="hashtagGif26"></p>
+            </div>
+            <div id="gifSuggest27" class="secondaryTrendsCharge">
+                <p id="hashtagGif27"></p>
+            </div>
+            <div id="gifSuggest28" class="secondaryTrendsCharge">
+                <p id="hashtagGif28"></p>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="index.js"></script>
