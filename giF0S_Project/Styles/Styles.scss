@@ -155,7 +155,6 @@ body {
             text-decoration: none;
         }
 
-        //DELETE UNNECESSARY CODE IN THE HOVER
         .day {
             cursor: pointer;
             display: flex;
@@ -227,7 +226,7 @@ a {
     }
 
 }
-}
+
 
 #searchBox {
     background-color: $backgroundcolorsearchbox;
@@ -417,11 +416,16 @@ a {
         margin-top: 76px;
         border: solid 1px #E6BBE2;
         box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+        caret-color: #4180F6;
+        color: $outsidebordercolor;
+        font-size: 16px;
+        font-family: $primaryfont;
+        font-weight: 400;
 
         &::placeholder {
             color: $outsidebordercolor;
-            font-family: $primaryfont;
             font-size: 14px;
+            font-family: $primaryfont;
             font-weight: 400;
         }
     }
@@ -524,11 +528,16 @@ a {
         margin-left: 6.9541%;
         border: solid 1px #E6BBE2;
         box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+        caret-color: #4180F6;
+        color: $outsidebordercolor;
+        font-size: 16px;
+        font-family: $primaryfont;
+        font-weight: 400;
 
         &::placeholder {
             color: $outsidebordercolor;
-            font-family: $primaryfont;
             font-size: 14px;
+            font-family: $primaryfont;
             font-weight: 400;
         }
     }

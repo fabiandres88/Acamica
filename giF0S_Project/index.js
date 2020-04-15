@@ -2,13 +2,14 @@
 
 //GETING THEMES TO CHANGE IT
 let changeTheme = document.getElementById("buttonTwo");
+let themes = document.getElementById("menuThemes");
 let selectThemeD = document.getElementsByClassName("day");
 let selectThemeN = document.getElementsByClassName("night");
 
-//GETTING BUTTON
+//GETTING INPUT SEARCH
 let inputValue = document.getElementById("mySearch");
 
-//GETTING BUTTON
+//GETTING BUTTON SEARCH
 let listenSearch = document.querySelector("#buttonSearch")
 
 //VARIABLR TO USE IN THE FETCH
@@ -17,28 +18,33 @@ var urlToFetch = "";
 //TODO: FR- CREATE CONST TO ORGANIZE THE URLS DEFINITION   
 
 // LISTEN CLICK OVER THE CREATE GUIFOS TO SHOW ITS SUBMENU
-changeTheme.addEventListener("click", function () {
-	let themes = document.getElementById("menuThemes");
-	themes.style.display = isHidden(themes) ? "flex": "none";	
+	changeTheme.addEventListener("click", function () {
+	themes.style.display = isHidden(themes) ? "flex" : "none";
+	changeTheme.style.height = "40px";
 });
 
+// LISTEN MOUSELEAVE OVER THE SUBMENU CHANGE THEME, TO HIDDEN IT
+	changeTheme.addEventListener("mouseleave", function (){
+	themes.style.display = "none";
+})
 
 // LISTEN FOCUS OVER THE PLACEHOLDER IN THE INPUT SEARCH
 inputValue.addEventListener("focus", changeButtonSearch),
 
-// LISTEN FOCUS OVER THE PLACEHOLDER TO SHOW THE SUBMENU OF BUTTON SEARCH
-inputValue.addEventListener("focus", subMenuSearch);
+	// LISTEN FOCUS OVER THE PLACEHOLDER TO SHOW THE SUBMENU OF BUTTON SEARCH
+	inputValue.addEventListener("focus", subMenuSearch);
 
 // listenSearch.addEventListener("click", activeButtonSearch);
 
 // FUNCTION TO MANAGE THE SUBMENU IN THE FUNCTION SELECT THEME
 function isHidden(element) {
-    var style = window.getComputedStyle(element);
-    return (style.display === 'none')
+	var style = window.getComputedStyle(element);
+	return (style.display === 'none')
 }
 // FUNCTION TO CHANGES THE THEME TO DARK BY USERS
 function darkThemeCall() {
 	document.getElementById('themeSelector').href = './Theme2/Styles2/Styles2.css';
+	// e.stopPropagation();
 }
 // FUNCTION TO CHANGES THE THEME TO LIGHT BY USERS
 function lightThemeCall() {
@@ -51,15 +57,15 @@ function lightThemeCall() {
 // 	document.getElementById("mGlassImage").setAttribute("src", "./Images/lupa.svg");}
 
 // FUNCTION TO CHANGE STYLES SEARCH BUTTON WHEN USER START THE SEARCH
-function changeButtonSearch () {
-	listenSearch.removeAttribute("id","buttonSearch");
-	listenSearch.setAttribute("id","buttonSearchInput");
+function changeButtonSearch() {
+	listenSearch.removeAttribute("id", "buttonSearch");
+	listenSearch.setAttribute("id", "buttonSearchInput");
 	document.getElementById("mGlassImage").removeAttribute("src");
 	document.getElementById("mGlassImage").setAttribute("src", "./Images/lupa.svg");
 }
 
 // FUNCTION TO SHOW SUBMENU SEARCH
-function subMenuSearch () {
+function subMenuSearch() {
 	document.getElementById("subMenuSearch").style.display = "flex";
 	document.getElementById("subMenuSearch").style.zIndex = "5";
 }
@@ -73,6 +79,7 @@ function gettingSearchValue() {
 	getGifsBySearch(urlToFetch);
 }
 
+//CALLING THE APIWHEN THE PAGE IS CHARGING
 window.onload = getGifsBySearch("https://api.giphy.com/v1/gifs/search?api_key=qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA&q=coding&limit=28&offset=0&rating=G&lang=en");
 
 //FUNCTION TO GET REQUEST BY FETCH
@@ -110,8 +117,8 @@ function getGifsBySearch(url) {
 				gifImg.setAttribute("src", gifGiphy.images.original.url);
 				gifInsertIn.append(gifImg);
 				let gifTitle = data.data[i].title;
-				let gifTitleInsert=document.getElementById(`hashtagGif${i+1}`);
-				gifTitleInsert.innerHTML=gifTitle;
+				let gifTitleInsert = document.getElementById(`hashtagGif${i + 1}`);
+				gifTitleInsert.innerHTML = gifTitle;
 			}
 			return data
 		}).catch(error => {
