@@ -1,7 +1,7 @@
 //CREATING VARIABLES
 
 //GETING THEMES TO CHANGE IT
-let changeTheme = document.getElementById("themes");
+let changeTheme = document.getElementById("buttonTwo");
 let selectThemeD = document.getElementsByClassName("day");
 let selectThemeN = document.getElementsByClassName("night");
 
@@ -17,14 +17,11 @@ var urlToFetch = "";
 //TODO: FR- CREATE CONST TO ORGANIZE THE URLS DEFINITION   
 
 // LISTEN CLICK OVER THE CREATE GUIFOS TO SHOW ITS SUBMENU
-changeTheme.addEventListener("click", function (event) {
+changeTheme.addEventListener("click", function () {
 	let themes = document.getElementById("menuThemes");
-	themes.style.display = "flex";
-	// themes.addEventListener("mouseout", function (){
-	// 	themes.style.display = "none";
-	// })
-	
+	themes.style.display = isHidden(themes) ? "flex": "none";	
 });
+
 
 // LISTEN FOCUS OVER THE PLACEHOLDER IN THE INPUT SEARCH
 inputValue.addEventListener("focus", changeButtonSearch),
@@ -34,13 +31,18 @@ inputValue.addEventListener("focus", subMenuSearch);
 
 // listenSearch.addEventListener("click", activeButtonSearch);
 
+// FUNCTION TO MANAGE THE SUBMENU IN THE FUNCTION SELECT THEME
+function isHidden(element) {
+    var style = window.getComputedStyle(element);
+    return (style.display === 'none')
+}
 // FUNCTION TO CHANGES THE THEME TO DARK BY USERS
 function darkThemeCall() {
 	document.getElementById('themeSelector').href = './Theme2/Styles2/Styles2.css';
 }
 // FUNCTION TO CHANGES THE THEME TO LIGHT BY USERS
 function lightThemeCall() {
-	document.getElementById('themeDarkSelect').href = "./Styles/Styles.css";
+	document.getElementById('themeSelector').href = "./Styles/Styles.css";
 }
 
 // FUNCTION TO APLY THE IMAGE WHE THE SEARCH BUTTON IS ACTIVE

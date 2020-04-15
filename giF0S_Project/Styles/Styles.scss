@@ -61,10 +61,11 @@ body {
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
 
-        &:active{
+        &:active {
             outline: 1px dotted $outsidebordercolor;
             outline-offset: -4px;
         }
+
         &:hover {
             outline: 1px dotted $outsidebordercolor;
             outline-offset: -4px;
@@ -73,31 +74,73 @@ body {
 
     #buttonTwo {
         align-self: center;
+        display: flex;
         height: 36px;
-        width: 9.1098%;
-        background-color: $backgroundcolorbtn;
-        color: $outsidebordercolor;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: $primaryfont;
-        border: $outsidebordercolor outset 1px;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+        width: 11.8915%;
+        border: none;
+        background-color: transparent;
+        padding: 0px;
 
-        &:active{
-            outline: 1px dotted $outsidebordercolor;
-            outline-offset: -4px;
+        #buttonChooseTheme {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 77%;
+            height: 34px;
+            padding: 0%;
+            background-color: $backgroundcolorbtn;
+            color: $outsidebordercolor;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $primaryfont;
+            border: $outsidebordercolor outset 1px;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+
+            &:active {
+                outline: 1px dotted $outsidebordercolor;
+                outline-offset: -4px;
+            }
+
+            &:hover {
+                outline: 1px dotted $outsidebordercolor;
+                outline-offset: -4px;
+            }
         }
-        &:hover {
-            outline: 1px dotted $outsidebordercolor;
-            outline-offset: -4px;
+
+        #dropDown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 22.22%;
+            height: 34px;
+            padding: 0%;
+            background-color: $backgroundcolorbtn;
+            color: $outsidebordercolor;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $primaryfont;
+            border: $outsidebordercolor outset 1px;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+
+            &:active {
+                outline: 1px dotted $outsidebordercolor;
+                outline-offset: -4px;
+            }
+
+            &:hover {
+                outline: 1px dotted $outsidebordercolor;
+                outline-offset: -4px;
+            }
         }
     }
 
     #menuThemes {
         display: none;
         position: absolute;
-        top: 84px;
-        right: 15.7%;
+        top: 89px;
+        right: 15.5%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -112,6 +155,7 @@ body {
             text-decoration: none;
         }
 
+        //DELETE UNNECESSARY CODE IN THE HOVER
         .day {
             cursor: pointer;
             display: flex;
@@ -120,13 +164,19 @@ body {
             position: relative;
             width: 150px;
             height: 36px;
-            background-color: #FFF4FD;
-            border: #CCA6C9 1px solid;
-            box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
+            background-color: #F0F0F0;
+            border: #808080 1px solid;
+            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
             font-size: 16px;
             font-weight: 400;
             font-family: $primaryfont;
             color: $outsidebordercolor;
+
+            &:hover {
+                background-color: #FFF4FD;
+                border: #CCA6C9 1px solid;
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
+            }
         }
 
         .night {
@@ -144,54 +194,39 @@ body {
             font-weight: 400;
             font-family: $primaryfont;
             color: $outsidebordercolor;
+
+            &:hover {
+                background-color: #FFF4FD;
+                border: #CCA6C9 1px solid;
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
+            }
         }
     }
+}
 
-    #themes {
-        display: flex;
-        align-self: center;
-        width: 2.5%;
-        height: 36px;
-        background-color: $backgroundcolorbtn;
-        appearance: none;
-        background-image: url(../Images/dropdown.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        border: $outsidebordercolor outset 1px;
-        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+a {
+    display: flex;
+    margin-left: 1.1474%;
+}
 
-        &:active{
-            outline: 1px dotted $outsidebordercolor;
-            outline-offset: -4px;
-        }
-        &:hover {
-            outline: 1px dotted $outsidebordercolor;
-            outline-offset: -4px;
-        }
+#linkMyGifos {
+    display: flex;
+    width: 85px;
+    color: $outsidebordercolor;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $primaryfont;
+
+    &:hover {
+        outline: 1px dotted $outsidebordercolor;
+        outline-offset: -4px;
     }
 
-    a {
-        display: flex;
-        margin-left: 1.1474%;
+    &:active {
+        color: $searchBarColor;
     }
 
-    #linkMyGifos {
-        display: flex;
-        width: 85px;
-        color: $outsidebordercolor;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: $primaryfont;
-
-        &:hover {
-            outline: 1px dotted $outsidebordercolor;
-            outline-offset: -4px;
-        }
-        &:active{
-           color: $searchBarColor;
-        }
-        
-    }
+}
 }
 
 #searchBox {
@@ -262,7 +297,7 @@ body {
         border: solid 1px #808080;
         box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
 
-        &:active{
+        &:active {
             background-color: #E6BBE2;
             border: $outsidebordercolor solid 1px;
             box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 $fontcolorheader;
@@ -275,10 +310,12 @@ body {
                 background-repeat: no-repeat;
                 background-position: left;
             }
+
             // #mGlassImage{
             //     display: none;
             // }
         }
+
         #buttonContent {
             display: flex;
             flex-direction: row;
@@ -628,8 +665,8 @@ body {
             background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         }
     }
-     
-//THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE LEFT MARGIN
+
+    //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE LEFT MARGIN
     .bigLeftTrendsCharge {
         display: flex;
         flex-direction: column;
@@ -640,7 +677,7 @@ body {
         margin-left: 0%;
         background: $backgroundcolorsearchbox;
         color: #FFFFFF;
-        font-size: 14px;   
+        font-size: 14px;
         font-weight: 700;
         font-family: $primaryfont;
 
@@ -686,7 +723,8 @@ body {
 
         }
     }
-//THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE RIGHT MARGIN
+
+    //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE RIGHT MARGIN
     .bigRightTrendsCharge {
         display: flex;
         flex-direction: column;
@@ -697,10 +735,10 @@ body {
         margin-left: 0.5565%;
         background: $backgroundcolorsearchbox;
         color: $fontcolorheader;
-        font-size: 14px;   
+        font-size: 14px;
         font-weight: 700;
         font-family: $primaryfont;
-        
+
         &:hover {
             margin-right: 0.3478%;
             margin-left: 0.3478%;
@@ -721,7 +759,7 @@ body {
 
             p {
                 display: flex;
-         }
+            }
         }
 
         img {
@@ -743,8 +781,9 @@ body {
             background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         }
     }
-//IN THIS LINE THERE ARE THE SPECIAL STYLES OF THE ELEMENTS WITH SPECIALS FEATURES LIKE MARGIN,
-//WIDTH OR SOMETHING LIKE, THAT  ONLY THESE ELEMENTS HAVE FOR THEIR POSITION
+
+    //IN THIS LINE THERE ARE THE SPECIAL STYLES OF THE ELEMENTS WITH SPECIALS FEATURES LIKE MARGIN,
+    //WIDTH OR SOMETHING LIKE, THAT  ONLY THESE ELEMENTS HAVE FOR THEIR POSITION
     #gifSuggest8,
     #gifSuggest11,
     #gifSuggest18,
@@ -761,7 +800,7 @@ body {
         p {
             width: 98.4%;
             left: 0.3px;
-        }       
+        }
     }
 
     #gifSuggest12,
@@ -769,5 +808,5 @@ body {
     #gifSuggest22,
     #gifSuggest25 {
         margin-left: 0px;
-    }      
+    }
 }
