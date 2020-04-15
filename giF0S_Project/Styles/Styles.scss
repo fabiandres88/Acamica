@@ -32,7 +32,6 @@ body {
 }
 
 //THIS SECTION CONTENT LOGO GIFOS- BUTTONS CREATE GIFOS AND SELECT THEME AND MIS GUIFOS LINK 
-
 #buttonZone {
     display: flex;
     flex-direction: row;
@@ -62,16 +61,18 @@ body {
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
 
+        &:active{
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
         &:hover {
             outline: 1px dotted $outsidebordercolor;
             outline-offset: -4px;
         }
     }
 
-
     #buttonTwo {
         align-self: center;
-        // display: block;
         height: 36px;
         width: 9.1098%;
         background-color: $backgroundcolorbtn;
@@ -82,6 +83,10 @@ body {
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
 
+        &:active{
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
         &:hover {
             outline: 1px dotted $outsidebordercolor;
             outline-offset: -4px;
@@ -155,6 +160,10 @@ body {
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
 
+        &:active{
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
         &:hover {
             outline: 1px dotted $outsidebordercolor;
             outline-offset: -4px;
@@ -178,6 +187,10 @@ body {
             outline: 1px dotted $outsidebordercolor;
             outline-offset: -4px;
         }
+        &:active{
+           color: $searchBarColor;
+        }
+        
     }
 }
 
@@ -249,6 +262,23 @@ body {
         border: solid 1px #808080;
         box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
 
+        &:active{
+            background-color: #E6BBE2;
+            border: $outsidebordercolor solid 1px;
+            box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 $fontcolorheader;
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+
+            #buttonContent {
+                color: $outsidebordercolor;
+                background-image: url(../Images/lupa.svg);
+                background-repeat: no-repeat;
+                background-position: left;
+            }
+            // #mGlassImage{
+            //     display: none;
+            // }
+        }
         #buttonContent {
             display: flex;
             flex-direction: row;
@@ -598,9 +628,8 @@ body {
             background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         }
     }
-
-    // 
-
+     
+//THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE LEFT MARGIN
     .bigLeftTrendsCharge {
         display: flex;
         flex-direction: column;
@@ -657,7 +686,7 @@ body {
 
         }
     }
-
+//THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE RIGHT MARGIN
     .bigRightTrendsCharge {
         display: flex;
         flex-direction: column;
@@ -714,7 +743,8 @@ body {
             background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
         }
     }
-
+//IN THIS LINE THERE ARE THE SPECIAL STYLES OF THE ELEMENTS WITH SPECIALS FEATURES LIKE MARGIN,
+//WIDTH OR SOMETHING LIKE, THAT  ONLY THESE ELEMENTS HAVE FOR THEIR POSITION
     #gifSuggest8,
     #gifSuggest11,
     #gifSuggest18,
@@ -731,9 +761,7 @@ body {
         p {
             width: 98.4%;
             left: 0.3px;
-        }
-
-        ;
+        }       
     }
 
     #gifSuggest12,
@@ -741,11 +769,5 @@ body {
     #gifSuggest22,
     #gifSuggest25 {
         margin-left: 0px;
-    }
-   
-    // #gifSuggest19, #gifSuggest19{
-    //     p{
-    //         color: #FFFFFF;
-    //     }        
-    // }
+    }      
 }

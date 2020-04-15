@@ -13,6 +13,7 @@ body {
     background-color: #110038;
 }
 
+//THIS SECTION CONTENT THE TOP BAR WITH ITS GRADIENT STYLE
 #title {
     display: flex;
     align-items: center;
@@ -30,65 +31,147 @@ body {
     }
 }
 
+//THIS SECTION CONTENT LOGO GIFOS- BUTTONS CREATE GIFOS AND SELECT THEME AND MIS GUIFOS LINK 
 #buttonZone {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     height: 118px;
 
     #logotipe {
-        text-align: center;
-        margin-left: 6.9%;
-        margin-top: 35px;
-        margin-bottom: 19px;
+        align-self: center;
+        width: 91px;
+        margin-left: 6.3288%;
+        padding-right: 0.2504;
+        padding-left: 0.5565%;
     }
 
     #buttonOne {
-        display: block;
+        align-self:center ;
+        margin-right: 1.1137%;
+        margin-left: 47.6637%;
+        height: 36px;
         width: 10.0140%;
-        height: 36px;
         background-color: $backgroundcolorbtn;
         color: $fontcolorheader;
         font-size: 16px;
         font-weight: 400;
         font-family: $primaryfont;
-        margin-top: 44px;
-        margin-left: 47.6%;
-        margin-bottom: 38px;
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 $themeonegradientcolor1, inset 1px 1px 0 0 $fontcolorheader;
-    }
 
+        &:active{
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
+        &:hover {
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
+    }
+    
     #buttonTwo {
-        display: block;
-        width: 9.11%;
+        position: relative;
+        align-self: center;
         height: 36px;
+        width: 9.1098%;
         background-color: $backgroundcolorbtn;
         color: $fontcolorheader;
         font-size: 16px;
         font-weight: 400;
         font-family: $primaryfont;
-        margin-left: 1.1137%;
-        margin-top: 44px;
-        margin-bottom: 38px;
         border: $outsidebordercolor outset 1px;
         box-shadow: inset -1px -1px 0 0 $themeonegradientcolor1, inset 1px 1px 0 0 $fontcolorheader;
+
+        &:active{
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
+        &:hover {
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
+    }
+    
+    
+    #menuThemes {
+        display: none;
+        position: absolute;
+        top: 84px;
+        right: 15.7%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $backgroundcolorsearchbox;
+        width: 11.82%;
+        height: 102px;
+        padding-left: 0px;
+        box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+        }
+
+        .day {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 150px;
+            height: 36px;
+            background-color: #FFF4FD;
+            border: #CCA6C9 1px solid;
+            box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $primaryfont;
+            color: $outsidebordercolor;
+        }
+
+        .night {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 150px;
+            height: 36px;
+            background-color: #F0F0F0;
+            border: #808080 1px solid;
+            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $primaryfont;
+            color: $outsidebordercolor;
+        }
     }
 
     #themes {
         display: flex;
-        width: 2.504%;
+        align-self: center;
+        width: 36px;
         height: 36px;
         background-color: $backgroundcolorbtn;
-        margin-left: 0px;
-        margin-top: 44px;
-        margin-bottom: 38px;
         appearance: none;
         background-image: url(../../Images/forward.svg);
         transform: rotate(-270deg);
         background-position: center;
         background-repeat: no-repeat;
         border: $outsidebordercolor outset 1px;
-        box-shadow: inset 0 -1px 0 0 $fontcolorheader, inset 1px 0 0 0 $fontcolorheader;
+        box-shadow: inset -1px 0 0 0 #A72CB3, inset 1px 0 0 0 $fontcolorheader, inset 0 -1px 0 0 $fontcolorheader, inset 0 1px 0 0 #A72CB3;
+        ;
+
+        &:active{
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
+        &:hover {
+            outline: 1px dotted $outsidebordercolor;
+            outline-offset: -4px;
+        }
     }
 
     p {

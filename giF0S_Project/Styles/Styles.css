@@ -71,6 +71,11 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
+#buttonZone #buttonOne:active {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
 #buttonZone #buttonOne:hover {
   outline: 1px dotted #110038;
   outline-offset: -4px;
@@ -90,6 +95,11 @@ body {
   border: #110038 outset 1px;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#buttonZone #buttonTwo:active {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
 }
 
 #buttonZone #buttonTwo:hover {
@@ -193,6 +203,11 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
+#buttonZone #themes:active {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
 #buttonZone #themes:hover {
   outline: 1px dotted #110038;
   outline-offset: -4px;
@@ -219,6 +234,10 @@ body {
 #buttonZone #linkMyGifos:hover {
   outline: 1px dotted #110038;
   outline-offset: -4px;
+}
+
+#buttonZone #linkMyGifos:active {
+  color: #B4B4B4;
 }
 
 #searchBox {
@@ -325,6 +344,22 @@ body {
   border: solid 1px #808080;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#searchBox #buttonSearch:active {
+  background-color: #E6BBE2;
+  border: #110038 solid 1px;
+  -webkit-box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 #FFFFFF;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#searchBox #buttonSearch:active #buttonContent {
+  color: #110038;
+  background-image: url(../Images/lupa.svg);
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 #searchBox #buttonSearch #buttonContent {

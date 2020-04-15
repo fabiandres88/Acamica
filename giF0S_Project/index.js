@@ -20,6 +20,10 @@ var urlToFetch = "";
 changeTheme.addEventListener("click", function (event) {
 	let themes = document.getElementById("menuThemes");
 	themes.style.display = "flex";
+	// themes.addEventListener("mouseout", function (){
+	// 	themes.style.display = "none";
+	// })
+	
 });
 
 // LISTEN FOCUS OVER THE PLACEHOLDER IN THE INPUT SEARCH
@@ -27,6 +31,8 @@ inputValue.addEventListener("focus", changeButtonSearch),
 
 // LISTEN FOCUS OVER THE PLACEHOLDER TO SHOW THE SUBMENU OF BUTTON SEARCH
 inputValue.addEventListener("focus", subMenuSearch);
+
+// listenSearch.addEventListener("click", activeButtonSearch);
 
 // FUNCTION TO CHANGES THE THEME TO DARK BY USERS
 function darkThemeCall() {
@@ -36,6 +42,11 @@ function darkThemeCall() {
 function lightThemeCall() {
 	document.getElementById('themeDarkSelect').href = "./Styles/Styles.css";
 }
+
+// FUNCTION TO APLY THE IMAGE WHE THE SEARCH BUTTON IS ACTIVE
+// function activeButtonSearch (){
+// 	document.getElementById("mGlassImage").removeAttribute("src");
+// 	document.getElementById("mGlassImage").setAttribute("src", "./Images/lupa.svg");}
 
 // FUNCTION TO CHANGE STYLES SEARCH BUTTON WHEN USER START THE SEARCH
 function changeButtonSearch () {

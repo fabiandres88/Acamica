@@ -31,6 +31,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -38,56 +44,155 @@ body {
 }
 
 #buttonZone #logotipe {
-  text-align: center;
-  margin-left: 6.9%;
-  margin-top: 35px;
-  margin-bottom: 19px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 91px;
+  margin-left: 6.3288%;
+  padding-right: 0.2504;
+  padding-left: 0.5565%;
 }
 
 #buttonZone #buttonOne {
-  display: block;
-  width: 10.0140%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 1.1137%;
+  margin-left: 47.6637%;
   height: 36px;
+  width: 10.0140%;
   background-color: #EE3EFE;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 400;
   font-family: "Chakra Petch";
-  margin-top: 44px;
-  margin-left: 47.6%;
-  margin-bottom: 38px;
   border: #110038 outset 1px;
   -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
 }
 
+#buttonZone #buttonOne:active {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#buttonZone #buttonOne:hover {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
 #buttonZone #buttonTwo {
-  display: block;
-  width: 9.11%;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   height: 36px;
+  width: 9.1098%;
   background-color: #EE3EFE;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 400;
   font-family: "Chakra Petch";
-  margin-left: 1.1137%;
-  margin-top: 44px;
-  margin-bottom: 38px;
   border: #110038 outset 1px;
   -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#buttonZone #buttonTwo:active {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#buttonZone #buttonTwo:hover {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#buttonZone #menuThemes {
+  display: none;
+  position: absolute;
+  top: 84px;
+  right: 15.7%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #B4B4B4;
+  width: 11.82%;
+  height: 102px;
+  padding-left: 0px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  list-style: none;
+}
+
+#buttonZone #menuThemes a {
+  text-decoration: none;
+}
+
+#buttonZone #menuThemes .day {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 150px;
+  height: 36px;
+  background-color: #FFF4FD;
+  border: #CCA6C9 1px solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  color: #110038;
+}
+
+#buttonZone #menuThemes .night {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 150px;
+  height: 36px;
+  background-color: #F0F0F0;
+  border: #808080 1px solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  color: #110038;
 }
 
 #buttonZone #themes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 2.504%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 36px;
   height: 36px;
   background-color: #EE3EFE;
-  margin-left: 0px;
-  margin-top: 44px;
-  margin-bottom: 38px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -97,8 +202,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border: #110038 outset 1px;
-  -webkit-box-shadow: inset 0 -1px 0 0 #FFFFFF, inset 1px 0 0 0 #FFFFFF;
-          box-shadow: inset 0 -1px 0 0 #FFFFFF, inset 1px 0 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px 0 0 0 #A72CB3, inset 1px 0 0 0 #FFFFFF, inset 0 -1px 0 0 #FFFFFF, inset 0 1px 0 0 #A72CB3;
+          box-shadow: inset -1px 0 0 0 #A72CB3, inset 1px 0 0 0 #FFFFFF, inset 0 -1px 0 0 #FFFFFF, inset 0 1px 0 0 #A72CB3;
+}
+
+#buttonZone #themes:active {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#buttonZone #themes:hover {
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
 }
 
 #buttonZone p {
