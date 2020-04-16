@@ -80,7 +80,7 @@ function gettingSearchValue() {
 }
 
 //CALLING THE APIWHEN THE PAGE IS CHARGING
-window.onload = getGifsBySearch("https://api.giphy.com/v1/gifs/search?api_key=qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA&q=coding&limit=28&offset=0&rating=G&lang=en");
+window.onload = getGifsBySearch("https://api.giphy.com/v1/gifs/search?api_key=qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA&q=futbol&limit=29&offset=0&rating=G&lang=en");
 
 //FUNCTION TO GET REQUEST BY FETCH
 // function getGifByRandomToPreview(url){

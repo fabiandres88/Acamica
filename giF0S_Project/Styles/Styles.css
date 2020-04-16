@@ -72,11 +72,13 @@ body {
 }
 
 #buttonZone #buttonOne:active {
+  background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
 #buttonZone #buttonOne:hover {
+  background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
@@ -119,11 +121,13 @@ body {
 }
 
 #buttonZone #buttonTwo #buttonChooseTheme:active {
+  background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
 #buttonZone #buttonTwo #buttonChooseTheme:hover {
+  background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
@@ -153,11 +157,13 @@ body {
 }
 
 #buttonZone #buttonTwo #dropDown:active {
+  background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
 #buttonZone #buttonTwo #dropDown:hover {
+  background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
@@ -184,10 +190,6 @@ body {
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   list-style: none;
-}
-
-#buttonZone #menuThemes a {
-  text-decoration: none;
 }
 
 #buttonZone #menuThemes .day {
@@ -396,9 +398,16 @@ a {
 
 #searchBox #buttonSearch:active #buttonContent {
   color: #110038;
-  background-image: url(../Images/lupa.svg);
-  background-repeat: no-repeat;
-  background-position: left;
+}
+
+#searchBox #buttonSearch:active #buttonContent #mGlassImage {
+  display: none;
+}
+
+#searchBox #buttonSearch:active #buttonContent #mGlass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #searchBox #buttonSearch #buttonContent {
@@ -411,6 +420,18 @@ a {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+#searchBox #buttonSearch #buttonContent #mGlassImageDark {
+  display: none;
+}
+
+#searchBox #buttonSearch #buttonContent #mGlass {
+  display: none;
+}
+
+#searchBox #buttonSearch #buttonContent #mGlassLight {
+  display: none;
 }
 
 #searchBox #buttonSearchInput {
@@ -741,7 +762,7 @@ a {
 .trendsCharge #gifSuggest5:hover img {
   position: relative;
   z-index: 1;
-  left: 4px;
+  left: 3px;
   bottom: 18px;
   height: 100%;
   width: 97.2778%;

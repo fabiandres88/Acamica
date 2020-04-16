@@ -72,22 +72,44 @@ body {
 }
 
 #buttonZone #buttonOne:active {
+  background-color: #CE36DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
 #buttonZone #buttonOne:hover {
+  background-color: #CE36DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
 #buttonZone #buttonTwo {
-  position: relative;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 36px;
-  width: 9.1098%;
+  width: 11.8915%;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+#buttonZone #buttonTwo #buttonChooseTheme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 77%;
+  height: 34px;
+  padding: 0%;
   background-color: #EE3EFE;
   color: #FFFFFF;
   font-size: 16px;
@@ -98,12 +120,50 @@ body {
           box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonZone #buttonTwo:active {
+#buttonZone #buttonTwo #buttonChooseTheme:active {
+  background-color: #CE36DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#buttonZone #buttonTwo:hover {
+#buttonZone #buttonTwo #buttonChooseTheme:hover {
+  background-color: #CE36DB;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#buttonZone #buttonTwo #dropDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 22.22%;
+  height: 34px;
+  padding: 0%;
+  background-color: #EE3EFE;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#buttonZone #buttonTwo #dropDown:active {
+  background-color: #CE36DB;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#buttonZone #buttonTwo #dropDown:hover {
+  background-color: #CE36DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
@@ -111,7 +171,7 @@ body {
 #buttonZone #menuThemes {
   display: none;
   position: absolute;
-  top: 84px;
+  top: 88px;
   right: 15.7%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -130,10 +190,6 @@ body {
   -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
   list-style: none;
-}
-
-#buttonZone #menuThemes a {
-  text-decoration: none;
 }
 
 #buttonZone #menuThemes .day {
@@ -160,6 +216,14 @@ body {
   color: #110038;
 }
 
+#buttonZone #menuThemes .day:hover {
+  color: #FFFFFF;
+  background-color: #2E32FB;
+  border: #33358F 1px solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
 #buttonZone #menuThemes .night {
   cursor: pointer;
   display: -webkit-box;
@@ -184,45 +248,39 @@ body {
   color: #110038;
 }
 
-#buttonZone #themes {
+#buttonZone #menuThemes .night:hover {
+  background-color: #2E32FB;
+  color: #FFFFFF;
+  border: #33358F 1px solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  width: 36px;
-  height: 36px;
-  background-color: #EE3EFE;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url(../../Images/forward.svg);
-  -webkit-transform: rotate(-270deg);
-          transform: rotate(-270deg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px 0 0 0 #A72CB3, inset 1px 0 0 0 #FFFFFF, inset 0 -1px 0 0 #FFFFFF, inset 0 1px 0 0 #A72CB3;
-          box-shadow: inset -1px 0 0 0 #A72CB3, inset 1px 0 0 0 #FFFFFF, inset 0 -1px 0 0 #FFFFFF, inset 0 1px 0 0 #A72CB3;
+  margin: 1.1474%;
 }
 
-#buttonZone #themes:active {
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-#buttonZone #themes:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-#buttonZone p {
-  margin-right: 83, 4492%;
-  margin-left: 1.147%;
+#linkMyGifos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85px;
   color: #FFFFFF;
-  font-size: 100%;
+  font-size: 16px;
   font-weight: 400;
   font-family: "Chakra Petch";
+}
+
+#linkMyGifos:hover {
+  outline: 1px dotted #8F8F8F;
+  outline-offset: -4px;
+}
+
+#linkMyGifos:active {
+  color: #8F8F8F;
 }
 
 #searchBox {
@@ -273,44 +331,50 @@ body {
           align-items: center;
 }
 
-#searchBox #formSearch #mySearch {
+#searchBox #mySearch {
+  caret-color: #4180F6;
+  color: #110038;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
   width: 88.08%;
   height: 48px;
   margin-left: 15px;
   border: solid 1px #979797;
   -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
           box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
+  list-style: lower-alpha;
 }
 
-#searchBox #formSearch #mySearch::-webkit-input-placeholder {
+#searchBox #mySearch::-webkit-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchBox #formSearch #mySearch:-ms-input-placeholder {
+#searchBox #mySearch:-ms-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchBox #formSearch #mySearch::-ms-input-placeholder {
+#searchBox #mySearch::-ms-input-placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchBox #formSearch #mySearch::placeholder {
+#searchBox #mySearch::placeholder {
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#searchBox #formSearch #buttonSearch {
+#searchBox #buttonSearch {
   text-align: center;
   margin-left: 8px;
   width: 8.5%;
@@ -325,7 +389,31 @@ body {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#searchBox #formSearch #buttonSearch #buttonContent {
+#searchBox #buttonSearch:active {
+  background-color: #CE36DB;
+  border: #110038 solid 1px;
+  -webkit-box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 #FFFFFF;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#searchBox #buttonSearch:active #buttonContent {
+  color: #FFFFFF;
+  font-family: "Chakra Petch";
+}
+
+#searchBox #buttonSearch:active #buttonContent #mGlassLight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#searchBox #buttonSearch:active #buttonContent #mGlassImageDark {
+  display: none;
+}
+
+#searchBox #buttonSearch #buttonContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,7 +425,42 @@ body {
       justify-content: space-around;
 }
 
+#searchBox #buttonSearch #buttonContent #mGlassImage {
+  display: none;
+}
+
+#searchBox #buttonSearch #buttonContent #mGlass {
+  display: none;
+}
+
+#searchBox #buttonSearch #buttonContent #mGlassLight {
+  display: none;
+}
+
+#searchBox #buttonSearch #buttonContent #mGlassImageDark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#searchBox #buttonSearchInput {
+  text-align: center;
+  margin-left: 8px;
+  width: 8.5%;
+  height: 36px;
+  background-color: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  color: #110038;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+}
+
 #subMenuSearch {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,13 +481,31 @@ body {
   width: 87.9166%;
   height: 34px;
   margin-left: 1.3333%;
+  font-size: 16px;
+  font-family: #FFFFFF;
+  color: #B4B4B4;
 }
 
 #subMenuSearch #resultSearch {
   margin-top: 17px;
+  text-align: left;
+  background-color: #B4B4B4;
+  border: solid 1px #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#subMenuSearch #resultSearch:hover {
+  background-color: #DBDBDB;
+  border: #808080 1PX solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
 }
 
 #subMenuSearch #similarResult {
+  text-align: left;
   margin-top: 11px;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -372,12 +513,31 @@ body {
           box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
 }
 
+#subMenuSearch #similarResult:hover {
+  background-color: #DBDBDB;
+  border: #808080 1PX solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
 #subMenuSearch #otherOneResult {
+  text-align: left;
   margin-top: 10px;
   background-color: #f0f0f0;
   border: solid 1px #808080;
   -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#subMenuSearch #otherOneResult:hover {
+  background-color: #DBDBDB;
+  border: #808080 1PX solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
 }
 
 #suggestions #suggest {
@@ -388,6 +548,11 @@ body {
   border: solid 1px #2E32FB;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
           box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+  caret-color: #4180F6;
+  color: #110038;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
 }
 
 #suggestions #suggest::-webkit-input-placeholder {
@@ -458,7 +623,12 @@ body {
   width: 97.22277%;
 }
 
-#gifSuggest .hashtagGif {
+#gifSuggest .borderShadowGif img:hover {
+  outline: 1px dotted #110038;
+  outline-offset: -1px;
+}
+
+#gifSuggest p {
   color: #FFFFFF;
   font-size: 14px;
   font-family: "Chakra Petch";
@@ -505,6 +675,11 @@ body {
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #284F99;
 }
 
+#gifSuggest .seeMoreButton:hover {
+  outline: 1px dotted #110038;
+  outline-offset: -5px;
+}
+
 #trendsSection #trends {
   width: 83.45%;
   height: 32px;
@@ -513,6 +688,11 @@ body {
   border: solid 1px #2E32FB;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
           box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+  caret-color: #4180F6;
+  color: #110038;
+  font-size: 16px;
+  font-family: "Chakra Petch";
+  font-weight: 400;
 }
 
 #trendsSection #trends::-webkit-input-placeholder {
@@ -561,6 +741,11 @@ body {
   width: 100%;
 }
 
+.trendsCharge img:hover {
+  outline: 1px dotted #110038;
+  outline-offset: -1px;
+}
+
 .trendsCharge #gifSuggest5 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,29 +754,47 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 0.3478%;
+  margin-right: 0.5565%;
   margin-left: 0%;
-  height: 304px;
-  width: 20.4461%;
+  height: 298px;
+  width: 20.0289%;
   background-color: #B4B4B4;
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
 }
 
-.trendsCharge #gifSuggest5 img {
+.trendsCharge #gifSuggest5:hover {
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  margin-right: 0.3478%;
+  width: 20.4461%;
+  height: 304px;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+.trendsCharge #gifSuggest5:hover img {
   position: relative;
   z-index: 1;
   left: 3px;
   bottom: 18px;
   height: 100%;
   width: 97.2778%;
-  border: dotted #110038 1px;
 }
 
-.trendsCharge #gifSuggest5 div {
+.trendsCharge #gifSuggest5:hover p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trendsCharge #gifSuggest5 img {
+  height: 100%;
+  width: 100%;
+}
+
+.trendsCharge #gifSuggest5 p {
+  display: none;
   position: relative;
-  z-index: 4;
-  top: 284px;
+  z-index: 3;
   color: #FFFFFF;
   font-size: 14px;
   font-family: "Chakra Petch";
@@ -599,19 +802,23 @@ body {
   width: 97.2778%;
   height: 24px;
   margin-left: 1.3943%;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  -webkit-transform: translateY(277px);
+          transform: translateY(277px);
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-}
-
-.trendsCharge #gifSuggest6 {
-  margin-left: 0.3478%;
 }
 
 .trendsCharge .secondaryTrendsCharge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
   background: #B4B4B4;
   height: 298px;
   width: 20.0289%;
@@ -619,12 +826,98 @@ body {
   margin-left: 0.5565%;
 }
 
+.trendsCharge .secondaryTrendsCharge:hover {
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  margin-right: 0.3478%;
+  width: 20.4461%;
+  height: 304px;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+.trendsCharge .secondaryTrendsCharge:hover img {
+  position: absolute;
+  z-index: 1;
+  left: 4px;
+  bottom: 2px;
+  height: 98%;
+  width: 97.2778%;
+}
+
+.trendsCharge .secondaryTrendsCharge:hover p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trendsCharge .secondaryTrendsCharge img {
+  height: 100%;
+  width: 100%;
+}
+
+.trendsCharge .secondaryTrendsCharge p {
+  display: none;
+  position: relative;
+  z-index: 3;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: "Chakra Petch";
+  font-weight: 700;
+  width: 97.2778%;
+  height: 24px;
+  margin-left: 1.3943%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  -webkit-transform: translateY(277px);
+          transform: translateY(277px);
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
 .trendsCharge .bigLeftTrendsCharge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
   width: 41.1693%;
   height: 298px;
   margin-right: 0.5565%;
   margin-left: 0%;
   background: #B4B4B4;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Chakra Petch";
+}
+
+.trendsCharge .bigLeftTrendsCharge:hover {
+  margin-right: 0.3478%;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  width: 41.5865%;
+  height: 304px;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+.trendsCharge .bigLeftTrendsCharge:hover img {
+  position: absolute;
+  z-index: 1;
+  width: 99%;
+  height: 98%;
+  top: 3px;
+  left: 3px;
+}
+
+.trendsCharge .bigLeftTrendsCharge:hover p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .trendsCharge .bigLeftTrendsCharge img {
@@ -632,17 +925,102 @@ body {
   height: 100%;
 }
 
+.trendsCharge .bigLeftTrendsCharge p {
+  display: none;
+  position: relative;
+  z-index: 5;
+  -webkit-transform: translateY(275px);
+          transform: translateY(275px);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-left: 0.7%;
+  height: 24px;
+  width: 98.7%;
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
 .trendsCharge .bigRightTrendsCharge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
   width: 41.1693%;
   height: 298px;
   margin-right: 0.5565%;
   margin-left: 0.5565%;
   background: #B4B4B4;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Chakra Petch";
+}
+
+.trendsCharge .bigRightTrendsCharge:hover {
+  margin-right: 0.3478%;
+  margin-left: 0.3478%;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  width: 41.5865%;
+  height: 304px;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+.trendsCharge .bigRightTrendsCharge:hover img {
+  position: absolute;
+  z-index: 1;
+  width: 99%;
+  height: 98%;
+  top: 3px;
+  left: 3px;
+}
+
+.trendsCharge .bigRightTrendsCharge:hover p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .trendsCharge .bigRightTrendsCharge img {
   width: 100%;
   height: 100%;
+}
+
+.trendsCharge .bigRightTrendsCharge p {
+  display: none;
+  position: relative;
+  z-index: 5;
+  -webkit-transform: translateY(275px);
+          transform: translateY(275px);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-left: 0.7%;
+  height: 24px;
+  width: 98.7%;
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.trendsCharge #gifSuggest8 p,
+.trendsCharge #gifSuggest11 p,
+.trendsCharge #gifSuggest18 p,
+.trendsCharge #gifSuggest21 p,
+.trendsCharge #gifSuggest28 p {
+  width: 97%;
+  bottom: 0px;
+}
+
+.trendsCharge #gifSuggest14 p,
+.trendsCharge #gifSuggest24 p {
+  width: 98.4%;
+  left: 0.3px;
 }
 
 .trendsCharge #gifSuggest12,
