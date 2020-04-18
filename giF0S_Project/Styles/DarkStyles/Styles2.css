@@ -754,6 +754,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   margin-right: 0.5565%;
   margin-left: 0%;
   height: 298px;
@@ -772,11 +773,11 @@ a {
 }
 
 .trendsCharge #gifSuggest5:hover img {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  left: 3px;
-  bottom: 18px;
-  height: 100%;
+  left: 4px;
+  bottom: 2px;
+  height: 98%;
   width: 97.2778%;
 }
 
