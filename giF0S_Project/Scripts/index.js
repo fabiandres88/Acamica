@@ -25,14 +25,19 @@ changeTheme.addEventListener("mouseleave", function () {
 })
 
 // LISTEN FOCUS OVER THE PLACEHOLDER IN THE INPUT SEARCH
-inputValue.addEventListener("focus", changeButtonSearch);
-inputValue.addEventListener("focusout", returnStyles);
+// inputValue.addEventListener("focus", changeButtonSearch);
+// inputValue.addEventListener("focusout", returnStyles);
 
 // LISTEN FOCUS OVER THE PLACEHOLDER TO SHOW THE SUBMENU OF BUTTON SEARCH
-inputValue.addEventListener("focus", subMenuSearch);
-inputValue.addEventListener("focusout", () => {
-	document.getElementById("subMenuSearch").style.display = "none";
-});
+// inputValue.addEventListener("focus", subMenuSearch);
+// inputValue.addEventListener("focusout", () => {
+// 	document.getElementById("subMenuSearch").style.display = "none";
+// });
+
+// GETTING VALUE OF BUTTONS INTO THE SUBMENU SEARCH
+let buttonSuggest1= document.getElementById("Result1");
+let buttonSuggest2= document.getElementById("Result2");
+let buttonSuggest3= document.getElementById("Result3");
 
 // FUNCTION TO MANAGE THE SUBMENU IN THE FUNCTION SELECT THEME
 function isHidden(element) {
@@ -111,6 +116,56 @@ function subMenuSearch(e) {
 	e.stopPropagation();
 }
 
+//LISTEN BUTTONS INTO THE SUBMENU SEARCH
+buttonSuggest1.addEventListener("click",autocompleteSearch);
+function autocompleteSearch () {
+	let suggest1 =(buttonSuggest1.innerHTML);		
+	localStorage.setItem("button1","#"+ buttonSuggest1.innerHTML);	
+	urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${suggest1}&limit=29&offset=0&rating=G&lang=en`
+	getGifsBySearch (urlToFetch);
+	let saveButton = document.createElement("button");
+	let container = document.getElementById("buttonsContainer");
+	container.append(saveButton);			
+	saveButton.style.width = "100px";			
+	saveButton.style.height = "36px";
+	saveButton.style.color = "#110038";
+	let tagSaved = localStorage.getItem("button1");
+	container.firstElementChild.innerHTML=("#"+tagSaved);
+	saveButton.style.backgroundColor = "blue";
+}
+buttonSuggest2.addEventListener("click",autocompleteSearch2);
+function autocompleteSearch2 () {	
+	let suggest2 =(buttonSuggest2.innerHTML);
+	localStorage.setItem("button2","#"+ buttonSuggest2.innerHTML);
+	urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${suggest2}&limit=29&offset=0&rating=G&lang=en`
+	getGifsBySearch (urlToFetch);
+	let saveButton = document.createElement("button");
+	let container = document.getElementById("buttonsContainer");
+	container.append(saveButton);			
+	saveButton.style.width = "100px";			
+	saveButton.style.height = "36px";
+	saveButton.style.color = "#110038";
+	let tagSaved = localStorage.getItem("button2");
+	container.firstElementChild.innerHTML=("#"+tagSaved);
+	saveButton.style.backgroundColor = "blue";	
+}
+buttonSuggest3.addEventListener("click",autocompleteSearch3);
+function autocompleteSearch3 () {
+	let suggest3 =(buttonSuggest3.innerHTML);	
+	localStorage.setItem("button3","#"+ buttonSuggest3.innerHTML);	
+	urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${suggest3}&limit=29&offset=0&rating=G&lang=en`
+	getGifsBySearch (urlToFetch)
+	let saveButton = document.createElement("button");
+	let container = document.getElementById("buttonsContainer");
+	container.append(saveButton);			
+	saveButton.style.width = "100px";			
+	saveButton.style.height = "36px";
+	saveButton.style.color = "#110038";
+	let tagSaved = localStorage.getItem("button3");
+	container.firstElementChild.innerHTML=("#"+tagSaved);
+	saveButton.style.backgroundColor = "blue";	
+}
+
 //FUNCTION TO START THE SEARCH BY AUTOCOMPLETE REQUEST
 inputValue.addEventListener("keypress", suggestSearch);
 
@@ -144,23 +199,7 @@ function getSuggestSearch(url) {
 			for (let i=0; i<=3; i++){
 			let suggestTag = (data.data[i].name);			
 			let Result1 = document.getElementById(`Result${i+1}`);
-			// Result1.innerHTML=suggestTag;
-			let tagSet = Result1.innerHTML=suggestTag;
-			let size = suggestTag.length;
-			if ( size == 6){
-			
-			localStorage.setItem("TagSuggest",tagSet);
-			let saveButton = document.createElement("button");
-			let container = document.getElementById("buttonsContainer");
-			container.append(saveButton);			
-			saveButton.style.width = "100px";			
-			saveButton.style.height = "36px";
-			saveButton.style.color = "#110038";
-			let tagSaved = localStorage.getItem("TagSuggest");
-			let buttonNew = container.firstElementChild.innerHTML=("#"+tagSaved);
-			console.log(buttonNew);
-		}
-						
+			Result1.innerHTML=suggestTag;						
 		}
 			return data
 		})
@@ -204,10 +243,10 @@ function getGifsBySearch(url) {
 		})
 		.then(data => {
 			data;
-			console.log(data);
-			console.log(data.data);
-			console.log(data.data[0]);
-			console.log(data.data[0].source);
+			// console.log(data);
+			// console.log(data.data);
+			// console.log(data.data[0]);
+			// console.log(data.data[0].source);
 
 			for (let i = 0; i <= 27; i++) {
 				let gifGiphy = data.data[i];

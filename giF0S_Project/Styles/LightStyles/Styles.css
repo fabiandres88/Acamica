@@ -5,7 +5,7 @@ body {
   background-color: #faf1f9;
 }
 
-#title {
+body #title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,7 @@ body {
           box-shadow: inset 0 -1px 0 0 #110038;
 }
 
-#title h1 {
+body #title h1 {
   font-size: 12px;
   margin-left: 0.4867%;
   font-family: "Chakra Petch";
@@ -28,7 +28,7 @@ body {
   color: #FFFFFF;
 }
 
-#buttonZone {
+body #buttonZone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +44,7 @@ body {
   height: 118px;
 }
 
-#buttonZone #logotipe {
+body #buttonZone #logotipe {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -54,10 +54,12 @@ body {
   padding-right: 0.2504%;
 }
 
-#buttonZone #buttonOne {
+body #buttonZone #buttonOne {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: 1.1137%;
   margin-left: 47.6637%;
   height: 36px;
@@ -72,19 +74,32 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonZone #buttonOne:active {
+body #buttonZone #buttonOne:active {
   background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#buttonZone #buttonOne:hover {
+body #buttonZone #buttonOne:hover {
   background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#buttonZone #buttonTwo {
+body #buttonZone #buttonOne a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #110038;
+  width: 100%;
+  height: 100%;
+}
+
+body #buttonZone #buttonTwo {
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -97,7 +112,7 @@ body {
   padding: 0px;
 }
 
-#buttonZone #buttonTwo #buttonChooseTheme {
+body #buttonZone #buttonTwo #buttonChooseTheme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,19 +136,19 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonZone #buttonTwo #buttonChooseTheme:active {
+body #buttonZone #buttonTwo #buttonChooseTheme:active {
   background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#buttonZone #buttonTwo #buttonChooseTheme:hover {
+body #buttonZone #buttonTwo #buttonChooseTheme:hover {
   background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#buttonZone #buttonTwo #dropDown {
+body #buttonZone #buttonTwo #dropDown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,19 +172,19 @@ body {
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonZone #buttonTwo #dropDown:active {
+body #buttonZone #buttonTwo #dropDown:active {
   background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#buttonZone #buttonTwo #dropDown:hover {
+body #buttonZone #buttonTwo #dropDown:hover {
   background-color: #E6BBE2;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#buttonZone #menuThemes {
+body #buttonZone #menuThemes {
   display: none;
   position: absolute;
   top: 89px;
@@ -193,7 +208,7 @@ body {
   list-style: none;
 }
 
-#buttonZone #menuThemes .day {
+body #buttonZone #menuThemes .day {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,14 +232,14 @@ body {
   color: #110038;
 }
 
-#buttonZone #menuThemes .day:hover {
+body #buttonZone #menuThemes .day:hover {
   background-color: #FFF4FD;
   border: #CCA6C9 1px solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#buttonZone #menuThemes .night {
+body #buttonZone #menuThemes .night {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,21 +263,21 @@ body {
   color: #110038;
 }
 
-#buttonZone #menuThemes .night:hover {
+body #buttonZone #menuThemes .night:hover {
   background-color: #FFF4FD;
   border: #CCA6C9 1px solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-a {
+body a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 1.1474%;
 }
 
-#linkMyGifos {
+body #linkMyGifos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,16 +288,16 @@ a {
   font-family: "Chakra Petch";
 }
 
-#linkMyGifos:hover {
+body #linkMyGifos:hover {
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#linkMyGifos:active {
+body #linkMyGifos:active {
   color: #B4B4B4;
 }
 
-#searchBox {
+body #searchBox {
   background-color: #E6E6E6;
   width: 83.45%;
   height: 99px;
@@ -291,7 +306,7 @@ a {
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
 }
 
-#searchBox #searchBoxTitle {
+body #searchBox #searchBoxTitle {
   background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   -webkit-box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
@@ -301,7 +316,7 @@ a {
   margin-left: 0.25%;
 }
 
-#searchBox h2 {
+body #searchBox h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,7 +332,7 @@ a {
   border-top: #FFFFFF solid 2px;
 }
 
-#searchBox #formSearch {
+body #searchBox #formSearch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,7 +345,7 @@ a {
           align-items: center;
 }
 
-#searchBox #mySearch {
+body #searchBox #mySearch {
   caret-color: #4180F6;
   color: #110038;
   font-size: 16px;
@@ -345,7 +360,7 @@ a {
   list-style: lower-alpha;
 }
 
-#searchBox #mySearch::-webkit-input-placeholder {
+body #searchBox::-webkit-input-placeholder {
   padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
@@ -353,7 +368,7 @@ a {
   font-weight: 400;
 }
 
-#searchBox #mySearch:-ms-input-placeholder {
+body #searchBox:-ms-input-placeholder {
   padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
@@ -361,7 +376,7 @@ a {
   font-weight: 400;
 }
 
-#searchBox #mySearch::-ms-input-placeholder {
+body #searchBox::-ms-input-placeholder {
   padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
@@ -369,7 +384,7 @@ a {
   font-weight: 400;
 }
 
-#searchBox #mySearch::placeholder {
+body #searchBox::placeholder {
   padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
@@ -377,7 +392,7 @@ a {
   font-weight: 400;
 }
 
-#searchBox #buttonSearch {
+body #buttonSearch {
   text-align: center;
   margin-left: 8px;
   width: 8.5%;
@@ -392,7 +407,7 @@ a {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#searchBox #buttonSearch:active {
+body #buttonSearch:active {
   background-color: #E6BBE2;
   border: #110038 solid 1px;
   -webkit-box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 #FFFFFF;
@@ -401,21 +416,21 @@ a {
   outline-offset: -4px;
 }
 
-#searchBox #buttonSearch:active #buttonContent {
+body #buttonSearch:active #buttonContent {
   color: #110038;
 }
 
-#searchBox #buttonSearch:active #buttonContent #mGlassImage {
+body #buttonSearch:active #buttonContent #mGlassImage {
   display: none;
 }
 
-#searchBox #buttonSearch:active #buttonContent #mGlass {
+body #buttonSearch:active #buttonContent #mGlass {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#searchBox #buttonSearch #buttonContent {
+body #buttonSearch #buttonContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,19 +442,19 @@ a {
       justify-content: space-around;
 }
 
-#searchBox #buttonSearch #buttonContent #mGlassImageDark {
+body #buttonSearch #buttonContent #mGlassImageDark {
   display: none;
 }
 
-#searchBox #buttonSearch #buttonContent #mGlass {
+body #buttonSearch #buttonContent #mGlass {
   display: none;
 }
 
-#searchBox #buttonSearch #buttonContent #mGlassLight {
+body #buttonSearch #buttonContent #mGlassLight {
   display: none;
 }
 
-#searchBox #buttonSearchInput {
+body #buttonSearchInput {
   text-align: center;
   margin-left: 8px;
   width: 8.5%;
@@ -454,7 +469,7 @@ a {
   font-family: "Chakra Petch";
 }
 
-#subMenuSearch {
+body #subMenuSearch {
   position: relative;
   z-index: 2;
   -webkit-box-orient: vertical;
@@ -469,7 +484,7 @@ a {
   display: none;
 }
 
-#subMenuSearch button {
+body #subMenuSearch button {
   background-color: #E6E6E6;
   width: 87.9166%;
   height: 34px;
@@ -479,7 +494,7 @@ a {
   color: #110038;
 }
 
-#subMenuSearch #Result1 {
+body #subMenuSearch #Result1 {
   margin-top: 17px;
   text-align: left;
   background-color: #f0f0f0;
@@ -488,7 +503,7 @@ a {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #Result1:hover {
+body #subMenuSearch #Result1:hover {
   background-color: #DBDBDB;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -497,7 +512,7 @@ a {
   outline-offset: -4px;
 }
 
-#subMenuSearch #Result2 {
+body #subMenuSearch #Result2 {
   text-align: left;
   margin-top: 11px;
   background-color: #f0f0f0;
@@ -506,7 +521,7 @@ a {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #Result2:hover {
+body #subMenuSearch #Result2:hover {
   background-color: #DBDBDB;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -515,7 +530,7 @@ a {
   outline-offset: -4px;
 }
 
-#subMenuSearch #Result3 {
+body #subMenuSearch #Result3 {
   text-align: left;
   margin-top: 10px;
   background-color: #f0f0f0;
@@ -524,7 +539,7 @@ a {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #Result3:hover {
+body #subMenuSearch #Result3:hover {
   background-color: #DBDBDB;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -533,7 +548,7 @@ a {
   outline-offset: -4px;
 }
 
-#suggestions #suggest {
+body #suggestions #suggest {
   height: 32px;
   width: 83.45%;
   margin-left: 6.9%;
@@ -548,35 +563,35 @@ a {
   font-weight: 400;
 }
 
-#suggestions #suggest::-webkit-input-placeholder {
+body #suggestions #suggest::-webkit-input-placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#suggestions #suggest:-ms-input-placeholder {
+body #suggestions #suggest:-ms-input-placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#suggestions #suggest::-ms-input-placeholder {
+body #suggestions #suggest::-ms-input-placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#suggestions #suggest::placeholder {
+body #suggestions #suggest::placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#gifSuggest {
+body #gifSuggest {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,17 +603,17 @@ a {
   margin-top: 19px;
 }
 
-#gifSuggest #gifSuggest1 {
+body #gifSuggest #gifSuggest1 {
   margin-left: 6.955%;
 }
 
-#gifSuggest #gifSuggest2,
-#gifSuggest #gifSuggest3,
-#gifSuggest #gifSuggest4 {
+body #gifSuggest #gifSuggest2,
+body #gifSuggest #gifSuggest3,
+body #gifSuggest #gifSuggest4 {
   margin-left: 0.5565%;
 }
 
-#gifSuggest .borderShadowGif {
+body #gifSuggest .borderShadowGif {
   margin-right: 0.5565%;
   width: 20.0289%;
   height: 313px;
@@ -607,7 +622,7 @@ a {
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
 }
 
-#gifSuggest .borderShadowGif img {
+body #gifSuggest .borderShadowGif img {
   position: relative;
   right: 30px;
   bottom: 47px;
@@ -616,12 +631,12 @@ a {
   width: 97.22277%;
 }
 
-#gifSuggest .borderShadowGif img:hover {
+body #gifSuggest .borderShadowGif img:hover {
   outline: 1px dotted #110038;
   outline-offset: -1px;
 }
 
-#gifSuggest p {
+body #gifSuggest p {
   color: #FFFFFF;
   font-size: 14px;
   font-family: "Chakra Petch";
@@ -634,7 +649,7 @@ a {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-#gifSuggest .buttonCloseGif {
+body #gifSuggest .buttonCloseGif {
   position: relative;
   z-index: 4;
   bottom: 43px;
@@ -651,7 +666,7 @@ a {
   border-left: solid 1px #FFFFFF;
 }
 
-#gifSuggest .seeMoreButton {
+body #gifSuggest .seeMoreButton {
   position: relative;
   z-index: 5;
   font-size: 14px;
@@ -668,12 +683,12 @@ a {
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #284F99;
 }
 
-#gifSuggest .seeMoreButton:hover {
+body #gifSuggest .seeMoreButton:hover {
   outline: 1px dotted #110038;
   outline-offset: -5px;
 }
 
-#trendsSection #trends {
+body #trendsSection #trends {
   width: 83.45%;
   height: 32px;
   margin-top: 68px;
@@ -688,35 +703,35 @@ a {
   font-weight: 400;
 }
 
-#trendsSection #trends::-webkit-input-placeholder {
+body #trendsSection #trends::-webkit-input-placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#trendsSection #trends:-ms-input-placeholder {
+body #trendsSection #trends:-ms-input-placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#trendsSection #trends::-ms-input-placeholder {
+body #trendsSection #trends::-ms-input-placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-#trendsSection #trends::placeholder {
+body #trendsSection #trends::placeholder {
   color: #110038;
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-.trendsCharge {
+body .trendsCharge {
   margin-left: 6.955%;
   margin-top: 17px;
   display: -webkit-box;
@@ -725,7 +740,7 @@ a {
   width: 100%;
 }
 
-.trendsCharge img {
+body .trendsCharge img {
   position: relative;
   right: 30px;
   bottom: 0px;
@@ -734,12 +749,12 @@ a {
   width: 100%;
 }
 
-.trendsCharge img:hover {
+body .trendsCharge img:hover {
   outline: 1px dotted #110038;
   outline-offset: -1px;
 }
 
-.trendsCharge #gifSuggest5 {
+body .trendsCharge #gifSuggest5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -754,7 +769,7 @@ a {
   background-color: #E6E6E6;
 }
 
-.trendsCharge #gifSuggest5:hover {
+body .trendsCharge #gifSuggest5:hover {
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   margin-right: 0.3478%;
@@ -764,7 +779,7 @@ a {
   outline-offset: -4px;
 }
 
-.trendsCharge #gifSuggest5:hover img {
+body .trendsCharge #gifSuggest5:hover img {
   position: relative;
   z-index: 1;
   left: 3px;
@@ -773,18 +788,18 @@ a {
   width: 97.2778%;
 }
 
-.trendsCharge #gifSuggest5:hover p {
+body .trendsCharge #gifSuggest5:hover p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trendsCharge #gifSuggest5 img {
+body .trendsCharge #gifSuggest5 img {
   height: 100%;
   width: 100%;
 }
 
-.trendsCharge #gifSuggest5 p {
+body .trendsCharge #gifSuggest5 p {
   display: none;
   position: relative;
   z-index: 3;
@@ -803,7 +818,7 @@ a {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-.trendsCharge .secondaryTrendsCharge {
+body .trendsCharge .secondaryTrendsCharge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -819,7 +834,7 @@ a {
   margin-left: 0.5565%;
 }
 
-.trendsCharge .secondaryTrendsCharge:hover {
+body .trendsCharge .secondaryTrendsCharge:hover {
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   margin-right: 0.3478%;
@@ -829,7 +844,7 @@ a {
   outline-offset: -4px;
 }
 
-.trendsCharge .secondaryTrendsCharge:hover img {
+body .trendsCharge .secondaryTrendsCharge:hover img {
   position: absolute;
   z-index: 1;
   left: 4px;
@@ -838,18 +853,18 @@ a {
   width: 97.2778%;
 }
 
-.trendsCharge .secondaryTrendsCharge:hover p {
+body .trendsCharge .secondaryTrendsCharge:hover p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trendsCharge .secondaryTrendsCharge img {
+body .trendsCharge .secondaryTrendsCharge img {
   height: 100%;
   width: 100%;
 }
 
-.trendsCharge .secondaryTrendsCharge p {
+body .trendsCharge .secondaryTrendsCharge p {
   display: none;
   position: relative;
   z-index: 3;
@@ -868,7 +883,7 @@ a {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-.trendsCharge .bigLeftTrendsCharge {
+body .trendsCharge .bigLeftTrendsCharge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -888,7 +903,7 @@ a {
   font-family: "Chakra Petch";
 }
 
-.trendsCharge .bigLeftTrendsCharge:hover {
+body .trendsCharge .bigLeftTrendsCharge:hover {
   margin-right: 0.3478%;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
@@ -898,7 +913,7 @@ a {
   outline-offset: -4px;
 }
 
-.trendsCharge .bigLeftTrendsCharge:hover img {
+body .trendsCharge .bigLeftTrendsCharge:hover img {
   position: absolute;
   z-index: 1;
   width: 99%;
@@ -907,18 +922,18 @@ a {
   left: 3px;
 }
 
-.trendsCharge .bigLeftTrendsCharge:hover p {
+body .trendsCharge .bigLeftTrendsCharge:hover p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trendsCharge .bigLeftTrendsCharge img {
+body .trendsCharge .bigLeftTrendsCharge img {
   width: 100%;
   height: 100%;
 }
 
-.trendsCharge .bigLeftTrendsCharge p {
+body .trendsCharge .bigLeftTrendsCharge p {
   display: none;
   position: relative;
   z-index: 5;
@@ -934,7 +949,7 @@ a {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-.trendsCharge .bigRightTrendsCharge {
+body .trendsCharge .bigRightTrendsCharge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -954,7 +969,7 @@ a {
   font-family: "Chakra Petch";
 }
 
-.trendsCharge .bigRightTrendsCharge:hover {
+body .trendsCharge .bigRightTrendsCharge:hover {
   margin-right: 0.3478%;
   margin-left: 0.3478%;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
@@ -965,7 +980,7 @@ a {
   outline-offset: -4px;
 }
 
-.trendsCharge .bigRightTrendsCharge:hover img {
+body .trendsCharge .bigRightTrendsCharge:hover img {
   position: absolute;
   z-index: 1;
   width: 99%;
@@ -974,18 +989,18 @@ a {
   left: 3px;
 }
 
-.trendsCharge .bigRightTrendsCharge:hover p {
+body .trendsCharge .bigRightTrendsCharge:hover p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.trendsCharge .bigRightTrendsCharge img {
+body .trendsCharge .bigRightTrendsCharge img {
   width: 100%;
   height: 100%;
 }
 
-.trendsCharge .bigRightTrendsCharge p {
+body .trendsCharge .bigRightTrendsCharge p {
   display: none;
   position: relative;
   z-index: 5;
@@ -1001,25 +1016,25 @@ a {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-.trendsCharge #gifSuggest8 p,
-.trendsCharge #gifSuggest11 p,
-.trendsCharge #gifSuggest18 p,
-.trendsCharge #gifSuggest21 p,
-.trendsCharge #gifSuggest28 p {
+body .trendsCharge #gifSuggest8 p,
+body .trendsCharge #gifSuggest11 p,
+body .trendsCharge #gifSuggest18 p,
+body .trendsCharge #gifSuggest21 p,
+body .trendsCharge #gifSuggest28 p {
   width: 97%;
   bottom: 0px;
 }
 
-.trendsCharge #gifSuggest14 p,
-.trendsCharge #gifSuggest24 p {
+body .trendsCharge #gifSuggest14 p,
+body .trendsCharge #gifSuggest24 p {
   width: 98.4%;
   left: 0.3px;
 }
 
-.trendsCharge #gifSuggest12,
-.trendsCharge #gifSuggest15,
-.trendsCharge #gifSuggest22,
-.trendsCharge #gifSuggest25 {
+body .trendsCharge #gifSuggest12,
+body .trendsCharge #gifSuggest15,
+body .trendsCharge #gifSuggest22,
+body .trendsCharge #gifSuggest25 {
   margin-left: 0px;
 }
 /*# sourceMappingURL=Styles.css.map */

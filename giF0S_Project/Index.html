@@ -18,7 +18,7 @@
         <!-- SECTION IMAGE LOGO AND BUTTONS TO SELECT THEME -->
         <div id="buttonZone">
             <img id="logotipe" src="./Images/gifOF_logo.png" alt="Logo blu Gifos">
-            <button id="buttonOne">Crear Guifos</button>
+            <button id="buttonOne"><a href="./Pre_Catch/Pre_Catch.html">Crear Guifos</a></button>
             <button id="buttonTwo">
                 <div id="buttonChooseTheme">Elegir Tema</div>
                 <div id="dropDown"><img src="./Images/dropdown.svg" alt=""></div>
@@ -43,21 +43,22 @@
             </div>
             <div id="formSearch">
                 <input type="search" id="mySearch" name="mySearch" autocomplete="off" onsearch="gettingSearchValue()"
-                    placeholder="Busca gifs, hashtags, temas, busca lo que quieras..." size="30">
-                <button id="buttonSearch" type="button">
+                    placeholder="Busca gifs, hashtags, temas, busca lo que quieras..." size="30">          
+                    <button id="buttonSearch" type="button">
                     <div id="buttonContent">
                         <img id="mGlassImage" src="./Images/lupa_inactive.svg" alt="magnifying_glass_image">
                         <img id="mGlassImageDark" src="./Images/Combined_Shape.svg" alt="magnifying_glass_image"> 
                         <img id="mGlassLight" src="./Images/lupa_light.svg" alt="magnifying_glass_image">
                         <img id="mGlass" src="./Images/lupa.svg" alt="magnifying_glass_image"> Buscar</div>
                 </button>
+                      <!--SECTION SUB MENU SEARCH -->
+            <div id="subMenuSearch" class="show">
+                <button id="Result1" type="button">&nbsp;&nbsp;Resultado de búsqueda sugerido</button>
+                <button id="Result2" type="button">&nbsp;&nbsp;Un resultado similar de búsqueda</button>
+                <button id="Result3" type="button">&nbsp;&nbsp;Y otro más</button>
             </div>
-            <!--SECTION SUB MENU SEARCH -->
-            <div id="subMenuSearch">
-                <button id="Result1">&nbsp;&nbsp;Resultado de búsqueda sugerido</button>
-                <button id="Result2">&nbsp;&nbsp;Un resultado similar de búsqueda</button>
-                <button id="Result3">&nbsp;&nbsp;Y otro más</button>
             </div>
+            
         </div>
 
     </div>

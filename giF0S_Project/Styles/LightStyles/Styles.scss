@@ -12,7 +12,7 @@ body {
     padding: 0%;
     border: 0%;
     background-color: rgb(250, 241, 249);
-}
+
 
 //THIS SECTION CONTENT THE TOP BAR WITH ITS GRADIENT STYLE
 #title {
@@ -51,6 +51,7 @@ body {
     // THESE ARE THE STYLES OF THE CREATE GUIFOS BUTTON
     #buttonOne {
         align-self: center;
+        display: flex;
         margin-right: 1.1137%;
         margin-left: 47.6637%;
         height: 36px;
@@ -73,6 +74,14 @@ body {
             background-color: #E6BBE2;
             outline: 1px dotted $outsidebordercolor;
             outline-offset: -4px;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: $outsidebordercolor;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -261,7 +270,7 @@ a {
     #formSearch {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: center;       
     }
 
     #mySearch {
@@ -276,6 +285,8 @@ a {
         border: solid 1px #979797;
         box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
         list-style: lower-alpha;
+                
+        }
 
         &::placeholder {
             padding-left: 1.3333%;
@@ -300,7 +311,7 @@ a {
         border: solid 1px #808080;
         box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
 
-        &:active {
+            &:active {
             background-color: #E6BBE2;
             border: $outsidebordercolor solid 1px;
             box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 $fontcolorheader;
@@ -349,7 +360,7 @@ a {
         font-weight: 400;
         font-family: $primaryfont;
     }
-}
+
 
 //THESE ARE THE STYLES OF THE SUBMENU THAT IS SHOWN AFTER THE CLICK OVER THE SEARCH BUTTON
 #subMenuSearch {
@@ -831,4 +842,5 @@ a {
     #gifSuggest25 {
         margin-left: 0px;
     }
+}
 }
