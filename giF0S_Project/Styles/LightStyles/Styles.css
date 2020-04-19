@@ -1,6 +1,7 @@
 body {
   margin: 0%;
   padding: 0%;
+  border: 0%;
   background-color: #faf1f9;
 }
 
@@ -345,6 +346,7 @@ a {
 }
 
 #searchBox #mySearch::-webkit-input-placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -352,6 +354,7 @@ a {
 }
 
 #searchBox #mySearch:-ms-input-placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -359,6 +362,7 @@ a {
 }
 
 #searchBox #mySearch::-ms-input-placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -366,6 +370,7 @@ a {
 }
 
 #searchBox #mySearch::placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -474,7 +479,7 @@ a {
   color: #110038;
 }
 
-#subMenuSearch #resultSearch {
+#subMenuSearch #Result1 {
   margin-top: 17px;
   text-align: left;
   background-color: #f0f0f0;
@@ -483,7 +488,7 @@ a {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #resultSearch:hover {
+#subMenuSearch #Result1:hover {
   background-color: #DBDBDB;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -492,7 +497,7 @@ a {
   outline-offset: -4px;
 }
 
-#subMenuSearch #similarResult {
+#subMenuSearch #Result2 {
   text-align: left;
   margin-top: 11px;
   background-color: #f0f0f0;
@@ -501,7 +506,7 @@ a {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #similarResult:hover {
+#subMenuSearch #Result2:hover {
   background-color: #DBDBDB;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -510,7 +515,7 @@ a {
   outline-offset: -4px;
 }
 
-#subMenuSearch #otherOneResult {
+#subMenuSearch #Result3 {
   text-align: left;
   margin-top: 10px;
   background-color: #f0f0f0;
@@ -519,7 +524,7 @@ a {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #otherOneResult:hover {
+#subMenuSearch #Result3:hover {
   background-color: #DBDBDB;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -637,7 +642,7 @@ a {
   width: 16px;
   height: 14px;
   margin-right: 1.786%;
-  background-image: url(../Images/button3.svg);
+  background-image: url(../../Images/button3.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-top: solid 1px #FFFFFF;

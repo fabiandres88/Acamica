@@ -347,6 +347,7 @@ a {
 }
 
 #searchBox #mySearch::-webkit-input-placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -354,6 +355,7 @@ a {
 }
 
 #searchBox #mySearch:-ms-input-placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -361,6 +363,7 @@ a {
 }
 
 #searchBox #mySearch::-ms-input-placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -368,6 +371,7 @@ a {
 }
 
 #searchBox #mySearch::placeholder {
+  padding-left: 1.3333%;
   color: #B4B4B4;
   font-size: 16px;
   font-family: "Chakra Petch";
@@ -486,26 +490,9 @@ a {
   color: #B4B4B4;
 }
 
-#subMenuSearch #resultSearch {
-  margin-top: 17px;
+#subMenuSearch #Result1 {
   text-align: left;
-  background-color: #B4B4B4;
-  border: solid 1px #110038;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-}
-
-#subMenuSearch #resultSearch:hover {
-  background-color: #DBDBDB;
-  border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-#subMenuSearch #similarResult {
-  text-align: left;
+  color: #110038;
   margin-top: 11px;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -513,17 +500,37 @@ a {
           box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #similarResult:hover {
-  background-color: #DBDBDB;
+#subMenuSearch #Result1:hover {
+  background-color: #CCCCCC;
   border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-#subMenuSearch #otherOneResult {
+#subMenuSearch #Result2 {
   text-align: left;
+  color: #110038;
+  margin-top: 11px;
+  background-color: #f0f0f0;
+  border: solid 1px #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#subMenuSearch #Result2:hover {
+  background-color: #CCCCCC;
+  border: #808080 1PX solid;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+#subMenuSearch #Result3 {
+  text-align: left;
+  color: #110038;
   margin-top: 10px;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -531,11 +538,11 @@ a {
           box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
 }
 
-#subMenuSearch #otherOneResult:hover {
-  background-color: #DBDBDB;
+#subMenuSearch #Result3:hover {
+  background-color: #CCCCCC;
   border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }

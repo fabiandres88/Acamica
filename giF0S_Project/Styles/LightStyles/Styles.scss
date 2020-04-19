@@ -10,6 +10,7 @@ $primaryfont: "Chakra Petch";
 body {
     margin: 0%;
     padding: 0%;
+    border: 0%;
     background-color: rgb(250, 241, 249);
 }
 
@@ -277,6 +278,7 @@ a {
         list-style: lower-alpha;
 
         &::placeholder {
+            padding-left: 1.3333%;
             color: $searchBarColor;
             font-size: 16px;
             font-family: $primaryfont;
@@ -371,7 +373,7 @@ a {
         color: $outsidebordercolor;
     }
 
-    #resultSearch {
+    #Result1 {
         margin-top: 17px;
         text-align: left;
         background-color: #f0f0f0;
@@ -387,7 +389,7 @@ a {
         }
     }
 
-    #similarResult {
+    #Result2 {
         text-align: left;
         margin-top: 11px;
         background-color: #f0f0f0;
@@ -403,7 +405,7 @@ a {
         }
     }
 
-    #otherOneResult {
+    #Result3 {
         text-align: left;
         margin-top: 10px;
         background-color: #f0f0f0;
@@ -502,7 +504,7 @@ a {
         width: 16px;
         height: 14px;
         margin-right: 1.786%;
-        background-image: url(../Images/button3.svg);
+        background-image: url(../../Images/button3.svg);
         background-repeat: no-repeat;
         background-position: center;
         border-top: solid 1px $fontcolorheader;

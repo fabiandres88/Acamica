@@ -1,23 +1,19 @@
 //CREATING VARIABLES
-
 //GETING THEMES TO CHANGE IT
 let changeTheme = document.getElementById("buttonTwo");
 let themes = document.getElementById("menuThemes");
 let selectThemeD = document.getElementsByClassName("day");
 let selectThemeN = document.getElementsByClassName("night");
-
 //GETTING INPUT SEARCH
 let inputValue = document.getElementById("mySearch");
-
 //GETTING BUTTON SEARCH
 let listenSearch = document.querySelector("#buttonSearch")
-
 //VARIABLR TO USE IN THE FETCH
 var urlToFetch = "";
 const requestDefault = "https://api.giphy.com/v1/gifs/";
 const apiKey = "qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA";
 
-// LISTEN CLICK OVER THE CREATE GUIFOS TO SHOW ITS SUBMENU
+// LISTEN CLICK OVER THE CHOOSE GUIFOS TO SHOW ITS SUBMENU
 changeTheme.addEventListener("click", function () {
 	themes.style.display = isHidden(themes) ? "flex" : "none";
 	changeTheme.style.height = "40px";
@@ -27,11 +23,10 @@ changeTheme.addEventListener("click", function () {
 changeTheme.addEventListener("mouseleave", function () {
 	themes.style.display = "none";
 })
-let botones = document.getElementById("buttonSearch");
 
 // LISTEN FOCUS OVER THE PLACEHOLDER IN THE INPUT SEARCH
 inputValue.addEventListener("focus", changeButtonSearch);
-inputValue.addEventListener("focusout", returStyles);
+inputValue.addEventListener("focusout", returnStyles);
 
 // LISTEN FOCUS OVER THE PLACEHOLDER TO SHOW THE SUBMENU OF BUTTON SEARCH
 inputValue.addEventListener("focus", subMenuSearch);
@@ -46,14 +41,12 @@ function isHidden(element) {
 }
 // FUNCTION TO CHANGES THE THEME TO DARK BY USERS
 function darkThemeCall() {
-	document.getElementById('themeSelector').href = '../Styles/DarkStyles/Styles2.css';
-	// e.stopPropagation();
+	document.getElementById('themeSelector').href = '../Styles/DarkStyles/Styles2.css';	
 }
 // FUNCTION TO CHANGES THE THEME TO LIGHT BY USERS
 function lightThemeCall() {
 	document.getElementById('themeSelector').href = "../Styles/LightStyles/Styles.css";
 }
-
 // FUNCTION TO CHANGE STYLES SEARCH BUTTON WHEN USER START THE SEARCH
 function changeButtonSearch(e) {
 	let hrefStyles = themeSelector.getAttribute("href");
@@ -83,7 +76,7 @@ function changeButtonSearch(e) {
 	e.stopPropagation();
 }
 
-function returStyles(e) {
+function returnStyles(e) {
 	let hrefDocument = themeSelector.getAttribute("href");
 
 	if (hrefDocument == "./Styles/LightStyles/Styles.css") {
@@ -118,6 +111,16 @@ function subMenuSearch(e) {
 	e.stopPropagation();
 }
 
+//FUNCTION TO START THE SEARCH BY AUTOCOMPLETE REQUEST
+inputValue.addEventListener("keypress", suggestSearch);
+
+function suggestSearch() {
+	let valueSearch = document.getElementById("mySearch");
+	let inputSearch = (valueSearch.value);
+	urlToFetch = `${requestDefault}search/tags?api_key=${apiKey}&q=${inputSearch}&limit=3&offset=0&rating=G&lang=en`
+	getSuggestSearch(urlToFetch);	
+}
+
 //GETTING SEARCH VALUE AN CALLING THE FETCH
 listenSearch.addEventListener("click", gettingSearchValue);
 function gettingSearchValue() {
@@ -129,6 +132,42 @@ function gettingSearchValue() {
 
 //CALLING THE API WHEN THE PAGE IS CHARGING
 window.onload = getGifsDefault(`${requestDefault}search?api_key=${apiKey}&q=colombia&limit=29&offset=0&rating=G&lang=en`);
+
+// FUNCTION TO GET API REQUEST BY TAG
+function getSuggestSearch(url) {
+	return fetch(url)
+		.then(response => {
+			return response.json();
+		})
+		.then(data => {
+			data;
+			for (let i=0; i<=3; i++){
+			let suggestTag = (data.data[i].name);			
+			let Result1 = document.getElementById(`Result${i+1}`);
+			// Result1.innerHTML=suggestTag;
+			let tagSet = Result1.innerHTML=suggestTag;
+			let size = suggestTag.length;
+			if ( size == 6){
+			
+			localStorage.setItem("TagSuggest",tagSet);
+			let saveButton = document.createElement("button");
+			let container = document.getElementById("buttonsContainer");
+			container.append(saveButton);			
+			saveButton.style.width = "100px";			
+			saveButton.style.height = "36px";
+			saveButton.style.color = "#110038";
+			let tagSaved = localStorage.getItem("TagSuggest");
+			let buttonNew = container.firstElementChild.innerHTML=("#"+tagSaved);
+			console.log(buttonNew);
+		}
+						
+		}
+			return data
+		})
+		.catch(error => {
+			console.error("Fetch Failed", error);
+		})
+}
 
 //FUNCTION TO GET REQUEST BY FETCH DEFAULT
 function getGifsDefault(url) {
@@ -145,8 +184,12 @@ function getGifsDefault(url) {
 				gifImg.setAttribute("src", gifGiphy.images.original.url);
 				gifInsertIn.append(gifImg);
 				let gifTitle = data.data[i].title;
+				let hashTag = "#";
+				let getLimit = gifTitle.search("GIF");
+				let newTitle = gifTitle.slice(0, getLimit);
+				let endTitle = hashTag.concat(newTitle);
 				let gifTitleInsert = document.getElementById(`hashtagGif${i + 1}`);
-				gifTitleInsert.innerHTML = gifTitle;
+				gifTitleInsert.innerHTML = endTitle;
 			}
 			return data
 		}).catch(error => {
@@ -168,17 +211,21 @@ function getGifsBySearch(url) {
 
 			for (let i = 0; i <= 27; i++) {
 				let gifGiphy = data.data[i];
-				let gifInsertIn = document.getElementById(`gifSuggest${i+5}`);
+				let gifInsertIn = document.getElementById(`gifSuggest${i + 5}`);
 				let gifTitle = data.data[i].title;
-				let gifTitleChange = document.getElementById(`hashtagGif${i+5}`);
-				gifTitleChange.innerHTML = gifTitle;
+				let hashTag = "#";
+				let getLimit = gifTitle.search("GIF");
+				let newTitle = gifTitle.slice(0, getLimit);
+				let endTitle = hashTag.concat(newTitle);
+				let gifTitleInsert = document.getElementById(`hashtagGif${i + 5}`);
+				gifTitleInsert.innerHTML = endTitle;
 				let toRemove = (gifInsertIn.childNodes[3]);
 				gifInsertIn.removeChild(toRemove);
-				let gifInsertNew = document.getElementById(`gifSuggest${i+5}`);
-				let gifImg2 = document.createElement("img");				
+				let gifInsertNew = document.getElementById(`gifSuggest${i + 5}`);
+				let gifImg2 = document.createElement("img");
 				gifImg2.setAttribute("src", gifGiphy.images.original.url);
 				gifInsertNew.append(gifImg2);
-								
+
 			}
 			return data
 		}).catch(error => {
