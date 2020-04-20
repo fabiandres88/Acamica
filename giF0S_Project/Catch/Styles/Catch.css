@@ -111,6 +111,16 @@ body #buttonZone #logotipe {
           box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
 }
 
+#videoContainer div #showCapture #video {
+  width: 100%;
+  height: 100%;
+}
+
+#videoContainer div #showCapture #gif {
+  width: 100%;
+  height: 100%;
+}
+
 #videoContainer div #catchButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,5 +168,99 @@ body #buttonZone #logotipe {
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#videoContainer div #recordButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  width: 12.7955%;
+  height: 36px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#videoContainer div #recordButton #circleButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#videoContainer div #recordButton #readyButton {
+  width: 70%;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  background-color: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#videoContainer #stopButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  width: 12.7955%;
+  height: 36px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#videoContainer #stopButton #1Button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+}
+
+#videoContainer #stopButton #2Button {
+  width: 70%;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  background-color: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
 }
 /*# sourceMappingURL=Catch.css.map */
