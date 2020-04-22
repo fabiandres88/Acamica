@@ -4,10 +4,16 @@ let video = document.querySelector("video");
 let image = document.getElementById("gif");
 //GETTIN CAPTURE BUTTON
 let captureButton = document.getElementById("catchButton");
-captureButton.addEventListener("click",getCamera);
-
 //GETTING RECORD BUTTON
 let recordButton = document.getElementById("recordButton");
+//GETTING STOP BUTTON
+let stopButton = document.getElementById("stopButton");
+//LISTEN CLICK OVER THE BUTTON CAPTURE
+captureButton.addEventListener("click",function (){
+    getCamera();
+    captureButton.style.display = "none";
+    recordButton.style.display = ("flex");
+});
 
 //THIS FUNCTION STARTS THE CAMERA
 function getCamera(stream) {
@@ -47,6 +53,8 @@ function stopRecordingCallback() {
 }
 
 recordButton.addEventListener("click", function () {
+    recordButton.style.display = ("none");
+    stopButton.style.display = ("flex");
     this.disabled = true;
     getRecord(function (camera) {
         video.style.display = "none";

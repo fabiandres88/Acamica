@@ -93,11 +93,12 @@ body {
             border: 1px solid #979797;
             box-shadow: inset -2px -2px 0 0 $backgroundcolorsearchbox, inset 2px 2px 0 0 #000000;
 
-            #video{
+            #video {
                 width: 100%;
                 height: 100%;
             }
-            #gif{
+
+            #gif {
                 width: 100%;
                 height: 100%;
             }
@@ -140,15 +141,17 @@ body {
                 box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
             }
         }
-        #recordButton{
-            display: flex;
+
+        #recordButton {
+            display: none;
             flex-direction: row;
             position: relative;
             width: 12.7955%;
             height: 36px;
             margin: 0px;
             padding: 0px;
-            #circleButton{
+
+            #circleButton {
                 display: flex;
                 justify-content: center;
                 width: 25%;
@@ -159,7 +162,8 @@ body {
                 border: 1px solid $outsidebordercolor;
                 box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
             }
-            #readyButton{
+
+            #readyButton {
                 width: 70%;
                 height: 32px;
                 margin: 0px;
@@ -173,39 +177,40 @@ body {
                 box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
             }
         }
-    }
-    #stopButton{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        width: 12.7955%;
-        height: 36px;
-        margin: 0px;
-        padding: 0px;
-
-        #1Button{
-            display: flex;
-            justify-content: center;
-            width: 25%;
-            height: 32px;
+        #stopButton {
+            display: none;
+            flex-direction: row;
+            position: relative;
+            width: 12.7955%;
+            height: 36px;
             margin: 0px;
             padding: 0px;
-            background-color: #FF6161;
-            border: 1px solid $outsidebordercolor;
-            box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
-        }
-        #2Button{
-            width: 70%;
-            height: 32px;
-            margin: 0px;
-            padding: 0px;
-            color: $fontcolorheader;
-            font-size: 16px;
-            font-weight: 400;
-            font-family: $primaryfont;
-            background-color: #FF6161;
-            border: 1px solid $outsidebordercolor;
-            box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
+    
+            #buttonTwo {
+                display: flex;
+                justify-content: center;
+                width: 25%;
+                height: 32px;
+                margin: 0px;
+                padding: 0px;
+                background-color: rgb(97, 255, 136);
+                border: 1px solid $outsidebordercolor;
+                box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
+            }
+    
+            #buttonThree {
+                width: 70%;
+                height: 32px;
+                margin: 0px;
+                padding: 0px;
+                color: $fontcolorheader;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: $primaryfont;
+                background-color: #FF6161;
+                border: 1px solid $outsidebordercolor;
+                box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
+            }
         }
     }
 }

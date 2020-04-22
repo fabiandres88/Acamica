@@ -109,6 +109,7 @@ body #menuSection #listCreateGifs {
 }
 
 body #buttonsContainer button {
+  width: 100%;
   background-color: #FFF4FD;
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -129,5 +130,15 @@ body #buttonsContainer button:hover {
   background-color: #F7C9F3;
   outline: 1px dotted #110038;
   outline-offset: -4px;
+}
+
+body #suggestions {
+  width: 83.4492%;
+  margin-top: 153px;
+  margin-left: 6.9541%;
+}
+
+body #suggestions #suggest {
+  width: 100%;
 }
 /*# sourceMappingURL=Pre_catch.css.map */

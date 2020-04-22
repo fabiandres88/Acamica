@@ -98,6 +98,7 @@ body {
 
     #buttonsContainer {
         button {
+            width: 100%;
             background-color: #FFF4FD;
             border: 1px solid $outsidebordercolor;
             box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
@@ -117,6 +118,15 @@ body {
                 outline: 1px dotted $outsidebordercolor;
                 outline-offset: -4px;
             }
+        }
+    }
+    #suggestions{
+        width: 83.4492%;
+        margin-top: 153px;
+        margin-left: 6.9541%;
+
+        #suggest{
+                width: 100%;
         }
     }
 }
