@@ -46,11 +46,17 @@ function isHidden(element) {
 }
 // FUNCTION TO CHANGES THE THEME TO DARK BY USERS
 function darkThemeCall() {
-	document.getElementById('themeSelector').href = '../Styles/DarkStyles/Styles2.css';	
+	let divContainer=(document.getElementById('container'));
+	if(divContainer.className == "light") {
+		divContainer.className = "dark";
+	}	
 }
 // FUNCTION TO CHANGES THE THEME TO LIGHT BY USERS
 function lightThemeCall() {
-	document.getElementById('themeSelector').href = "../Styles/LightStyles/Styles.css";
+	let divContainer =document.getElementById('container');
+	if(divContainer.className == "dark") {
+		divContainer.className = "light";
+	}	
 }
 // FUNCTION TO CHANGE STYLES SEARCH BUTTON WHEN USER START THE SEARCH
 function changeButtonSearch(e) {

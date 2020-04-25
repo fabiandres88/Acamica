@@ -102,6 +102,11 @@ body {
                 width: 100%;
                 height: 100%;
             }
+            #globe{
+                display: none;
+                width: 48px;
+                height: 48px;
+            }
         }
 
         #catchButton {
@@ -177,6 +182,7 @@ body {
                 box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
             }
         }
+
         #stopButton {
             display: none;
             flex-direction: row;
@@ -185,7 +191,7 @@ body {
             height: 36px;
             margin: 0px;
             padding: 0px;
-    
+
             #buttonTwo {
                 display: flex;
                 justify-content: center;
@@ -197,7 +203,7 @@ body {
                 border: 1px solid $outsidebordercolor;
                 box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
             }
-    
+
             #buttonThree {
                 width: 70%;
                 height: 32px;
@@ -211,6 +217,43 @@ body {
                 border: 1px solid $outsidebordercolor;
                 box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
             }
+        }
+
+        
+            #repeat {
+                display: none;
+                color: $outsidebordercolor;                
+                justify-content: center;
+                width: 25%;
+                height: 32px;
+                margin: 0px;
+                padding: 0px;
+                border: 1px solid $outsidebordercolor;
+                box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
+                background-color: #FFF4FD;
+            }
+
+            #upload {
+                display: none;
+                color: $outsidebordercolor;
+                width: 70%;
+                height: 32px;
+                margin: 0px;
+                padding: 0px;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: $primaryfont;
+                border: 1px solid $outsidebordercolor;
+                box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 $fontcolorheader;
+                background-color: #FFF4FD;
+            }
+        
+
+        #cancel {
+            display: none;
+            width: 144px;
+            height: 32px;
+
         }
     }
 }

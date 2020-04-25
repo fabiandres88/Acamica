@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/Catch.css">
+    <link rel="stylesheet" href="../Styles/Catch/catch.css">
     <title>giF0S Project</title>
 </head>
 
@@ -15,7 +15,7 @@
         </header>
     </div>
     <div id="buttonZone">
-        <a id="arrowBack" href="../Pre_Catch/Pre_Catch.html"><img src="../Images/arrow.svg" alt="arrow_To_Back"></a>
+        <a id="arrowBack" href="../Pages/Pre_Catch.html"><img src="../Images/arrow.svg" alt="arrow_To_Back"></a>
         <img id="logotipe" src="../Images/gifOF_logo.png" alt="Logo blu Gifos">
     </div>
     <div id="videoContainer">
@@ -24,6 +24,7 @@
             <div id="showCapture">
                 <video id="video" src=""></video>
                 <img id="gif" src="" alt="">
+                <img id="globe" src="../Images/globe_img.png" alt="globeImage">
             </div>
             <button type="button" id="catchButton">
                 <div id="cameraButton">
@@ -33,14 +34,6 @@
                     Capturar
                 </div>
             </button>
-            <button type="button" id="recordButton">
-                <div id="circleButton">
-                    <img src="../Images/recording.svg" alt="camera_Image">
-                </div>
-                <div id="readyButton">
-                    Listo
-                </div>
-            </button>
             <button type="button" id="stopButton" disabled>
                 <div id="buttonTwo">
                     <img src="../Images/recording.svg" alt="camera_Image">
@@ -48,11 +41,22 @@
                 <div id="buttonThree">
                     Parar
                 </div>
+            </button>            
+            
+                <button type="button" id="repeat">
+                    Repetir Captura
+                </button>
+                <button type="button" id="upload">
+                    Subir Guifo
+                </button>
+            
+            <button type="button" id="cancel">
+                Cancelar
             </button>
         </div>
     </div>
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-    <script src="./Scripts/Catch.js" type="text/javascript"></script>    
+    <script src="../Scripts/Pages/Catch.js" type="text/javascript"></script>    
 </body>
 
 </html>

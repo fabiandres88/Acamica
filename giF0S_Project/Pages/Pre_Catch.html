@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/Pre_catch.css">
+    <link rel="stylesheet" href="../Styles/PreCatch/preCatch.css">
     <title>giF0S Project</title>
 </head>
 
@@ -23,10 +23,12 @@
             <h1>
                 Crear Guifos
             </h1>
-            <img src="../Images/window img.png" alt="window_Icon">
-            <h2>
-                Aquí podrás crear tus propios guifos 
-            </h2>
+            <div id="here">
+                <img src="../Images/window img.png" alt="window_Icon">
+                <h2>
+                    Aquí podrás crear tus propios guifos
+                </h2>
+            </div>
             <p>
                 Crear tu <b><i>guifo</i></b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos <br>
                 personalizados. Los pasos para crear tu guifo son:
@@ -38,24 +40,23 @@
                 <li>
                     <b>2]</b> Capturar tu momento guifo
                 </li>
-                <li> 
+                <li>
                     <b>3]</b> Revisar el momento
                 </li>
                 <li>
                     <b>4]</b> Listo para subir y compartir!
                 </li>
                 <p>¿Quieres comenzar a crear tu <b><i>guifo</i></b> ahora?</p>
-            </ol>
-            <div id="buttonsContainer">
-                <button type="button"><a href="../Index.html">Cancelar</a></button>
-                <button type="button"><a href="../Catch/Catch.html">Comenzar</a></button>
-            </div>
-        </div>        
+                </ol>
+                <div id="buttonsContainer">
+                    <button type="button"><a href="../index.html">Cancelar</a></button>
+                    <button id="start" type="button"><a href="../Pages/Catch.html">Comenzar</a></button>
+                </div>
+        </div>
     </div>
     <div id="suggestions">
         <input id="suggest" type="text" name="we_suggest_you" placeholder="&nbsp;&nbsp;Mis Guifos:" size="32">
     </div>
-    <script src="./Scripts/Catch.js"></script>
 </body>
 
 </html>

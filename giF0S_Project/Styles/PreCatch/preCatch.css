@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0%;
   padding: 0%;
@@ -69,13 +68,14 @@ body #menuSection {
 
 body #menuSection #menuContainer {
   position: relative;
-  width: 47.56606397774687%‬;
+  width: 47.5%;
+  height: 386px;
   background-color: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
-body #menuSection h1 {
+body #menuSection #menuContainer h1 {
   position: relative;
   margin-top: 0px;
   color: #FFFFFF;
@@ -86,30 +86,72 @@ body #menuSection h1 {
   background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
-body #menuSection h2 {
+body #menuSection #menuContainer #here {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #menuSection #menuContainer #here img {
+  width: 32px;
+  height: 32px;
+}
+
+body #menuSection #menuContainer #here h2 {
+  margin-left: 16px;
   color: #110038;
   font-size: 16px;
   font-weight: 700;
   font-family: "Chakra Petch";
 }
 
-body #menuSection p {
+body #menuSection #menuContainer p {
   color: #110038;
+  margin-left: 73px;
   font-size: 14px;
   font-weight: 400;
   font-family: "Chakra Petch";
+  line-height: 20px;
 }
 
-body #menuSection #listCreateGifs {
+body #menuSection #menuContainer #listCreateGifs {
   list-style: none;
+  margin-left: 33px;
   color: #110038;
   font-size: 14px;
   font-weight: 400;
   font-family: "Chakra Petch";
+  line-height: 20px;
 }
 
-body #buttonsContainer button {
+body #menuSection #buttonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
+  margin-left: 0px;
+}
+
+body #menuSection #buttonsContainer button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  width: 133px;
+  height: 36px;
+  margin-left: 16px;
   background-color: #FFF4FD;
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -120,16 +162,29 @@ body #buttonsContainer button {
   font-family: "Chakra Petch";
 }
 
-body #buttonsContainer button:active {
+body #menuSection #buttonsContainer button:active {
   background-color: #F7C9F3;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-body #buttonsContainer button:hover {
+body #menuSection #buttonsContainer button:hover {
   background-color: #F7C9F3;
   outline: 1px dotted #110038;
   outline-offset: -4px;
+}
+
+body #menuSection #buttonsContainer button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #110038;
+  height: 100%;
+  width: 100%;
 }
 
 body #suggestions {
@@ -141,4 +196,4 @@ body #suggestions {
 body #suggestions #suggest {
   width: 100%;
 }
-/*# sourceMappingURL=Pre_catch.css.map */
+/*# sourceMappingURL=preCatch.css.map */

@@ -121,6 +121,12 @@ body #buttonZone #logotipe {
   height: 100%;
 }
 
+#videoContainer div #showCapture #globe {
+  display: none;
+  width: 48px;
+  height: 48px;
+}
+
 #videoContainer div #catchButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,4 +265,42 @@ body #buttonZone #logotipe {
   -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
 }
-/*# sourceMappingURL=Catch.css.map */
+
+#videoContainer div #repeat {
+  display: none;
+  color: #110038;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+  background-color: #FFF4FD;
+}
+
+#videoContainer div #upload {
+  display: none;
+  color: #110038;
+  width: 70%;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+  background-color: #FFF4FD;
+}
+
+#videoContainer div #cancel {
+  display: none;
+  width: 144px;
+  height: 32px;
+}
+/*# sourceMappingURL=catch.css.map */
