@@ -138,11 +138,13 @@ body .dark #searchBox #searchBoxTitle {
 }
 
 body .dark #searchBox h2 {
+  padding-left: 6px;
   color: #FFFFFF;
   border-top: solid 2px #FFFFFF;
 }
 
 body .dark #searchBox #mySearch {
+  padding-left: 16px;
   caret-color: #4180F6;
   color: #110038;
   border: solid 1px #979797;
@@ -298,6 +300,8 @@ body .dark #subMenuSearch #Result3:hover {
 }
 
 body .dark #suggestions #suggest {
+  width: 82.9%;
+  padding-left: 7px;
   border: solid 1px #2E32FB;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
           box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
@@ -362,6 +366,8 @@ body .dark #gifSuggest .seeMoreButton:hover {
 }
 
 body .dark #trendsSection #trends {
+  width: 82.9%;
+  padding-left: 7px;
   border: solid 1px #2E32FB;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
           box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
@@ -395,21 +401,21 @@ body .dark .trendsCharge #gifSuggest5 {
 }
 
 body .dark .trendsCharge #gifSuggest5:hover {
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
   margin-right: 0.3478%;
   width: 20.4461%;
   height: 304px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
 body .dark .trendsCharge #gifSuggest5:hover img {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  left: 4px;
-  bottom: 2px;
-  height: 98%;
+  left: 3px;
+  bottom: 18px;
+  height: 100%;
   width: 97.2778%;
 }
 

@@ -1,4 +1,4 @@
-//CREATING VARIABLES
+// //CREATING VARIABLES
 //VARIABLES TO DO THE FETCH
 var urlToFetch = "";
 const requestDefault = "upload.giphy.com/v1/gifs";
@@ -10,30 +10,33 @@ let image = document.getElementById("gif");
 let globe = document.getElementById("globe");
 //GETTIN CAPTURE BUTTON
 let captureButton = document.getElementById("catchButton");
-//GETTING UPLOAD BUTTON
-let uploadButton = document.getElementById("upload");
-//GETTING REPEAT BUTTON
-let repeatButton = document.getElementById("repeat");
-//GETTING STOP BUTTON
+//GETTING CHRONO AND STOP BUTTON
+let chrono = document.getElementById("chrono");
 let stopButton = document.getElementById("stopButton");
+//GETTING PLAY A CHARGE BAR
+let playGif = document.getElementById("play");
+let barCharge = document.getElementById("bar");
+let repeatButton = document.getElementById("repeat");
+let uploadButton = document.getElementById("upload");
 //GETTING CANCEL BUTTON
 let cancelButton = document.getElementById("cancel");
 //CREATING FORMDATA OBJECT
 let form = new FormData();
 
 window.onload = function () {
-    getCamera();
+    this.getCamera();
 }
 
 //THIS FUNCTION STARTS THE CAMERA
 function getCamera(stream) {
-    navigator.mediaDevices.getUserMedia({
-        video: true,
+    navigator.mediaDevices.getUserMedia({               
+        video: { width: 1280, height: 720 }
     })
         .then(function (stream) {
             video.srcObject = stream;
             video.onloadedmetadata = function () {
-                video.play();
+                video.play();                
+                video.height = 434;
             };
         })
         .catch(error => {
@@ -75,7 +78,9 @@ function stopStreamedVideo(videoElem) {
 
 captureButton.addEventListener("click", function () {
     captureButton.style.display = ("none");
-    stopButton.style.display = ("flex");
+    chrono.style.display = ("flex");    
+    stopButton.style.display = ("flex");   
+    
     this.disabled = true;
     stopStreamedVideo(video);
     getRecord(function (camera) {
@@ -103,8 +108,10 @@ captureButton.addEventListener("click", function () {
 document.getElementById('stopButton').addEventListener("click", function () {
     alert("stoped");
     stopButton.style.display = ("none");
-    uploadButton.style.display = ("flex");
+    playGif.style.display = ("flex");
+    barCharge.style.display = ("flex");
     repeatButton.style.display = "flex";
+    uploadButton.style.display = ("flex");
     this.disabled = true;
     recorder.stopRecording(stopRecordingCallback);
 });
@@ -114,9 +121,13 @@ uploadButton.addEventListener("click", function () {
     cancelButton.style.display = "flex";
     uploadButton.style.display = "none";
     repeatButton.style.display = "none";
+    chrono.style.display = "none";
+    playGif.style.display = "none";
+    barCharge.style.display = "none";
     image.style.display = "none";
     globe.style.display = "flex";
-    console.log(form.get("file"));
+    document.getElementById("showCapture").style.display = "flex";
+    document.getElementById("uploadingGif").style.display = "flex";
 
     //METHODT POST FOR CREATED GIFScreated gifs
     form.append("api_key", "qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA")
@@ -135,11 +146,11 @@ uploadButton.addEventListener("click", function () {
         })
         .then(function (response) {
             console.log(response);
-            toBase64(form.get("file")).then(function (base64){
+            toBase64(form.get("file")).then(function (base64) {
                 localStorage.setItem("gif_" + response.data.id, base64);
             })
 
-            
+
         })
         .catch(function (error) {
             console.log("Error in the post" + error);

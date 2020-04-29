@@ -140,11 +140,13 @@ body {
             }
 
             h2 {
+                padding-left: 6px;
                 color: $fontcolorheader;
                 border-top: solid 2px $fontcolorheader;
             }
 
             #mySearch {
+                padding-left: 16px;
                 caret-color: #4180F6;
                 color: $outsidebordercolor;
                 border: solid 1px #979797;
@@ -270,8 +272,10 @@ body {
         }
 
         #suggestions {
-
+            
             #suggest {
+                width: 82.9%;
+                padding-left: 7px;
                 border: solid 1px #2E32FB;
                 box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor;
                 caret-color: #4180F6;
@@ -327,6 +331,8 @@ body {
 
         #trendsSection {
             #trends {
+                width: 82.9%;
+                padding-left: 7px;
                 border: solid 1px #2E32FB;
                 box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $outsidebordercolor;
                 caret-color: #4180F6;
@@ -350,20 +356,20 @@ body {
             #gifSuggest5 {
                 background-color: $backgroundcolorsearchbox;
 
-                &:hover {
-                    box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+                &:hover {                    
                     margin-right: 0.3478%;
                     width: 20.4461%;
                     height: 304px;
+                    box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
                     outline: 1px dotted $outsidebordercolor;
                     outline-offset: -4px;
 
                     img {
-                        position: absolute;
+                        position: relative;
                         z-index: 1;
-                        left: 4px;
-                        bottom: 2px;
-                        height: 98%;
+                        left: 3px;
+                        bottom: 18px;
+                        height: 100%;
                         width: 97.2778%;
                     }
 

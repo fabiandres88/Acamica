@@ -1,1048 +1,3 @@
-body .light {
-  background-color: #faf1f9;
-}
-
-body .light #title {
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-  -webkit-box-shadow: inset 0 -1px 0 0 #110038;
-          box-shadow: inset 0 -1px 0 0 #110038;
-}
-
-body .light #title h1 {
-  color: #FFFFFF;
-}
-
-body .light #buttonZone #buttonOne {
-  background-color: #F7C9F3;
-  color: #110038;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #buttonZone #buttonOne:active, body .light #buttonZone #buttonOne:hover {
-  background-color: #E6BBE2;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #buttonZone #buttonOne a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-decoration: none;
-  color: #110038;
-  width: 100%;
-  height: 100%;
-}
-
-body .light #buttonZone #buttonTwo {
-  cursor: pointer;
-}
-
-body .light #buttonZone #buttonTwo #buttonChooseTheme {
-  background-color: #F7C9F3;
-  color: #110038;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #buttonZone #buttonTwo #buttonChooseTheme:active, body .light #buttonZone #buttonTwo #buttonChooseTheme:hover {
-  background-color: #E6BBE2;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #buttonZone #buttonTwo #dropDown {
-  background-color: #F7C9F3;
-  color: #110038;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #buttonZone #buttonTwo #dropDown:active, body .light #buttonZone #buttonTwo #dropDown:hover {
-  background-color: #E6BBE2;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #buttonZone #menuThemes {
-  background-color: #E6E6E6;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-}
-
-body .light #buttonZone #menuThemes .day {
-  background-color: #F0F0F0;
-  border: #808080 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  color: #110038;
-}
-
-body .light #buttonZone #menuThemes .day:hover {
-  background-color: #FFF4FD;
-  border: #CCA6C9 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #buttonZone #menuThemes .night {
-  background-color: #F0F0F0;
-  border: #808080 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  color: #110038;
-}
-
-body .light #buttonZone #menuThemes .night:hover {
-  background-color: #FFF4FD;
-  border: #CCA6C9 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #linkMyGifos {
-  color: #110038;
-}
-
-body .light #linkMyGifos:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #linkMyGifos:active {
-  color: #B4B4B4;
-}
-
-body .light #searchBox {
-  background-color: #E6E6E6;
-  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
-          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
-}
-
-body .light #searchBox #searchBoxTitle {
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-  -webkit-box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
-          box-shadow: inset 2px 0 0 0 #E6E6E6, inset 0 4px 0 0 #E6E6E6, inset -2px 0 0 0 #E6E6E6;
-  border-right: solid #B4B4B4 2px;
-}
-
-body .light #searchBox h2 {
-  color: #FFFFFF;
-  border-top: #FFFFFF solid 2px;
-}
-
-body .light #searchBox #mySearch {
-  caret-color: #4180F6;
-  color: #110038;
-  border: solid 1px #979797;
-  -webkit-box-shadow: inset -1px -1px 0 0 #E6E6E6, inset 1px 1px 0 0 #000000;
-          box-shadow: inset -1px -1px 0 0 #E6E6E6, inset 1px 1px 0 0 #000000;
-}
-
-body .light #searchBox::-webkit-input-placeholder {
-  color: #B4B4B4;
-}
-
-body .light #searchBox:-ms-input-placeholder {
-  color: #B4B4B4;
-}
-
-body .light #searchBox::-ms-input-placeholder {
-  color: #B4B4B4;
-}
-
-body .light #searchBox::placeholder {
-  color: #B4B4B4;
-}
-
-body .light #buttonSearch {
-  background-color: #E6E6E6;
-  color: #B4B4B4;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #buttonSearch:active {
-  background-color: #E6BBE2;
-  border: #110038 solid 1px;
-  -webkit-box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #buttonSearch:active #buttonContent {
-  color: #110038;
-}
-
-body .light #buttonSearch:active #buttonContent #mGlassImage {
-  display: none;
-}
-
-body .light #buttonSearch:active #buttonContent #mGlass {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .light #buttonSearchInput {
-  background-color: #F7C9F3;
-  border: 1px solid #110038;
-  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-  color: #110038;
-}
-
-body .light #subMenuSearch {
-  background-color: #E6E6E6;
-}
-
-body .light #subMenuSearch button {
-  background-color: #E6E6E6;
-  color: #110038;
-}
-
-body .light #subMenuSearch #Result1 {
-  background-color: #f0f0f0;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #subMenuSearch #Result1:hover {
-  background-color: #DBDBDB;
-  border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #subMenuSearch #Result2 {
-  background-color: #f0f0f0;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #subMenuSearch #Result2:hover {
-  background-color: #DBDBDB;
-  border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #subMenuSearch #Result3 {
-  background-color: #f0f0f0;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .light #subMenuSearch #Result3:hover {
-  background-color: #DBDBDB;
-  border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light #suggestions #suggest {
-  border: solid 1px #E6BBE2;
-  -webkit-box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
-          box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
-  caret-color: #4180F6;
-  color: #110038;
-}
-
-body .light #suggestions #suggest::-webkit-input-placeholder {
-  color: #110038;
-}
-
-body .light #suggestions #suggest:-ms-input-placeholder {
-  color: #110038;
-}
-
-body .light #suggestions #suggest::-ms-input-placeholder {
-  color: #110038;
-}
-
-body .light #suggestions #suggest::placeholder {
-  color: #110038;
-}
-
-body .light #gifSuggest .borderShadowGif {
-  background-color: #E6E6E6;
-  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
-          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #B4B4B4;
-}
-
-body .light #gifSuggest .borderShadowGif img:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -1px;
-}
-
-body .light #gifSuggest p {
-  color: #FFFFFF;
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-}
-
-body .light #gifSuggest .buttonCloseGif {
-  background-image: url(../../Images/button3.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-top: solid 1px #FFFFFF;
-  border-right: solid 1px #000000;
-  border-bottom: solid 1px #000000;
-  border-left: solid 1px #FFFFFF;
-}
-
-body .light #gifSuggest .seeMoreButton {
-  color: #FFFFFF;
-  background-color: #4180F6;
-  border: solid 1px #4C2F99;
-  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #284F99;
-          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #284F99;
-}
-
-body .light #gifSuggest .seeMoreButton:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -5px;
-}
-
-body .light #trendsSection #trends {
-  border: solid 1px #E6BBE2;
-  -webkit-box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
-          box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
-  caret-color: #4180F6;
-  color: #110038;
-}
-
-body .light #trendsSection #trends::-webkit-input-placeholder {
-  color: #110038;
-}
-
-body .light #trendsSection #trends:-ms-input-placeholder {
-  color: #110038;
-}
-
-body .light #trendsSection #trends::-ms-input-placeholder {
-  color: #110038;
-}
-
-body .light #trendsSection #trends::placeholder {
-  color: #110038;
-}
-
-body .light .trendsCharge img:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -1px;
-}
-
-body .light .trendsCharge #gifSuggest5 {
-  background-color: #E6E6E6;
-}
-
-body .light .trendsCharge #gifSuggest5:hover {
-  margin-right: 0.3478%;
-  width: 20.4461%;
-  height: 304px;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light .trendsCharge #gifSuggest5:hover img {
-  position: relative;
-  z-index: 1;
-  left: 3px;
-  bottom: 18px;
-  height: 100%;
-  width: 97.2778%;
-}
-
-body .light .trendsCharge #gifSuggest5:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .light .trendsCharge #gifSuggest5 p {
-  color: #FFFFFF;
-  -webkit-transform: translateY(277px);
-          transform: translateY(277px);
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-}
-
-body .light .trendsCharge .secondaryTrendsCharge {
-  background: #E6E6E6;
-}
-
-body .light .trendsCharge .secondaryTrendsCharge:hover {
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  margin-right: 0.3478%;
-  width: 20.4461%;
-  height: 304px;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light .trendsCharge .secondaryTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
-  left: 4px;
-  bottom: 2px;
-  height: 98%;
-  width: 97.2778%;
-}
-
-body .light .trendsCharge .secondaryTrendsCharge:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .light .trendsCharge .secondaryTrendsCharge p {
-  color: #FFFFFF;
-  -webkit-transform: translateY(277px);
-          transform: translateY(277px);
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-}
-
-body .light .trendsCharge .bigLeftTrendsCharge {
-  background: #E6E6E6;
-  color: #FFFFFF;
-}
-
-body .light .trendsCharge .bigLeftTrendsCharge:hover {
-  margin-right: 0.3478%;
-  width: 41.5865%;
-  height: 304px;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light .trendsCharge .bigLeftTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
-  width: 99%;
-  height: 98%;
-  top: 3px;
-  left: 3px;
-}
-
-body .light .trendsCharge .bigLeftTrendsCharge:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .light .trendsCharge .bigLeftTrendsCharge p {
-  -webkit-transform: translateY(275px);
-          transform: translateY(275px);
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-}
-
-body .light .trendsCharge .bigRightTrendsCharge {
-  background: #faf1f9;
-  color: #FFFFFF;
-}
-
-body .light .trendsCharge .bigRightTrendsCharge:hover {
-  margin-right: 0.3478%;
-  margin-left: 0.3478%;
-  width: 41.5865%;
-  height: 304px;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .light .trendsCharge .bigRightTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
-  width: 99%;
-  height: 98%;
-  top: 3px;
-  left: 3px;
-}
-
-body .light .trendsCharge .bigRightTrendsCharge:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .light .trendsCharge .bigRightTrendsCharge p {
-  -webkit-transform: translateY(275px);
-          transform: translateY(275px);
-  background: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-}
-
-body .dark {
-  background-color: #110038;
-}
-
-body .dark #title {
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-  -webkit-box-shadow: inset 0 -1px 0 0 #110038;
-          box-shadow: inset 0 -1px 0 0 #110038;
-}
-
-body .dark #title h1 {
-  color: #FFFFFF;
-}
-
-body .dark #buttonZone #buttonOne {
-  background-color: #EE3EFE;
-  color: #FFFFFF;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #buttonZone #buttonOne:active, body .dark #buttonZone #buttonOne:hover {
-  background-color: #CE36DB;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #buttonZone #buttonOne a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-decoration: none;
-  color: #FFFFFF;
-  width: 100%;
-  height: 100%;
-}
-
-body .dark #buttonZone #buttonTwo {
-  cursor: pointer;
-}
-
-body .dark #buttonZone #buttonTwo #buttonChooseTheme {
-  background-color: #EE3EFE;
-  color: #FFFFFF;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #buttonZone #buttonTwo #buttonChooseTheme:active, body .dark #buttonZone #buttonTwo #buttonChooseTheme:hover {
-  background-color: #CE36DB;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #buttonZone #buttonTwo #dropDown {
-  background-color: #EE3EFE;
-  color: #FFFFFF;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #buttonZone #buttonTwo #dropDown:active, body .dark #buttonZone #buttonTwo #dropDown:hover {
-  background-color: #CE36DB;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #buttonZone #menuThemes {
-  background-color: #B4B4B4;
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-}
-
-body .dark #buttonZone #menuThemes .day {
-  background-color: #FFF4FD;
-  border: #CCA6C9 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-  color: #110038;
-}
-
-body .dark #buttonZone #menuThemes .day:hover {
-  color: #FFFFFF;
-  background-color: #2E32FB;
-  border: #33358F 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #buttonZone #menuThemes .night {
-  background-color: #F0F0F0;
-  border: #808080 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-  color: #110038;
-}
-
-body .dark #buttonZone #menuThemes .night:hover {
-  background-color: #2E32FB;
-  color: #FFFFFF;
-  border: #33358F 1px solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #linkMyGifos {
-  color: #FFFFFF;
-}
-
-body .dark #linkMyGifos:hover {
-  outline: 1px dotted #8F8F8F;
-  outline-offset: -4px;
-}
-
-body .dark #linkMyGifos:active {
-  color: #8F8F8F;
-}
-
-body .dark #searchBox {
-  background-color: #B4B4B4;
-  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
-          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
-}
-
-body .dark #searchBox #searchBoxTitle {
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-  -webkit-box-shadow: inset 2px 0 0 0 #B4B4B4, inset 0 4px 0 0 #B4B4B4, inset -2px 0 0 0 #B4B4B4;
-          box-shadow: inset 2px 0 0 0 #B4B4B4, inset 0 4px 0 0 #B4B4B4, inset -2px 0 0 0 #B4B4B4;
-  border-right: solid 1px #8F8F8F;
-}
-
-body .dark #searchBox h2 {
-  color: #FFFFFF;
-  border-top: solid 2px #FFFFFF;
-}
-
-body .dark #searchBox #mySearch {
-  caret-color: #4180F6;
-  color: #110038;
-  border: solid 1px #979797;
-  -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
-          box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
-}
-
-body .dark #searchBox #mySearch::-webkit-input-placeholder {
-  color: #B4B4B4;
-}
-
-body .dark #searchBox #mySearch:-ms-input-placeholder {
-  color: #B4B4B4;
-}
-
-body .dark #searchBox #mySearch::-ms-input-placeholder {
-  color: #B4B4B4;
-}
-
-body .dark #searchBox #mySearch::placeholder {
-  color: #B4B4B4;
-}
-
-body .dark #searchBox #buttonSearch {
-  background-color: #B4B4B4;
-  color: #8F8F8F;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #searchBox #buttonSearch:active {
-  background-color: #CE36DB;
-  border: #110038 solid 1px;
-  -webkit-box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #searchBox #buttonSearch:active #buttonContent {
-  color: #FFFFFF;
-}
-
-body .dark #searchBox #buttonSearch:active #buttonContent #mGlassLight {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .dark #searchBox #buttonSearch:active #buttonContent #mGlassImageDark {
-  display: none;
-}
-
-body .dark #searchBox #buttonSearch #buttonContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-body .dark #searchBox #buttonSearch #buttonContent #mGlassImage {
-  display: none;
-}
-
-body .dark #searchBox #buttonSearch #buttonContent #mGlass {
-  display: none;
-}
-
-body .dark #searchBox #buttonSearch #buttonContent #mGlassLight {
-  display: none;
-}
-
-body .dark #searchBox #buttonSearch #buttonContent #mGlassImageDark {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .dark #searchBox #buttonSearchInput {
-  background-color: #F7C9F3;
-  border: 1px solid #110038;
-  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-  color: #110038;
-}
-
-body .dark #subMenuSearch {
-  background-color: #B4B4B4;
-  -webkit-transform: translateY(15px);
-          transform: translateY(15px);
-}
-
-body .dark #subMenuSearch button {
-  background-color: #B4B4B4;
-  color: #B4B4B4;
-}
-
-body .dark #subMenuSearch #Result1 {
-  color: #110038;
-  background-color: #f0f0f0;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #subMenuSearch #Result1:hover {
-  background-color: #CCCCCC;
-  border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #subMenuSearch #Result2 {
-  color: #110038;
-  background-color: #f0f0f0;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #subMenuSearch #Result2:hover {
-  background-color: #CCCCCC;
-  border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #subMenuSearch #Result3 {
-  color: #110038;
-  background-color: #f0f0f0;
-  border: solid 1px #808080;
-  -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
-}
-
-body .dark #subMenuSearch #Result3:hover {
-  background-color: #CCCCCC;
-  border: #808080 1PX solid;
-  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #suggestions #suggest {
-  border: solid 1px #2E32FB;
-  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
-          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
-  caret-color: #4180F6;
-  color: #110038;
-}
-
-body .dark #suggestions #suggest::-webkit-input-placeholder {
-  color: #110038;
-}
-
-body .dark #suggestions #suggest:-ms-input-placeholder {
-  color: #110038;
-}
-
-body .dark #suggestions #suggest::-ms-input-placeholder {
-  color: #110038;
-}
-
-body .dark #suggestions #suggest::placeholder {
-  color: #110038;
-}
-
-body .dark #gifSuggest .borderShadowGif {
-  background-color: #B4B4B4;
-  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
-          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
-}
-
-body .dark #gifSuggest .borderShadowGif img:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -1px;
-}
-
-body .dark #gifSuggest p {
-  color: #FFFFFF;
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-}
-
-body .dark #gifSuggest .buttonCloseGif {
-  background-image: url(../../Images/button3.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-top: solid 1px #FFFFFF;
-  border-right: solid 1px #000000;
-  border-bottom: solid 1px #000000;
-  border-left: solid 1px #FFFFFF;
-}
-
-body .dark #gifSuggest .seeMoreButton {
-  color: #FFFFFF;
-  background-color: #4180F6;
-  border: solid 1px #4C2F99;
-  -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #284F99;
-          box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #284F99;
-}
-
-body .dark #gifSuggest .seeMoreButton:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -5px;
-}
-
-body .dark #trendsSection #trends {
-  border: solid 1px #2E32FB;
-  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
-          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
-  caret-color: #4180F6;
-  color: #110038;
-}
-
-body .dark #trendsSection #trends::-webkit-input-placeholder {
-  color: #110038;
-}
-
-body .dark #trendsSection #trends:-ms-input-placeholder {
-  color: #110038;
-}
-
-body .dark #trendsSection #trends::-ms-input-placeholder {
-  color: #110038;
-}
-
-body .dark #trendsSection #trends::placeholder {
-  color: #110038;
-}
-
-body .dark .trendsCharge img:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -1px;
-}
-
-body .dark .trendsCharge #gifSuggest5 {
-  background-color: #B4B4B4;
-}
-
-body .dark .trendsCharge #gifSuggest5:hover {
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-  margin-right: 0.3478%;
-  width: 20.4461%;
-  height: 304px;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark .trendsCharge #gifSuggest5:hover img {
-  position: absolute;
-  z-index: 1;
-  left: 4px;
-  bottom: 2px;
-  height: 98%;
-  width: 97.2778%;
-}
-
-body .dark .trendsCharge #gifSuggest5:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .dark .trendsCharge #gifSuggest5 p {
-  color: #FFFFFF;
-  -webkit-transform: translateY(277px);
-          transform: translateY(277px);
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge {
-  background: #B4B4B4;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge:hover {
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-  margin-right: 0.3478%;
-  width: 20.4461%;
-  height: 304px;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
-  left: 4px;
-  bottom: 2px;
-  height: 98%;
-  width: 97.2778%;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge p {
-  color: #FFFFFF;
-  -webkit-transform: translateY(277px);
-          transform: translateY(277px);
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-}
-
-body .dark .trendsCharge .bigLeftTrendsCharge {
-  background: #B4B4B4;
-  color: #FFFFFF;
-}
-
-body .dark .trendsCharge .bigLeftTrendsCharge:hover {
-  margin-right: 0.3478%;
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-  width: 41.5865%;
-  height: 304px;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark .trendsCharge .bigLeftTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
-  width: 99%;
-  height: 98%;
-  top: 3px;
-  left: 3px;
-}
-
-body .dark .trendsCharge .bigLeftTrendsCharge:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .dark .trendsCharge .bigLeftTrendsCharge p {
-  -webkit-transform: translateY(275px);
-          transform: translateY(275px);
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-}
-
-body .dark .trendsCharge .bigRightTrendsCharge {
-  background: #B4B4B4;
-  color: #FFFFFF;
-}
-
-body .dark .trendsCharge .bigRightTrendsCharge:hover {
-  margin-right: 0.3478%;
-  margin-left: 0.3478%;
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-  width: 41.5865%;
-  height: 304px;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark .trendsCharge .bigRightTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
-  width: 99%;
-  height: 98%;
-  top: 3px;
-  left: 3px;
-}
-
-body .dark .trendsCharge .bigRightTrendsCharge:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .dark .trendsCharge .bigRightTrendsCharge p {
-  -webkit-transform: translateY(275px);
-          transform: translateY(275px);
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-}
-
 body {
   margin: 0%;
   padding: 0%;
@@ -1067,48 +22,59 @@ body #title h1 {
   font-weight: 400;
 }
 
-body #buttonZone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body #content {
+  margin-right: 9.7%;
+  margin-left: 7.2%;
+}
+
+body #content #buttonZone {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
   height: 118px;
 }
 
-body #buttonZone #logotipe {
+body #content #buttonZone #logotipe {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-right: 50%;
   width: 91px;
-  margin-left: 6.3288%;
-  padding-left: 0.5565%;
-  padding-right: 0.2504%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
 }
 
-body #buttonZone #buttonOne {
+body #content #buttonZone div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body #content #buttonZone div #buttonOne {
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: 1.1137%;
-  margin-left: 47.6637%;
   height: 36px;
-  width: 10.0139%;
+  width: 144px;
   font-size: 16px;
   font-weight: 400;
   font-family: "Chakra Petch";
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
 }
 
-body #buttonZone #buttonOne a {
+body #content #buttonZone div #buttonOne a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1120,20 +86,24 @@ body #buttonZone #buttonOne a {
   height: 100%;
 }
 
-body #buttonZone #buttonTwo {
+body #content #buttonZone div #buttonTwo {
+  cursor: pointer;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 36px;
-  width: 11.8915%;
+  width: 167px;
   border: none;
   background-color: transparent;
   padding: 0px;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
 }
 
-body #buttonZone #buttonTwo #buttonChooseTheme {
+body #content #buttonZone div #buttonTwo #buttonChooseTheme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1152,7 +122,7 @@ body #buttonZone #buttonTwo #buttonChooseTheme {
   font-family: "Chakra Petch";
 }
 
-body #buttonZone #buttonTwo #dropDown {
+body #content #buttonZone div #buttonTwo #dropDown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1171,7 +141,7 @@ body #buttonZone #buttonTwo #dropDown {
   font-family: "Chakra Petch";
 }
 
-body #buttonZone #menuThemes {
+body #content #buttonZone div #menuThemes {
   display: none;
   position: absolute;
   top: 89px;
@@ -1192,7 +162,7 @@ body #buttonZone #menuThemes {
   list-style: none;
 }
 
-body #buttonZone #menuThemes .day {
+body #content #buttonZone div #menuThemes .day {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1211,7 +181,7 @@ body #buttonZone #menuThemes .day {
   font-family: "Chakra Petch";
 }
 
-body #buttonZone #menuThemes .night {
+body #content #buttonZone div #menuThemes .night {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1230,35 +200,44 @@ body #buttonZone #menuThemes .night {
   font-family: "Chakra Petch";
 }
 
-body a {
+body #content #buttonZone a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 1.1474%;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
 }
 
-body #linkMyGifos {
+body #content #buttonZone #linkMyGifos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-item-align: center;
+      align-self: center;
   width: 85px;
   font-size: 16px;
   font-weight: 400;
   font-family: "Chakra Petch";
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
 }
 
-body #searchBox {
-  width: 83.45%;
+body #content #searchBox {
   height: 99px;
-  margin-left: 6.9%;
 }
 
-body #searchBox #searchBoxTitle {
-  width: 99.5%;
+body #content #searchBox #searchBoxTitle {
+  width: 99.6%;
   margin-left: 0.25%;
 }
 
-body #searchBox h2 {
+body #content #searchBox h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1272,7 +251,7 @@ body #searchBox h2 {
   width: 100%;
 }
 
-body #searchBox #formSearch {
+body #content #searchBox #formSearch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1285,7 +264,7 @@ body #searchBox #formSearch {
           align-items: center;
 }
 
-body #searchBox #mySearch {
+body #content #searchBox #mySearch {
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
@@ -1295,35 +274,35 @@ body #searchBox #mySearch {
   list-style: lower-alpha;
 }
 
-body #searchBox::-webkit-input-placeholder {
+body #content #searchBox::-webkit-input-placeholder {
   padding-left: 1.3333%;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #searchBox:-ms-input-placeholder {
+body #content #searchBox:-ms-input-placeholder {
   padding-left: 1.3333%;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #searchBox::-ms-input-placeholder {
+body #content #searchBox::-ms-input-placeholder {
   padding-left: 1.3333%;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #searchBox::placeholder {
+body #content #searchBox::placeholder {
   padding-left: 1.3333%;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #buttonSearch {
+body #content #buttonSearch {
   text-align: center;
   margin-left: 8px;
   width: 8.5%;
@@ -1333,7 +312,7 @@ body #buttonSearch {
   font-weight: 400;
 }
 
-body #buttonSearch #buttonContent {
+body #content #buttonSearch #buttonContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1345,19 +324,19 @@ body #buttonSearch #buttonContent {
       justify-content: space-around;
 }
 
-body #buttonSearch #buttonContent #mGlassImageDark {
+body #content #buttonSearch #buttonContent #mGlassImageDark {
   display: none;
 }
 
-body #buttonSearch #buttonContent #mGlass {
+body #content #buttonSearch #buttonContent #mGlass {
   display: none;
 }
 
-body #buttonSearch #buttonContent #mGlassLight {
+body #content #buttonSearch #buttonContent #mGlassLight {
   display: none;
 }
 
-body #buttonSearchInput {
+body #content #buttonSearchInput {
   text-align: center;
   margin-left: 8px;
   width: 8.5%;
@@ -1367,7 +346,7 @@ body #buttonSearchInput {
   font-family: "Chakra Petch";
 }
 
-body #subMenuSearch {
+body #content #subMenuSearch {
   position: relative;
   z-index: 2;
   -webkit-box-orient: vertical;
@@ -1381,7 +360,7 @@ body #subMenuSearch {
   display: none;
 }
 
-body #subMenuSearch button {
+body #content #subMenuSearch button {
   width: 87.9166%;
   height: 34px;
   margin-left: 1.3333%;
@@ -1389,56 +368,55 @@ body #subMenuSearch button {
   font-family: "Chakra Petch";
 }
 
-body #subMenuSearch #Result1 {
+body #content #subMenuSearch #Result1 {
   margin-top: 17px;
   text-align: left;
 }
 
-body #subMenuSearch #Result2 {
+body #content #subMenuSearch #Result2 {
   text-align: left;
   margin-top: 11px;
 }
 
-body #subMenuSearch #Result3 {
+body #content #subMenuSearch #Result3 {
   text-align: left;
   margin-top: 10px;
 }
 
-body #suggestions #suggest {
+body #content #suggestions #suggest {
   height: 32px;
-  width: 83.45%;
-  margin-left: 6.9%;
+  width: 99.4%;
   margin-top: 76px;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #suggestions #suggest::-webkit-input-placeholder {
+body #content #suggestions #suggest::-webkit-input-placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #suggestions #suggest:-ms-input-placeholder {
+body #content #suggestions #suggest:-ms-input-placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #suggestions #suggest::-ms-input-placeholder {
+body #content #suggestions #suggest::-ms-input-placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #suggestions #suggest::placeholder {
+body #content #suggestions #suggest::placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #gifSuggest {
+body #content #gifSuggest {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1446,27 +424,21 @@ body #gifSuggest {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
   margin-top: 19px;
 }
 
-body #gifSuggest #gifSuggest1 {
-  margin-left: 6.955%;
+body #content #gifSuggest #gifSuggest1,
+body #content #gifSuggest #gifSuggest2,
+body #content #gifSuggest #gifSuggest3 {
+  margin-right: 18px;
 }
 
-body #gifSuggest #gifSuggest2,
-body #gifSuggest #gifSuggest3,
-body #gifSuggest #gifSuggest4 {
-  margin-left: 0.5565%;
-}
-
-body #gifSuggest .borderShadowGif {
-  margin-right: 0.5565%;
-  width: 20.0289%;
+body #content #gifSuggest .borderShadowGif {
+  width: 25%;
   height: 313px;
 }
 
-body #gifSuggest .borderShadowGif img {
+body #content #gifSuggest .borderShadowGif img {
   position: relative;
   right: 30px;
   bottom: 47px;
@@ -1475,7 +447,7 @@ body #gifSuggest .borderShadowGif img {
   width: 97.22277%;
 }
 
-body #gifSuggest p {
+body #content #gifSuggest p {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 700;
@@ -1485,7 +457,7 @@ body #gifSuggest p {
   margin-left: 1.3943%;
 }
 
-body #gifSuggest .buttonCloseGif {
+body #content #gifSuggest .buttonCloseGif {
   position: relative;
   z-index: 4;
   bottom: 43px;
@@ -1495,7 +467,7 @@ body #gifSuggest .buttonCloseGif {
   margin-right: 1.786%;
 }
 
-body #gifSuggest .seeMoreButton {
+body #content #gifSuggest .seeMoreButton {
   position: relative;
   z-index: 5;
   font-size: 14px;
@@ -1507,54 +479,55 @@ body #gifSuggest .seeMoreButton {
   height: 34px;
 }
 
-body #trendsSection #trends {
-  width: 83.45%;
+body #content #trendsSection #trends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  width: 99.4%;
   height: 32px;
   margin-top: 68px;
-  margin-left: 6.9541%;
   font-size: 16px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #trendsSection #trends::-webkit-input-placeholder {
-  color: #110038;
+body #content #trendsSection #trends::-webkit-input-placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #trendsSection #trends:-ms-input-placeholder {
-  color: #110038;
+body #content #trendsSection #trends:-ms-input-placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #trendsSection #trends::-ms-input-placeholder {
-  color: #110038;
+body #content #trendsSection #trends::-ms-input-placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body #trendsSection #trends::placeholder {
-  color: #110038;
+body #content #trendsSection #trends::placeholder {
   font-size: 14px;
   font-family: "Chakra Petch";
   font-weight: 400;
 }
 
-body .trendsCharge {
-  margin-left: 6.955%;
+body #content .trendsCharge {
   margin-top: 17px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
 }
 
-body .trendsCharge img {
+body #content .trendsCharge img {
   position: relative;
   right: 30px;
   bottom: 0px;
@@ -1563,7 +536,8 @@ body .trendsCharge img {
   width: 100%;
 }
 
-body .trendsCharge #gifSuggest5 {
+body #content .trendsCharge .chargeSmall {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1571,154 +545,119 @@ body .trendsCharge #gifSuggest5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 0.5565%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0%;
   margin-left: 0%;
   height: 298px;
-  width: 20.0289%;
+  width: 25%;
 }
 
-body .trendsCharge #gifSuggest5 img {
-  height: 100%;
-  width: 100%;
-}
-
-body .trendsCharge #gifSuggest5 p {
-  display: none;
-  position: relative;
-  z-index: 3;
-  font-size: 14px;
-  font-family: "Chakra Petch";
-  font-weight: 700;
-  width: 97.2778%;
-  height: 24px;
-  margin-left: 1.3943%;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-
-body .trendsCharge .secondaryTrendsCharge {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  height: 298px;
-  width: 20.0289%;
-  margin-right: 0.5565%;
-  margin-left: 0.5565%;
-}
-
-body .trendsCharge .secondaryTrendsCharge img {
-  height: 100%;
-  width: 100%;
-}
-
-body .trendsCharge .secondaryTrendsCharge p {
-  display: none;
-  position: relative;
-  z-index: 3;
-  font-size: 14px;
-  font-family: "Chakra Petch";
-  font-weight: 700;
-  width: 97.2778%;
-  height: 24px;
-  margin-left: 1.3943%;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-
-body .trendsCharge .bigLeftTrendsCharge {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  width: 41.1693%;
-  height: 298px;
-  margin-right: 0.5565%;
-  margin-left: 0%;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: "Chakra Petch";
-}
-
-body .trendsCharge .bigLeftTrendsCharge img {
-  width: 100%;
-  height: 100%;
-}
-
-body .trendsCharge .bigLeftTrendsCharge p {
-  display: none;
-  position: relative;
-  z-index: 5;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  margin-left: 0.7%;
-  height: 24px;
-  width: 98.7%;
-}
-
-body .trendsCharge .bigRightTrendsCharge {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  width: 41.1693%;
-  height: 298px;
-  margin-right: 0.5565%;
-  margin-left: 0.5565%;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: "Chakra Petch";
-}
-
-body .trendsCharge .bigRightTrendsCharge img {
-  width: 100%;
-  height: 100%;
-}
-
-body .trendsCharge .bigRightTrendsCharge p {
-  display: none;
-  position: relative;
-  z-index: 5;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  margin-left: 0.7%;
-  height: 24px;
-  width: 98.7%;
-}
-
-body .trendsCharge #gifSuggest8 p,
-body .trendsCharge #gifSuggest11 p,
-body .trendsCharge #gifSuggest18 p,
-body .trendsCharge #gifSuggest21 p,
-body .trendsCharge #gifSuggest28 p {
+body #content .trendsCharge .chargeSmall img {
+  position: absolute;
+  z-index: 1;
+  height: 97%;
   width: 97%;
-  bottom: 0px;
+  left: 4px;
+  bottom: 5px;
 }
 
-body .trendsCharge #gifSuggest14 p,
-body .trendsCharge #gifSuggest24 p {
-  width: 98.4%;
-  left: 0.3px;
+body #content .trendsCharge .chargeSmall p {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 4;
+  width: 95.5%;
+  height: 24px;
+  font-size: 14px;
+  font-family: "Chakra Petch";
+  font-weight: 700;
+  bottom: 268px;
+  padding-left: 3px;
 }
 
-body .trendsCharge #gifSuggest12,
-body .trendsCharge #gifSuggest15,
-body .trendsCharge #gifSuggest22,
-body .trendsCharge #gifSuggest25 {
-  margin-left: 0px;
+body #content .trendsCharge .bigLeftTrendsCharge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 50%;
+  height: 298px;
+  margin-right: 8px;
+  margin-left: 0%;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Chakra Petch";
+}
+
+body #content .trendsCharge .bigLeftTrendsCharge img {
+  position: absolute;
+  z-index: 1;
+  height: 97%;
+  width: 100%;
+  left: 4px;
+  bottom: 5px;
+}
+
+body #content .trendsCharge .bigLeftTrendsCharge p {
+  display: none;
+  position: relative;
+  z-index: 5;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-left: 0.7%;
+  height: 24px;
+  width: 98.7%;
+  bottom: 5px;
+}
+
+body #content .trendsCharge .bigRightTrendsCharge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 50%;
+  height: 298px;
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Chakra Petch";
+}
+
+body #content .trendsCharge .bigRightTrendsCharge img {
+  position: absolute;
+  z-index: 1;
+  height: 97%;
+  width: 100%;
+  left: 4px;
+  bottom: 5px;
+}
+
+body #content .trendsCharge .bigRightTrendsCharge p {
+  display: none;
+  position: relative;
+  z-index: 5;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-left: 0.7%;
+  height: 24px;
+  width: 98.7%;
+  bottom: 5px;
 }
 /*# sourceMappingURL=index.css.map */

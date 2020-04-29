@@ -1,7 +1,7 @@
 $themeonegradientcolor1:#F7C9F3;
 $themeonegradientcolor2:#4180F6;
 $outsidebordercolor:#110038;
-$fontcolorheader:#FFFFFF;
+$fontcolorheader: #FFFFFF;
 $backgroundcolorbtn:#F7C9F3;
 $backgroundcolorsearchbox: #E6E6E6;
 $searchBarColor: #B4B4B4;
@@ -21,9 +21,11 @@ body {
             }
         }
 
+        #content {
+
         //THIS SECTION CONTENT LOGO GIFOS- BUTTONS CREATE GIFOS AND SELECT THEME AND MIS GUIFOS LINK 
         #buttonZone {
-
+            div{
             // THESE ARE THE STYLES OF THE CREATE GUIFOS BUTTON
             #buttonOne {
                 background-color: $backgroundcolorbtn;
@@ -36,21 +38,15 @@ body {
                     background-color: #E6BBE2;
                     outline: 1px dotted $outsidebordercolor;
                     outline-offset: -4px;
-                }
+                }                
 
-                a {
-                    display: flex;
-                    justify-content: center;
-                    text-decoration: none;
-                    color: $outsidebordercolor;
-                    width: 100%;
-                    height: 100%;
+                a {                    
+                    color: $outsidebordercolor;                  
                 }
             }
 
             //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
-            #buttonTwo {
-                cursor: pointer;
+            #buttonTwo {                
 
                 #buttonChooseTheme {
                     background-color: $backgroundcolorbtn;
@@ -80,6 +76,7 @@ body {
                     }
                 }
             }
+        }
 
             #menuThemes {
                 background-color: $backgroundcolorsearchbox;
@@ -136,19 +133,21 @@ body {
                 border-right: solid $searchBarColor 2px;
             }
 
-            h2 {
+            h2 {                
+                padding-left: 6px;
                 color: $fontcolorheader;
                 border-top: $fontcolorheader solid 2px;
             }
 
             #mySearch {
+                padding-left: 16px;
                 caret-color: #4180F6;
                 color: $outsidebordercolor;
                 border: solid 1px #979797;
                 box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
             }
 
-            &::placeholder {
+            &::placeholder {                           
                 color: $searchBarColor;
             }
         }
@@ -244,6 +243,7 @@ body {
         #suggestions {
 
             #suggest {
+                padding-left: 7px;                              
                 border: solid 1px #E6BBE2;
                 box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
                 caret-color: #4180F6;
@@ -299,6 +299,7 @@ body {
 
         #trendsSection {
             #trends {
+                padding-left: 7px;
                 border: solid 1px #E6BBE2;
                 box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
                 caret-color: #4180F6;
@@ -311,72 +312,19 @@ body {
         }
 
         .trendsCharge {
-            img {
-                &:hover {
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -1px;
-                }
-            }
 
             //THESE ARE THE STYLES OF THE TRENDS SECTION
-            #gifSuggest5 {
-                background-color: $backgroundcolorsearchbox;
+            .chargeSmall {                 
 
-                &:hover {
-                    margin-right: 0.3478%;
-                    width: 20.4461%;
-                    height: 304px;
+                &:hover{
                     box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
                     outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
-
-                    img {
-                        position: relative;
-                        z-index: 1;
-                        left: 3px;
-                        bottom: 18px;
-                        height: 100%;
-                        width: 97.2778%;
-                    }
-
-                    p {
-                        display: flex;
-                    }
-                }
-
-
-                p {
-                    color: $fontcolorheader;
-                    transform: translateY(277px);
-                    background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-                }
-            }
-
-            .secondaryTrendsCharge {
-                background: $backgroundcolorsearchbox;
-
-                &:hover {
-                    box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
-                    margin-right: 0.3478%;
-                    width: 20.4461%;
-                    height: 304px;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
-
-                    img {
-                        position: absolute;
-                        z-index: 1;
-                        left: 4px;
-                        bottom: 2px;
-                        height: 98%;
-                        width: 97.2778%;
-                    }
-
-                    p {
-                        display: flex;
-                    }
-                }
-
+                    outline-offset: -4px;                    
+                    p{
+                        display:flex; 
+                    }                  
+                }               
+                
                 p {
                     color: $fontcolorheader;
                     transform: translateY(277px);
@@ -385,25 +333,17 @@ body {
             }
 
             //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE LEFT MARGIN
-            .bigLeftTrendsCharge {
-                background: $backgroundcolorsearchbox;
+            .bigLeftTrendsCharge {                
                 color: #FFFFFF;
 
                 &:hover {
-                    margin-right: 0.3478%;
-                    width: 41.5865%;
-                    height: 304px;
+                    width: 50%;
                     box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
                     outline: 1px dotted $outsidebordercolor;
                     outline-offset: -4px;
 
-                    img {
-                        position: absolute;
-                        z-index: 1;
-                        width: 99%;
-                        height: 98%;
-                        top: 3px;
-                        left: 3px;
+                    img {                        
+                        width: 98.6%;
                     }
 
                     p {
@@ -419,14 +359,13 @@ body {
 
             //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE RIGHT MARGIN
             .bigRightTrendsCharge {
-                background:  rgb(250, 241, 249);
                 color: $fontcolorheader;
 
                 &:hover {
                     margin-right: 0.3478%;
                     margin-left: 0.3478%;
-                    width: 41.5865%;
-                    height: 304px;
+                    width: 50%;
+                    height: 298px;
                     box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
                     outline: 1px dotted $outsidebordercolor;
                     outline-offset: -4px;
@@ -434,10 +373,9 @@ body {
                     img {
                         position: absolute;
                         z-index: 1;
-                        width: 99%;
-                        height: 98%;
-                        top: 3px;
-                        left: 3px;
+                        width: 98.5%;                        
+                        top: 4px;
+                        left: 4px;
                     }
 
                     p {
@@ -452,4 +390,5 @@ body {
             }
         }
     }
+}
 }

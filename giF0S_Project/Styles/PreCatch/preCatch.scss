@@ -62,76 +62,96 @@ body {
             height: 386px;
             background-color: $backgroundcolorsearchbox;
             box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
-        
 
-        h1 {
-            position: relative;
-            margin-top: 0px;
-            color: $fontcolorheader;
-            font-size: 14px;
-            font-weight: 700;
-            font-family: $primaryfont;
-            background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-        }
-        #here{
-            display:flex;
-            flex-direction: row;
-            justify-content: center;
-            
-            img{
-                width: 32px;
-                height: 32px;
+
+            h1 {
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-top: 3px;
+                margin-left: 3px;
+                width: 98.5%;
+                height: 24px;
+                padding-left: 4px;
+                color: $fontcolorheader;
+                font-size: 14px;
+                font-weight: 700;
+                font-family: $primaryfont;
+                background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
             }
 
-        h2 {
-            margin-left: 16px;
-            color: $outsidebordercolor;
-            font-size: 16px;
-            font-weight: 700;
-            font-family: $primaryfont;
+            #here {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                margin-top: 19px;
+                margin-bottom: 0px;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 3.6%;
+                }
+
+                h2 {
+                    margin-left: 16px;
+                    padding-bottom: 12px;
+                    color: $outsidebordercolor;
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-family: $primaryfont;
+                }
+            }
+
+            p {
+                color: $outsidebordercolor;
+                margin-top: 0px;
+                margin-left: 73px;
+                font-size: 14px;
+                font-weight: 400;
+                font-family: $primaryfont;
+                line-height: 20px;
+            }
+
+            #listCreateGifs {
+                list-style: none;
+                margin-top: 0px;
+                margin-left: 33px;
+                color: $outsidebordercolor;
+                font-size: 14px;
+                font-weight: 400;
+                font-family: $primaryfont;
+                line-height: 25px;
+
+                p {
+                    margin-left: 0px;
+                }
+            }
         }
-    }
 
-        p {
-            color: $outsidebordercolor;
-            margin-left: 73px;
-            font-size: 14px;
-            font-weight: 400;
-            font-family: $primaryfont;
-            line-height: 20px;
-        }
+        #buttonsContainer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 28px;
+            margin-left: 95px;
 
-        #listCreateGifs {
-            list-style: none;
-            margin-left: 33px;
-            color: $outsidebordercolor;
-            font-size: 14px;
-            font-weight: 400;
-            font-family: $primaryfont;
-            line-height: 20px;
-        }
-    }
-
-    #buttonsContainer {
-        display: flex;
-        justify-content:  center;
-        width: 100%;
-        margin-left: 0px;
-
-        button {
-            align-self: center;
-            display: flex;                       
-            cursor: pointer;
-            width: 133px;        
-            height: 36px;
-            margin-left: 16px;
-            background-color: #FFF4FD;
-            border: 1px solid $outsidebordercolor;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
-            color: $outsidebordercolor;
-            font-size: 16px;
-            font-weight: 400;
-            font-family: $primaryfont;               
+            button {
+                align-self: center;
+                display: flex;
+                cursor: pointer;
+                width: 133px;
+                height: 36px;
+                margin-top: 5px;
+                margin-left: 16px;
+                background-color: #FFF4FD;
+                border: 1px solid $outsidebordercolor;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+                color: $outsidebordercolor;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: $primaryfont;
 
                 &:active {
                     background-color: #F7C9F3;
@@ -144,26 +164,45 @@ body {
                     outline: 1px dotted $outsidebordercolor;
                     outline-offset: -4px;
                 }
+
                 a {
 
                     display: flex;
                     justify-content: center;
-                    text-decoration: none;                    
+                    text-decoration: none;
                     color: $outsidebordercolor;
                     height: 100%;
-                    width: 100%;                    
+                    width: 100%;
+                }
             }
         }
     }
-}
 
     #suggestions {
         width: 83.4492%;
         margin-top: 153px;
         margin-left: 6.9541%;
 
-        #suggest {
+        #myGuifos {
+            padding-left: 7px;
+            caret-color: #4180F6;
+            color: $outsidebordercolor;
+            font-size: 16px;            
+            font-family: $primaryfont;
+            font-weight: 400;
             width: 100%;
+            height: 32px;
+            margin-bottom: 17px;
+            background-color: #FFFAFE;
+            border: 1px solid #E6BBE2;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+
+            &::placeholder{                
+                color: $outsidebordercolor;
+                font-size: 14px;
+                font-family: $primaryfont;
+                font-weight: 400;
+            }
         }
     }
 }

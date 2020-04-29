@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/Catch/catch.css">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     <title>giF0S Project</title>
 </head>
 
@@ -24,39 +25,50 @@
             <div id="showCapture">
                 <video id="video" src=""></video>
                 <img id="gif" src="" alt="">
-                <img id="globe" src="../Images/globe_img.png" alt="globeImage">
+                <div id="uploadingGif">
+                    <img id="globe" src="../Images/globe_img.png" alt="globeImage">
+                    Estamos subiendo tu guifo…
+                </div>
             </div>
-            <button type="button" id="catchButton">
-                <div id="cameraButton">
-                    <img src="../Images/camera.svg" alt="camera_Image">
+            <div id="post">
+                <button type="button" id="catchButton">
+                    <div id="cameraButton">
+                        <img src="../Images/camera.svg" alt="camera_Image">
+                    </div>
+                    <div id="Button">
+                        Capturar
+                    </div>
+                </button>
+                <div id="chrono">
+                    00 00 00 00
                 </div>
-                <div id="Button">
-                    Capturar
-                </div>
-            </button>
-            <button type="button" id="stopButton" disabled>
-                <div id="buttonTwo">
-                    <img src="../Images/recording.svg" alt="camera_Image">
-                </div>
-                <div id="buttonThree">
-                    Parar
-                </div>
-            </button>            
-            
+                <button type="button" id="play">
+
+                </button>                                
+                <progress value=0 max=100 id="bar" class="barStyle">
+                    </progress>
+                <button type="button" id="stopButton" disabled>
+                    <div id="buttonTwo">
+                        <img src="../Images/recording.svg" alt="camera_Image">
+                    </div>
+                    <div id="buttonThree">
+                        Listo
+                    </div>
+                </button>
                 <button type="button" id="repeat">
                     Repetir Captura
                 </button>
                 <button type="button" id="upload">
                     Subir Guifo
                 </button>
-            
-            <button type="button" id="cancel">
-                Cancelar
-            </button>
+                <button type="button" id="cancel">
+                    Cancelar
+                </button>
+            </div>            
         </div>
     </div>
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-    <script src="../Scripts/Pages/Catch.js" type="text/javascript"></script>    
+    <script src="../Scripts/Pages/Catch.js" type="text/javascript"></script>
 </body>
 
 </html>
