@@ -39,15 +39,19 @@ body {
                 grid-column-start: 1;
                 grid-column-end: 1;
             }
+            
+            .darkLogo{
+                display: none;
+            }
             div{
                 display: flex;
                 justify-content: flex-end;
 
             // THESE ARE THE STYLES OF THE CREATE GUIFOS BUTTON
             #buttonOne {
+                cursor: pointer;
                 align-self: center;
-                display: flex;
-                
+                display: flex;                
                 margin-right: 1.1137%;
                 height: 36px;
                 width: 144px;
@@ -110,11 +114,11 @@ body {
                 display: none;
                 position: absolute;
                 top: 89px;
-                right: 15.5%;
+                right: 16.5%;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 11.82%;
+                width: 12.5%;
                 height: 102px;
                 padding-left: 0px;
                 list-style: none;
@@ -163,7 +167,7 @@ body {
             font-weight: 400;
             font-family: $primaryfont;
             grid-column-start: 2;
-                grid-column-end: 2;
+            grid-column-end: 2;
         }
     }
 
@@ -213,7 +217,7 @@ body {
         #buttonSearch {
             text-align: center;
             margin-left: 8px;
-            width: 8.5%;
+            width: 102px;
             height: 36px;
             font-size: 16px;
             font-family: $primaryfont;

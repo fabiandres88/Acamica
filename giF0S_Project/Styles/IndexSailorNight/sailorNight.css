@@ -13,38 +13,43 @@ body .dark #title h1 {
   color: #FFFFFF;
 }
 
-body .dark #buttonZone #buttonOne {
-  background-color: #EE3EFE;
-  color: #FFFFFF;
-  border: #110038 outset 1px;
-  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+body .dark #content #buttonZone #logotipe {
+  display: none;
 }
 
-body .dark #buttonZone #buttonOne:active, body .dark #buttonZone #buttonOne:hover {
-  background-color: #CE36DB;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark #buttonZone #buttonOne a {
+body .dark #content #buttonZone .darkLogo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: 50%;
+  width: 91px;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+body .dark #content #buttonZone #buttonOne {
+  background-color: #EE3EFE;
+  color: #FFFFFF;
+  border: #110038 outset 1px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
+}
+
+body .dark #content #buttonZone #buttonOne:active, body .dark #content #buttonZone #buttonOne:hover {
+  background-color: #CE36DB;
+  outline: 1px dotted #110038;
+  outline-offset: -4px;
+}
+
+body .dark #content #buttonZone #buttonOne a {
   text-decoration: none;
   color: #FFFFFF;
-  width: 100%;
-  height: 100%;
 }
 
-body .dark #buttonZone #buttonTwo {
-  cursor: pointer;
-}
-
-body .dark #buttonZone #buttonTwo #buttonChooseTheme {
+body .dark #content #buttonZone #buttonTwo #buttonChooseTheme {
   background-color: #EE3EFE;
   color: #FFFFFF;
   border: #110038 outset 1px;
@@ -52,13 +57,13 @@ body .dark #buttonZone #buttonTwo #buttonChooseTheme {
           box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #buttonZone #buttonTwo #buttonChooseTheme:active, body .dark #buttonZone #buttonTwo #buttonChooseTheme:hover {
+body .dark #content #buttonZone #buttonTwo #buttonChooseTheme:active, body .dark #content #buttonZone #buttonTwo #buttonChooseTheme:hover {
   background-color: #CE36DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-body .dark #buttonZone #buttonTwo #dropDown {
+body .dark #content #buttonZone #buttonTwo #dropDown {
   background-color: #EE3EFE;
   color: #FFFFFF;
   border: #110038 outset 1px;
@@ -66,19 +71,25 @@ body .dark #buttonZone #buttonTwo #dropDown {
           box-shadow: inset -1px -1px 0 0 #EE3EFE, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #buttonZone #buttonTwo #dropDown:active, body .dark #buttonZone #buttonTwo #dropDown:hover {
+body .dark #content #buttonZone #buttonTwo #dropDown img {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+}
+
+body .dark #content #buttonZone #buttonTwo #dropDown:active, body .dark #content #buttonZone #buttonTwo #dropDown:hover {
   background-color: #CE36DB;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-body .dark #buttonZone #menuThemes {
+body .dark #content #buttonZone #menuThemes {
+  right: 16.3%;
   background-color: #B4B4B4;
   -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
 }
 
-body .dark #buttonZone #menuThemes .day {
+body .dark #content #buttonZone #menuThemes .day {
   background-color: #FFF4FD;
   border: #CCA6C9 1px solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
@@ -86,7 +97,7 @@ body .dark #buttonZone #menuThemes .day {
   color: #110038;
 }
 
-body .dark #buttonZone #menuThemes .day:hover {
+body .dark #content #buttonZone #menuThemes .day:hover {
   color: #FFFFFF;
   background-color: #2E32FB;
   border: #33358F 1px solid;
@@ -94,7 +105,7 @@ body .dark #buttonZone #menuThemes .day:hover {
           box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #buttonZone #menuThemes .night {
+body .dark #content #buttonZone #menuThemes .night {
   background-color: #F0F0F0;
   border: #808080 1px solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
@@ -102,7 +113,7 @@ body .dark #buttonZone #menuThemes .night {
   color: #110038;
 }
 
-body .dark #buttonZone #menuThemes .night:hover {
+body .dark #content #buttonZone #menuThemes .night:hover {
   background-color: #2E32FB;
   color: #FFFFFF;
   border: #33358F 1px solid;
@@ -110,40 +121,44 @@ body .dark #buttonZone #menuThemes .night:hover {
           box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #linkMyGifos {
+body .dark #content #linkMyGifos {
   color: #FFFFFF;
 }
 
-body .dark #linkMyGifos:hover {
+body .dark #content #linkMyGifos:hover {
   outline: 1px dotted #8F8F8F;
   outline-offset: -4px;
 }
 
-body .dark #linkMyGifos:active {
+body .dark #content #linkMyGifos:active {
   color: #8F8F8F;
 }
 
-body .dark #searchBox {
+body .dark #content #searchBox {
   background-color: #B4B4B4;
   -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
 }
 
-body .dark #searchBox #searchBoxTitle {
+body .dark #content #searchBox #searchBoxTitle {
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   -webkit-box-shadow: inset 2px 0 0 0 #B4B4B4, inset 0 4px 0 0 #B4B4B4, inset -2px 0 0 0 #B4B4B4;
           box-shadow: inset 2px 0 0 0 #B4B4B4, inset 0 4px 0 0 #B4B4B4, inset -2px 0 0 0 #B4B4B4;
   border-right: solid 1px #8F8F8F;
+  border-top: white solid 2px;
 }
 
-body .dark #searchBox h2 {
+body .dark #content #searchBox h2 {
+  position: relative;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  height: 24px;
   padding-left: 6px;
   color: #FFFFFF;
-  border-top: solid 2px #FFFFFF;
 }
 
-body .dark #searchBox #mySearch {
+body .dark #content #searchBox #mySearch {
   padding-left: 16px;
   caret-color: #4180F6;
   color: #110038;
@@ -152,23 +167,23 @@ body .dark #searchBox #mySearch {
           box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
 }
 
-body .dark #searchBox #mySearch::-webkit-input-placeholder {
+body .dark #content #searchBox #mySearch::-webkit-input-placeholder {
   color: #B4B4B4;
 }
 
-body .dark #searchBox #mySearch:-ms-input-placeholder {
+body .dark #content #searchBox #mySearch:-ms-input-placeholder {
   color: #B4B4B4;
 }
 
-body .dark #searchBox #mySearch::-ms-input-placeholder {
+body .dark #content #searchBox #mySearch::-ms-input-placeholder {
   color: #B4B4B4;
 }
 
-body .dark #searchBox #mySearch::placeholder {
+body .dark #content #searchBox #mySearch::placeholder {
   color: #B4B4B4;
 }
 
-body .dark #searchBox #buttonSearch {
+body .dark #content #searchBox #buttonSearch {
   background-color: #B4B4B4;
   color: #8F8F8F;
   border: solid 1px #808080;
@@ -176,7 +191,7 @@ body .dark #searchBox #buttonSearch {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #searchBox #buttonSearch:active {
+body .dark #content #searchBox #buttonSearch:active {
   background-color: #CE36DB;
   border: #110038 solid 1px;
   -webkit-box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 #FFFFFF;
@@ -185,21 +200,21 @@ body .dark #searchBox #buttonSearch:active {
   outline-offset: -4px;
 }
 
-body .dark #searchBox #buttonSearch:active #buttonContent {
+body .dark #content #searchBox #buttonSearch:active #buttonContent {
   color: #FFFFFF;
 }
 
-body .dark #searchBox #buttonSearch:active #buttonContent #mGlassLight {
+body .dark #content #searchBox #buttonSearch:active #buttonContent #mGlassLight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .dark #searchBox #buttonSearch:active #buttonContent #mGlassImageDark {
+body .dark #content #searchBox #buttonSearch:active #buttonContent #mGlassImageDark {
   display: none;
 }
 
-body .dark #searchBox #buttonSearch #buttonContent {
+body .dark #content #searchBox #buttonSearch #buttonContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,25 +226,25 @@ body .dark #searchBox #buttonSearch #buttonContent {
       justify-content: space-around;
 }
 
-body .dark #searchBox #buttonSearch #buttonContent #mGlassImage {
+body .dark #content #searchBox #buttonSearch #buttonContent #mGlassImage {
   display: none;
 }
 
-body .dark #searchBox #buttonSearch #buttonContent #mGlass {
+body .dark #content #searchBox #buttonSearch #buttonContent #mGlass {
   display: none;
 }
 
-body .dark #searchBox #buttonSearch #buttonContent #mGlassLight {
+body .dark #content #searchBox #buttonSearch #buttonContent #mGlassLight {
   display: none;
 }
 
-body .dark #searchBox #buttonSearch #buttonContent #mGlassImageDark {
+body .dark #content #searchBox #buttonSearch #buttonContent #mGlassImageDark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .dark #searchBox #buttonSearchInput {
+body .dark #content #searchBox #buttonSearchInput {
   background-color: #F7C9F3;
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -237,18 +252,18 @@ body .dark #searchBox #buttonSearchInput {
   color: #110038;
 }
 
-body .dark #subMenuSearch {
+body .dark #content #subMenuSearch {
   background-color: #B4B4B4;
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
 }
 
-body .dark #subMenuSearch button {
+body .dark #content #subMenuSearch button {
   background-color: #B4B4B4;
   color: #B4B4B4;
 }
 
-body .dark #subMenuSearch #Result1 {
+body .dark #content #subMenuSearch #Result1 {
   color: #110038;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -256,7 +271,7 @@ body .dark #subMenuSearch #Result1 {
           box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #subMenuSearch #Result1:hover {
+body .dark #content #subMenuSearch #Result1:hover {
   background-color: #CCCCCC;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -265,7 +280,7 @@ body .dark #subMenuSearch #Result1:hover {
   outline-offset: -4px;
 }
 
-body .dark #subMenuSearch #Result2 {
+body .dark #content #subMenuSearch #Result2 {
   color: #110038;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -273,7 +288,7 @@ body .dark #subMenuSearch #Result2 {
           box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #subMenuSearch #Result2:hover {
+body .dark #content #subMenuSearch #Result2:hover {
   background-color: #CCCCCC;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -282,7 +297,7 @@ body .dark #subMenuSearch #Result2:hover {
   outline-offset: -4px;
 }
 
-body .dark #subMenuSearch #Result3 {
+body .dark #content #subMenuSearch #Result3 {
   color: #110038;
   background-color: #f0f0f0;
   border: solid 1px #808080;
@@ -290,7 +305,7 @@ body .dark #subMenuSearch #Result3 {
           box-shadow: inset -1px -1px 0 0 #8F8F8F, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .dark #subMenuSearch #Result3:hover {
+body .dark #content #subMenuSearch #Result3:hover {
   background-color: #CCCCCC;
   border: #808080 1PX solid;
   -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
@@ -299,8 +314,7 @@ body .dark #subMenuSearch #Result3:hover {
   outline-offset: -4px;
 }
 
-body .dark #suggestions #suggest {
-  width: 82.9%;
+body .dark #content #suggestions #suggest {
   padding-left: 7px;
   border: solid 1px #2E32FB;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
@@ -309,40 +323,40 @@ body .dark #suggestions #suggest {
   color: #110038;
 }
 
-body .dark #suggestions #suggest::-webkit-input-placeholder {
+body .dark #content #suggestions #suggest::-webkit-input-placeholder {
   color: #110038;
 }
 
-body .dark #suggestions #suggest:-ms-input-placeholder {
+body .dark #content #suggestions #suggest:-ms-input-placeholder {
   color: #110038;
 }
 
-body .dark #suggestions #suggest::-ms-input-placeholder {
+body .dark #content #suggestions #suggest::-ms-input-placeholder {
   color: #110038;
 }
 
-body .dark #suggestions #suggest::placeholder {
+body .dark #content #suggestions #suggest::placeholder {
   color: #110038;
 }
 
-body .dark #gifSuggest .borderShadowGif {
+body .dark #content #gifSuggest .borderShadowGif {
   background-color: #B4B4B4;
   -webkit-box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #8F8F8F;
 }
 
-body .dark #gifSuggest .borderShadowGif img:hover {
+body .dark #content #gifSuggest .borderShadowGif img:hover {
   outline: 1px dotted #110038;
   outline-offset: -1px;
 }
 
-body .dark #gifSuggest p {
+body .dark #content #gifSuggest p {
   color: #FFFFFF;
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
-body .dark #gifSuggest .buttonCloseGif {
+body .dark #content #gifSuggest .buttonCloseGif {
   background-image: url(../../Images/button3.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -352,7 +366,7 @@ body .dark #gifSuggest .buttonCloseGif {
   border-left: solid 1px #FFFFFF;
 }
 
-body .dark #gifSuggest .seeMoreButton {
+body .dark #content #gifSuggest .seeMoreButton {
   color: #FFFFFF;
   background-color: #4180F6;
   border: solid 1px #4C2F99;
@@ -360,13 +374,12 @@ body .dark #gifSuggest .seeMoreButton {
           box-shadow: inset 2px 2px 0 0 #FFFFFF, inset -2px -2px 0 0 #284F99;
 }
 
-body .dark #gifSuggest .seeMoreButton:hover {
+body .dark #content #gifSuggest .seeMoreButton:hover {
   outline: 1px dotted #110038;
   outline-offset: -5px;
 }
 
-body .dark #trendsSection #trends {
-  width: 82.9%;
+body .dark #content #trendsSection #trends {
   padding-left: 7px;
   border: solid 1px #2E32FB;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
@@ -375,57 +388,41 @@ body .dark #trendsSection #trends {
   color: #110038;
 }
 
-body .dark #trendsSection #trends::-webkit-input-placeholder {
+body .dark #content #trendsSection #trends::-webkit-input-placeholder {
   color: #110038;
 }
 
-body .dark #trendsSection #trends:-ms-input-placeholder {
+body .dark #content #trendsSection #trends:-ms-input-placeholder {
   color: #110038;
 }
 
-body .dark #trendsSection #trends::-ms-input-placeholder {
+body .dark #content #trendsSection #trends::-ms-input-placeholder {
   color: #110038;
 }
 
-body .dark #trendsSection #trends::placeholder {
+body .dark #content #trendsSection #trends::placeholder {
   color: #110038;
 }
 
-body .dark .trendsCharge img:hover {
-  outline: 1px dotted #110038;
-  outline-offset: -1px;
-}
-
-body .dark .trendsCharge #gifSuggest5 {
-  background-color: #B4B4B4;
-}
-
-body .dark .trendsCharge #gifSuggest5:hover {
-  margin-right: 0.3478%;
-  width: 20.4461%;
-  height: 304px;
+body .dark #content .trendsCharge .chargeSmall:hover {
   -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
   outline: 1px dotted #110038;
-  outline-offset: -4px;
+  outline-offset: -2px;
 }
 
-body .dark .trendsCharge #gifSuggest5:hover img {
-  position: relative;
-  z-index: 1;
-  left: 3px;
-  bottom: 18px;
-  height: 100%;
-  width: 97.2778%;
+body .dark #content .trendsCharge .chargeSmall:hover img {
+  width: 97.7%;
 }
 
-body .dark .trendsCharge #gifSuggest5:hover p {
+body .dark #content .trendsCharge .chargeSmall:hover p {
+  width: 96.7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .dark .trendsCharge #gifSuggest5 p {
+body .dark #content .trendsCharge .chargeSmall p {
   color: #FFFFFF;
   -webkit-transform: translateY(277px);
           transform: translateY(277px);
@@ -433,112 +430,74 @@ body .dark .trendsCharge #gifSuggest5 p {
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
-body .dark .trendsCharge .secondaryTrendsCharge {
-  background: #B4B4B4;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge:hover {
-  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-  margin-right: 0.3478%;
-  width: 20.4461%;
-  height: 304px;
-  outline: 1px dotted #110038;
-  outline-offset: -4px;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
-  left: 4px;
-  bottom: 2px;
-  height: 98%;
-  width: 97.2778%;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge:hover p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .dark .trendsCharge .secondaryTrendsCharge p {
-  color: #FFFFFF;
-  -webkit-transform: translateY(277px);
-          transform: translateY(277px);
-  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
-  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-}
-
-body .dark .trendsCharge .bigLeftTrendsCharge {
-  background: #B4B4B4;
+body .dark #content .trendsCharge .bigLeftTrendsCharge {
   color: #FFFFFF;
 }
 
-body .dark .trendsCharge .bigLeftTrendsCharge:hover {
-  margin-right: 0.3478%;
+body .dark #content .trendsCharge .bigLeftTrendsCharge:hover {
   -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-  width: 41.5865%;
-  height: 304px;
+  width: 50%;
   outline: 1px dotted #110038;
-  outline-offset: -4px;
+  outline-offset: -2px;
 }
 
-body .dark .trendsCharge .bigLeftTrendsCharge:hover img {
-  position: absolute;
-  z-index: 1;
+body .dark #content .trendsCharge .bigLeftTrendsCharge:hover img {
   width: 99%;
-  height: 98%;
-  top: 3px;
-  left: 3px;
 }
 
-body .dark .trendsCharge .bigLeftTrendsCharge:hover p {
+body .dark #content .trendsCharge .bigLeftTrendsCharge:hover p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .dark .trendsCharge .bigLeftTrendsCharge p {
+body .dark #content .trendsCharge .bigLeftTrendsCharge p {
+  padding-left: 2px;
   -webkit-transform: translateY(275px);
           transform: translateY(275px);
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
-body .dark .trendsCharge .bigRightTrendsCharge {
-  background: #B4B4B4;
+body .dark #content .trendsCharge .bigRightTrendsCharge {
   color: #FFFFFF;
 }
 
-body .dark .trendsCharge .bigRightTrendsCharge:hover {
+body .dark #content .trendsCharge .bigRightTrendsCharge:hover {
   margin-right: 0.3478%;
   margin-left: 0.3478%;
   -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
-  width: 41.5865%;
-  height: 304px;
+  width: 50%;
+  height: 298px;
   outline: 1px dotted #110038;
-  outline-offset: -4px;
+  outline-offset: -2px;
 }
 
-body .dark .trendsCharge .bigRightTrendsCharge:hover img {
+body .dark #content .trendsCharge .bigRightTrendsCharge:hover img {
   position: absolute;
   z-index: 1;
-  width: 99%;
-  height: 98%;
-  top: 3px;
-  left: 3px;
+  width: 98.8%;
+  top: 4px;
+  left: 4px;
 }
 
-body .dark .trendsCharge .bigRightTrendsCharge:hover p {
+body .dark #content .trendsCharge .bigRightTrendsCharge:hover p {
+  width: 98.6%;
+  padding-left: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .dark .trendsCharge .bigRightTrendsCharge p {
+body .dark #content .trendsCharge .bigRightTrendsCharge p {
   -webkit-transform: translateY(275px);
           transform: translateY(275px);
   background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));

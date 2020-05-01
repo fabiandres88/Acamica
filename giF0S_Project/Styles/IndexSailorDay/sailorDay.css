@@ -95,16 +95,20 @@ body .light #content #buttonZone #menuThemes .night:hover {
           box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 
-body .light #content #linkMyGifos {
+body .light #content a {
+  text-decoration: none;
+}
+
+body .light #content a #linkMyGifos {
   color: #110038;
 }
 
-body .light #content #linkMyGifos:hover {
+body .light #content a #linkMyGifos:hover {
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }
 
-body .light #content #linkMyGifos:active {
+body .light #content a #linkMyGifos:active {
   color: #B4B4B4;
 }
 
@@ -377,9 +381,14 @@ body .light #content .trendsCharge .bigLeftTrendsCharge:hover img {
 }
 
 body .light #content .trendsCharge .bigLeftTrendsCharge:hover p {
+  padding-left: 2px;
+  width: 98.3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .light #content .trendsCharge .bigLeftTrendsCharge p {
@@ -416,6 +425,11 @@ body .light #content .trendsCharge .bigRightTrendsCharge:hover p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 2px;
+  width: 98.2%;
 }
 
 body .light #content .trendsCharge .bigRightTrendsCharge p {

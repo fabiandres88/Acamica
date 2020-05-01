@@ -40,7 +40,7 @@ body {
                     outline-offset: -4px;
                 }                
 
-                a {                    
+                a {                
                     color: $outsidebordercolor;                  
                 }
             }
@@ -110,6 +110,8 @@ body {
             }
         }
 
+        a{
+            text-decoration: none;
         #linkMyGifos {
             color: $outsidebordercolor;
 
@@ -122,6 +124,7 @@ body {
                 color: $searchBarColor;
             }
         }
+    }
 
         #searchBox {
             background-color: $backgroundcolorsearchbox;
@@ -319,7 +322,8 @@ body {
                 &:hover{
                     box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
                     outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;                    
+                    outline-offset: -4px;     
+
                     p{
                         display:flex; 
                     }                  
@@ -347,7 +351,10 @@ body {
                     }
 
                     p {
+                        padding-left: 2px;
+                        width: 98.3%;
                         display: flex;
+                        align-items: center;
                     }
                 }
 
@@ -380,6 +387,9 @@ body {
 
                     p {
                         display: flex;
+                        align-items: center;
+                        padding-left: 2px;
+                        width: 98.2%;
                     }
                 }
 
