@@ -139,7 +139,6 @@ uploadButton.addEventListener("click", function () {
             console.log(response);
             if (response.ok) {
                 return response.json();
-
             } else {
                 console.log("Request failed")
             }
@@ -149,17 +148,26 @@ uploadButton.addEventListener("click", function () {
             toBase64(form.get("file")).then(function (base64) {
                 localStorage.setItem("gif_" + response.data.id, base64);
             })
-
-
         })
         .catch(function (error) {
             console.log("Error in the post" + error);
         });
 });
 
+//THIS FUNCTION CONVERT BLOB FILE IN BASE64
 const toBase64 = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => resolve(reader.result);
     reader.onerror = error => reject(error);
+});
+
+//LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
+repeatButton.addEventListener("click", function(){
+    window.location.href="../../Pages/Catch.html";
+});
+
+//LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
+cancelButton.addEventListener("click", function(){
+    window.location.href="../../Pages/Catch.html";
 });
