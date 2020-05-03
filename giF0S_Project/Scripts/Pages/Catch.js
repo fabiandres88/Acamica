@@ -29,13 +29,13 @@ window.onload = function () {
 
 //THIS FUNCTION STARTS THE CAMERA
 function getCamera(stream) {
-    navigator.mediaDevices.getUserMedia({               
+    navigator.mediaDevices.getUserMedia({
         video: { width: 1280, height: 720 }
     })
         .then(function (stream) {
             video.srcObject = stream;
             video.onloadedmetadata = function () {
-                video.play();                
+                video.play();
                 video.height = 434;
             };
         })
@@ -77,10 +77,10 @@ function stopStreamedVideo(videoElem) {
 }
 
 captureButton.addEventListener("click", function () {
+    // chronoStart();
     captureButton.style.display = ("none");
-    chrono.style.display = ("flex");    
-    stopButton.style.display = ("flex");   
-    
+    chrono.style.display = ("flex");
+    stopButton.style.display = ("flex");
     this.disabled = true;
     stopStreamedVideo(video);
     getRecord(function (camera) {
@@ -93,11 +93,10 @@ captureButton.addEventListener("click", function () {
             width: 360,
             hidden: 240,
             onGifRecordingStarted: function () {
-                document.getElementById('statuscapture').innerHTML = 'Gif recording started.';
+                document.getElementById('statuscapture').innerHTML = 'Vista Previa';
             },
             onGifPreview: function (gifURL) {
-                let img = image.src = gifURL;
-                localStorage.setItem("gif", img);
+                img = image.src = gifURL;
             }
         });
         recorder.startRecording();
@@ -106,12 +105,13 @@ captureButton.addEventListener("click", function () {
     });
 });
 document.getElementById('stopButton').addEventListener("click", function () {
-    alert("stoped");
     stopButton.style.display = ("none");
     playGif.style.display = ("flex");
-    barCharge.style.display = ("flex");
+    // barCharge.style.display = ("flex");
     repeatButton.style.display = "flex";
     uploadButton.style.display = ("flex");
+    document.getElementById("charging").style.display = ("flex");
+    move();
     this.disabled = true;
     recorder.stopRecording(stopRecordingCallback);
 });
@@ -123,9 +123,11 @@ uploadButton.addEventListener("click", function () {
     repeatButton.style.display = "none";
     chrono.style.display = "none";
     playGif.style.display = "none";
-    barCharge.style.display = "none";
+    document.getElementById("charging").style.display = ("none");    
     image.style.display = "none";
     globe.style.display = "flex";
+    UploadCapture();
+    document.getElementById("uploading").style.display = "flex";
     document.getElementById("showCapture").style.display = "flex";
     document.getElementById("uploadingGif").style.display = "flex";
 
@@ -163,11 +165,75 @@ const toBase64 = file => new Promise((resolve, reject) => {
 });
 
 //LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
-repeatButton.addEventListener("click", function(){
-    window.location.href="../../Pages/Catch.html";
+repeatButton.addEventListener("click", function () {
+    window.location.href = "../../Pages/Catch.html";
 });
 
 //LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
-cancelButton.addEventListener("click", function(){
-    window.location.href="../../Pages/Catch.html";
+cancelButton.addEventListener("click", function () {
+    window.location.href = "../../Pages/Catch.html";
 });
+
+//MANAGE THE CHRONO
+let id
+captureButton.addEventListener("click",function(){
+    setTimeout(function(){
+        chronoStart();
+    },3000)
+})
+stopButton.addEventListener("click", function(){
+    clearInterval(id);
+});
+function chronoStart() {
+    var h = 0;
+    var m = 0;
+    var s = 0;
+    var ms = 0;
+    var hCont, mCont, sCont, msCont;
+    
+    id = setInterval(function () {
+        ms++;
+        if (ms > 10) { s++; ms = 0; }
+        if (s > 59) { m++; s = 0; }
+        if (m > 59) { h++; m = 0; }
+        if (h > 24) { h = 0; }
+
+        if (ms < 10) { msCont = "0" + ms; } else { msCont = ms; }
+        if (s < 10) { sCont = "0" + s; } else { sCont = s; }
+        if (m < 10) { mCont = "0" + m; } else { mCont = m; }
+        if (h < 10) { hCont = "0" + h; } else { hCont = h; }
+
+        document.getElementById("chrono").innerHTML = `${hCont}:${mCont}:${sCont}:${msCont}`;
+
+    }, 1);
+}
+
+//FUNCTION TO ANIMATE THE CHARGE BAR
+function move() {
+    var elem = document.getElementById("pinksCharge");   
+    var width = 1;
+    var id = setInterval(frame, 600);
+    function frame() {
+      if (width >= 16) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  //FUNCTION TO ANIMATE THE CHARGE BAR IN THE UPLOADING GUIFO
+function UploadCapture() {
+    var elem = document.getElementById("pinkBar");   
+    var width = 0;
+    var id = setInterval(frame, 600);
+    function frame() {
+      if (width >= 20) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }

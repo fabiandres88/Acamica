@@ -140,7 +140,6 @@ body #buttonZone #logotipe {
           align-items: center;
   width: 100%;
   height: 434px;
-  margin: 0px;
   background-color: #FFFFFF;
   color: #110038;
   font-family: "Chakra Petch";
@@ -152,6 +151,55 @@ body #buttonZone #logotipe {
   display: none;
   width: 48px;
   height: 48px;
+  margin-bottom: 8px;
+}
+
+#videoContainer div #showCapture #uploadingGif #uploading {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 1;
+  width: 37%;
+  height: 24PX;
+  margin-top: 41px;
+  -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+          box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+  background-color: #B4B4B4;
+}
+
+#videoContainer div #showCapture #uploadingGif #uploading #pinkBar {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #F7C9F3;
+  height: 20px;
+  width: 0;
+  margin-top: 2px;
+  margin-left: 3px;
+  padding-left: 10px;
+  border-right: #F7C9F3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#videoContainer div #showCapture #uploadingGif #uploading span {
+  z-index: 3;
+  width: 5.8%;
+  height: 20px;
+  border-right: 2px #E6E6E6 solid;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #videoContainer div #post {
@@ -332,19 +380,52 @@ body #buttonZone #logotipe {
           box-shadow: inset -1px -1px 0 0 #997D97, 1px 1px 0 0 #FFFFFF;
 }
 
-#videoContainer div #post .barStyle {
+#videoContainer div #post #charging {
   display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 27.9%;
-  height: 20PX;
+  z-index: 1;
+  width: 28%;
+  height: 24PX;
   margin-left: 4px;
+  -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+          box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+  background-color: #B4B4B4;
 }
 
-#videoContainer div #post .barStyle::-webkit-progress-bar {
-  -webkit-box-shadow: inset 2px 2px 0 0 #FFFCFC, inset -2px -2px 0 0 #000000;
-          box-shadow: inset 2px 2px 0 0 #FFFCFC, inset -2px -2px 0 0 #000000;
+#videoContainer div #post #charging #pinksCharge {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #F7C9F3;
+  height: 20px;
+  width: 0;
+  margin-top: 2px;
+  margin-left: 3px;
+  padding-left: 4px;
+  border-right: #F7C9F3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#videoContainer div #post #charging span {
+  z-index: 3;
+  width: 5.8%;
+  height: 20px;
+  border-right: 2px #E6E6E6 solid;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #videoContainer div #post #repeat {

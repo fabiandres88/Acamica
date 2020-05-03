@@ -261,4 +261,32 @@ body #suggestions #myGuifos::placeholder {
   font-family: "Chakra Petch";
   font-weight: 400;
 }
+
+body #containerGifs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 6.9%;
+}
+
+body #containerGifs div {
+  width: 21.7%;
+  height: 298%;
+  margin-bottom: 17px;
+}
+
+body #containerGifs div:not(:nth-child(4)) {
+  margin-right: 16px;
+}
+
+body #containerGifs div img {
+  width: 100%;
+  height: 298px;
+}
 /*# sourceMappingURL=preCatch.css.map */

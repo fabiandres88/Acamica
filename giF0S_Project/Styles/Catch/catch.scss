@@ -115,11 +115,8 @@ body {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                height: 434px;
-                margin: 0px;
+                height: 434px;                
                 background-color: $fontcolorheader;
-                // border: none;
-                // box-shadow: none;
                 color: $outsidebordercolor;
                 font-family: $primaryfont;
                 font-size: 16px;
@@ -129,6 +126,44 @@ body {
                     display: none;
                     width: 48px;
                     height: 48px;
+                    margin-bottom: 8px;
+                }
+
+                #uploading {
+                    display: none;
+                    flex-direction: row;
+                    align-self: center;
+                    z-index: 1;
+                    width: 37%;
+                    height: 24PX;
+                    margin-top: 41px;
+                    // margin-left: 4px;
+                    box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+                    background-color: $searchBarColor;
+
+                    #pinkBar {
+                        position: absolute;
+                        display: flex;
+                        z-index: 2;
+                        flex-direction: row;
+                        background-color: #F7C9F3;
+                        height: 20px;
+                        width: 0;
+                        margin-top: 2px;
+                        margin-left: 3px;
+                        padding-left: 10px;
+                        border-right: #F7C9F3;
+                        box-shadow: none;
+                    }
+    
+                    span {
+                        z-index: 3;
+                        width: 5.8%;
+                        height: 20px;
+                        border-right: 2px $backgroundcolorsearchbox solid;
+                        margin-top: 2px;
+                        margin-bottom: 2px;
+                    }
                 }
             }
         }
@@ -210,7 +245,6 @@ body {
                 box-shadow: inset -2px -2px 0 0 $backgroundcolorsearchbox, inset 2px 2px 0 0 #000000;
                 width: 14.4%;
                 height: 36px;
-
             }
 
             #stopButton {
@@ -265,23 +299,43 @@ body {
                 background-color: #F7C9F3;
                 border: 1px solid $outsidebordercolor;
                 box-shadow: inset -1px -1px 0 0 #997D97, 1px 1px 0 0 $fontcolorheader;
-
             }
 
-            .barStyle {
+            #charging {
                 display: none;
+                flex-direction: row;
                 align-self: center;
-                // -webkit-appearance: none;
-                // appearance: none;
-                width: 27.9%;
-                height: 20PX;
+                z-index: 1;
+                width: 28%;
+                height: 24PX;
                 margin-left: 4px;
-                
-                &::-webkit-progress-bar {
-                    // background-color: #999999;                    
-                    box-shadow: inset 2px 2px 0 0 #FFFCFC, inset -2px -2px 0 0 #000000;
-                  }
-                
+                box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #FFFCFC;
+                background-color: $searchBarColor;
+
+
+                #pinksCharge {
+                    position: absolute;
+                    display: flex;
+                    z-index: 2;
+                    flex-direction: row;
+                    background-color: #F7C9F3;
+                    height: 20px;
+                    width: 0;
+                    margin-top: 2px;
+                    margin-left: 3px;
+                    padding-left: 4px;
+                    border-right: #F7C9F3;
+                    box-shadow: none;
+                }
+
+                span {
+                    z-index: 3;
+                    width: 5.8%;
+                    height: 20px;
+                    border-right: 2px $backgroundcolorsearchbox solid;
+                    margin-top: 2px;
+                    margin-bottom: 2px;
+                }
             }
 
             #repeat {
@@ -333,6 +387,7 @@ body {
                     outline-offset: -4px;
                 }
             }
+
             #cancel {
                 display: none;
                 justify-content: center;
@@ -342,13 +397,13 @@ body {
                 color: $outsidebordercolor;
                 font-size: 16px;
                 font-weight: 400;
-                font-family: $primaryfont;                
+                font-family: $primaryfont;
                 margin-left: 650px;
                 background-color: #FFF4FD;
                 border: solid 1px $outsidebordercolor;
                 box-shadow: inset -2ps -2ps 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
-    
-    
+
+
                 &:hover {
                     background-color: #F7C9F3;
                     outline: 1px dotted $outsidebordercolor;
@@ -358,6 +413,6 @@ body {
 
         }
 
-        
+
     }
 }
