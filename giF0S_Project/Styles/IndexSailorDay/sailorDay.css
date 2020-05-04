@@ -141,6 +141,10 @@ body .light #content #searchBox #mySearch {
           box-shadow: inset -1px -1px 0 0 #E6E6E6, inset 1px 1px 0 0 #000000;
 }
 
+body .light #content #searchBox #mySearch:focus ~ #buttonSearch {
+  background-color: red;
+}
+
 body .light #content #searchBox::-webkit-input-placeholder {
   color: #B4B4B4;
 }
@@ -253,6 +257,14 @@ body .light #content #subMenuSearch #Result3:hover {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   outline: 1px dotted #110038;
   outline-offset: -4px;
+}
+
+body .light #content #buttonsContainer button {
+  color: #FFFFFF;
+  background-color: #4180F6;
+  border: #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #284F99, 2px 2px 0 0 #FFFFFF;
 }
 
 body .light #content #suggestions #suggest {

@@ -243,10 +243,12 @@ function UploadCapture() {
         elem.style.width = width + '%'; 
       }
     }
-  }
+  };
 
+//THIS FUNCTION LISTEN CLICK OVER THE LAS BUTTON TO COPY OR DOWNLOAD GIF
+document.getElementById("download").addEventListener("click",function (){
 
-  captureButton.addEventListener("click", function () {
-        document.getElementById("buttonClose").style.display = "flex";
-        document.getElementById('statuscapture').innerHTML = 'Esperando para capturar Guifo...';  
-  })
+})
+document.getElementById("copy").addEventListener("click", function (){
+    
+})

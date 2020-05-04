@@ -84,7 +84,7 @@ function changeButtonSearch(e) {
 		document.getElementById("buttonSearch").style.boxShadow = "-1px -1px 0 0 #A72CB3 inset";
 		document.getElementById("buttonSearch").style.boxShadow = "1px 1px 0 0 #FFFFFF inset";
 	}
-	e.stopPropagation();
+	
 }
 
 function returnStyles(e) {
@@ -112,64 +112,40 @@ function returnStyles(e) {
 		document.getElementById("buttonSearch").style.boxShadow = "-1px -1px 0 0 #A72CB3 inset";
 		document.getElementById("buttonSearch").style.boxShadow = "1px 1px 0 0 #FFFFFF inset";
 	}
-	e.stopPropagation();
+	
 }
 
 // FUNCTION TO SHOW SUBMENU SEARCH
 function subMenuSearch(e) {
 	document.getElementById("subMenuSearch").style.display = "flex";
-	document.getElementById("subMenuSearch").style.zIndex = "5";
-	e.stopPropagation();
+	document.getElementById("subMenuSearch").style.zIndex = "5";	
 }
 
 //LISTEN BUTTONS INTO THE SUBMENU SEARCH
-buttonSuggest1.addEventListener("click",autocompleteSearch);
-function autocompleteSearch () {
+console.log(buttonSuggest1);
+buttonSuggest1.addEventListener("click",function (){
 	let suggest1 =(buttonSuggest1.innerHTML);		
-	localStorage.setItem("button1","#"+ buttonSuggest1.innerHTML);	
+	localStorage.setItem("#"+buttonSuggest1.innerHTML,"#"+ buttonSuggest1.innerHTML);	
 	urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${suggest1}&limit=29&offset=0&rating=G&lang=en`
 	getGifsBySearch (urlToFetch);
-	let saveButton = document.createElement("button");
-	let container = document.getElementById("buttonsContainer");
-	container.append(saveButton);			
-	saveButton.style.width = "100px";			
-	saveButton.style.height = "36px";
-	saveButton.style.color = "#110038";
-	let tagSaved = localStorage.getItem("button1");
-	container.firstElementChild.innerHTML=("#"+tagSaved);
-	saveButton.style.backgroundColor = "blue";
-}
+});
+// function autocompleteSearch () {
+		
+// }
 buttonSuggest2.addEventListener("click",autocompleteSearch2);
-function autocompleteSearch2 () {	
+function autocompleteSearch2 () {
+	alert("ok")	
 	let suggest2 =(buttonSuggest2.innerHTML);
-	localStorage.setItem("button2","#"+ buttonSuggest2.innerHTML);
+	localStorage.setItem("#"+ buttonSuggest2.innerHTML, "#"+ buttonSuggest2.innerHTML);
 	urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${suggest2}&limit=29&offset=0&rating=G&lang=en`
 	getGifsBySearch (urlToFetch);
-	let saveButton = document.createElement("button");
-	let container = document.getElementById("buttonsContainer");
-	container.append(saveButton);			
-	saveButton.style.width = "100px";			
-	saveButton.style.height = "36px";
-	saveButton.style.color = "#110038";
-	let tagSaved = localStorage.getItem("button2");
-	container.firstElementChild.innerHTML=("#"+tagSaved);
-	saveButton.style.backgroundColor = "blue";	
 }
 buttonSuggest3.addEventListener("click",autocompleteSearch3);
 function autocompleteSearch3 () {
 	let suggest3 =(buttonSuggest3.innerHTML);	
-	localStorage.setItem("button3","#"+ buttonSuggest3.innerHTML);	
+	localStorage.setItem("#"+ buttonSuggest3.innerHTML,"#"+ buttonSuggest3.innerHTML);	
 	urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${suggest3}&limit=29&offset=0&rating=G&lang=en`
 	getGifsBySearch (urlToFetch)
-	let saveButton = document.createElement("button");
-	let container = document.getElementById("buttonsContainer");
-	container.append(saveButton);			
-	saveButton.style.width = "100px";			
-	saveButton.style.height = "36px";
-	saveButton.style.color = "#110038";
-	let tagSaved = localStorage.getItem("button3");
-	container.firstElementChild.innerHTML=("#"+tagSaved);
-	saveButton.style.backgroundColor = "blue";	
 }
 
 //FUNCTION TO START THE SEARCH BY AUTOCOMPLETE REQUEST
@@ -202,12 +178,14 @@ function getSuggestSearch(url) {
 			return response.json();
 		})
 		.then(data => {
-			data;
-			for (let i=0; i<=3; i++){
-			let suggestTag = (data.data[i].name);			
-			let Result1 = document.getElementById(`Result${i+1}`);
-			Result1.innerHTML=suggestTag;						
-		}
+			if (data.data.length > 0){
+				for (let i=0; i<3; i++){
+					let suggestTag = (data.data[i].name);			
+					let Result1 = document.getElementById(`Result${i+1}`);
+					Result1.innerHTML=suggestTag;						
+				}
+			}
+			
 			return data
 		})
 		.catch(error => {
@@ -251,19 +229,19 @@ function getGifsBySearch(url) {
 		.then(data => {
 			data;			
 
-			for (let i = 0; i <= 27; i++) {
+			for (let i = 5; i < 29; i++) {
 				let gifGiphy = data.data[i];
-				let gifInsertIn = document.getElementById(`gifSuggest${i + 5}`);
+				let gifInsertIn = document.getElementById(`gifSuggest${i}`);
 				let gifTitle = data.data[i].title;
 				let hashTag = "#";
 				let getLimit = gifTitle.search("GIF");
 				let newTitle = gifTitle.slice(0, getLimit);
 				let endTitle = hashTag.concat(newTitle);
-				let gifTitleInsert = document.getElementById(`hashtagGif${i + 5}`);
+				let gifTitleInsert = document.getElementById(`hashtagGif${i}`);
 				gifTitleInsert.innerHTML = endTitle;
 				let toRemove = (gifInsertIn.childNodes[3]);
 				gifInsertIn.removeChild(toRemove);
-				let gifInsertNew = document.getElementById(`gifSuggest${i + 5}`);
+				let gifInsertNew = document.getElementById(`gifSuggest${i}`);
 				let gifImg2 = document.createElement("img");
 				gifImg2.setAttribute("src", gifGiphy.images.original.url);
 				gifInsertNew.append(gifImg2);

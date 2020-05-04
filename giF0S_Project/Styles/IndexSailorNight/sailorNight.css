@@ -317,6 +317,14 @@ body .dark #content #subMenuSearch #Result3:hover {
   outline-offset: -4px;
 }
 
+body .dark #content #buttonsContainer button {
+  color: #FFFFFF;
+  background-color: #2E32FB;
+  border: #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #2124B3, 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #2124B3, 2px 2px 0 0 #FFFFFF;
+}
+
 body .dark #content #suggestions #suggest {
   padding-left: 7px;
   border: solid 1px #2E32FB;

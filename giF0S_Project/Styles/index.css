@@ -369,6 +369,7 @@ body #content #subMenuSearch {
 }
 
 body #content #subMenuSearch button {
+  cursor: pointer;
   width: 88%;
   height: 34px;
   margin-left: 1.3333%;
@@ -389,6 +390,19 @@ body #content #subMenuSearch #Result2 {
 body #content #subMenuSearch #Result3 {
   text-align: left;
   margin-top: 10px;
+}
+
+body #content #buttonsContainer {
+  display: none;
+  height: 34px;
+}
+
+body #content #buttonsContainer button {
+  width: 100px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
 }
 
 body #content #suggestions #suggest {

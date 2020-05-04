@@ -150,8 +150,12 @@ body {
                     color: $outsidebordercolor;
                     border: solid 1px #979797;
                     box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
-                }
 
+                    &:focus~#buttonSearch{
+                        background-color: red;
+                    }
+                }
+               
                 &::placeholder {
                     color: $searchBarColor;
                 }
@@ -243,6 +247,16 @@ body {
                         outline: 1px dotted $outsidebordercolor;
                         outline-offset: -4px;
                     }
+                }
+            }
+
+            #buttonsContainer {
+
+                button {
+                    color: $fontcolorheader;
+                    background-color: #4180F6;
+                    border: #4C2F99;
+                    box-shadow: inset -2px -2px 0 0 #284F99, 2px 2px 0 0 $fontcolorheader;
                 }
             }
 

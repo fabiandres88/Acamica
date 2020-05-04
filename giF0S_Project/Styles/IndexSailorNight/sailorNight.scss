@@ -295,6 +295,16 @@ body {
                 }
             }
 
+            #buttonsContainer {
+
+                button {
+                    color: $fontcolorheader;
+                    background-color: #2E32FB ;
+                    border: #4C2F99;
+                    box-shadow: inset -2px -2px 0 0 #2124B3, 2px 2px 0 0 $fontcolorheader;
+                }
+            }
+
             #suggestions {
 
                 #suggest {

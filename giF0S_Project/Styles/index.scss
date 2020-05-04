@@ -29,7 +29,7 @@ body {
         #buttonZone {
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-template-rows: 100%;            
+            grid-template-rows: 100%;
             height: 118px;
 
             #logotipe {
@@ -40,137 +40,138 @@ body {
                 grid-column-start: 1;
                 grid-column-end: 1;
             }
-            
-            .darkLogo{
+
+            .darkLogo {
                 display: none;
             }
-            div{
+
+            div {
                 display: flex;
                 justify-content: flex-end;
 
-            // THESE ARE THE STYLES OF THE CREATE GUIFOS BUTTON
-            #buttonOne {
-                cursor: pointer;
+                // THESE ARE THE STYLES OF THE CREATE GUIFOS BUTTON
+                #buttonOne {
+                    cursor: pointer;
+                    align-self: center;
+                    display: flex;
+                    margin-right: 1.1137%;
+                    height: 36px;
+                    width: 144px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $primaryfont;
+                    grid-column-start: 2;
+                    grid-column-end: 2;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
+                #buttonTwo {
+                    cursor: pointer;
+                    align-self: center;
+                    display: flex;
+                    height: 36px;
+                    width: 167px;
+                    border: none;
+                    background-color: transparent;
+                    padding: 0px;
+                    grid-column-start: 2;
+                    grid-column-end: 2;
+
+                    #buttonChooseTheme {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        width: 77%;
+                        height: 34px;
+                        padding: 0%;
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-family: $primaryfont;
+                    }
+
+                    #dropDown {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        width: 22.22%;
+                        height: 34px;
+                        padding: 0%;
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-family: $primaryfont;
+                    }
+                }
+
+                #menuThemes {
+                    display: none;
+                    position: absolute;
+                    top: 89px;
+                    right: 16.5%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 12.5%;
+                    height: 102px;
+                    padding-left: 0px;
+                    list-style: none;
+
+                    .day {
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        width: 150px;
+                        height: 36px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-family: $primaryfont;
+                    }
+
+                    .night {
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        width: 150px;
+                        height: 36px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-family: $primaryfont;
+                    }
+                }
+            }
+
+            a {
+                display: flex;
+                margin-left: 1.1474%;
+                grid-column-start: 2;
+                grid-column-end: 2;
+            }
+
+            #linkMyGifos {
+                display: flex;
+                justify-content: flex-end;
                 align-self: center;
-                display: flex;                
-                margin-right: 1.1137%;
-                height: 36px;
-                width: 144px;
+                width: 85px;
                 font-size: 16px;
                 font-weight: 400;
                 font-family: $primaryfont;
                 grid-column-start: 2;
                 grid-column-end: 2;
-
-                a {
-                    display: flex;
-                    justify-content: center;
-                    text-decoration: none;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
-            #buttonTwo {
-                cursor: pointer;
-                align-self: center;
-                display: flex;
-                height: 36px;
-                width: 167px;
-                border: none;
-                background-color: transparent;
-                padding: 0px;
-                grid-column-start: 2;
-                grid-column-end: 2;
-
-                #buttonChooseTheme {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    width: 77%;
-                    height: 34px;
-                    padding: 0%;
-                    font-size: 16px;
-                    font-weight: 400;
-                    font-family: $primaryfont;
-                }
-
-                #dropDown {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    width: 22.22%;
-                    height: 34px;
-                    padding: 0%;
-                    font-size: 16px;
-                    font-weight: 400;
-                    font-family: $primaryfont;
-                }
-            }
-
-            #menuThemes {
-                display: none;
-                position: absolute;
-                top: 89px;
-                right: 16.5%;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 12.5%;
-                height: 102px;
-                padding-left: 0px;
-                list-style: none;
-
-                .day {
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    width: 150px;
-                    height: 36px;
-                    font-size: 16px;
-                    font-weight: 400;
-                    font-family: $primaryfont;
-                }
-
-                .night {
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    width: 150px;
-                    height: 36px;
-                    font-size: 16px;
-                    font-weight: 400;
-                    font-family: $primaryfont;
-                }
             }
         }
-
-        a {
-            display: flex;
-            margin-left: 1.1474%;
-            grid-column-start: 2;
-            grid-column-end: 2;
-        }
-
-        #linkMyGifos {
-            display: flex;
-            justify-content: flex-end;            
-            align-self: center;
-            width: 85px;
-            font-size: 16px;
-            font-weight: 400;
-            font-family: $primaryfont;
-            grid-column-start: 2;
-            grid-column-end: 2;
-        }
-    }
 
         #searchBox {
             height: 99px;
@@ -262,11 +263,12 @@ body {
             z-index: 2;
             flex-direction: column;
             width: 83%;
-            height: 160px;         
+            height: 160px;
             transform: translateY(74%);
-            margin-left: 1px;            
+            margin-left: 1px;
 
             button {
+                cursor: pointer;
                 width: 88%;
                 height: 34px;
                 margin-left: 1.3333%;
@@ -289,6 +291,21 @@ body {
                 margin-top: 10px;
             }
         }
+
+        #buttonsContainer {
+            display: none;
+            height: 34px;
+
+            button {
+                width: 100px;
+                height: 36px;
+                font-size: 14px;
+                font-weight: 400;
+                font-family: $primaryfont;
+            }
+        }
+
+
 
         #suggestions {
 
