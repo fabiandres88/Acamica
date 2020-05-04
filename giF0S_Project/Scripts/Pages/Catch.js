@@ -76,8 +76,7 @@ function stopStreamedVideo(videoElem) {
     videoElem.srcObject = null;
 }
 
-captureButton.addEventListener("click", function () {
-    
+captureButton.addEventListener("click", function () {    
     captureButton.style.display = ("none");
     chrono.style.display = ("flex");
     stopButton.style.display = ("flex");
@@ -85,8 +84,7 @@ captureButton.addEventListener("click", function () {
     stopStreamedVideo(video);
     getRecord(function (camera) {
         video.style.display = "none";
-        document.getElementById('statuscapture').innerHTML = 'Esperando para capturar Guifo...';
-        
+        document.getElementById('statuscapture').innerHTML = 'Esperando para capturar Guifo...';        
         recorder = RecordRTC(camera, {
             type: 'gif',
             frameRate: 1,
@@ -105,6 +103,7 @@ captureButton.addEventListener("click", function () {
         document.getElementById('stopButton').disabled = false;
     });
 });
+
 document.getElementById('stopButton').addEventListener("click", function () {
     stopButton.style.display = ("none");
     playGif.style.display = ("flex");    
@@ -132,7 +131,7 @@ uploadButton.addEventListener("click", function () {
     document.getElementById("showCapture").style.display = "flex";
     document.getElementById("uploadingGif").style.display = "flex";
 
-    //METHODT POST FOR CREATED GIFScreated gifs
+    //METHODT POST FOR UPLOAD GIFS CREATED
     form.append("api_key", "qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA")
     fetch(`http://upload.giphy.com/v1/gifs`, {
         method: "POST",
@@ -148,10 +147,7 @@ uploadButton.addEventListener("click", function () {
         })
         .then(function (response) {
             console.log(response);
-            localStorage.setItem("iD"+response.data.id, response.data.id);            
-            // toBase64(form.get("file")).then(function (base64) {
-            //     localStorage.setItem("gif_" + response.data.id, base64);
-            // })
+            localStorage.setItem("iD"+response.data.id, response.data.id);                        
             if(response.meta.status==200){
                 showResponse()
             }
@@ -161,8 +157,7 @@ uploadButton.addEventListener("click", function () {
         });
 });
 
-function showResponse(){
-    alert("Gufo will be showed")
+function showResponse(){    
     image.style.display = "flex";
     globe.style.display = "none";
     document.getElementById("uploadingGif").style.display = "none";
@@ -173,17 +168,8 @@ function showResponse(){
     document.getElementById("showCapture").style.marginLeft = ("24px");
     document.getElementById("showCapture").style.marginTop = ("24px");
     document.getElementById("contentFinal").style.display = ("flex");        
-    document.getElementById("showCapture").style.marginLeft = ("24px");
-    
-}
-
-//THIS FUNCTION CONVERT BLOB FILE IN BASE64
-const toBase64 = file => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
-});
+    document.getElementById("showCapture").style.marginLeft = ("24px");    
+};
 
 //LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
 repeatButton.addEventListener("click", function () {
@@ -258,3 +244,9 @@ function UploadCapture() {
       }
     }
   }
+
+
+  captureButton.addEventListener("click", function () {
+        document.getElementById("buttonClose").style.display = "flex";
+        document.getElementById('statuscapture').innerHTML = 'Esperando para capturar Guifo...';  
+  })

@@ -198,6 +198,8 @@ body .light #content #buttonSearchInput {
 
 body .light #content #subMenuSearch {
   background-color: #E6E6E6;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
 body .light #content #subMenuSearch button {

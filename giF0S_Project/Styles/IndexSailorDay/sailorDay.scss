@@ -23,382 +23,385 @@ body {
 
         #content {
 
-        //THIS SECTION CONTENT LOGO GIFOS- BUTTONS CREATE GIFOS AND SELECT THEME AND MIS GUIFOS LINK 
-        #buttonZone {
-            div{
-            // THESE ARE THE STYLES OF THE CREATE GUIFOS BUTTON
-            #buttonOne {
-                background-color: $backgroundcolorbtn;
-                color: $outsidebordercolor;
-                border: $outsidebordercolor outset 1px;
-                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+            //THIS SECTION CONTENT LOGO GIFOS- BUTTONS CREATE GIFOS AND SELECT THEME AND MIS GUIFOS LINK 
+            #buttonZone {
+                div {
 
-                &:active,
-                &:hover {
-                    background-color: #E6BBE2;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
-                }                
+                    // THESE ARE THE STYLES OF THE CREATE GUIFOS BUTTON
+                    #buttonOne {
+                        background-color: $backgroundcolorbtn;
+                        color: $outsidebordercolor;
+                        border: $outsidebordercolor outset 1px;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
 
-                a {                
-                    color: $outsidebordercolor;                  
+                        &:active,
+                        &:hover {
+                            background-color: #E6BBE2;
+                            outline: 1px dotted $outsidebordercolor;
+                            outline-offset: -4px;
+                        }
+
+                        a {
+                            color: $outsidebordercolor;
+                        }
+                    }
+
+                    //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
+                    #buttonTwo {
+
+                        #buttonChooseTheme {
+                            background-color: $backgroundcolorbtn;
+                            color: $outsidebordercolor;
+                            border: $outsidebordercolor outset 1px;
+                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+
+                            &:active,
+                            &:hover {
+                                background-color: #E6BBE2;
+                                outline: 1px dotted $outsidebordercolor;
+                                outline-offset: -4px;
+                            }
+                        }
+
+                        #dropDown {
+                            background-color: $backgroundcolorbtn;
+                            color: $outsidebordercolor;
+                            border: $outsidebordercolor outset 1px;
+                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+
+                            &:active,
+                            &:hover {
+                                background-color: #E6BBE2;
+                                outline: 1px dotted $outsidebordercolor;
+                                outline-offset: -4px;
+                            }
+                        }
+                    }
+                }
+
+                #menuThemes {
+                    background-color: $backgroundcolorsearchbox;
+                    box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+
+                    .day {
+                        background-color: #F0F0F0;
+                        border: #808080 1px solid;
+                        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+                        color: $outsidebordercolor;
+
+                        &:hover {
+                            background-color: #FFF4FD;
+                            border: #CCA6C9 1px solid;
+                            box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
+                        }
+                    }
+
+                    .night {
+                        background-color: #F0F0F0;
+                        border: #808080 1px solid;
+                        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+                        color: $outsidebordercolor;
+
+                        &:hover {
+                            background-color: #FFF4FD;
+                            border: #CCA6C9 1px solid;
+                            box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
+                        }
+                    }
                 }
             }
 
-            //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
-            #buttonTwo {                
+            a {
+                text-decoration: none;
 
-                #buttonChooseTheme {
-                    background-color: $backgroundcolorbtn;
+                #linkMyGifos {
                     color: $outsidebordercolor;
-                    border: $outsidebordercolor outset 1px;
-                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
 
-                    &:active,
                     &:hover {
-                        background-color: #E6BBE2;
                         outline: 1px dotted $outsidebordercolor;
                         outline-offset: -4px;
                     }
-                }
 
-                #dropDown {
-                    background-color: $backgroundcolorbtn;
-                    color: $outsidebordercolor;
-                    border: $outsidebordercolor outset 1px;
-                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
-
-                    &:active,
-                    &:hover {
-                        background-color: #E6BBE2;
-                        outline: 1px dotted $outsidebordercolor;
-                        outline-offset: -4px;
+                    &:active {
+                        color: $searchBarColor;
                     }
                 }
             }
-        }
 
-            #menuThemes {
-                background-color: $backgroundcolorsearchbox;
-                box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
-
-                .day {
-                    background-color: #F0F0F0;
-                    border: #808080 1px solid;
-                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-                    color: $outsidebordercolor;
-
-                    &:hover {
-                        background-color: #FFF4FD;
-                        border: #CCA6C9 1px solid;
-                        box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
-                    }
-                }
-
-                .night {
-                    background-color: #F0F0F0;
-                    border: #808080 1px solid;
-                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-                    color: $outsidebordercolor;
-
-                    &:hover {
-                        background-color: #FFF4FD;
-                        border: #CCA6C9 1px solid;
-                        box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 $fontcolorheader;
-                    }
-                }
-            }
-        }
-
-        a{
-            text-decoration: none;
-        #linkMyGifos {
-            color: $outsidebordercolor;
-
-            &:hover {
-                outline: 1px dotted $outsidebordercolor;
-                outline-offset: -4px;
-            }
-
-            &:active {
-                color: $searchBarColor;
-            }
-        }
-    }
-
-        #searchBox {
-            background-color: $backgroundcolorsearchbox;
-            box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
-
-            #searchBoxTitle {
-                background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-                box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox, inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
-                border-right: solid $searchBarColor 2px;
-            }
-
-            h2 {                
-                padding-left: 6px;
-                color: $fontcolorheader;
-                border-top: $fontcolorheader solid 2px;
-            }
-
-            #mySearch {
-                padding-left: 16px;
-                caret-color: #4180F6;
-                color: $outsidebordercolor;
-                border: solid 1px #979797;
-                box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
-            }
-
-            &::placeholder {                           
-                color: $searchBarColor;
-            }
-        }
-
-        //THESE ARE THE STYLES OF THE SEARCH BUTTON AND THE CLASS WHOSE STYLES ARE APPLIED WHEN THE USER ARE ENTERING A TEXT FOR SEARCH
-        #buttonSearch {
-            background-color: $backgroundcolorsearchbox;
-            color: $searchBarColor;
-            border: solid 1px #808080;
-            box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-
-            &:active {
-                background-color: #E6BBE2;
-                border: $outsidebordercolor solid 1px;
-                box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 $fontcolorheader;
-                outline: 1px dotted $outsidebordercolor;
-                outline-offset: -4px;
-
-                #buttonContent {
-                    color: $outsidebordercolor;
-
-                    #mGlassImage {
-                        display: none;
-                    }
-
-                    #mGlass {
-                        display: flex;
-                    }
-                }
-            }
-        }
-
-        #buttonSearchInput {
-            background-color: #F7C9F3;
-            border: 1px solid $outsidebordercolor;
-            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
-            color: $outsidebordercolor;
-        }
-
-
-        //THESE ARE THE STYLES OF THE SUBMENU THAT IS SHOWN AFTER THE CLICK OVER THE SEARCH BUTTON
-        #subMenuSearch {
-            background-color: $backgroundcolorsearchbox;
-
-            button {
-                background-color: $backgroundcolorsearchbox;
-                color: $outsidebordercolor;
-            }
-
-            #Result1 {
-                background-color: #f0f0f0;
-                border: solid 1px #808080;
-                box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-
-                &:hover {
-                    background-color: #DBDBDB;
-                    border: #808080 1PX solid;
-                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
-                }
-            }
-
-            #Result2 {
-                background-color: #f0f0f0;
-                border: solid 1px #808080;
-                box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-
-                &:hover {
-                    background-color: #DBDBDB;
-                    border: #808080 1PX solid;
-                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
-                }
-            }
-
-            #Result3 {
-                background-color: #f0f0f0;
-                border: solid 1px #808080;
-                box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-
-                &:hover {
-                    background-color: #DBDBDB;
-                    border: #808080 1PX solid;
-                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
-                }
-            }
-        }
-
-        #suggestions {
-
-            #suggest {
-                padding-left: 7px;                              
-                border: solid 1px #E6BBE2;
-                box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
-                caret-color: #4180F6;
-                color: $outsidebordercolor;
-
-                &::placeholder {
-                    color: $outsidebordercolor;
-                }
-            }
-        }
-
-        #gifSuggest {
-
-            .borderShadowGif {
+            #searchBox {
                 background-color: $backgroundcolorsearchbox;
                 box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
-                img {
-                    &:hover {
-                        outline: 1px dotted $outsidebordercolor;
-                        outline-offset: -1px;
-                    }
+                #searchBoxTitle {
+                    background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+                    box-shadow: inset 2px 0 0 0 $backgroundcolorsearchbox, inset 0 4px 0 0 $backgroundcolorsearchbox, inset -2px 0 0 0 $backgroundcolorsearchbox;
+                    border-right: solid $searchBarColor 2px;
                 }
-            }
 
-            p {
-                color: $fontcolorheader;
-                background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-            }
-
-            .buttonCloseGif {
-                background-image: url(../../Images/button3.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                border-top: solid 1px $fontcolorheader;
-                border-right: solid 1px #000000;
-                border-bottom: solid 1px #000000;
-                border-left: solid 1px $fontcolorheader;
-            }
-
-            .seeMoreButton {
-                color: $fontcolorheader;
-                background-color: #4180F6;
-                border: solid 1px #4C2F99;
-                box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 #284F99;
-
-                &:hover {
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -5px;
+                h2 {
+                    padding-left: 6px;
+                    color: $fontcolorheader;
+                    border-top: $fontcolorheader solid 2px;
                 }
-            }
-        }
 
-        #trendsSection {
-            #trends {
-                padding-left: 7px;
-                border: solid 1px #E6BBE2;
-                box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
-                caret-color: #4180F6;
-                color: $outsidebordercolor;
+                #mySearch {
+                    padding-left: 16px;
+                    caret-color: #4180F6;
+                    color: $outsidebordercolor;
+                    border: solid 1px #979797;
+                    box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
+                }
 
                 &::placeholder {
+                    color: $searchBarColor;
+                }
+            }
+
+            //THESE ARE THE STYLES OF THE SEARCH BUTTON AND THE CLASS WHOSE STYLES ARE APPLIED WHEN THE USER ARE ENTERING A TEXT FOR SEARCH
+            #buttonSearch {
+                background-color: $backgroundcolorsearchbox;
+                color: $searchBarColor;
+                border: solid 1px #808080;
+                box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+
+                &:active {
+                    background-color: #E6BBE2;
+                    border: $outsidebordercolor solid 1px;
+                    box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 $fontcolorheader;
+                    outline: 1px dotted $outsidebordercolor;
+                    outline-offset: -4px;
+
+                    #buttonContent {
+                        color: $outsidebordercolor;
+
+                        #mGlassImage {
+                            display: none;
+                        }
+
+                        #mGlass {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+
+            #buttonSearchInput {
+                background-color: #F7C9F3;
+                border: 1px solid $outsidebordercolor;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+                color: $outsidebordercolor;
+            }
+
+
+            //THESE ARE THE STYLES OF THE SUBMENU THAT IS SHOWN AFTER THE CLICK OVER THE SEARCH BUTTON
+            #subMenuSearch {
+                background-color: $backgroundcolorsearchbox;
+                box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+
+                button {
+                    background-color: $backgroundcolorsearchbox;
                     color: $outsidebordercolor;
                 }
-            }
-        }
 
-        .trendsCharge {
+                #Result1 {
+                    background-color: #f0f0f0;
+                    border: solid 1px #808080;
+                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
 
-            //THESE ARE THE STYLES OF THE TRENDS SECTION
-            .chargeSmall {                 
-
-                &:hover{
-                    box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;     
-
-                    p{
-                        display:flex; 
-                    }                  
-                }               
-                
-                p {
-                    color: $fontcolorheader;
-                    transform: translateY(277px);
-                    background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
-                }
-            }
-
-            //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE LEFT MARGIN
-            .bigLeftTrendsCharge {                
-                color: #FFFFFF;
-
-                &:hover {
-                    width: 50%;
-                    box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
-
-                    img {                        
-                        width: 98.6%;
-                    }
-
-                    p {
-                        padding-left: 2px;
-                        width: 98.3%;
-                        display: flex;
-                        align-items: center;
+                    &:hover {
+                        background-color: #DBDBDB;
+                        border: #808080 1PX solid;
+                        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+                        outline: 1px dotted $outsidebordercolor;
+                        outline-offset: -4px;
                     }
                 }
 
-                p {
-                    transform: translateY(275px);
-                    background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+                #Result2 {
+                    background-color: #f0f0f0;
+                    border: solid 1px #808080;
+                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+
+                    &:hover {
+                        background-color: #DBDBDB;
+                        border: #808080 1PX solid;
+                        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+                        outline: 1px dotted $outsidebordercolor;
+                        outline-offset: -4px;
+                    }
+                }
+
+                #Result3 {
+                    background-color: #f0f0f0;
+                    border: solid 1px #808080;
+                    box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+
+                    &:hover {
+                        background-color: #DBDBDB;
+                        border: #808080 1PX solid;
+                        box-shadow: inset -1px -1px 0 0 $searchBarColor, inset 1px 1px 0 0 $fontcolorheader;
+                        outline: 1px dotted $outsidebordercolor;
+                        outline-offset: -4px;
+                    }
                 }
             }
 
-            //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE RIGHT MARGIN
-            .bigRightTrendsCharge {
-                color: $fontcolorheader;
+            #suggestions {
 
-                &:hover {
-                    margin-right: 0.3478%;
-                    margin-left: 0.3478%;
-                    width: 50%;
-                    height: 298px;
-                    box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
-                    outline: 1px dotted $outsidebordercolor;
-                    outline-offset: -4px;
+                #suggest {
+                    padding-left: 7px;
+                    border: solid 1px #E6BBE2;
+                    box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+                    caret-color: #4180F6;
+                    color: $outsidebordercolor;
+
+                    &::placeholder {
+                        color: $outsidebordercolor;
+                    }
+                }
+            }
+
+            #gifSuggest {
+
+                .borderShadowGif {
+                    background-color: $backgroundcolorsearchbox;
+                    box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
 
                     img {
-                        position: absolute;
-                        z-index: 1;
-                        width: 98.5%;                        
-                        top: 4px;
-                        left: 4px;
-                    }
-
-                    p {
-                        display: flex;
-                        align-items: center;
-                        padding-left: 2px;
-                        width: 98.2%;
+                        &:hover {
+                            outline: 1px dotted $outsidebordercolor;
+                            outline-offset: -1px;
+                        }
                     }
                 }
 
                 p {
-                    transform: translateY(275px);
+                    color: $fontcolorheader;
                     background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+                }
+
+                .buttonCloseGif {
+                    background-image: url(../../Images/button3.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    border-top: solid 1px $fontcolorheader;
+                    border-right: solid 1px #000000;
+                    border-bottom: solid 1px #000000;
+                    border-left: solid 1px $fontcolorheader;
+                }
+
+                .seeMoreButton {
+                    color: $fontcolorheader;
+                    background-color: #4180F6;
+                    border: solid 1px #4C2F99;
+                    box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 #284F99;
+
+                    &:hover {
+                        outline: 1px dotted $outsidebordercolor;
+                        outline-offset: -5px;
+                    }
+                }
+            }
+
+            #trendsSection {
+                #trends {
+                    padding-left: 7px;
+                    border: solid 1px #E6BBE2;
+                    box-shadow: inset -2px -2px 0 0 #ECDCE4, inset 2px 2px 0 0 #80687D;
+                    caret-color: #4180F6;
+                    color: $outsidebordercolor;
+
+                    &::placeholder {
+                        color: $outsidebordercolor;
+                    }
+                }
+            }
+
+            .trendsCharge {
+
+                //THESE ARE THE STYLES OF THE TRENDS SECTION
+                .chargeSmall {
+
+                    &:hover {
+                        box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+                        outline: 1px dotted $outsidebordercolor;
+                        outline-offset: -4px;
+
+                        p {
+                            display: flex;
+                        }
+                    }
+
+                    p {
+                        color: $fontcolorheader;
+                        transform: translateY(277px);
+                        background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+                    }
+                }
+
+                //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE LEFT MARGIN
+                .bigLeftTrendsCharge {
+                    color: #FFFFFF;
+
+                    &:hover {
+                        width: 50%;
+                        box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+                        outline: 1px dotted $outsidebordercolor;
+                        outline-offset: -4px;
+
+                        img {
+                            width: 98.6%;
+                        }
+
+                        p {
+                            padding-left: 2px;
+                            width: 98.3%;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+
+                    p {
+                        transform: translateY(275px);
+                        background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+                    }
+                }
+
+                //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE RIGHT MARGIN
+                .bigRightTrendsCharge {
+                    color: $fontcolorheader;
+
+                    &:hover {
+                        margin-right: 0.3478%;
+                        margin-left: 0.3478%;
+                        width: 50%;
+                        height: 298px;
+                        box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+                        outline: 1px dotted $outsidebordercolor;
+                        outline-offset: -4px;
+
+                        img {
+                            position: absolute;
+                            z-index: 1;
+                            width: 98.5%;
+                            top: 4px;
+                            left: 4px;
+                        }
+
+                        p {
+                            display: flex;
+                            align-items: center;
+                            padding-left: 2px;
+                            width: 98.2%;
+                        }
+                    }
+
+                    p {
+                        transform: translateY(275px);
+                        background: linear-gradient(270deg, $themeonegradientcolor1 0%, $themeonegradientcolor2 100%);
+                    }
                 }
             }
         }
     }
-}
 }

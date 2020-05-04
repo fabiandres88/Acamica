@@ -29,10 +29,10 @@ changeTheme.addEventListener("mouseleave", function () {
 // inputValue.addEventListener("focusout", returnStyles);
 
 // LISTEN FOCUS OVER THE PLACEHOLDER TO SHOW THE SUBMENU OF BUTTON SEARCH
-// inputValue.addEventListener("focus", subMenuSearch);
-// inputValue.addEventListener("focusout", () => {
-// 	document.getElementById("subMenuSearch").style.display = "none";
-// });
+inputValue.addEventListener("focus", subMenuSearch);
+inputValue.addEventListener("focusout", () => {
+	document.getElementById("subMenuSearch").style.display = "none";
+});
 
 // GETTING VALUE OF BUTTONS INTO THE SUBMENU SEARCH
 let buttonSuggest1= document.getElementById("Result1");
@@ -274,10 +274,12 @@ function getGifsBySearch(url) {
 			console.error("fetch failed", error);
 		})
 }
+//AFTER TO DO CLICK OVER THE LOGO GIFOS IN THE INDEX
 document.getElementById("logotipe").addEventListener("click", function(){
 	window.location.href = "../../Pages/Pre_Catch.html";	
 });
 
+//FUNCTION TO DO SCROLL DOWN AFTER A SEARCH
 function scrollDown(){
 	setTimeout(function (){
 		window.scrollBy(0, 760);

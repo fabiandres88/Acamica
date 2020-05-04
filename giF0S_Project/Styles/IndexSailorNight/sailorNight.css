@@ -254,8 +254,11 @@ body .dark #content #searchBox #buttonSearchInput {
 
 body .dark #content #subMenuSearch {
   background-color: #B4B4B4;
-  -webkit-transform: translateY(15px);
-          transform: translateY(15px);
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  -webkit-transform: translateY(71%);
+          transform: translateY(71%);
+  margin-left: 0px;
 }
 
 body .dark #content #subMenuSearch button {

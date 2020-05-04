@@ -240,7 +240,9 @@ body {
             //THESE ARE THE STYLES OF THE SUBMENU THAT IS SHOWN AFTER THE CLICK OVER THE SEARCH BUTTON
             #subMenuSearch {
                 background-color: $backgroundcolorsearchbox;
-                transform: translateY(15px);
+                box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 $fontcolorheader;
+                transform: translateY(71%);
+                margin-left: 0px;
 
                 button {
                     background-color: $backgroundcolorsearchbox;
@@ -367,13 +369,14 @@ body {
             .trendsCharge {
 
                 //THESE ARE THE STYLES TO THE ONLY GIF WITH BORDER  STYLE IN THE TRENDS SECTION
-                .chargeSmall {                   
+                .chargeSmall {
 
                     &:hover {
                         box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
                         outline: 1px dotted $outsidebordercolor;
                         outline-offset: -2px;
-                        img{
+
+                        img {
                             width: 97.7%;
                         }
 
@@ -391,7 +394,7 @@ body {
                 }
 
                 //THESE ARE THE STYLES OF THE ELEMENTS WHERE THE BIGGER GIFS WILL SHOW, THOSE WHO ARE POSITIONED IN THE LEFT MARGIN
-                .bigLeftTrendsCharge {                    
+                .bigLeftTrendsCharge {
                     color: #FFFFFF;
 
                     &:hover {
@@ -401,7 +404,7 @@ body {
                         outline-offset: -2px;
 
                         img {
-                            width: 99%;                            
+                            width: 99%;
                         }
 
                         p {
@@ -434,7 +437,7 @@ body {
                         img {
                             position: absolute;
                             z-index: 1;
-                            width: 98.8%;                            
+                            width: 98.8%;
                             top: 4px;
                             left: 4px;
                         }
