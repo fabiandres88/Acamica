@@ -1,7 +1,6 @@
 body {
   margin: 0%;
   padding: 0%;
-  border: 0%;
   background-color: #faf1f9;
 }
 
@@ -98,6 +97,7 @@ body #buttonZone #logotipe {
 }
 
 #videoContainer div h1 #buttonClose {
+  cursor: pointer;
   position: absolute;
   top: 1.5px;
   right: 4px;
@@ -202,6 +202,52 @@ body #buttonZone #logotipe {
   margin-bottom: 2px;
 }
 
+#videoContainer div #contentFinal {
+  display: none;
+  width: 30%;
+  height: 300px;
+  -webkit-transform: translate(216%, -83%);
+          transform: translate(216%, -83%);
+  margin-bottom: 14px;
+  margin-bottom: 14px;
+  margin-top: 14px;
+  padding-bottom: 200px;
+  margin-left: 24px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#videoContainer div #contentFinal p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #110038;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Chakra Petch";
+}
+
+#videoContainer div #contentFinal button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 14px;
+  color: #110038;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Chakra Petch";
+  width: 100%;
+  height: 36px;
+  cursor: pointer;
+  background-color: #FFF4FD;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
 #videoContainer div #post {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,6 +264,7 @@ body #buttonZone #logotipe {
 }
 
 #videoContainer div #post #catchButton {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,6 +358,7 @@ body #buttonZone #logotipe {
 }
 
 #videoContainer div #post #stopButton {
+  cursor: pointer;
   display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -429,6 +477,7 @@ body #buttonZone #logotipe {
 }
 
 #videoContainer div #post #repeat {
+  cursor: pointer;
   display: none;
   color: #110038;
   font-size: 16px;
@@ -459,6 +508,7 @@ body #buttonZone #logotipe {
 }
 
 #videoContainer div #post #upload {
+  cursor: pointer;
   display: none;
   color: #110038;
   -webkit-box-pack: center;
@@ -489,6 +539,7 @@ body #buttonZone #logotipe {
 }
 
 #videoContainer div #post #cancel {
+  cursor: pointer;
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -502,7 +553,7 @@ body #buttonZone #logotipe {
   font-size: 16px;
   font-weight: 400;
   font-family: "Chakra Petch";
-  margin-left: 650px;
+  margin-left: 81%;
   background-color: #FFF4FD;
   border: solid 1px #110038;
   -webkit-box-shadow: inset -2ps -2ps 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;

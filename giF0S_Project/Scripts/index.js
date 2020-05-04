@@ -189,6 +189,7 @@ function gettingSearchValue() {
 	let valuesearch = (stringSearch.value);
 	urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${valuesearch}&limit=25&offset=0&rating=G&lang=en`
 	getGifsBySearch(urlToFetch);
+	scrollDown();
 }
 
 //CALLING THE API WHEN THE PAGE IS CHARGING
@@ -248,11 +249,7 @@ function getGifsBySearch(url) {
 			return response.json();
 		})
 		.then(data => {
-			data;
-			// console.log(data);
-			// console.log(data.data);
-			// console.log(data.data[0]);
-			// console.log(data.data[0].source);
+			data;			
 
 			for (let i = 0; i <= 27; i++) {
 				let gifGiphy = data.data[i];
@@ -277,3 +274,12 @@ function getGifsBySearch(url) {
 			console.error("fetch failed", error);
 		})
 }
+document.getElementById("logotipe").addEventListener("click", function(){
+	window.location.href = "../../Pages/Pre_Catch.html";	
+});
+
+function scrollDown(){
+	setTimeout(function (){
+		window.scrollBy(0, 760);
+	},3000);	
+};

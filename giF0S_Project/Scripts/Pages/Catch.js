@@ -58,7 +58,7 @@ function getRecord(callback) {
 }
 
 function stopRecordingCallback() {
-    document.querySelector('#statuscapture').innerHTML = 'Gif recording stopped: ' + bytesToSize(recorder.getBlob().size);
+    document.querySelector('#statuscapture').innerHTML = 'Vista Previa';
     image.src = URL.createObjectURL(recorder.getBlob());
     form.append("file", recorder.getBlob(), "myGif.gif");
     recorder.camera.stop();
@@ -77,7 +77,7 @@ function stopStreamedVideo(videoElem) {
 }
 
 captureButton.addEventListener("click", function () {
-    // chronoStart();
+    
     captureButton.style.display = ("none");
     chrono.style.display = ("flex");
     stopButton.style.display = ("flex");
@@ -85,7 +85,8 @@ captureButton.addEventListener("click", function () {
     stopStreamedVideo(video);
     getRecord(function (camera) {
         video.style.display = "none";
-        document.getElementById('statuscapture').innerHTML = 'Waiting for Gif Recorder to start...';
+        document.getElementById('statuscapture').innerHTML = 'Esperando para capturar Guifo...';
+        
         recorder = RecordRTC(camera, {
             type: 'gif',
             frameRate: 1,
@@ -93,7 +94,7 @@ captureButton.addEventListener("click", function () {
             width: 360,
             hidden: 240,
             onGifRecordingStarted: function () {
-                document.getElementById('statuscapture').innerHTML = 'Vista Previa';
+                document.getElementById('statuscapture').innerHTML = 'Capturando Tu Guifo';                
             },
             onGifPreview: function (gifURL) {
                 img = image.src = gifURL;
@@ -106,8 +107,7 @@ captureButton.addEventListener("click", function () {
 });
 document.getElementById('stopButton').addEventListener("click", function () {
     stopButton.style.display = ("none");
-    playGif.style.display = ("flex");
-    // barCharge.style.display = ("flex");
+    playGif.style.display = ("flex");    
     repeatButton.style.display = "flex";
     uploadButton.style.display = ("flex");
     document.getElementById("charging").style.display = ("flex");
@@ -126,6 +126,7 @@ uploadButton.addEventListener("click", function () {
     document.getElementById("charging").style.display = ("none");    
     image.style.display = "none";
     globe.style.display = "flex";
+    document.getElementById('statuscapture').innerHTML = 'Subiendo Guifo';    
     UploadCapture();
     document.getElementById("uploading").style.display = "flex";
     document.getElementById("showCapture").style.display = "flex";
@@ -147,14 +148,34 @@ uploadButton.addEventListener("click", function () {
         })
         .then(function (response) {
             console.log(response);
-            toBase64(form.get("file")).then(function (base64) {
-                localStorage.setItem("gif_" + response.data.id, base64);
-            })
+            localStorage.setItem("iD"+response.data.id, response.data.id);            
+            // toBase64(form.get("file")).then(function (base64) {
+            //     localStorage.setItem("gif_" + response.data.id, base64);
+            // })
+            if(response.meta.status==200){
+                showResponse()
+            }
         })
         .catch(function (error) {
             console.log("Error in the post" + error);
         });
 });
+
+function showResponse(){
+    alert("Gufo will be showed")
+    image.style.display = "flex";
+    globe.style.display = "none";
+    document.getElementById("uploadingGif").style.display = "none";
+    cancelButton.innerHTML= "Listo";
+    cancelButton.style.transform = ("translateY(-740%)");
+    document.getElementById('showCapture').style.width = ("62%");
+    document.getElementById('showCapture').style.height = ("300px");
+    document.getElementById("showCapture").style.marginLeft = ("24px");
+    document.getElementById("showCapture").style.marginTop = ("24px");
+    document.getElementById("contentFinal").style.display = ("flex");        
+    document.getElementById("showCapture").style.marginLeft = ("24px");
+    
+}
 
 //THIS FUNCTION CONVERT BLOB FILE IN BASE64
 const toBase64 = file => new Promise((resolve, reject) => {
@@ -169,12 +190,12 @@ repeatButton.addEventListener("click", function () {
     window.location.href = "../../Pages/Catch.html";
 });
 
-//LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
+//LISTEING CLICK OVER THE CANCEL CAPTURE BUTTON
 cancelButton.addEventListener("click", function () {
     window.location.href = "../../Pages/Catch.html";
 });
 
-//MANAGE THE CHRONO
+//FINCTION TO MANAGE THE CHRONO
 let id
 captureButton.addEventListener("click",function(){
     setTimeout(function(){
@@ -223,7 +244,7 @@ function move() {
     }
   }
 
-  //FUNCTION TO ANIMATE THE CHARGE BAR IN THE UPLOADING GUIFO
+//FUNCTION TO ANIMATE THE CHARGE BAR IN THE UPLOADING GUIFO
 function UploadCapture() {
     var elem = document.getElementById("pinkBar");   
     var width = 0;
