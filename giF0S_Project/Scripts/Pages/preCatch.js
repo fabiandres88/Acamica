@@ -17,6 +17,7 @@ for (let i = 0; i < localStorage.length; i++) {
     };
 };
 }
+
 function getById(url) {
     fetch(url)
         .then(response => {

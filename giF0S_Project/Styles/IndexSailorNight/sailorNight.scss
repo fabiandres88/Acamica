@@ -51,12 +51,7 @@ body {
                         background-color: #CE36DB;
                         outline: 1px dotted $outsidebordercolor;
                         outline-offset: -4px;
-                    }
-
-                    a {
-                        text-decoration: none;
-                        color: $fontcolorheader;
-                    }
+                    }             
 
                 }
 
@@ -174,6 +169,22 @@ body {
                     border: solid 1px #979797;
                     box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
 
+                    &:focus~#buttonSearch{
+                        color: $fontcolorheader;
+                        background-color: #EE3EFE;
+                        border: solid 1px $outsidebordercolor;
+                        box-shadow: inset -1px -1px 0 0 #A72CB3 , inset 1px 1px 0 0 $fontcolorheader;
+
+                        #mGlassLight {
+                            display: flex;
+                        }
+
+                        #mGlassImageDark {
+                            display: none;
+                        }
+                       
+                    }
+                    
                     &::placeholder {
                         color: $backgroundcolorsearchbox;
                     }

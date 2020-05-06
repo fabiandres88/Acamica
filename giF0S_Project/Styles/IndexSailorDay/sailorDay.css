@@ -27,10 +27,6 @@ body .light #content #buttonZone div #buttonOne:active, body .light #content #bu
   outline-offset: -4px;
 }
 
-body .light #content #buttonZone div #buttonOne a {
-  color: #110038;
-}
-
 body .light #content #buttonZone div #buttonTwo #buttonChooseTheme {
   background-color: #F7C9F3;
   color: #110038;
@@ -142,7 +138,21 @@ body .light #content #searchBox #mySearch {
 }
 
 body .light #content #searchBox #mySearch:focus ~ #buttonSearch {
-  background-color: red;
+  color: #110038;
+  background-color: #F7C9F3;
+  border: solid 1px #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+body .light #content #searchBox #mySearch:focus ~ #buttonSearch #mGlassImage {
+  display: none;
+}
+
+body .light #content #searchBox #mySearch:focus ~ #buttonSearch #mGlass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body .light #content #searchBox::-webkit-input-placeholder {

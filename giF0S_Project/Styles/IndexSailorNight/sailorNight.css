@@ -44,11 +44,6 @@ body .dark #content #buttonZone #buttonOne:active, body .dark #content #buttonZo
   outline-offset: -4px;
 }
 
-body .dark #content #buttonZone #buttonOne a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
 body .dark #content #buttonZone #buttonTwo #buttonChooseTheme {
   background-color: #EE3EFE;
   color: #FFFFFF;
@@ -165,6 +160,24 @@ body .dark #content #searchBox #mySearch {
   border: solid 1px #979797;
   -webkit-box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
           box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
+}
+
+body .dark #content #searchBox #mySearch:focus ~ #buttonSearch {
+  color: #FFFFFF;
+  background-color: #EE3EFE;
+  border: solid 1px #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+body .dark #content #searchBox #mySearch:focus ~ #buttonSearch #mGlassLight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dark #content #searchBox #mySearch:focus ~ #buttonSearch #mGlassImageDark {
+  display: none;
 }
 
 body .dark #content #searchBox #mySearch::-webkit-input-placeholder {

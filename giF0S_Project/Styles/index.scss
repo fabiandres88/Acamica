@@ -54,6 +54,7 @@ body {
                     cursor: pointer;
                     align-self: center;
                     display: flex;
+                    justify-content: center;
                     margin-right: 1.1137%;
                     height: 36px;
                     width: 144px;
@@ -61,15 +62,7 @@ body {
                     font-weight: 400;
                     font-family: $primaryfont;
                     grid-column-start: 2;
-                    grid-column-end: 2;
-
-                    a {
-                        display: flex;
-                        justify-content: center;
-                        text-decoration: none;
-                        width: 100%;
-                        height: 100%;
-                    }
+                    grid-column-end: 2;                   
                 }
 
                 //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
@@ -294,18 +287,20 @@ body {
 
         #buttonsContainer {
             display: none;
+            overflow: hidden;
             height: 34px;
+            margin-top: 12px;
+            padding-left: 20px;
 
             button {
-                width: 100px;
+                float: left;                
+                width: 120px;
                 height: 36px;
                 font-size: 14px;
                 font-weight: 400;
                 font-family: $primaryfont;
             }
         }
-
-
 
         #suggestions {
 

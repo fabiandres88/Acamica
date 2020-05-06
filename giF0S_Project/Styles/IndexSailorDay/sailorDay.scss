@@ -39,11 +39,7 @@ body {
                             background-color: #E6BBE2;
                             outline: 1px dotted $outsidebordercolor;
                             outline-offset: -4px;
-                        }
-
-                        a {
-                            color: $outsidebordercolor;
-                        }
+                        }                        
                     }
 
                     //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
@@ -152,7 +148,17 @@ body {
                     box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
 
                     &:focus~#buttonSearch{
-                        background-color: red;
+                        color: $outsidebordercolor;
+                        background-color: #F7C9F3;
+                        border: solid 1px $outsidebordercolor;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+                        #mGlassImage {
+                            display: none;
+                        }
+
+                        #mGlass {
+                            display: flex;
+                        }
                     }
                 }
                

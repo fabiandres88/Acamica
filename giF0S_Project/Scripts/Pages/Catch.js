@@ -76,7 +76,7 @@ function stopStreamedVideo(videoElem) {
     videoElem.srcObject = null;
 }
 
-captureButton.addEventListener("click", function () {    
+captureButton.addEventListener("click", function () {
     captureButton.style.display = ("none");
     chrono.style.display = ("flex");
     stopButton.style.display = ("flex");
@@ -84,7 +84,7 @@ captureButton.addEventListener("click", function () {
     stopStreamedVideo(video);
     getRecord(function (camera) {
         video.style.display = "none";
-        document.getElementById('statuscapture').innerHTML = 'Esperando para capturar Guifo...';        
+        document.getElementById('statuscapture').innerHTML = 'Esperando para capturar Guifo...';
         recorder = RecordRTC(camera, {
             type: 'gif',
             frameRate: 1,
@@ -92,7 +92,7 @@ captureButton.addEventListener("click", function () {
             width: 360,
             hidden: 240,
             onGifRecordingStarted: function () {
-                document.getElementById('statuscapture').innerHTML = 'Capturando Tu Guifo';                
+                document.getElementById('statuscapture').innerHTML = 'Capturando Tu Guifo';
             },
             onGifPreview: function (gifURL) {
                 img = image.src = gifURL;
@@ -106,7 +106,7 @@ captureButton.addEventListener("click", function () {
 
 document.getElementById('stopButton').addEventListener("click", function () {
     stopButton.style.display = ("none");
-    playGif.style.display = ("flex");    
+    playGif.style.display = ("flex");
     repeatButton.style.display = "flex";
     uploadButton.style.display = ("flex");
     document.getElementById("charging").style.display = ("flex");
@@ -122,16 +122,17 @@ uploadButton.addEventListener("click", function () {
     repeatButton.style.display = "none";
     chrono.style.display = "none";
     playGif.style.display = "none";
-    document.getElementById("charging").style.display = ("none");    
+    document.getElementById("charging").style.display = ("none");
     image.style.display = "none";
     globe.style.display = "flex";
-    document.getElementById('statuscapture').innerHTML = 'Subiendo Guifo';    
+    document.getElementById('statuscapture').innerHTML = 'Subiendo Guifo';
     UploadCapture();
     document.getElementById("uploading").style.display = "flex";
     document.getElementById("showCapture").style.display = "flex";
     document.getElementById("uploadingGif").style.display = "flex";
 
     //METHODT POST FOR UPLOAD GIFS CREATED
+
     form.append("api_key", "qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA")
     fetch(`http://upload.giphy.com/v1/gifs`, {
         method: "POST",
@@ -147,8 +148,10 @@ uploadButton.addEventListener("click", function () {
         })
         .then(function (response) {
             console.log(response);
-            localStorage.setItem("iD"+response.data.id, response.data.id);                        
-            if(response.meta.status==200){
+
+            localStorage.setItem("iD" + response.data.id, response.data.id);
+            idGif = ("iD" + response.data.id, response.data.id);
+            if (response.meta.status == 200) {
                 showResponse()
             }
         })
@@ -157,18 +160,18 @@ uploadButton.addEventListener("click", function () {
         });
 });
 
-function showResponse(){    
+function showResponse() {
     image.style.display = "flex";
     globe.style.display = "none";
     document.getElementById("uploadingGif").style.display = "none";
-    cancelButton.innerHTML= "Listo";
+    cancelButton.innerHTML = "Listo";
     cancelButton.style.transform = ("translateY(-740%)");
     document.getElementById('showCapture').style.width = ("62%");
     document.getElementById('showCapture').style.height = ("300px");
     document.getElementById("showCapture").style.marginLeft = ("24px");
     document.getElementById("showCapture").style.marginTop = ("24px");
-    document.getElementById("contentFinal").style.display = ("flex");        
-    document.getElementById("showCapture").style.marginLeft = ("24px");    
+    document.getElementById("contentFinal").style.display = ("flex");
+    document.getElementById("showCapture").style.marginLeft = ("24px");
 };
 
 //LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
@@ -183,12 +186,12 @@ cancelButton.addEventListener("click", function () {
 
 //FINCTION TO MANAGE THE CHRONO
 let id
-captureButton.addEventListener("click",function(){
-    setTimeout(function(){
+captureButton.addEventListener("click", function () {
+    setTimeout(function () {
         chronoStart();
-    },3000)
+    }, 3000)
 })
-stopButton.addEventListener("click", function(){
+stopButton.addEventListener("click", function () {
     clearInterval(id);
 });
 function chronoStart() {
@@ -197,7 +200,7 @@ function chronoStart() {
     var s = 0;
     var ms = 0;
     var hCont, mCont, sCont, msCont;
-    
+
     id = setInterval(function () {
         ms++;
         if (ms > 10) { s++; ms = 0; }
@@ -217,38 +220,89 @@ function chronoStart() {
 
 //FUNCTION TO ANIMATE THE CHARGE BAR
 function move() {
-    var elem = document.getElementById("pinksCharge");   
+    var elem = document.getElementById("pinksCharge");
     var width = 1;
     var id = setInterval(frame, 600);
     function frame() {
-      if (width >= 16) {
-        clearInterval(id);
-      } else {
-        width++; 
-        elem.style.width = width + '%'; 
-      }
+        if (width >= 16) {
+            clearInterval(id);
+        } else {
+            width++;
+            elem.style.width = width + '%';
+        }
     }
-  }
+}
 
 //FUNCTION TO ANIMATE THE CHARGE BAR IN THE UPLOADING GUIFO
 function UploadCapture() {
-    var elem = document.getElementById("pinkBar");   
+    var elem = document.getElementById("pinkBar");
     var width = 0;
     var id = setInterval(frame, 600);
     function frame() {
-      if (width >= 20) {
-        clearInterval(id);
-      } else {
-        width++; 
-        elem.style.width = width + '%'; 
-      }
+        if (width >= 20) {
+            clearInterval(id);
+        } else {
+            width++;
+            elem.style.width = width + '%';
+        }
     }
-  };
+};
+
+let idGif
+let urlGif
+function getUrl() {
+    let urlfetch = "https://api.giphy.com/v1/gifs/";
+    let apiKey = "?api_key=qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA";
+    let url = urlfetch + idGif + apiKey;
+    getById(url);
+
+};
+
+function getById(url) {
+    fetch(url)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            data;
+            urlGif = (data.data.images.downsized_large.url);
+
+            return data
+        }).catch(error => {
+            console.error("fetch failed", error);
+        })
+}
+
+
 
 //THIS FUNCTION LISTEN CLICK OVER THE LAS BUTTON TO COPY OR DOWNLOAD GIF
-document.getElementById("download").addEventListener("click",function (){
+document.getElementById("download").addEventListener("click", function () {
+    var source = document.getElementById("gif").getAttribute("src");
+    console.log(source)
+    var a = document.createElement('a');
 
-})
-document.getElementById("copy").addEventListener("click", function (){
-    
+    a.download = true;
+    a.target = '_blank';
+    a.href = source;
+
+    a.click();
+});
+
+const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = urlGif;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+};
+document.getElementById("copy").addEventListener("click", function () {
+    getUrl();
+    setTimeout(function () {
+        copyToClipboard();
+    }, 3000);
+
 })
