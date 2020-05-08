@@ -1,3 +1,9 @@
+document.getElementById("cancel").addEventListener("click",function(){
+    window.location.href = "../../index.html";
+});
+document.getElementById("start").addEventListener("click",function(){
+    window.location.href = "../../Pages/Catch.html";
+});
 //LOGOTIPE ACTION DOWN SCROLL TO MY GUIFOS ZONE
 document.getElementById("logotipe").addEventListener("click", function () {
     window.scrollBy(0, 660);
@@ -14,8 +20,8 @@ for (let i = 0; i < localStorage.length; i++) {
         let url = urlfetch + id + apiKey;
         console.log(url);
         getById(url);
-    };
-};
+    }
+}
 }
 
 function getById(url) {
@@ -30,9 +36,9 @@ function getById(url) {
             let gif = document.createElement("img");
             gif.setAttribute("src", urlTocreate);
             document.getElementById("containerGifs").appendChild(container);
-            container.appendChild(gif)
-            return data
+            container.appendChild(gif);
+            return data;
         }).catch(error => {
             console.error("fetch failed", error);
-        })
+        });
 }

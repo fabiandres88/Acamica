@@ -182,8 +182,8 @@ body .light #content #buttonSearch {
 body .light #content #buttonSearch:active {
   background-color: #E6BBE2;
   border: #110038 solid 1px;
-  -webkit-box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }

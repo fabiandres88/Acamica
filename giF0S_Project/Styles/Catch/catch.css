@@ -556,8 +556,8 @@ body #buttonZone #logotipe {
   margin-left: 81%;
   background-color: #FFF4FD;
   border: solid 1px #110038;
-  -webkit-box-shadow: inset -2ps -2ps 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2ps -2ps 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
 #videoContainer div #post #cancel:hover {

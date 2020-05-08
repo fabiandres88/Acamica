@@ -8,6 +8,7 @@ $searchBarColor: #8F8F8F;
 
 body {
 
+    ///THIS CLASS IS APPLIED TO GET THE SAILOR NIGHT DAY
     .dark {
         background-color: #110038;
 
@@ -51,7 +52,7 @@ body {
                         background-color: #CE36DB;
                         outline: 1px dotted $outsidebordercolor;
                         outline-offset: -4px;
-                    }             
+                    }
 
                 }
 
@@ -141,6 +142,7 @@ body {
                 }
             }
 
+            //STYLES OF THE SEARCH SECTION
             #searchBox {
                 background-color: $backgroundcolorsearchbox;
                 box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
@@ -169,11 +171,11 @@ body {
                     border: solid 1px #979797;
                     box-shadow: inset 2px 2px 0 0 #000000, inset -2px -2px 0 0 #E6E6E6;
 
-                    &:focus~#buttonSearch{
+                    &:focus~#buttonSearch {
                         color: $fontcolorheader;
                         background-color: #EE3EFE;
                         border: solid 1px $outsidebordercolor;
-                        box-shadow: inset -1px -1px 0 0 #A72CB3 , inset 1px 1px 0 0 $fontcolorheader;
+                        box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 $fontcolorheader;
 
                         #mGlassLight {
                             display: flex;
@@ -182,9 +184,9 @@ body {
                         #mGlassImageDark {
                             display: none;
                         }
-                       
+
                     }
-                    
+
                     &::placeholder {
                         color: $backgroundcolorsearchbox;
                     }
@@ -200,7 +202,7 @@ body {
                     &:active {
                         background-color: #CE36DB;
                         border: $outsidebordercolor solid 1px;
-                        box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 $fontcolorheader;
+                        box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 $fontcolorheader;
                         outline: 1px dotted $outsidebordercolor;
                         outline-offset: -4px;
 
@@ -306,16 +308,18 @@ body {
                 }
             }
 
+            //STYLES OF THE BUTTONS CREATED AFTER THE SEARCH BY SUGGEST
             #buttonsContainer {
 
                 button {
                     color: $fontcolorheader;
-                    background-color: #2E32FB ;
+                    background-color: #2E32FB;
                     border: #4C2F99;
                     box-shadow: inset -2px -2px 0 0 #2124B3, 2px 2px 0 0 $fontcolorheader;
                 }
             }
 
+            //STYLES OF THE SUGGEST SECTIONS
             #suggestions {
 
                 #suggest {
@@ -373,6 +377,7 @@ body {
                 }
             }
 
+            //STYLES OF THE SHOW GIF SECTION            
             #trendsSection {
                 #trends {
                     padding-left: 7px;

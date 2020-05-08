@@ -3,8 +3,7 @@ $primaryfont: "Chakra Petch";
 
 body {
     margin: 0%;
-    padding: 0%;
-    border: 0%;
+    padding: 0%;    
 
     //THIS SECTION CONTENT THE TOP BAR WITH ITS GRADIENT STYLE
     #title {
@@ -62,7 +61,7 @@ body {
                     font-weight: 400;
                     font-family: $primaryfont;
                     grid-column-start: 2;
-                    grid-column-end: 2;                   
+                    grid-column-end: 2;
                 }
 
                 //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
@@ -166,6 +165,8 @@ body {
             }
         }
 
+
+        //STYLES OF THE SEARCH SECTION
         #searchBox {
             height: 99px;
 
@@ -285,6 +286,7 @@ body {
             }
         }
 
+        //STYLES OF THE BUTTONS CREATED AFTER THE SEARCH BY TAGS
         #buttonsContainer {
             display: none;
             overflow: hidden;
@@ -293,7 +295,7 @@ body {
             padding-left: 20px;
 
             button {
-                float: left;                
+                float: left;
                 width: 120px;
                 height: 36px;
                 font-size: 14px;
@@ -302,6 +304,7 @@ body {
             }
         }
 
+        //STYLES OF THE SUGGEST SECTION        
         #suggestions {
 
             #suggest {
@@ -400,6 +403,7 @@ body {
             }
         }
 
+        //STYLES OF THE SHOW GIFS SECTION
         .trendsCharge {
             margin-top: 17px;
             display: flex;

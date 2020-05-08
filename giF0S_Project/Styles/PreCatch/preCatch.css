@@ -1,7 +1,6 @@
 body {
   margin: 0%;
   padding: 0%;
-  border: 0%;
   background-color: #faf1f9;
 }
 
@@ -173,6 +172,9 @@ body #menuSection #buttonsContainer button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   width: 133px;
   height: 36px;

@@ -51,6 +51,7 @@ body {
     }
 }
 
+//STYLES OT THE RECORDING CONTAINER
 #videoContainer {
     display: flex;
     justify-content: center;
@@ -166,6 +167,7 @@ body {
             }
         }
 
+        //STYLES OF THE LAST SCREEN IN THE UPLOAD PROCESS
         #contentFinal {
             display: none;
             width: 30%;
@@ -203,6 +205,7 @@ body {
             }
         }
 
+        //STYLES OF THE BUTTONS
         #post {
             display: flex;
             flex-direction: row;
@@ -441,7 +444,7 @@ body {
                 margin-left: 81%;
                 background-color: #FFF4FD;
                 border: solid 1px $outsidebordercolor;
-                box-shadow: inset -2ps -2ps 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
+                box-shadow: inset -2px -2px 0 0 $searchBarColor, inset 2px 2px 0 0 $fontcolorheader;
 
 
                 &:hover {

@@ -1,8 +1,5 @@
 // //CREATING VARIABLES
-//VARIABLES TO DO THE FETCH
-var urlToFetch = "";
-const requestDefault = "upload.giphy.com/v1/gifs";
-const apiKey = "qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA";
+
 //CREATING AN OBJECT TO RECORD AND ELEMENTS TO SHOW THE RECORDING
 let recorder;
 let video = document.querySelector("video");
@@ -25,7 +22,7 @@ let form = new FormData();
 
 window.onload = function () {
     this.getCamera();
-}
+};
 
 //THIS FUNCTION STARTS THE CAMERA
 function getCamera(stream) {
@@ -133,7 +130,7 @@ uploadButton.addEventListener("click", function () {
 
     //METHODT POST FOR UPLOAD GIFS CREATED
 
-    form.append("api_key", "qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA")
+    form.append("api_key", "qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA");
     fetch(`http://upload.giphy.com/v1/gifs`, {
         method: "POST",
         body: form,
@@ -143,7 +140,7 @@ uploadButton.addEventListener("click", function () {
             if (response.ok) {
                 return response.json();
             } else {
-                console.log("Request failed")
+                console.log("Request failed");
             }
         })
         .then(function (response) {
@@ -152,7 +149,7 @@ uploadButton.addEventListener("click", function () {
             localStorage.setItem("iD" + response.data.id, response.data.id);
             idGif = ("iD" + response.data.id, response.data.id);
             if (response.meta.status == 200) {
-                showResponse()
+                showResponse();
             }
         })
         .catch(function (error) {
@@ -172,7 +169,7 @@ function showResponse() {
     document.getElementById("showCapture").style.marginTop = ("24px");
     document.getElementById("contentFinal").style.display = ("flex");
     document.getElementById("showCapture").style.marginLeft = ("24px");
-};
+}
 
 //LISTEING CLICK OVER THE REPEAT CAPTURE BUTTON
 repeatButton.addEventListener("click", function () {
@@ -185,12 +182,12 @@ cancelButton.addEventListener("click", function () {
 });
 
 //FINCTION TO MANAGE THE CHRONO
-let id
+let id;
 captureButton.addEventListener("click", function () {
     setTimeout(function () {
         chronoStart();
-    }, 3000)
-})
+    }, 3000);
+});
 stopButton.addEventListener("click", function () {
     clearInterval(id);
 });
@@ -246,17 +243,17 @@ function UploadCapture() {
             elem.style.width = width + '%';
         }
     }
-};
+}
 
-let idGif
-let urlGif
+let idGif;
+let urlGif;
 function getUrl() {
     let urlfetch = "https://api.giphy.com/v1/gifs/";
     let apiKey = "?api_key=qf6ZWqRanwv9kIXXWpSxlQJmK2zf1UKA";
     let url = urlfetch + idGif + apiKey;
     getById(url);
 
-};
+}
 
 function getById(url) {
     fetch(url)
@@ -267,10 +264,10 @@ function getById(url) {
             data;
             urlGif = (data.data.images.downsized_large.url);
 
-            return data
+            return data;
         }).catch(error => {
             console.error("fetch failed", error);
-        })
+        });
 }
 
 
@@ -278,7 +275,7 @@ function getById(url) {
 //THIS FUNCTION LISTEN CLICK OVER THE LAS BUTTON TO COPY OR DOWNLOAD GIF
 document.getElementById("download").addEventListener("click", function () {
     var source = document.getElementById("gif").getAttribute("src");
-    console.log(source)
+    console.log(source);
     var a = document.createElement('a');
 
     a.download = true;

@@ -207,8 +207,8 @@ body .dark #content #searchBox #buttonSearch {
 body .dark #content #searchBox #buttonSearch:active {
   background-color: #CE36DB;
   border: #110038 solid 1px;
-  -webkit-box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 #FFFFFF;
-          box-shadow: inset -1px -1xp 0 0 #A72CB3, inset 1px1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
   outline: 1px dotted #110038;
   outline-offset: -4px;
 }

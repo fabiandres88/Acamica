@@ -9,7 +9,7 @@ for (let i = 0; i < localStorage.length; i++) {
         saveButton.onclick = function () {
             let urlToFetch = `${requestDefault}search?api_key=${apiKey}&q=${searchText.substring(1)}&limit=29&offset=0&rating=G&lang=en`;
             getGifsBySearch(urlToFetch);
-        }
+        };
         container.append(saveButton);
         container.style.display = "block";
     }

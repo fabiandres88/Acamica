@@ -8,6 +8,7 @@ $searchBarColor: #B4B4B4;
 
 body {
 
+    //THIS CLASS IS APPLIED TO CHOSE THE SAILOR DAY THEME
     .light {
         background-color: rgb(250, 241, 249);
 
@@ -39,7 +40,7 @@ body {
                             background-color: #E6BBE2;
                             outline: 1px dotted $outsidebordercolor;
                             outline-offset: -4px;
-                        }                        
+                        }
                     }
 
                     //THESE ARE THE STYLES OF THE CONTAINER AND ITS ELEMENTS THEME BUTTON AND THE DROPDOWN BUTTON
@@ -124,6 +125,7 @@ body {
                 }
             }
 
+            //STYLES OF THE SEARCH SECTION
             #searchBox {
                 background-color: $backgroundcolorsearchbox;
                 box-shadow: inset 2px 2px 0 0 $fontcolorheader, inset -2px -2px 0 0 $searchBarColor;
@@ -147,11 +149,12 @@ body {
                     border: solid 1px #979797;
                     box-shadow: inset -1px -1px 0 0 $backgroundcolorsearchbox, inset 1px 1px 0 0 #000000;
 
-                    &:focus~#buttonSearch{
+                    &:focus~#buttonSearch {
                         color: $outsidebordercolor;
                         background-color: #F7C9F3;
                         border: solid 1px $outsidebordercolor;
                         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
+
                         #mGlassImage {
                             display: none;
                         }
@@ -161,7 +164,7 @@ body {
                         }
                     }
                 }
-               
+
                 &::placeholder {
                     color: $searchBarColor;
                 }
@@ -177,7 +180,7 @@ body {
                 &:active {
                     background-color: #E6BBE2;
                     border: $outsidebordercolor solid 1px;
-                    box-shadow: inset -1px -1xp 0 0 #997D97, inset 1px1px 0 0 $fontcolorheader;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 $fontcolorheader;
                     outline: 1px dotted $outsidebordercolor;
                     outline-offset: -4px;
 
@@ -256,6 +259,7 @@ body {
                 }
             }
 
+            //STYLES OF THE BUTTONS CREATED AFTER THE SEARCH BY TAGS
             #buttonsContainer {
 
                 button {
@@ -266,6 +270,7 @@ body {
                 }
             }
 
+            //STYLES OF THE SUGGEST SECTION
             #suggestions {
 
                 #suggest {
@@ -323,6 +328,7 @@ body {
                 }
             }
 
+            //STYLES OF THE SHOW GIFS SECTION
             #trendsSection {
                 #trends {
                     padding-left: 7px;

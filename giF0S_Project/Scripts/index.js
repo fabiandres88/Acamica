@@ -7,7 +7,7 @@ let selectThemeN = document.getElementsByClassName("night");
 //GETTING INPUT SEARCH
 let inputValue = document.getElementById("mySearch");
 //GETTING BUTTON SEARCH
-let listenSearch = document.querySelector("#buttonSearch")
+let listenSearch = document.querySelector("#buttonSearch");
 //VARIABLR TO USE IN THE FETCH
 var urlToFetch = "";
 const requestDefault = "https://api.giphy.com/v1/gifs/";
@@ -22,7 +22,7 @@ changeTheme.addEventListener("click", function () {
 // LISTEN MOUSELEAVE OVER THE SUBMENU CHANGE THEME, TO HIDDEN IT
 changeTheme.addEventListener("mouseleave", function () {
 	themes.style.display = "none";
-})
+});
 
 // LISTEN FOCUS OVER THE PLACEHOLDER TO SHOW THE SUBMENU OF BUTTON SEARCH
 inputValue.addEventListener("focus", subMenuSearch);
@@ -40,7 +40,7 @@ let buttonSuggest3 = document.getElementById("Result3");
 // FUNCTION TO MANAGE THE SUBMENU IN THE FUNCTION SELECT THEME
 function isHidden(element) {
 	var style = window.getComputedStyle(element);
-	return (style.display === 'none')
+	return (style.display === 'none');
 }
 // FUNCTION TO CHANGES THE THEME TO DARK BY USERS
 function darkThemeCall() {
@@ -82,7 +82,7 @@ inputValue.addEventListener("search", gettingSearchValue);
 function suggestSearch() {
 	let valueSearch = document.getElementById("mySearch");
 	let inputSearch = (valueSearch.value);
-	urlToFetch = `${requestDefault}search/tags?api_key=${apiKey}&q=${inputSearch}&limit=3&offset=0&rating=G&lang=en`
+	urlToFetch = `${requestDefault}search/tags?api_key=${apiKey}&q=${inputSearch}&limit=3&offset=0&rating=G&lang=en`;
 	getSuggestSearch(urlToFetch);
 }
 
@@ -112,11 +112,11 @@ function getSuggestSearch(url) {
 					resultButton.innerHTML = suggestTag;
 				}
 			}
-			return data
+			return data;
 		})
 		.catch(error => {
 			console.error("Fetch Failed", error);
-		})
+		});
 }
 
 function getRandomInt(min, max) {
@@ -130,7 +130,7 @@ function updateGifElement(gifGiphy, index) {
 	let seeMoreButton = gifInsertIn.getElementsByClassName("seeMoreButton");
 	let gifImg = gifInsertIn.getElementsByTagName("img");
 
-	if (gifImg.length == 0) {
+	if (gifImg.length === 0) {
 		gifImg = document.createElement("img");
 		gifImg.setAttribute("src", gifGiphy.images.original.url);
 		gifInsertIn.append(gifImg);
@@ -150,7 +150,7 @@ function updateGifElement(gifGiphy, index) {
 	if (seeMoreButton.length > 0) {
 		seeMoreButton[0].onclick = function () {
 			getGifsBySearch(endTitle.substring(1));
-		}
+		};
 	}
 }
 
