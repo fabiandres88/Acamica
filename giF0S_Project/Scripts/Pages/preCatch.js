@@ -18,7 +18,6 @@ for (let i = 0; i < localStorage.length; i++) {
     if (localStorage.key(i)[0] == "i") {
         id = localStorage.getItem(localStorage.key(i));
         let url = urlfetch + id + apiKey;
-        console.log(url);
         getById(url);
     }
 }

@@ -153,7 +153,7 @@ uploadButton.addEventListener("click", function () {
             }
         })
         .catch(function (error) {
-            console.log("Error in the post" + error);
+            console.error("Error in the post" + error);
         });
 });
 
@@ -274,8 +274,7 @@ function getById(url) {
 
 //THIS FUNCTION LISTEN CLICK OVER THE LAS BUTTON TO COPY OR DOWNLOAD GIF
 document.getElementById("download").addEventListener("click", function () {
-    var source = document.getElementById("gif").getAttribute("src");
-    console.log(source);
+    var source = document.getElementById("gif").getAttribute("src");    
     var a = document.createElement('a');
 
     a.download = true;

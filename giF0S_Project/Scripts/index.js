@@ -245,12 +245,12 @@ function getGifsBySearch(searchText) {
 
 // AFTER TO DO CLICK OVER THE LOGO GIFOS IN THE INDEX
 document.getElementById("logotipe").addEventListener("click", function () {
-	window.location.href = "../../Pages/Pre_Catch.html";
+	window.location.href = "../../Pages/pre_Catch.html";
 });
 
 // AFTER TO DO CLICK OVER THE LOGO GIFOS IN THE INDEX
 document.getElementById("buttonOne").addEventListener("click", function () {
-	window.location.href = "../../Pages/Pre_Catch.html";
+	window.location.href = "../../Pages/pre_Catch.html";
 });
 
 //FUNCTION TO DO SCROLL DOWN AFTER A SEARCH
