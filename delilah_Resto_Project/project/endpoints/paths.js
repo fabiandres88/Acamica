@@ -1,33 +1,59 @@
-const Sequelize = require ("sequelize");
-const sequelize = new Sequelize ("mysql://root:@localhost:8111/delilah_resto");
+const Sequelize = require("sequelize");
+const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
+const jwt = require('jsonwebtoken');
+const validations = require("../validations/validations");
+const { response } = require("express");
+const bodyParser = require("body-parser");
 
-
-module.exports = function (app){
-//Route to get all users
-    app.get("/users", (req, res) =>{
-        const query = "SELECT * FROM users";    
+module.exports = function (app) {
+    app.use(bodyParser.json());
+    //Route to get all users
+    app.get("/users", (req, res) => {
+        const query = "SELECT * FROM users";
         sequelize.query(query,
-            {type: sequelize.QueryTypes.SELECT}
-            ).then((response)=>{
-                res.json(response);
-            }).catch((error)=>{
-                console.error(error);
-            })        
+            { type: sequelize.QueryTypes.SELECT }
+        ).then((response) => {
+            res.json(response);
+        }).catch((error) => {
+            console.error(error);
+        })
     });
-//Route to users sign up
-    app.post("/users", (req, res) =>{
-console.log(req.body);
-                
-        const query = "INSERT INTO users (user_name, full_name, email, phone, address, password, admin) VALUES (?,?,?,?,?,?,?)";            
-        
-        const {user_name, full_name, email, phone, address, password, admin} = req.body;
-
-        sequelize.query(query,            
-            {replacements: [user_name, full_name, email, phone, address, password, admin]}
-            ).then((response)=>{
-                res.json(response);
-            }).catch((error)=>{
-                console.error(error);
-            })        
+    //Route to users sign up
+    app.post("/users", (req, res) => {
+        const query = "INSERT INTO users (user_name, full_name, email, phone, address, password, admin) VALUES (?,?,?,?,?,?,?)";
+        const { user_name, full_name, email, phone, address, password, admin } = req.body;
+        sequelize.query(query,
+            { replacements: [user_name, full_name, email, phone, address, password, admin] }
+        ).then((response) => {
+            res.json(response);
+        }).catch((error) => {
+            console.error(error);
+        })
+    });
+    //Route to users log in
+    app.post("/users/login",validations.loginUser, (req, res) => {
+        const {user_name, email} = req.body;
+        const sing = "MySecretPassword1988";
+        let information="";
+        if(user_name){
+            information=user_name;
+        }
+        if(email){
+            information=email;
+        }
+        const token = jwt.sign(information, sing);
+        res.json("Token: " + token);        
+    });
+    //Route to delete users
+    app.delete("/users", (req, res) => {
+        const query = "DELETE FROM users WHERE id = ?";
+        const { id } = req.body;
+        sequelize.query(query,
+            { replacements: [id] }
+        ).then((response) => {
+            res.json(response);
+        }).catch((error) => {
+            console.error(error);
+        })
     });
 };
