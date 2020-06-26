@@ -1,3 +1,4 @@
+//This file contents all paths of the project
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
 const jwt = require('jsonwebtoken');
@@ -7,7 +8,7 @@ const bodyParser = require("body-parser");
 
 module.exports = function (app) {
     app.use(bodyParser.json());
-    //Route to get all users
+    //Route to get all users only by manager
     app.get("/users", (req, res) => {
         const query = "SELECT * FROM users";
         sequelize.query(query,
@@ -19,7 +20,7 @@ module.exports = function (app) {
         })
     });
     //Route to users sign up
-    app.post("/users", (req, res) => {
+    app.post("/users", validations.signupUser, (req, res) => {
         const query = "INSERT INTO users (user_name, full_name, email, phone, address, password, admin) VALUES (?,?,?,?,?,?,?)";
         const { user_name, full_name, email, phone, address, password, admin } = req.body;
         sequelize.query(query,

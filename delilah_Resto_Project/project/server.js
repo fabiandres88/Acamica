@@ -8,5 +8,5 @@ app.use(bodyParser.json());
 routes(app);
 
 app.listen(3000, () =>{
-    console.log("Server ready at port 3000 ...")
+    console.log("Server is ready at port 3000 ...")
 });
