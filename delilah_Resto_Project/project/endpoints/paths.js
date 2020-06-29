@@ -3,13 +3,13 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
 const jwt = require('jsonwebtoken');
 const validations = require("../validations/validations");
-const { response } = require("express");
-const bodyParser = require("body-parser");
+// const { response } = require("express");
+// const bodyParser = require("body-parser");
 
 module.exports = function (app) {
-    app.use(bodyParser.json());
+    // app.use(bodyParser.json());
     //Route to get all users only by manager
-    app.get("/users", (req, res) => {
+    app.get("/users", validations.verifyToken,validations.validateAdministrator, (req, res) => {                
         const query = "SELECT * FROM users";
         sequelize.query(query,
             { type: sequelize.QueryTypes.SELECT }
@@ -17,8 +17,9 @@ module.exports = function (app) {
             res.json(response);
         }).catch((error) => {
             console.error(error);
-        })
+        });
     });
+
     //Route to users sign up
     app.post("/users", validations.signupUser, (req, res) => {
         const query = "INSERT INTO users (user_name, full_name, email, phone, address, password, admin) VALUES (?,?,?,?,?,?,?)";
@@ -32,18 +33,18 @@ module.exports = function (app) {
         })
     });
     //Route to users log in
-    app.post("/users/login",validations.loginUser, (req, res) => {
-        const {user_name, email} = req.body;
+    app.post("/users/login", validations.loginUser, (req, res) => {
+        const { user_name, email } = req.body;
         const sing = "MySecretPassword1988";
-        let information="";
-        if(user_name){
-            information=user_name;
+        let information = "";
+        if (user_name) {
+            information = user_name;
         }
-        if(email){
-            information=email;
+        if (email) {
+            information = email;
         }
-        const token = jwt.sign(information, sing);
-        res.json("Token: " + token);        
+        const token = jwt.sign(information, sign);
+        res.json("Token: " + token);
     });
     //Route to delete users
     app.delete("/users", (req, res) => {
