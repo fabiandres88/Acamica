@@ -84,4 +84,5 @@ const validateAdministrator = (req, res, next) => {
         console.error(error);
     });
 };
+
 module.exports = { signupUser, loginUser, verifyToken, validateAdministrator, valueRequired };

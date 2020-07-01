@@ -3,7 +3,7 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
 const jwt = require('jsonwebtoken');
 const validations = require("../validations/validations");
-const { response } = require("express");
+
 
 module.exports = function (app) {
     //Route to get all users only by manager
@@ -48,16 +48,48 @@ module.exports = function (app) {
 
     //Route to update users information
     app.put("/users", validations.verifyToken, (req, res) => {
-        const user = req.query.user;
-        const query = "UPDATE users SET email=?, phone=?, address=?, password=? WHERE user_name =? OR email=?";
+        const user = req.query.user; 
         const { email, phone, address, password  } = req.body;
-        sequelize.query(query,
-            { replacements: [email, phone, address, password, user, user]}
-            ).then((response) => {
-                res.status(200).json("User has been updated");
-            }).catch((error) =>{
-                console.error(error);
-            });
+        if(email){
+            const query = "UPDATE users SET email=? WHERE user_name =? OR email=?";
+            sequelize.query(query,
+                { replacements: [ email, user, user]}
+                ).then((response) => {
+                    res.status(200).json("User has been updated");
+                }).catch((error) =>{
+                    console.error(error);
+                });
+        };
+        if(phone){
+            const query = "UPDATE users SET phone=? WHERE user_name =? OR email=?";
+            sequelize.query(query,
+                { replacements: [ phone, user, user]}
+                ).then((response) => {
+                    res.status(200).json("User has been updated");
+                }).catch((error) =>{
+                    console.error(error);
+                });
+        };
+        if(address){
+            const query = "UPDATE users SET address=? WHERE user_name =? OR email=?";
+            sequelize.query(query,
+                { replacements: [ address, user, user]}
+                ).then((response) => {
+                    res.status(200).json("User has been updated");
+                }).catch((error) =>{
+                    console.error(error);
+                });
+        };
+        if(password){
+            const query = "UPDATE users SET password=? WHERE user_name =? OR email=?";
+            sequelize.query(query,
+                { replacements: [ password, user, user]}
+                ).then((response) => {
+                    res.status(200).json("User has been updated");
+                }).catch((error) =>{
+                    console.error(error);
+                });
+        };        
     });
 
     //Route to delete users
