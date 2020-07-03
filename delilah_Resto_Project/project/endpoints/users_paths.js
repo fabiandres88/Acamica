@@ -3,6 +3,8 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
 const jwt = require('jsonwebtoken');
 const validations = require("../validations/users_validations");
+const sign = "MySecretPassword1988";
+
 
 module.exports = function (app) {
     //Route to get all users only by manager
@@ -32,7 +34,7 @@ module.exports = function (app) {
 
     //Route to users log in
     app.post("/users/login", validations.loginUser, (req, res) => {
-        const sign = "MySecretPassword1988";
+        // const sign = "MySecretPassword1988";
         const { user_name, email } = req.body;
         let information = "";
         if (user_name) {
@@ -91,8 +93,8 @@ module.exports = function (app) {
         };
     });
 
-    //Route to delete users
-    app.delete("/users", validations.verifyToken, validations.validateAdministrator, (req, res) => {
+    //Route to delete users by id
+    app.delete("/users", validations.verifyToken, validations.validateAdministrator, validations.userExist, (req, res) => {
         const query = "DELETE FROM users WHERE id = ?";
         const { id } = req.body;
         sequelize.query(query,

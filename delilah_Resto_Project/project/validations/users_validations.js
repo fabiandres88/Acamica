@@ -22,7 +22,7 @@ const signupUser = (req, res, next) => {
 //Here we can validate if the body request has all the values different of null
 const valueRequired = (req, res, next) => {
     const { user_name, full_name, email, phone, address, password } = req.body;
-    if (!user_name | !full_name | !email | !phone | !address | !password) {
+    if (!user_name || !full_name || !email || !phone || !address || !password) {
         return res.status(400).json({ error: "This values is required" });
     };
     next();
@@ -84,4 +84,21 @@ const validateAdministrator = (req, res, next) => {
     });
 };
 
-module.exports = { signupUser, loginUser, verifyToken, validateAdministrator, valueRequired };
+//Here we can validate if an user exist to be deleted
+const userExist = (req, res, next) => {
+    const { id } = req.body;
+    const query = "SELECT* FROM users WHERE id=?";
+    sequelize.query(query,
+        { replacements: [id] }
+    ).then((response) => {
+        if (response[0].length == 0) {
+            return res.status(409).json("User does not exist");
+        } else {
+            next();
+        };
+    }).catch((error) => {
+        console.error(error);
+    })
+};
+
+module.exports = { signupUser, loginUser, verifyToken, validateAdministrator, valueRequired, userExist };
