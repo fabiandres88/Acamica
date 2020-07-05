@@ -2,12 +2,13 @@
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
 const jwt = require('jsonwebtoken');
-const validations = require("../validations/products_validations");
+const usersValidations= require("../validations/users_validations");
+const productsValidations = require("../validations/products_validations");
 
 module.exports = function (app) {
 
     //This path allows to get the list of products
-    app.get("/products", (req, res) => {
+    app.get("/products", usersValidations.verifyToken, productsValidations.validateAdministrator, (req, res) => {
         const query = "SELECT * FROM products";
         sequelize.query(query,
             { type: sequelize.QueryTypes.SELECT }
