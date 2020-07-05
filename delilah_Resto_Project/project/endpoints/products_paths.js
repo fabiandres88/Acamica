@@ -1,7 +1,6 @@
 //This file contents all paths of the products
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
-const jwt = require('jsonwebtoken');
 const usersValidations= require("../validations/users_validations");
 const productsValidations = require("../validations/products_validations");
 
@@ -20,7 +19,7 @@ module.exports = function (app) {
     });
 
     //This path allows to the manager to add a new product in the menu
-    app.post("/products", (req, res) => {
+    app.post("/products", usersValidations.verifyToken, productsValidations.validateAdministrator, productsValidations.validateExist, (req, res) => {
         const query = "INSERT INTO products (product_name, price, available) VALUES (?,?,?)";
         const { product_name, price, available } = req.body;
         sequelize.query(query,
@@ -32,8 +31,8 @@ module.exports = function (app) {
         })
     });
 
-    //This path allows to the manager to update the price or the availability of the products
-    app.put("/products", (req, res) => {
+    //This path allows to the manager to update the price or the availability of the products by id
+    app.put("/products",usersValidations.verifyToken, productsValidations.validateAdministrator, productsValidations.existToUpdate, (req, res) => {
         const { id } = req.query;
         const { price, available } = req.body;
         if (price) {
@@ -59,7 +58,7 @@ module.exports = function (app) {
     });
 
     //This path allows to the manager to delete a product by "id"
-    app.delete("/products", (req, res) => {
+    app.delete("/products", usersValidations.verifyToken, productsValidations.validateAdministrator, productsValidations.existToUpdate, (req, res) => {
         const { id } = req.query;
         const query = "DELETE FROM products WHERE id=?";
         sequelize.query(query,
