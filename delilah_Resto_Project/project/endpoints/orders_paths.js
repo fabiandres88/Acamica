@@ -1,7 +1,7 @@
 //This file contents all paths of the orders
 const Sequelize = require ("sequelize");
 const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
-const moment = require ("moment");
+const ordersValidations = require ("../validations/orders_validations")
 
 module.exports = function (app){
 
@@ -16,21 +16,12 @@ module.exports = function (app){
             });
     });
 
-    app.post("/orders", (req, res) => {
-        const { id_user, order_status_id, payment_method_id} = req.body;
-        const date = moment().format();
-        const query = "INSERT INTO orders (id_user, order_status_id, payment_method_id, date) VALUES (?,?,?,?)";
-        sequelize.query(query,
-            { replacements: [ id_user, order_status_id, payment_method_id, date]}
-            ).then((response) => {
-                res.json(response);
-            }).catch((error) => {
-                console.error(error);
-            });
+    app.post("/orders", ordersValidations.creatingOrder, ordersValidations.creatingOrderDetail, (req, res) => {
+        res.json("ok");            
     });
 
     app.put("/order", (req, res) => {
-
+        
     });
 
     app.delete("/order", (req, res) => {
