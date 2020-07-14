@@ -8,13 +8,14 @@ const products = require ("./endpoints/products_paths");
 const orders = require ("./endpoints/orders_paths");
 const orderStatus = require ("./endpoints/order_status_paths");
 const paymentMethods = require ("./endpoints/payment_methods_paths");
-
+const orderDetail = require ("./endpoints/order_details_paths");
 
 app.use(bodyParser.json());
 users (app);
 products (app);
 orders (app);
 orderStatus (app);
+orderDetail (app);
 paymentMethods (app);
 
 app.listen(3000, () =>{

@@ -16,8 +16,8 @@ module.exports = function (app){
             });
     });
 
-    app.post("/orders", ordersValidations.creatingOrder, ordersValidations.creatingOrderDetail, (req, res) => {
-        res.json("ok");            
+    app.post("/orders", ordersValidations.creatingOrder, (req, res) => {
+        res.status(200).json("Order created");
     });
 
     app.put("/order", (req, res) => {

@@ -9,7 +9,11 @@ const sign = "MySecretPassword1988";
 module.exports = function (app) {
     //Route to get all users only by manager
     app.get("/users", userValidations.verifyToken, userValidations.validateAdministrator, (req, res) => {
-        const query = "SELECT * FROM users";
+        const { isAdmin, user } = req.query;        
+        let query = "SELECT * FROM users";
+        if(!isAdmin){
+            query+=" WHERE user_name='"+user+"' OR email='"+user+"'";
+        }            
         sequelize.query(query,
             { type: sequelize.QueryTypes.SELECT }
         ).then((response) => {

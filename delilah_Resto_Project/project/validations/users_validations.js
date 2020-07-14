@@ -62,26 +62,23 @@ const verifyToken = (req, res, next) => {
 //Here We can validate if a user has manager permissions
 const validateAdministrator = (req, res, next) => {
     const { user } = req.query;
-    const query = "SELECT * FROM users WHERE user_name=? OR email= ?";
+    const query = "SELECT * FROM users WHERE (user_name=? OR email= ?) AND admin=1";
     sequelize.query(query,
-        { replacements: [user, user] }
-    ).then((response) => {
-        const [checking] = response[0].filter(element => {
-            if (element.admin === 1) {
-                next();
-            } else {
-                let method = (req.method);
-                let met = method.toString();
-                if (met == "DELETE") {
-                    return res.status(409).json({ Error: "Request did not allow, you do not have permission" });
-                } else {
-                    return res.status(200).json(response[0]);
-                }
-            }
-        })
-    }).catch((error) => {
-        console.error(error);
-    });
+        { replacements: [user, user], type: sequelize.QueryTypes.SELECT }
+    ).then((users) => {
+        const isAdmin =users.length>0;
+        if (!isAdmin) {
+            let method = (req.method);
+            let met = method.toString();
+            if (met == "DELETE") {
+                return res.status(409).json({ Error: "Request did not allow, you do not have permission" });
+            } 
+        }
+        req.query.isAdmin=isAdmin;        
+        next();          
+}).catch ((error) => {
+    console.error(error);
+});
 };
 
 //Here we can validate if an user exist to be deleted
