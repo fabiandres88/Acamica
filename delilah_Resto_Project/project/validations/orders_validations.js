@@ -1,21 +1,39 @@
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
-const moment = require ("moment");
+const HttpStatus = require('http-status-codes');
 
-const creatingOrder = (req, res, next) => {
-    const { id_user, order_status_id, payment_method_id} = req.body;
-        const date = moment().format();
-        const query = "INSERT INTO orders (id_user, order_status_id, payment_method_id, date) VALUES (?,?,?,?)";
-        sequelize.query(query,
-            { replacements: [ id_user, order_status_id, payment_method_id, date]}
-            ).then((response) => {
-                req.query.orderId= response[0];
-                next();
-            }).catch((error) => {
-                console.error(error);
-            });
+//This validation allows to show the list of the all products even those who are unavailable only
+//if the user is the managers, and only the available for the normal users
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
+const validateAdministrator = (req, res, next) => {    
+    const user = req.user;    
+    
+    if(!user.admin && ["PUT", "DELETE"].includes(req.method))
+    {                
+        return res.status(HttpStatus.UNAUTHORIZED).json("Insuficient privileges.");
+    }
+
+    next();    
 };
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
+const valuesRequired = (req, res, next) => {
+    const { user_id, payment_method_id, order_status_id } = req.body;
+    
+    if(!user_id || !payment_method_id || !order_status_id) 
+    {
+        return res.status(HttpStatus.BAD_REQUEST).json({ error: "user_id, payment_method_id and order_status_id are required." });
+    }
 
+    next();
+};
 
-module.exports = { creatingOrder };
+module.exports = { validateAdministrator, valuesRequired };

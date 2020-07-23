@@ -1,37 +1,72 @@
 //This file contents all paths of the payment methods
-const Sequelize = require ("sequelize");
-const sequelize = new Sequelize ("mysql://root:@localhost:8111/delilah_resto");
+require('dotenv').config();
 
-module.exports = function (app){
+const HttpStatus = require('http-status-codes');
+const { Sequelize, QueryTypes } = require('sequelize');
 
-    app.get("/payment", (req, res) =>{
+/**
+ * 
+ * @param {*} app 
+ */
+module.exports = function (app) {
+    const connectionString = `mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;    
+
+    app.get("/paymentMethods", (_, res) =>{
+        const sequelizeInstance = new Sequelize(connectionString);
         const query = "SELECT * FROM payment_methods";
-        sequelize.query(query,
-            { type: sequelize.QueryTypes.SELECT }
-            ).then((response) => {
-                res.json(response);
+
+        sequelizeInstance.query(query, { type: QueryTypes.SELECT })
+            .then((paymentMethods) => {
+                res.status(HttpStatus.OK).json(paymentMethods);
             }).catch((error) => {
-                console.log(error);
+                res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
+            }).finally(() => {
+                sequelizeInstance.close();
             });
     });
 
-    app.post("/payment", (req, res) => {
+    app.post("/paymentMethods", (req, res) => {
         const { name } = req.body;
+        const sequelizeInstance = new Sequelize(connectionString);
         const query = "INSERT INTO payment_methods (name) VALUES (?)";
-        sequelize.query(query,
-            { replacements: [ name ]}
-            ).then((response) => {
-                res.json(response);
+
+        sequelizeInstance.query(query, { replacements: [ name ]})
+            .then((response) => {
+                res.status(HttpStatus.CREATED).json(response);
             }).catch((error) =>{
-                console.error(error);
+                res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
+            }).finally(() => {
+                sequelizeInstance.close();
             });
     });
 
-    app.put("/payment", (req, res) => {
+    app.put("/paymentMethods", (req, res) => {        
+        const { id, name } = req.body;
+        const sequelizeInstance = new Sequelize(connectionString);
+        const query = "UPDATE payment_methods SET name = ? WHERE id = ? ";
 
+        sequelizeInstance.query(query, { replacements: [ name, id ]})
+            .then((response) => {
+                res.status(HttpStatus.OK).json(response);
+            }).catch((error) => {
+                res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
+            }).finally(() => {
+                sequelizeInstance.close();
+            });
     });
 
-    app.delete("/payment", (req, res) => {
+    app.delete("/paymentMethods/:id", (req, res) => {
+        const paymentMethodId = req.params.id;
+        const sequelizeInstance = new Sequelize(connectionString);
+        const query = "DELETE FROM payment_methods WHERE id = ?";
 
+        sequelizeInstance.query(query, { replacements : [ paymentMethodId ]})
+            .then((_) => {
+                res.status(HttpStatus.NO_CONTENT);
+            }).catch((error) => {
+                res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
+            }).finally(() => {
+                sequelizeInstance.close();
+            });
     });
 };

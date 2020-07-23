@@ -1,75 +1,115 @@
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize("mysql://root:@localhost:8111/delilah_resto");
-const jwt = require('jsonwebtoken');
+require('dotenv').config();
+
+const HttpStatus = require('http-status-codes');
+const { Sequelize, QueryTypes } = require('sequelize');
+const connectionString = `mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
 
 //This validation allows to show the list of the all products even those who are unavailable only
 //if the user is  the managers, and only the available for the normal users
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
 const validateAdministrator = (req, res, next) => {
-    const { user } = req.query;
-    const query = "SELECT * FROM users WHERE user_name=? OR email=? AND admin=1";
-    sequelize.query(query,
-        { replacements: [user, user] }
-    ).then((response) => {
-        console.log(response);
-        if (response[0].length === 1) {
-            next();
-        } else {
-            let method = req.method;
-            let met = method.toString();
-            if (met === "POST" || met === "PUT" || met === "DELETE") {
-                return res.status(409).json("Do not authorized");
-            } else {
-                const query = "SELECT * FROM products WHERE available=?";
-                sequelize.query(query,
-                    { replacements: ["YES"] }
-                ).then((response) => {
-                    return res.status(200).json(response[0]);
-                }).catch((error) => {
-                    console.log(error);
-                });
-            };
-        };
-    }).catch((error) => {
-        console.error(error);
-    });
+    const user = req.user;
+
+    if(!user.admin)
+    {        
+        if (["POST", "PUT", "DELETE"].includes(req.method)) 
+        {            
+            return res.status(HttpStatus.UNAUTHORIZED).json("Insufficient privileges.");
+        }
+    }
+
+    next();
 };
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
+const valueRequired = (req, res, next) => {
+    const { name, price, active } = req.body;
+    if (!name || !price || !active) {
+        return res.status(HttpStatus.BAD_REQUEST).json({ error: "name, price and active are required." });
+    };
+    next();
+};
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
+const valuesRequiredToUpdate = (req, res, next) => {
+    const { price, active } = req.body;
+    if (!price || !active) {
+        return res.status(HttpStatus.BAD_REQUEST).json({ error: "price and active are required." });
+    };
+    next();
+}
 
 //This validation allows to know if a product exist
 //before the manager creates a new product, if it already exists the execution stops
+/**
+ * 
+ */
 const validateExist = (req, res, next) => {
-    const { product_name } = req.body;    
-    if (product_name) {
-        const query = "SELECT * FROM products WHERE product_name = ?";
-        sequelize.query(query,
-            { replacements: [product_name] }
-        ).then((response) => {
-            if (response[0].length === 1) {
-                return res.status(409).json("Product already exist");
-            } else {
+    const { name } = req.body;
+
+    if (name) 
+    {
+        const sequelizeInstance = new Sequelize(connectionString);
+        const query = "SELECT id, name, price, active FROM products WHERE name = ?";
+
+        sequelizeInstance.query(query, { type: QueryTypes.SELECT, replacements: [name] })
+            .then((products) => {
+                if (products.length === 1) 
+                {
+                    return res.status(HttpStatus.CONFLICT).json("Product already exist");
+                }
                 next();
-            }
-        }).catch((error) => {
-            console.log(erro);
-        });
+
+            }).catch((error) => {
+                return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
+            }).finally(() => {
+                sequelizeInstance.close();
+            });
     };
 };
 
 //This validation allows to know if a product exist before to be deleted
 //or updated by the manager, if it already exist the execution continues
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
 const existToUpdate = (req, res , next) => {
-    const { id } = req.query;
-    const query = "SELECT * FROM products WHERE id=?";
-    sequelize.query(query,
-        { replacements: [ id ]}
-        ).then((response) => {
-            if(response[0].length === 1){
-                next();
-        }else{
-            return res.status(400).json("Product does not exist");
-        }
+    const product_id = req.params.id || req.body.id;
+    const sequelizeInstance = new Sequelize(connectionString);
+    const query = "SELECT id, name, price, active FROM products WHERE id = ?";
+    
+    sequelizeInstance.query(query, { type: QueryTypes.SELECT, replacements: [ product_id ]})
+        .then((products) => {
+            console.log(products);
+            if(products.length <= 0)
+            {
+                return res.status(HttpStatus.BAD_REQUEST).json("Product does not exist");
+            }
+            next();
+            
         }).catch((error) => {
-            console.log(error);
+            return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
+        }).finally(() => {
+            sequelizeInstance.close();
         });
 };
 
-module.exports = { validateAdministrator, validateExist, existToUpdate };
+module.exports = { validateAdministrator, valueRequired, valuesRequiredToUpdate, validateExist, existToUpdate };
