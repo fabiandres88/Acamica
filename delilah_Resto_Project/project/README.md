@@ -19,7 +19,7 @@ https://code.visualstudio.com/download
 
 ### Installing
 
-**1.**Install Postman with default install settings.
+**1. Install Postman with default install settings.**
 
 Importing the Delilah Resto Collection by link. Go to Import option, then link option and put into the Enter a URL place holder the link below:
 
@@ -28,13 +28,16 @@ https://www.getpostman.com/collections/f93877dcc22ff4141225
 ```
 In this way you will have all the endpoints of the Delilah Resto API to test them.
 
-**2.**Install XAMPP with default install settings.
+**2. Install XAMPP with default install settings.**
 
 On the desktop you find an XAMPP Control Panel icon to execute it. When it opens in the panel you find the Apache and MySQL modules, in the section actions you have to click on start buttons, now both modules are working.
 
 XAMPP works its MySQL module at 3306 port, if you have conflict with it because this port is busy you have to change the port configuration. Goto **xampp\phpMyAdmin directory** and find the **config.inc.php file**, now change this line *$cfg['Servers'][$i]['host'] = '127.0.0.1';* to *$cfg['Servers'][$i]['host'] = '127.0.0.1:{new port number to use}';*.
 
-**3.**Open the phpMyAdmin who is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. Open it in your browser using URL below. (Or open your app preferred).
+**3. Open the phpMyAdmin in your browser.**
+
+The phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. Open it in your browser using URL below. (Or open your app preferred).
+The phpMyAdmin supports a wide range of operations on MySQL. Frequently used operations (managing databases, tables, columns, relations, indexes, users, permissions, etc) can be performed via the user interface, while you still have the ability to directly execute any SQL statement.
 
 ```
 http://localhost/phpmyadmin/index.php 
