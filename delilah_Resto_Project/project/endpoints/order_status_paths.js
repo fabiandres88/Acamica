@@ -1,6 +1,7 @@
 //This file contents all paths of the order status
 require('dotenv').config();
 
+const validations = require(".././validations/users_validations");
 const HttpStatus = require('http-status-codes');
 const { Sequelize, QueryTypes } = require('sequelize');
 
@@ -11,7 +12,7 @@ const { Sequelize, QueryTypes } = require('sequelize');
 module.exports = function (app) {
     const connectionString = `mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;    
 
-    app.get("/orderStatuses", (_, res) => {
+    app.get("/orderStatuses", validations.verifyToken, (_, res) => {
         const sequelizeInstance = new Sequelize(connectionString);
         const query = "SELECT * FROM order_status";
         
@@ -25,7 +26,7 @@ module.exports = function (app) {
             });
     });
 
-    app.post("/orderStatuses", (req, res) => {
+    app.post("/orderStatuses", validations.verifyToken, (req, res) => {
         const { name } = req.body;
         const sequelizeInstance = new Sequelize(connectionString);
         const query = "INSERT INTO order_status (name) VALUES (?)";
@@ -40,14 +41,14 @@ module.exports = function (app) {
             });
     });
 
-    app.put("/orderStatuses", (req, res) => {        
+    app.put("/orderStatuses", validations.verifyToken, (req, res) => {        
         const { id, name } = req.body;
         const sequelizeInstance = new Sequelize(connectionString);
         const query = "UPDATE order_status SET name = ? WHERE id = ? ";
 
         sequelizeInstance.query(query, { replacements: [ name, id ]})
             .then((response) => {
-                res.status(HttpStatus.OK).json(response);
+                res.status(HttpStatus.OK).json("Order status updated.");
             }).catch((error) => {
                 res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
             }).finally(() => {
@@ -55,7 +56,7 @@ module.exports = function (app) {
             })
     });
 
-    app.delete("/orderStatuses/:id", (req, res) => {
+    app.delete("/orderStatuses/:id", validations.verifyToken, (req, res) => {
         const orderStatusId = req.params.id;
         const sequelizeInstance = new Sequelize(connectionString);
         const query = "DELETE FROM order_status WHERE id = ?";

@@ -1,0 +1,1700 @@
+swagger: "2.0"
+info:
+  description: "This is the Delilah Restó Restaurant API. Where you can make your order online, and receive it in your home, easy and quick."
+  version: "1.0.0"
+  title: "Delilah Restó"
+  termsOfService: "http://delilah/terms/"
+  contact:
+    email: "delilahresto@gmail.com.co"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.delilahresto.com.co"
+host: "delilah.swagger.io"
+basePath: "/v2"
+tags:
+- name: "products"
+  description: "All about products CRUD (List of products, create, delete and update a product)."
+- name: "orders"
+  description: "All about orders CRUD (create, get, update, delete an order and create the order details)."
+- name: "users"
+  description: "All about users CRUD (create, get, update, and delete users)."
+- name: "orderDetails"
+  description: "Operations about order details CRUD (get, update, and delete order details)."
+- name: "paymentMethods"
+  description: "All about payment methods CRUD (create, get, update, and delete a payment method)."
+- name: "orderStatuses"
+  description: "All about order statuses CRUD (create, get, update, and delete an order status)."
+schemes:
+- "https"
+- "http"
+paths:
+  /products/id:
+    get:
+      tags:
+      - "products"
+      summary: "Get a only product by id"
+      description: ""
+      operationId: "getPlate"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "id"
+        type: "integer"
+        description: "Get product that want to get by id (param)."
+        required: true
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true  
+      responses:
+        "200":
+          description: "Request successful"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/product"
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+        "404":
+          description: "Not Found"
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"  
+    delete:
+      tags:
+      - "products"
+      summary: "Delete a product by id"
+      description: "Manager delete a product specific by id (param), only can delete products never added in an order previously."
+      operationId: "deleteById"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "id"
+        type: "integer"
+        description: "Delete product that want by id (param)."
+        required: true
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Product was deleted"
+          schema:
+            type: "string"
+            enum:
+            - "Product was deleted"
+        "400":
+          description: "Product does not exist."
+          schema:
+            type: "string"
+            enum:
+            - "Product does not exist."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"     
+  /products:
+    get:
+      tags:
+      - "products"
+      summary: "Get a list of all the products availables"
+      description: ""
+      operationId: "getProduct"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "List of the all products availables"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/product"
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"      
+    post:
+      tags:
+      - "products"
+      summary: "Add a new product to the list of products"
+      description: ""
+      operationId: "addPlate"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "product"
+        description: "Product JSON object that needs to be added to the menu"
+        required: true
+        schema:
+          $ref: "#/definitions/productPost"
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true    
+      responses:
+        "201":
+          description: "Product created"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/productResponse"
+        "400":
+          description: "Name, price and active are required."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Name, price and active are required."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."        
+        "409":
+          description: "Product already exist"
+          schema: 
+            type: "string"
+            enum:
+            - "Product already exist"
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"    
+    put:
+      tags:
+      - "products"
+      summary: "Update an existing product"
+      description: ""
+      operationId: "updatePlate"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "product"
+        description: "Product JSON object that needs to be updated to the menu"
+        required: true
+        schema:
+          $ref: "#/definitions/product"
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Product has been updated."
+          schema:
+           type: "string"
+           enum:
+           - "Product has been updated."
+        "400":
+          description: "Product does not exist."
+          schema:
+           type: "string"
+           enum:
+           - "Product does not exist."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"     
+  /order/id:
+    get:
+      tags:
+      - "orders"
+      summary: "Get a record of an order by id"
+      description: "Returns a record of an specific order by id (param). URL Example: http://localhost:3000/orders/3?includeUser=true&includeOrderStatus=true&includePaymentMethod=true// "
+      operationId: "getInventory"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "id"
+        type: "integer"
+        description: "Id of order to get."
+        required: true
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+           type: "array"
+           items:
+             $ref: "#/definitions/order"
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."   
+        "404":
+          description: "Not found"
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"  
+  /orders:
+    get:
+      tags:
+      - "orders"
+      summary: "Get all orders of the users"
+      description: "Return a record of all orders of the user URL example: http://localhost:3000/orders?includeUser=true&includeOrderStatus=true&includePaymentMethod=true. Manager can get orders of all users."
+      operationId: "getRecord"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+           type: "array"
+           items:
+             $ref: "#/definitions/order"
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"     
+    post:
+      tags:
+      - "orders"
+      summary: "Creates new order"
+      description: "Creates a new order with (user id, order status id and payment method id)."
+      operationId: "postOrder"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "order"
+        description: "JSON object that needs to create a new order"
+        required: true
+        schema:
+          $ref: "#/definitions/orderToPost"
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Created"
+          schema:
+           type: "object"
+           properties:
+             order_id: 
+               type: "integer"
+               enum:
+               - 100
+        "400":
+          description: "User_id, payment_method_id and order_status_id are required."
+          schema:
+           type: "object"
+           properties:
+             error:
+              type: "string"
+              enum:
+              - "User_id, payment_method_id and order_status_id are required."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+           type: "object"
+           properties:
+             error:
+              type: "string"
+              enum:
+              - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"      
+    put:
+      tags:
+      - "orders"
+      summary: "Manager update an order"
+      description: "Update an specific order"
+      operationId: "putOrder"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "order"
+        description: "JSON object that needs to create a new order"
+        required: true
+        schema:
+          type: "object"
+          properties:
+            id:
+              type: "integer"
+              enum:
+              - 89
+            order_status_id:
+              type: "integer"
+              enum:
+              - 2
+            payment_method_id:
+              type: "integer"
+              enum:
+              - 1
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Order has been updated"
+          schema:
+            type: "string"
+            enum:
+            - "Order has been updated"
+        "400":
+          description: "Id field is required"
+          schema:
+            type: "string"
+            enum:
+            - "Id field is required"
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "string"
+              enum:
+              - "Session expired or User do not have permissions to access."
+        "404":
+          description: "Order was not found"
+          schema:
+            type: "string"
+            enum:
+            - "Order was not found"
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"    
+    delete:
+      tags:
+      - "orders"
+      summary: "Delete an order by id (param)"
+      description: "Cancel a specific order"
+      operationId: "deleteOrder"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "id"
+        type: "integer"
+        description: "Id of order to delete."
+        required: true
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "204":
+          description: "No content (deleted successful)."
+          schema:
+            type: "integer"
+            enum:
+            - 1
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "string"
+              enum:
+              - "Session expired or User do not have permissions to access."
+        "404":
+          description: "Order was not found."
+          schema:
+            type: "string"
+            enum:
+            - "Order was not found."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"    
+  /orders/id/oderDetails:
+    get:
+      tags:
+      - "orders"
+      summary: "Get the details of an specific order"
+      description: ""
+      operationId: "getMenu"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "id"
+        type: "integer"
+        description: "Id of the order."
+        required: true
+      - in: "header"
+        name: "token"
+        type: "string"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Results found"
+          schema:
+           type: "array"
+           items:
+            type: "object"
+            properties:
+             id:
+              type: "integer"
+              enum:
+              - 100
+             order_id: 
+              type: "integer"
+              enum:
+              - 250
+             product_id: 
+              type: "integer"
+              enum:
+              - 7
+             product_name: 
+              type: "string"
+              enum:
+              - "Hamburguesa AC/DC"
+             quantity:
+              type: "integer"
+              enum:
+              - 4
+             price:
+              type: "integer"
+              enum:
+              - 19400
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "string"
+              enum:
+              - "Session expired or User do not have permissions to access." 
+        "404":
+          description: "Not found (Order was not found)."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"  
+  /users:
+    get:
+      tags:
+      - "users"
+      summary: "Get an specific user if not manager or get all user if is manager"
+      description: "This can only be done by the logged in user."
+      operationId: "createUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate"
+        required: true
+      responses:
+       "200":
+        description: "successful operation"
+        schema:
+          type: "array"
+          items:
+            $ref: "#/definitions/User"
+       "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+       "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"    
+    post:
+      tags:
+      - "users"
+      summary: "Create a new user (user sign up)"
+      description: ""
+      operationId: "createUsersWithArrayInput"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "JSON Object with all user information."
+        required: true
+        schema:
+          type: "array"
+          items:
+            $ref: "#/definitions/UserToPost"
+      responses:
+       "200":
+        description: "Successful operation"
+        schema:
+          type: "array"
+          items:
+            $ref: "#/definitions/signUp"
+       "400":
+        description: "User_name, full_name, email, phone, address and password are required."
+        schema:
+          type: "object"
+          properties:
+            error:
+              type: "string"
+              enum:
+              - "User_name, full_name, email, phone, address and password are required."
+       "409":
+        description: "Username or email don't availables, User already exists."
+        schema:
+          type: "array"
+          items:
+            $ref: "#/definitions/alreadyExist"
+       "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"    
+    put:
+      tags:
+      - "users"
+      summary: "Update an user (phone, address, email)"
+      description: ""
+      operationId: "updateUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "JSON object with properties to update, one or all properties that want to update."
+        required: true
+        schema:
+          type: "array"
+          items:
+            $ref: "#/definitions/UserToUpdate"
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate"
+        required: true    
+      responses:
+       "200":
+        description: "User has been updated"
+        schema:
+          type: "string"
+          enum:
+          - "User has been updated"
+       "401":
+        description: "Insufficient privileges to update users. Please remove id property."
+        schema:
+          type: "string"
+          enum:
+          - "Insufficient privileges to update users. Please remove id property."
+       "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+       "404":
+          description: "User does not exist"
+          schema:
+           type: "string"
+           enum:
+           - "User does not exist"
+       "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"     
+  /users/id:        
+    delete:
+      tags:
+      - "users"
+      summary: "Delete an user by id"
+      description: "Delete an specific user only by manager"
+      operationId: "deleteUserr"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        type: "integer"
+        name: "id"
+        description: "Id of the user to be deleted"
+        required: true
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate"
+        required: true
+      responses:
+        "200":
+          description: "User was deleted successfully"
+          schema:
+           type: "string"
+           enum:
+           - "User was deleted successfully"
+        "401":
+          description: "Request not allowed, you do not have permission."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "string"
+              enum:
+              - "Request not allowed, you do not have permission"
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."  
+        "404":
+          description: "User does not exist"
+          schema:
+           type: "string"
+           enum:
+           - "User does not exist."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"   
+  /users/login:
+    post:
+      tags:
+      - "users"
+      summary: "Registered user login"
+      description: ""
+      operationId: "createUsersWithListInput"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "JSON Object with password and username or email"
+        required: true
+        schema:
+          type: "array"
+          items:
+            $ref: "#/definitions/login"
+      responses:
+        "200":
+          description: "token"
+          schema:
+            type: "object"
+            properties:
+              token:
+               type: "string"
+               enum:
+               - "JpZCI6MiwidXNlcl9uYW1lIjoiZmFiaWFubzE5ODgiLCJmdWxsX25hbWUiOiJGYWJpYW4gUmFtaXJleiIsImVtYWlsIjoidXNibGlua3NAZ21haWwuY29tIiwicGhvbmUiOiIzMTA3NTY0MTA1IiwiYWRkcmVzcyI6IkNhbGxlIDEyIDc1LTM3IiwicGFzc3dvcmQiOiIkMmEkMTAkOS5rdGxtdXk4T1FPRDQ3ZTdKMFpST3NoTG82T0EuMk5YSUNhOUtFTUU2eUhReVpCS0lZLi4iLCJhZG1pbiI6MSwiaWF0IjoxNTk1NjkzMjUyLCJleHAiOjE1OTU3MTEyNTJ9"
+        "401":
+          description: "User does not exist."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "User does not exist."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"      
+  /users/changePassword:
+    put:
+      tags:
+      - "users"
+      summary: "Change user password"
+      description: ""
+      operationId: "loginUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "password"
+        description: "The new password to update."
+        required: true
+        schema:
+          type: "object"
+          properties:
+            password:
+             type: "string"
+             enum:
+             - "zSmJ120308"
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true      
+      responses:
+        "200":
+          description: "Password has been updated."
+          schema:
+            type: "string"
+            enum:
+            - "Password has been updated."
+        "400":
+          description: "Password length must be greater than 3."
+          schema:
+            type: "string"
+            enum:
+            - "Password length must be greater than 3."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+             error:
+               type: "string"
+               enum:
+               - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"      
+  /orderDetails:
+    post:
+      tags:
+      - "orderDetails"
+      summary: "Create the order detail"
+      description: ""
+      operationId: "logoutUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "order"
+        description: "JSON object that needs to create a new order detail"
+        required: true
+        schema:
+          type: "object"
+          properties:
+            order_id:
+              type: "integer"
+              enum:
+              - 12
+            products:
+              type: "object"
+              properties:
+                product_id:
+                  type: "integer"
+                  enum:
+                  - 5
+                quantity:
+                  type: "integer"
+                  enum:
+                  - 3
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true            
+      responses:
+        "201":
+          description: "Order Detail created."
+          schema:
+            type: "array"
+            items:
+             type: "object"
+             properties:
+               order_detail_id:
+                 type: "integer"
+                 enum:
+                 - 58
+        "400":
+          description: "Products cannot be empty. Please provide a detail for it." 
+          schema:
+            type: "string"
+            enum:
+            - "Products cannot be empty. Please provide a detail for it."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "404":
+          description: "Product undefined does not exist."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Product undefined does not exist."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"        
+    put:
+      tags:
+      - "orderDetails"
+      summary: "Update quantity of an order by id."
+      description: ""
+      operationId: "updateOrderDetail"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "id and quantity."
+        description: "JSON object that needs to create a new order detail."
+        required: true
+        schema:
+          type: "object"
+          properties:
+            id:
+              type: "integer"
+              enum:
+              - 2
+            quentity:
+              type: "integer"
+              enum:
+              - 5
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Order detail has been updated."
+          schema:
+            type: "string"
+            enum:
+            - "Order detail has been updated."
+        "400":
+          description: "Order_detail_id and quantity are required."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "string"
+              enum:
+              - "Order_detail_id and quantity are required."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "404":
+          description: "Order detail was not found."
+          schema:
+           type: "string"
+           enum:
+           - "Order detail was not found."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"   
+    delete:
+      tags:
+      - "orderDetails"
+      summary: "Delete an user by id (param)."
+      description: "This option can only be done by the manager user."
+      operationId: "deleteUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        type: "integer"
+        name: "id"
+        description: "Id of the user to be deleted"
+        required: true     
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "204":
+          description: "User delete was successful"
+          schema:
+            type: "integer"
+            enum:
+            - 1
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "404":
+          description: "Order detail was not found."
+          schema:
+            type: "string"
+            enum:
+            - "Order detail was not found."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"    
+  /paymentMethods:
+    get:
+      tags:
+      - "paymentMethods"
+      summary: "Get list of payment methods."
+      description: ""
+      operationId: "getPaymentMethods"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+           type: "array"
+           items:
+            type: "object"
+            properties:
+              id: 
+               type: "integer"
+               enum:
+               - 2
+              name:
+               type: "string"
+               enum:
+               - "Cash"
+              active:
+               type: "integer"
+               enum:
+               - 1
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"        
+    post:
+      tags:
+      - "paymentMethods"
+      summary: "Post a new payment method."
+      description: ""
+      operationId: "postPaymentMethod"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "payment method"
+        description: "Payment method JSON object to create."
+        required: true
+        schema:
+         type: "object"
+         properties:
+           name:
+             type: "string"
+             enum:
+             - "Credit Card"
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true       
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+           type: "array"
+           items:
+             type: "integer"
+             enum:
+             - 1
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"        
+    put:
+      tags:
+      - "paymentMethods"
+      summary: "Update a payment method."
+      description: ""
+      operationId: "updatePaymentMethod"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "id and payment method name"
+        required: true
+        description: "Status JSON object to created a new status."
+        schema:
+         type: "object"
+         properties:
+           id:
+            type: "integer"
+            enum:
+            - 3
+           name:
+            type: "string"
+            enum:
+            - "Bit Coin"
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Payment method updated successfully."
+          schema:
+            type: "string"
+            enum:
+            - "Payment method updated successfully."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"        
+    delete:
+      tags:
+      - "paymentMethods"
+      summary: "Delete a payment method"
+      description: ""
+      operationId: "deletePaymentMethod"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        type: "integer"
+        name: "id"
+        description: "Id payment method to be deleted."
+        required: true
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "204":
+          description: "Payment method delete was successful"
+          schema:
+            type: "integer"
+            enum:
+            - 1
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"
+  /orderStatuses:
+    get:
+      tags:
+      - "orderStatuses"
+      summary: "Get list of order statuses."
+      description: ""
+      operationId: "getOrderStatuses"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+               id:
+                type: "integer"
+                enum:
+                - 1
+               name:
+                type: "string"
+                enum:
+                - "New"
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"        
+    post:
+      tags:
+      - "orderStatuses"
+      summary: "Create a new order status"
+      description: ""
+      operationId: "postOrderStatuses"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "status name"
+        required: true
+        description: "Status JSON object to created a new status."
+        schema:
+         type: "object"
+         properties:
+           name:
+            type: "string"
+            enum:
+            - "Confirmed"
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "201":
+          description: "Status created."
+          schema:
+            type: "array"
+            items:
+             type: "integer"
+             enum:
+             - 1
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"     
+    put:
+      tags:
+      - "orderStatuses"
+      summary: "Update an order status"
+      description: ""
+      operationId: "updateOrderStatuses"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "id and status name"
+        required: true
+        description: "Status JSON object to created a new status."
+        schema:
+         type: "object"
+         properties:
+           id:
+            type: "integer"
+            enum:
+            - 3
+           name:
+            type: "string"
+            enum:
+            - "Preparing"
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "200":
+          description: "Order status updated."
+          schema:
+            type: "string"
+            enum:
+            - "Order status updated."
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"  
+    delete:
+      tags:
+      - "orderStatuses"
+      summary: "Delete an order status by id (param)"
+      description: ""
+      operationId: "deleteOrderStatuses"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        type: "integer"
+        name: "id"
+        description: "Id order status to be deleted."
+        required: true
+      - in: "header"
+        type: "string"
+        name: "token"
+        description: "Token to authenticate."
+        required: true
+      responses:
+        "204":
+          description: "Order status delete was successful"
+          schema:
+            type: "integer"
+            enum:
+            - 1
+        "403":
+          description: "Session expired or User do not have permissions to access."
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                enum:
+                - "Session expired or User do not have permissions to access."
+        "500":
+          description: "Internal server error."
+          schema:
+            type: "object"
+            properties:
+             error:
+              type: "object"
+definitions:
+  User:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        enum:
+        - 1
+      user_name:
+        type: "string"
+        enum:
+        - "PirulaJaimes"
+      full_name:
+        type: "string"
+        enum:
+        - "Carolina Jaimes"
+      email:
+        type: "string"
+        enum:
+        - "carolina@hotmail.es"
+      phone:
+        type: "string"
+        enum:
+        - "3214578903"
+      address:
+        type: "string"
+        enum:
+        - "Calle 45 # 67 - 56 Ap 506"
+      password:
+        type: "string"
+        enum:
+        - "carJaNa1991V"
+      admin:
+        type: "boolean"
+        default: false
+  UserToPost:
+    type: "object"
+    properties:
+      user_name:
+        type: "string"
+        enum:
+        - "Fabito1957"
+      full_name:
+        type: "string"
+        enum:
+        - "Fabio Ramirez"
+      email:
+        type: "string"
+        enum:
+        - "fabito@yahoo.es"
+      phone:
+        type: "string"
+        enum:
+        - "6492674"
+      address:
+        type: "string"
+        enum:
+        - "Carrera 33 # 27 - 29"
+      password:
+        type: "string"
+        enum:
+        - RmFo1963rV
+  UserToUpdate:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        enum:
+        - 25
+      phone:
+        type: "string"
+        enum:
+        - "1673498"
+      address:
+        type: "string"
+        enum:
+        - "Avenida Los Angeles # 34 - 80"
+      email:
+        type: "string"
+        enum:
+        - "zaray@outlook.com"
+  alreadyExist:
+    type: "object"
+    properties:
+      error:
+       type: "string"
+       enum:
+       - "Username or email don't availables, User already exists."
+  signUp:
+    type: "object"
+    properties:
+      user_id:
+        type: "integer"
+        enum:
+        - 60
+  login:
+    type: "object"
+    properties:
+      user_name:
+        type: "string"
+        enum:
+        - "German Ramirez"
+      password:
+        type: "string"
+        enum:
+        - "GaRv1991mng"
+  product:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        enum:
+        - 1
+      name:
+        type: "string"
+        enum:
+        - "Hamburguesa U2"
+      price:
+        type: "integer"
+        enum:
+        - 15900
+      active:
+        type: "boolean"
+  productPost:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        enum:
+        - "Hamburguesa AeroSmith"
+      price:
+        type: "integer"
+        enum:
+        - 14400
+      active:
+        type: "boolean"
+  productResponse:
+    type: "object"
+    properties:
+      product_id:
+        type: "integer"
+        enum:
+        - 10
+  order:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        enum:
+        - 5
+      user_id:
+        type: "integer"
+        enum:
+        - 4
+      order_status_id:
+        type: "integer"
+        enum:
+        - 3
+      payment_method__id:
+        type: "integer"
+        enum:
+        - 2
+      user:
+        type: "object"
+        properties:
+          full_name:
+            type: "string"
+            enum:
+            - "Fabian Ramirez"
+          address:
+            type: "string"
+            enum:
+            - "Av 100 #22 - 37 Ap 204"
+          phone:
+            type: "string"
+            enum:
+            - "3001988128"
+          email:
+            type: "string"
+            enum:
+            - "example@gmail.com"
+      oderStatus: 
+       type: "object"
+       properties:
+         id:
+           type: "integer"
+           enum:
+           - 3
+         name:
+           type: "string"
+           enum:
+           - "Preparing"
+      paymentMethods:
+       type: "object"
+       properties:
+         id:
+           type: "integer"
+           enum:
+           - 2
+         name:
+           type: "string"
+           enum:
+           - Cash
+  orderToPost:
+    type: "object"
+    properties:
+      user_id:
+        type: "integer"
+        enum:
+        - 56
+      order_status_id:
+        type: "integer"
+        enum:
+        - 4
+      payment_method_id:
+        type: "integer"
+        enum:
+        - 1
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
