@@ -6,4 +6,4 @@ It contains all developed projects as part of Acamica Scholarship.
 
 # delilah_Resto Project
 # gif0S_Project
-# Podcast Project
+# Podcast_Project
