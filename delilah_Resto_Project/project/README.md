@@ -43,6 +43,11 @@ The phpMyAdmin supports a wide range of operations on MySQL. Frequently used ope
 http://localhost/phpmyadmin/index.php 
 ```
 
+**4.Creating the database**
+
+In the left margin of phpMyAdmin below the Recent and Favorites buttons, click on New option, then into the Database name insert the name **delilah_resto** and click on Create button.
+Now you have the new database created and ready to start working.
+
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
