@@ -32,7 +32,7 @@ paths:
     get:
       tags:
       - "products"
-      summary: "Get a only product by id"
+      summary: "Get a product by id"
       description: ""
       operationId: "getPlate"
       consumes:
@@ -528,7 +528,7 @@ paths:
             properties:
              error:
               type: "object"    
-  /orders/id/oderDetails:
+  /orders/id/orderDetails:
     get:
       tags:
       - "orders"
