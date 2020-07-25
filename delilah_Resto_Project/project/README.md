@@ -9,21 +9,24 @@ These instructions will get you instructions about how the project up and runnin
 
 ### Prerequisites
 
-You must first install Postman or any other collaboration platform for API development. After that, you need to install XAMPP to manage the database or your preferred service. Also you need a node js editor where you can use npm.
+You must first install Postman or any other collaboration platform for API development. After that, you need to install XAMPP to manage the database or your preferred service. Also you need a node js editor where you can use npm as VSCode or others.
 
 ```
-Give examples
+https://www.postman.com/downloads/
+https://www.apachefriends.org/download.html
+https://code.visualstudio.com/download
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Install Postman with default install settings.
 
-Say what the step will be
+Importing the Delilah Resto Collection by link.Go to Import option, then link option and put into the Enter a URL place holder the link below:
 
 ```
-Give the example
+https://www.getpostman.com/collections/f93877dcc22ff4141225
 ```
+In this way you will have all the endpoints of the Delilah Resto API to test them.
 
 And repeat
 
