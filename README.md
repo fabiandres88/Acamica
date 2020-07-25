@@ -5,3 +5,5 @@ It contains all developed projects as part of Acamica Scholarship.
 
 
 # Delilah Project
+# Gif0s Project
+# Podcast Project
