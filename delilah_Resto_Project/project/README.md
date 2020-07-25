@@ -1,6 +1,6 @@
-# Project Title
+# delilah_Resto_Project
 
-One Paragraph of project description goes here
+Delilah Resto project is an API for a restaurant, where people can create an user and make their orders, follow them, and receive them in your address.
 
 ## Getting Started
 
