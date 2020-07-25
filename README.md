@@ -4,6 +4,6 @@ It contains all developed projects as part of Acamica Scholarship.
 (Web Full Stack Development) 
 
 
-# Delilah Project
-# Gif0s Project
+# delilah_Resto Project
+# gif0S_Project
 # Podcast Project
