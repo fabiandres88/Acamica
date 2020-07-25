@@ -9,7 +9,7 @@ These instructions will get you instructions about how the project up and runnin
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You must first install Postman or any other collaboration platform for API development. After that, you need to install XAMPP to manage the database or your preferred service. Also you need a node js editor where you can use npm.
 
 ```
 Give examples
