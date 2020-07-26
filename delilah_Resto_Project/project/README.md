@@ -12,12 +12,12 @@ These instructions will get you instructions about how the project up and runnin
 You must first donwload Postman or any other collaboration platform for API development. After that, you need to download XAMPP to manage the database or your preferred service. Also you need a node js editor where you can use npm as VSCode or others.
 
 ```
-https://www.postman.com/downloads/
-https://www.apachefriends.org/download.html
-https://code.visualstudio.com/download
+(https://www.postman.com/downloads/)
+(https://www.apachefriends.org/download.html)
+(https://code.visualstudio.com/download)
 ```
 
-### Installing
+#### Installing
 
 **1. Install Postman with default install settings.**
 
@@ -36,8 +36,7 @@ XAMPP works its MySQL module at 3306 port, if you have conflict with it because 
 
 **3. Open the phpMyAdmin in your browser.**
 
-The phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. Open it in your browser using URL below. (Or open your app preferred).
-The phpMyAdmin supports a wide range of operations on MySQL. Frequently used operations (managing databases, tables, columns, relations, indexes, users, permissions, etc) can be performed via the user interface, while you still have the ability to directly execute any SQL statement.
+Open phpMyAdmin to handle the administration of MySQL over the Browser. Open it in your browser using URL below,to directly execute any SQL statement.
 
 ```
 http://localhost/phpmyadmin/index.php 
@@ -45,22 +44,51 @@ http://localhost/phpmyadmin/index.php
 
 **4.Creating the database**
 
-In the left margin of phpMyAdmin below the Recent and Favorites buttons, click on New option, then into the Database name insert the name **delilah_resto** and click on Create button.
+In the left margin of phpMyAdmin below the Recent and Favorites buttons, click on New option, then into the Database name insert the name **delilah_resto** and click on **Create button**.
 Now you have the new database created and ready to start working.
 
+**5.Creating the tables in the database**
+
+Open the sql folder that is inside the project folder and open one by one each sql file, then find the **CREATE TABLE** statement.
+Again in the phpMyAdmin in the margin left select the **delilah_resto** database that is empty and it only shows the option **Create Table**.
+So in the top menu select the **SQL** optiion, after this in the **Run SQL query/queries on database delilah_resto** section,you will find a text field.
+
+You must copy the **CREATE TABLE** statements from the each sql files in this order:
+**-** users.
+**-** products.
+**-** order_status.
+**-** payment_methods.
+**-** orders.
+**-** order_detail.
+
+After this disable the checkbox foreign key checks in the bottom menu and press the button Go. Now you have the database with all its tables ready.
+
+**6. initializing the project.**
+
+When you open the project folder in VScode you must run the **npm install** command, it will install all the dependencies in the json package, then you will have everything you need to start the server and all the features of the app.
+
+
+##### Configuration
+
+**1. Configuring the zero-dependency module.**
+
+Now you need to configure the dependency that will be load the environment variables from the **.env** file, who storing configuration the environment separate from code.
+
+*Example the variables to configure:*
+
+**-** SERVER_PORT = 3000 **Number port where express starting the server**.
+
+**'postgres://dataBaseUser:DataBasePassword@dataVaseHost:MySQLport/dataBaseName'**
+**'mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}'**
+
+**-** DB_HOST = localhost
+**-** DB_PORT = 8111
+**-** DB_NAME = delilah_resto
+**-** DB_USER = root (or your database user).
+**-** DB_PASS = (Your database password).
+**-** JWT_SECRET = MySecretPassword1988 **Secret string used as a part in the building user tokens**.
+
 End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ### And coding style tests
 
