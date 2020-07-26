@@ -1,4 +1,4 @@
-# delilah_Resto_Project
+# Delilah_Resto_Project
 
 Delilah Resto project is an API for a restaurant, where people can create an user and make their orders, follow them, and receive them in your address.
 Manager of the restaurant can check orders, update their statuses, add new products and update their availability, delete users and orders, also can manage order statuses and payment methods.
@@ -43,12 +43,12 @@ Open phpMyAdmin to handle the administration of MySQL over the Browser. Open it 
 [phpMyAdmin](http://localhost/phpmyadmin/index.php) 
 
 
-**4.Creating the database**
+**4. Creating the database**
 
 In the left margin of phpMyAdmin below the Recent and Favorites buttons, click on New option, then into the Database name insert the name **delilah_resto** and click on **Create button**.
 Now you have the new database created and ready to start working.
 
-**5.Creating the tables in the database**
+**5. Creating the tables in the database**
 
 Open the sql folder that is inside the project folder and open one by one each sql file, then find the **CREATE TABLE** statement.
 Again in the phpMyAdmin in the margin left select the **delilah_resto** database that is empty and it only shows the option **Create Table**.
@@ -56,12 +56,12 @@ So in the top menu select the **SQL** optiion, after this in the **Run SQL query
 
 You must copy the **CREATE TABLE** statements from the each sql files in this order:
 
-- users.
-- products.
-- order_status.
-- payment_methods.
-- orders.
-- order_detail.
+- Users.
+- Products.
+- Order_status.
+- Payment_methods.
+- Orders.
+- Order_detail.
 
 After this disable the checkbox foreign key checks in the bottom menu and press the button Go. Now you have the database with all its tables ready.
 
