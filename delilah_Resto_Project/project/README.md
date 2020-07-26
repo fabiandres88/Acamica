@@ -122,6 +122,6 @@ In the top menu you find the file option and select the import file option then 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 **2020**
