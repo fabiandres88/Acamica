@@ -11,11 +11,11 @@ These instructions will get you instructions about how the project up and runnin
 
 You must first donwload Postman or any other collaboration platform for API development. After that, you need to download XAMPP to manage the database or your preferred service. Also you need a node js editor where you can use npm as VSCode or others.
 
-```
-(https://www.postman.com/downloads/)
-(https://www.apachefriends.org/download.html)
-(https://code.visualstudio.com/download)
-```
+
+[Postman](https://www.postman.com/downloads/)
+[XAMPP](https://www.apachefriends.org/download.html)
+[Visual Studio Code](https://code.visualstudio.com/download)
+
 
 #### Installing
 
@@ -36,11 +36,10 @@ XAMPP works its MySQL module at 3306 port, if you have conflict with it because 
 
 **3. Open the phpMyAdmin in your browser.**
 
-Open phpMyAdmin to handle the administration of MySQL over the Browser. Open it in your browser using URL below,to directly execute any SQL statement.
+Open phpMyAdmin to handle the administration of MySQL over the Browser. Open it in your browser using link below,to directly execute any SQL statement.
 
-```
-http://localhost/phpmyadmin/index.php 
-```
+[Link](http://localhost/phpmyadmin/index.php) 
+
 
 **4.Creating the database**
 
@@ -81,12 +80,12 @@ Now you need to configure the dependency that will be load the environment varia
 **'postgres://dataBaseUser:DataBasePassword@dataVaseHost:MySQLport/dataBaseName'**
 **'mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}'**
 
-**-** DB_HOST = localhost
-**-** DB_PORT = 8111
-**-** DB_NAME = delilah_resto
-**-** DB_USER = root (or your database user).
-**-** DB_PASS = (Your database password).
-**-** JWT_SECRET = MySecretPassword1988 **Secret string used as a part in the building user tokens**.
+- DB_HOST = localhost
+- DB_PORT = 8111
+- DB_NAME = delilah_resto
+- DB_USER = root (or your database user).
+- DB_PASS = (Your database password).
+- JWT_SECRET = MySecretPassword1988 **Secret string used as a part in the building user tokens**.
 
 End with an example of getting some data out of the system or using it for a little demo
 
