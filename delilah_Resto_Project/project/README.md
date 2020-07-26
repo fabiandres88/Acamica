@@ -12,9 +12,11 @@ These instructions will get you instructions about how the project up and runnin
 You must first donwload Postman or any other collaboration platform for API development. After that, you need to download XAMPP to manage the database or your preferred service. Also you need a node js editor where you can use npm as VSCode or others.
 
 
-[Postman](https://www.postman.com/downloads/)
-[XAMPP](https://www.apachefriends.org/download.html)
-[Visual Studio Code](https://code.visualstudio.com/download)
+[Postman](https://www.postman.com/downloads/).
+
+[XAMPP](https://www.apachefriends.org/download.html).
+
+[Visual Studio Code](https://code.visualstudio.com/download).
 
 
 #### Installing
@@ -38,7 +40,7 @@ XAMPP works its MySQL module at 3306 port, if you have conflict with it because 
 
 Open phpMyAdmin to handle the administration of MySQL over the Browser. Open it in your browser using link below,to directly execute any SQL statement.
 
-[Link](http://localhost/phpmyadmin/index.php) 
+[phpMyAdmin](http://localhost/phpmyadmin/index.php) 
 
 
 **4.Creating the database**
