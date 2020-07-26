@@ -65,7 +65,7 @@ You must copy the **CREATE TABLE** statements from the each sql files in this or
 
 After this disable the checkbox foreign key checks in the bottom menu and press the button Go. Now you have the database with all its tables ready.
 
-**6. initializing the project.**
+**6. Initializing the project.**
 
 When you open the project folder in VScode you must run the **npm install** command, it will install all the dependencies in the json package, then you will have everything you need to start the server and all the features of the app.
 
