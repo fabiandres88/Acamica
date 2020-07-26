@@ -78,7 +78,7 @@ Now you need to configure the dependency that will be load the environment varia
 
 **Example the variables to configure:**
 
-- SERVER_PORT = 3000 **Number port where express starting the server**.
+- SERVER_PORT = 3000 *Number port where express starting the server*.
 
 **Connection string**
 
@@ -122,6 +122,6 @@ In the top menu you find the file option and select the import file option then 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
 
 **2020**
