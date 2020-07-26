@@ -55,12 +55,13 @@ Again in the phpMyAdmin in the margin left select the **delilah_resto** database
 So in the top menu select the **SQL** optiion, after this in the **Run SQL query/queries on database delilah_resto** section,you will find a text field.
 
 You must copy the **CREATE TABLE** statements from the each sql files in this order:
-**-** users.
-**-** products.
-**-** order_status.
-**-** payment_methods.
-**-** orders.
-**-** order_detail.
+
+- users.
+- products.
+- order_status.
+- payment_methods.
+- orders.
+- order_detail.
 
 After this disable the checkbox foreign key checks in the bottom menu and press the button Go. Now you have the database with all its tables ready.
 
@@ -69,70 +70,58 @@ After this disable the checkbox foreign key checks in the bottom menu and press 
 When you open the project folder in VScode you must run the **npm install** command, it will install all the dependencies in the json package, then you will have everything you need to start the server and all the features of the app.
 
 
-##### Configuration
+#### Configuration
 
 **1. Configuring the zero-dependency module.**
 
 Now you need to configure the dependency that will be load the environment variables from the **.env** file, who storing configuration the environment separate from code.
 
-*Example the variables to configure:*
+**Example the variables to configure:**
 
-**-** SERVER_PORT = 3000 **Number port where express starting the server**.
+- SERVER_PORT = 3000 **Number port where express starting the server**.
 
-**'postgres://dataBaseUser:DataBasePassword@dataVaseHost:MySQLport/dataBaseName'**
-**'mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}'**
+**Connection string**
+
+*'postgres://dataBaseUser:DataBasePassword@dataVaseHost:MySQLport/dataBaseName'*
+
+**Adding the variables as replacemnets**
+
+*'mysql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}'*
 
 - DB_HOST = localhost
 - DB_PORT = 8111
 - DB_NAME = delilah_resto
-- DB_USER = root (or your database user).
-- DB_PASS = (Your database password).
-- JWT_SECRET = MySecretPassword1988 **Secret string used as a part in the building user tokens**.
+- DB_USER = root *or your database user*.
+- DB_PASS = *Your database password*.
+- JWT_SECRET = MySecretPassword1988 *Secret string used as a part in the building user tokens*.
 
-End with an example of getting some data out of the system or using it for a little demo
-
-### And coding style tests
-
-Explain what these tests test and why
+With all of these steps complete, you can start testing. First, you must start the server by opening the terminal and located in the project folder, run the command npm start and receive the following message:
 
 ```
-Give an example
+[nodemon] 2.0.4
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node server.js`
+Server is ready at port 3000...
 ```
 
-## Deployment
+For finish you could check it out all endpoints imported in the postman previously, and start to fill the database and all their operations.
 
-Add additional notes about how to deploy this on a live system
+### Open and check the guide.
 
-## Built With
+Into the project folder you could find the **delilah_resto.yaml**; YAML file you can open it in the link below and have a preview of all paths.
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+[Swagger Editor](https://editor.swagger.io/).
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+In the top menu you find the file option and select the import file option then select the YAML file mentioned above and open it, after this you would have the endpoints and its instructions.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Fabian Ramirez** - *Initial work* - [fabiandres88](https://github.com/fabiandres88).
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-<<<<<<< HEAD
-* etc
-=======
-* etc
->>>>>>> 285a22f6a9fab0a4234998e9059104931f6cabd5
+**2020**
