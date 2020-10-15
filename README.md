@@ -1,7 +1,7 @@
 # Acamica
 
 It contains all developed projects as part of Acamica Scholarship.
-(Web Full Stack Development) 
+(Web Full Stack Development), using HTML, CSS, SASS, JavaScript, NodeJS and SQL
 
 
 # delilah_Resto Project
