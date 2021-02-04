@@ -29,3 +29,7 @@ https://giphy.com/
 ![Alt text](https://github.com/fabiandres88/Acamica/blob/master/previews/Podcast.png?raw=true "Preview Podcast")
 
 Podcast project is a landing web page with many different podcast about development embedded from spotify, building with HTML and CSS.
+
+### Mobile view
+
+![Alt text](https://github.com/fabiandres88/Acamica/blob/master/previews/podcastMobile.png?raw=true "Preview Podcast")
