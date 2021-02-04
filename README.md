@@ -13,7 +13,7 @@ Delilah Resto project is an API for a restaurant, where people can create an use
 
 ## gif0S_Project
 
-![Alt text](./previews/gifos.png?raw=true "Preview Podcast")
+![Alt text](https://github.com/fabiandres88/Acamica/blob/master/previews/Gifos.png?raw=true "Preview Podcast")
 
 Gifos Project, is a web application where user can find all gifs that want by topics and also create its own gifs
 usig the GIPHY API.
@@ -26,6 +26,6 @@ https://giphy.com/
 
 ## Podcast_Project
 
-![Alt text](./previews/podcast.png?raw=true "Preview Podcast")
+![Alt text](https://github.com/fabiandres88/Acamica/blob/master/previews/Podcast.png?raw=true "Preview Podcast")
 
 Podcast project is a landing web page with many different podcast about development embedded from spotify, building with HTML and CSS.
