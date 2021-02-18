@@ -9,6 +9,8 @@ HTML, CSS, JavaScript and utilities as SASS NodeJS, Express and SQL
 
 Delilah Resto project is an API for a restaurant, where people can create an user and make their orders, follow them, and receive them in your address. Manager of the restaurant can check orders, update their statuses, add new products and update their availability, delete users and orders, also can manage order statuses and payment methods.
 
+https://github.com/fabiandres88/Acamica/tree/master/delilah_Resto_Project/project
+
 # Front-end
 
 ## gif0S_Project
@@ -25,6 +27,8 @@ it is building with HTML, SASS and JavaScript.
 
 ![Alt text](https://github.com/fabiandres88/Acamica/blob/master/previews/gifosDark.png?raw=true "Preview Gifos dark")
 
+https://github.com/fabiandres88/Acamica/tree/master/giF0S_Project
+
 ## Podcast_Project
 
 ![Alt text](https://github.com/fabiandres88/Acamica/blob/master/previews/Podcast.png?raw=true "Preview Podcast")
@@ -34,3 +38,5 @@ Podcast project is a landing web page with many different podcast about developm
 ### Mobile view
 
 ![Alt text](https://github.com/fabiandres88/Acamica/blob/master/previews/podcastMobile.png?raw=true "Preview Podcast")
+
+https://github.com/fabiandres88/Acamica/tree/master/podcast_Project
