@@ -1,9 +1,11 @@
 # Acamica Web Full Stack Development
 
 It contains the developed projects as part of Acamica Program.This Development maked using languages as:
-HTML, CSS, JavaScript and utilities as SASS NodeJS, Express and SQL
+HTML, CSS, JavaScript and utilities as SASS NodeJS, Express and SQL.
 
-# Back-end
+This repository contains three reposiroties from each project worked.
+
+# Back-end project
 
 ## delilah_Resto Project
 
@@ -13,7 +15,7 @@ Delilah Resto project is an API for a restaurant, where people can create an use
 
 https://github.com/fabiandres88/Acamica/tree/master/delilah_Resto_Project/project
 
-# Front-end
+# Front-end projects
 
 ## gif0S_Project
 
